@@ -1,0 +1,68 @@
+{
+  "project": "Green Power – 250 MWac solar, Country X",
+  "case": "SMBC 2024 Analyst Programme – project finance model (bid support for Green Power)",
+  "start": [
+    2024,
+    1,
+    1
+  ],
+  "construction_months": 12,
+  "ppa_years": 20,
+  "first_repayment_months_after_cod": 6,
+  "capacity_mw": 250,
+  "cuf": {
+    "P50": 0.28,
+    "P90": 0.23
+  },
+  "energy_case": "P50",
+  "degradation": 0.004,
+  "seasonality": [
+    0.33,
+    0.36,
+    0.155,
+    0.155
+  ],
+  "tariff": 80,
+  "om": {
+    "fixed_per_mw": 10000,
+    "variable_per_mwh": 10,
+    "escalation": 0.015,
+    "base_year": 2024
+  },
+  "tax_rate": 0.0,
+  "capex": {
+    "land": 50,
+    "epc": 200,
+    "development": 10
+  },
+  "depreciation_years": 30,
+  "debt": {
+    "tenor_years": 18,
+    "gearing": 0.8,
+    "min_dscr": 1.3,
+    "upfront_fee": 0.0125,
+    "swap": 0.045,
+    "margin_pre": 0.02,
+    "margin_post": 0.015,
+    "repayment": "sculpted"
+  },
+  "target_equity_irr": 0.12,
+  "assumptions_log": [
+    "Energy case P50 for the base case (flip the switch on Inputs to P90; lenders often size on P90).",
+    "Land and the upfront fee are paid at financial close (1 Jan 2024); EPC and development costs are spread evenly over 12 months.",
+    "Equity is drawn first, then debt; IDC is charged monthly on the opening balance and funded by further debt (part of project cost).",
+    "The upfront fee is 1.25% of the final debt amount; debt size and project cost are solved together without circularity (pasted values + checks).",
+    "Debt is sculpted to a flat DSCR over the repayment period (first repayment 30 Jun 2025, final maturity 31 Dec 2041).",
+    "No tax: the case gives no tax rate (input provided, default 0%).",
+    "Depreciation: straight line over 30 years on total project cost excluding land, from completion; no residual value after the PPA.",
+    "8,760 hours a year (leap years ignored); O&M escalates 1.5% a year from 2024 prices, tariff flat at USD 80/MWh.",
+    "Lender standard added (not in the brief): a DSRA holding the next 2 quarters of senior debt service, funded at COD as part of project cost, topped up / released each quarter and fully released at maturity; no interest on the DSRA balance. Switch it off on Inputs to match the brief exactly.",
+    "All other cash after senior debt service and DSRA movements is paid out as dividends each quarter.",
+    "Hours per year 8,760 and USD 1,000,000 per USD m are shown as inputs, so no number is typed inside a formula."
+  ],
+  "case_short": "Green Power – 250 MWac solar PF model",
+  "dsra": {
+    "on": 1,
+    "quarters": 2
+  }
+}

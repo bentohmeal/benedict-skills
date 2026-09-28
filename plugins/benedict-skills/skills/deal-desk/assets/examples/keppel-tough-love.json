@@ -1,0 +1,44 @@
+{
+  "company": "Tough Love",
+  "case": "Keppel KAP 2026 – Tough Love (PE acquisition of an Australian fitness chain)",
+  "units": "$'000",
+  "years": 5,
+  "historical": {"revenue": 75000, "cogs": 4500, "opex": 54061, "depreciation": 801, "interest": 525.7, "tax": 3022.46},
+  "drivers": {
+    "revenue_growth": [0.07, 0.06, 0.05, 0.03, 0.03],
+    "gross_margin":   [0.93, 0.94, 0.95, 0.95, 0.95],
+    "opex_pct":       [0.77, 0.77, 0.76, 0.75, 0.75],
+    "capex":          [1000, 1000, 500, 500, 500],
+    "nwc_pct":        [0.04, 0.03, 0.03, 0.04, 0.04]
+  },
+  "opening": {"nwc": 3500, "equity_book": 55000},
+  "dep": {"existing_per_year": 740, "new_asset_life": 10, "same_year": 1},
+  "tax_rate": 0.20,
+  "deal": {"purchase_price": 80000, "entry_cost_pct": 0.02, "exit_cost_pct": 0.02, "exit_multiple": 5.0, "min_cash": 0, "distribute_fcfe": 1},
+  "loan": {"name": "Term loan", "amount": 15000, "rate": 0.04, "upfront_fee_pct": 0.015, "tenor": 5, "interest_on_average": 0},
+  "dcf": {"cost_of_equity": 0.12, "terminal_growth": 0.025, "mid_year": 0},
+  "sensitivity": {
+    "entry":   [3.8665, 4.3665, 4.8665, 5.3665, 5.8665],
+    "exit":    [4.0, 4.5, 5.0, 5.5, 6.0],
+    "gearing": [0.0875, 0.1375, 0.1875, 0.2375, 0.2875],
+    "rate":    [0.03, 0.035, 0.04, 0.045, 0.05]
+  },
+  "tags": {"pl": "Part I (a)", "da": "Part I (a)", "cf": "Part I (b)", "cov": "Part I (c)", "su": "Part I (d)",
+           "ret": "Part I (e)", "sens1": "Part I (f)", "sens2": "Part I (f)", "wacc": "Part II (a)", "dcf": "Part II (b)", "alt": "Part II (c)"},
+  "assumptions_log": [
+    "$80m is enterprise value on a cash-free, debt-free basis; the existing debt behind the Year 0 interest is repaid by the vendor.",
+    "Entry costs (2% of price) and the 1.5% upfront loan fee are paid at close and funded in Sources & Uses (not expensed in Years 1–5).",
+    "Exit costs are 2% of the exit enterprise value.",
+    "New capex is depreciated from the year it is spent (full year); existing assets keep $740k a year.",
+    "Interest is charged on the opening loan balance (no circularity); the loan amortises straight-line over 5 years.",
+    "Tax is 20% of positive profit before tax; no tax losses carried forward.",
+    "All free cash flow to equity is paid to the sponsor each year; minimum cash is nil.",
+    "WACC weights use the deal's capital structure at close (loan vs sponsor equity); terminal growth 2.5% is our assumption."
+  ],
+  "alt_method": [
+    "Trading comparables: pick listed gym / fitness chains (e.g. Viva Leisure, Planet Fitness, The Gym Group, Basic-Fit), tier them by similarity (format, geography, growth).",
+    "Take EV / LTM and NTM EBITDA for each, drop outliers, and use the median or interquartile range.",
+    "Apply the range to Tough Love's Year 0 / Year 1 EBITDA to get an EV range; cross-check with precedent gym transactions (control premium).",
+    "Show the result next to the DCF and the $80m asking price on a football-field chart."
+  ]
+}

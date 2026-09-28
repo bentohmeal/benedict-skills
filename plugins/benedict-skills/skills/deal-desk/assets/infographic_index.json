@@ -1,0 +1,2587 @@
+{
+ "library": "C:\\Users\\user\\Documents\\Google Drive\\Claude Things\\output\\_Deal Desk Toolkit\\Infographic Library.pptx",
+ "source": "C:\\Users\\user\\Documents\\Google Drive\\01. IB PE\\Investment Banking Library\\Slide Inspiration\\PwC Infographic Templates (2014).pptx",
+ "slides": [
+  {
+   "no": 1,
+   "pwc": 4,
+   "section": "Arrows",
+   "type": "Circular arrows",
+   "use": [
+    "process",
+    "flow"
+   ],
+   "picture": false,
+   "objects": 9
+  },
+  {
+   "no": 2,
+   "pwc": 5,
+   "section": "Arrows",
+   "type": "Circular arrows",
+   "use": [
+    "process",
+    "flow"
+   ],
+   "picture": false,
+   "objects": 9
+  },
+  {
+   "no": 3,
+   "pwc": 6,
+   "section": "Arrows",
+   "type": "Curved arrows",
+   "use": [
+    "process",
+    "flow"
+   ],
+   "picture": false,
+   "objects": 16
+  },
+  {
+   "no": 4,
+   "pwc": 7,
+   "section": "Arrows",
+   "type": "Square arrows",
+   "use": [
+    "process",
+    "flow"
+   ],
+   "picture": false,
+   "objects": 7
+  },
+  {
+   "no": 5,
+   "pwc": 8,
+   "section": "Arrows",
+   "type": "Square arrows",
+   "use": [
+    "process",
+    "flow"
+   ],
+   "picture": false,
+   "objects": 3
+  },
+  {
+   "no": 6,
+   "pwc": 9,
+   "section": "Arrows",
+   "type": "Square arrows",
+   "use": [
+    "process",
+    "flow"
+   ],
+   "picture": false,
+   "objects": 7
+  },
+  {
+   "no": 7,
+   "pwc": 10,
+   "section": "Arrows",
+   "type": "Square",
+   "use": [
+    "process",
+    "flow"
+   ],
+   "picture": false,
+   "objects": 9
+  },
+  {
+   "no": 8,
+   "pwc": 11,
+   "section": "Arrows",
+   "type": "Square",
+   "use": [
+    "process",
+    "flow"
+   ],
+   "picture": false,
+   "objects": 24
+  },
+  {
+   "no": 9,
+   "pwc": 13,
+   "section": "Circular Diagrams",
+   "type": "Venn diagram",
+   "use": [
+    "overlap",
+    "synergies",
+    "strategic fit"
+   ],
+   "picture": false,
+   "objects": 5
+  },
+  {
+   "no": 10,
+   "pwc": 14,
+   "section": "Circular Diagrams",
+   "type": "4 segment Venn diagram",
+   "use": [
+    "overlap",
+    "synergies",
+    "strategic fit",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 11,
+   "pwc": 15,
+   "section": "Circular Diagrams",
+   "type": "Sections",
+   "use": [
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 9
+  },
+  {
+   "no": 12,
+   "pwc": 16,
+   "section": "Circular Diagrams",
+   "type": "Pie sections",
+   "use": [
+    "mix",
+    "split",
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 22
+  },
+  {
+   "no": 13,
+   "pwc": 17,
+   "section": "Circular Diagrams",
+   "type": "Pie sections",
+   "use": [
+    "mix",
+    "split",
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 7
+  },
+  {
+   "no": 14,
+   "pwc": 18,
+   "section": "Circular Diagrams",
+   "type": "Relationship models",
+   "use": [
+    "relationships"
+   ],
+   "picture": false,
+   "objects": 60
+  },
+  {
+   "no": 15,
+   "pwc": 19,
+   "section": "Circular Diagrams",
+   "type": "Sections",
+   "use": [
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 18
+  },
+  {
+   "no": 16,
+   "pwc": 20,
+   "section": "Circular Diagrams",
+   "type": "Sections and arrows",
+   "use": [
+    "process",
+    "flow",
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 6
+  },
+  {
+   "no": 17,
+   "pwc": 21,
+   "section": "Circular Diagrams",
+   "type": "Sections and arrows",
+   "use": [
+    "process",
+    "flow",
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 4
+  },
+  {
+   "no": 18,
+   "pwc": 22,
+   "section": "Circular Diagrams",
+   "type": "Sections",
+   "use": [
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 7
+  },
+  {
+   "no": 19,
+   "pwc": 23,
+   "section": "Circular Diagrams",
+   "type": "Sections",
+   "use": [
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 7
+  },
+  {
+   "no": 20,
+   "pwc": 24,
+   "section": "Circular Diagrams",
+   "type": "Cycle",
+   "use": [
+    "value creation loop",
+    "operating model"
+   ],
+   "picture": false,
+   "objects": 16
+  },
+  {
+   "no": 21,
+   "pwc": 25,
+   "section": "Circular Diagrams",
+   "type": "Cycle",
+   "use": [
+    "value creation loop",
+    "operating model"
+   ],
+   "picture": false,
+   "objects": 11
+  },
+  {
+   "no": 22,
+   "pwc": 26,
+   "section": "Circular Diagrams",
+   "type": "Cycle",
+   "use": [
+    "value creation loop",
+    "operating model"
+   ],
+   "picture": false,
+   "objects": 7
+  },
+  {
+   "no": 23,
+   "pwc": 27,
+   "section": "Circular Diagrams",
+   "type": "Cycle",
+   "use": [
+    "value creation loop",
+    "operating model"
+   ],
+   "picture": false,
+   "objects": 15
+  },
+  {
+   "no": 24,
+   "pwc": 28,
+   "section": "Circular Diagrams",
+   "type": "Layout examples",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 12
+  },
+  {
+   "no": 25,
+   "pwc": 29,
+   "section": "Circular Diagrams",
+   "type": "Cycles",
+   "use": [
+    "value creation loop",
+    "operating model"
+   ],
+   "picture": false,
+   "objects": 13
+  },
+  {
+   "no": 26,
+   "pwc": 30,
+   "section": "Circular Diagrams",
+   "type": "Cycles",
+   "use": [
+    "value creation loop",
+    "operating model"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 27,
+   "pwc": 31,
+   "section": "Circular Diagrams",
+   "type": "Cycles",
+   "use": [
+    "value creation loop",
+    "operating model"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 28,
+   "pwc": 32,
+   "section": "Circular Diagrams",
+   "type": "Cycles",
+   "use": [
+    "value creation loop",
+    "operating model"
+   ],
+   "picture": false,
+   "objects": 75
+  },
+  {
+   "no": 29,
+   "pwc": 33,
+   "section": "Circular Diagrams",
+   "type": "Circular Diagram",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 3
+  },
+  {
+   "no": 30,
+   "pwc": 34,
+   "section": "Circular Diagrams",
+   "type": "Circular Diagram",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 17
+  },
+  {
+   "no": 31,
+   "pwc": 35,
+   "section": "Circular Diagrams",
+   "type": "Circular Diagram",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 30
+  },
+  {
+   "no": 32,
+   "pwc": 36,
+   "section": "Circular Diagrams",
+   "type": "Circular Diagram",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 15
+  },
+  {
+   "no": 33,
+   "pwc": 37,
+   "section": "Circular Diagrams",
+   "type": "Cycle",
+   "use": [
+    "value creation loop",
+    "operating model"
+   ],
+   "picture": false,
+   "objects": 24
+  },
+  {
+   "no": 34,
+   "pwc": 38,
+   "section": "Circular Diagrams",
+   "type": "Cycle",
+   "use": [
+    "value creation loop",
+    "operating model"
+   ],
+   "picture": false,
+   "objects": 12
+  },
+  {
+   "no": 35,
+   "pwc": 39,
+   "section": "Circular Diagrams",
+   "type": "Cycle",
+   "use": [
+    "value creation loop",
+    "operating model"
+   ],
+   "picture": false,
+   "objects": 33
+  },
+  {
+   "no": 36,
+   "pwc": 40,
+   "section": "Circular Diagrams",
+   "type": "Process",
+   "use": [
+    "process"
+   ],
+   "picture": false,
+   "objects": 24
+  },
+  {
+   "no": 37,
+   "pwc": 41,
+   "section": "Circular Diagrams",
+   "type": "Sections",
+   "use": [
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 38,
+   "pwc": 42,
+   "section": "Circular Diagrams",
+   "type": "Circular Diagram",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 42
+  },
+  {
+   "no": 39,
+   "pwc": 43,
+   "section": "Circular Diagrams",
+   "type": "Circular Diagram",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 14
+  },
+  {
+   "no": 40,
+   "pwc": 44,
+   "section": "Circular Diagrams",
+   "type": "Circular Diagram",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 17
+  },
+  {
+   "no": 41,
+   "pwc": 45,
+   "section": "Circular Diagrams",
+   "type": "Cycle",
+   "use": [
+    "value creation loop",
+    "operating model"
+   ],
+   "picture": false,
+   "objects": 3
+  },
+  {
+   "no": 42,
+   "pwc": 46,
+   "section": "Circular Diagrams",
+   "type": "Circular Diagram",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 25
+  },
+  {
+   "no": 43,
+   "pwc": 47,
+   "section": "Circular Diagrams",
+   "type": "Circular Diagram",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 44,
+   "pwc": 48,
+   "section": "Circular Diagrams",
+   "type": "Circular Diagram",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 45,
+   "pwc": 49,
+   "section": "Circular Diagrams",
+   "type": "Petals",
+   "use": [
+    "pillars"
+   ],
+   "picture": false,
+   "objects": 24
+  },
+  {
+   "no": 46,
+   "pwc": 50,
+   "section": "Circular Diagrams",
+   "type": "Petals",
+   "use": [
+    "pillars"
+   ],
+   "picture": false,
+   "objects": 17
+  },
+  {
+   "no": 47,
+   "pwc": 51,
+   "section": "Circular Diagrams",
+   "type": "Cycles",
+   "use": [
+    "value creation loop",
+    "operating model"
+   ],
+   "picture": false,
+   "objects": 6
+  },
+  {
+   "no": 48,
+   "pwc": 52,
+   "section": "Circular Diagrams",
+   "type": "Cycles",
+   "use": [
+    "value creation loop",
+    "operating model"
+   ],
+   "picture": false,
+   "objects": 55
+  },
+  {
+   "no": 49,
+   "pwc": 53,
+   "section": "Circular Diagrams",
+   "type": "Cycles",
+   "use": [
+    "value creation loop",
+    "operating model"
+   ],
+   "picture": false,
+   "objects": 4
+  },
+  {
+   "no": 50,
+   "pwc": 54,
+   "section": "Circular Diagrams",
+   "type": "Circular Diagram",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 30
+  },
+  {
+   "no": 51,
+   "pwc": 55,
+   "section": "Circular Diagrams",
+   "type": "Circular Diagram",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 22
+  },
+  {
+   "no": 52,
+   "pwc": 56,
+   "section": "Circular Diagrams",
+   "type": "Sections",
+   "use": [
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 9
+  },
+  {
+   "no": 53,
+   "pwc": 57,
+   "section": "Circular Diagrams",
+   "type": "Sections",
+   "use": [
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 28
+  },
+  {
+   "no": 54,
+   "pwc": 58,
+   "section": "Circular Diagrams",
+   "type": "Sections",
+   "use": [
+    "pillars",
+    "segments"
+   ],
+   "picture": true,
+   "objects": 1
+  },
+  {
+   "no": 55,
+   "pwc": 59,
+   "section": "Circular Diagrams",
+   "type": "Cycle",
+   "use": [
+    "value creation loop",
+    "operating model"
+   ],
+   "picture": false,
+   "objects": 39
+  },
+  {
+   "no": 56,
+   "pwc": 60,
+   "section": "Circular Diagrams",
+   "type": "Circular Diagram",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 61
+  },
+  {
+   "no": 57,
+   "pwc": 61,
+   "section": "Circular Diagrams",
+   "type": "Speedometers",
+   "use": [
+    "scoring",
+    "utilisation",
+    "leverage vs covenant"
+   ],
+   "picture": false,
+   "objects": 3
+  },
+  {
+   "no": 58,
+   "pwc": 62,
+   "section": "Circular Diagrams",
+   "type": "Speedometers",
+   "use": [
+    "scoring",
+    "utilisation",
+    "leverage vs covenant"
+   ],
+   "picture": false,
+   "objects": 3
+  },
+  {
+   "no": 59,
+   "pwc": 63,
+   "section": "Circular Diagrams",
+   "type": "Heat map",
+   "use": [
+    "risk",
+    "scoring",
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 44
+  },
+  {
+   "no": 60,
+   "pwc": 64,
+   "section": "Circular Diagrams",
+   "type": "Circular bar chart",
+   "use": [
+    "ranking",
+    "peers"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 61,
+   "pwc": 65,
+   "section": "Circular Diagrams",
+   "type": "Sections and percentages",
+   "use": [
+    "mix",
+    "market share",
+    "margin",
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 62,
+   "pwc": 66,
+   "section": "Circular Diagrams",
+   "type": "Sections and percentages",
+   "use": [
+    "mix",
+    "market share",
+    "margin",
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 46
+  },
+  {
+   "no": 63,
+   "pwc": 67,
+   "section": "Circular Diagrams",
+   "type": "Sections and percentages",
+   "use": [
+    "mix",
+    "market share",
+    "margin",
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 9
+  },
+  {
+   "no": 64,
+   "pwc": 68,
+   "section": "Circular Diagrams",
+   "type": "Sections and percentages",
+   "use": [
+    "mix",
+    "market share",
+    "margin",
+    "pillars",
+    "segments"
+   ],
+   "picture": true,
+   "objects": 16
+  },
+  {
+   "no": 65,
+   "pwc": 69,
+   "section": "Circular Diagrams",
+   "type": "Sections and percentages",
+   "use": [
+    "mix",
+    "market share",
+    "margin",
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 26
+  },
+  {
+   "no": 66,
+   "pwc": 70,
+   "section": "Circular Diagrams",
+   "type": "Sections and percentages",
+   "use": [
+    "mix",
+    "market share",
+    "margin",
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 20
+  },
+  {
+   "no": 67,
+   "pwc": 71,
+   "section": "Circular Diagrams",
+   "type": "Sections and percentages",
+   "use": [
+    "mix",
+    "market share",
+    "margin",
+    "pillars",
+    "segments"
+   ],
+   "picture": true,
+   "objects": 15
+  },
+  {
+   "no": 68,
+   "pwc": 72,
+   "section": "Circular Diagrams",
+   "type": "Sections and percentages",
+   "use": [
+    "mix",
+    "market share",
+    "margin",
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 29
+  },
+  {
+   "no": 69,
+   "pwc": 73,
+   "section": "Circular Diagrams",
+   "type": "Radar screen",
+   "use": [
+    "competitive scoring"
+   ],
+   "picture": false,
+   "objects": 5
+  },
+  {
+   "no": 70,
+   "pwc": 74,
+   "section": "Circular Diagrams",
+   "type": "Hub and spoke",
+   "use": [
+    "business model",
+    "ecosystem"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 71,
+   "pwc": 76,
+   "section": "Other Shapes",
+   "type": "Pyramid",
+   "use": [
+    "hierarchy",
+    "capital structure",
+    "priorities"
+   ],
+   "picture": false,
+   "objects": 7
+  },
+  {
+   "no": 72,
+   "pwc": 77,
+   "section": "Other Shapes",
+   "type": "Pyramid",
+   "use": [
+    "hierarchy",
+    "capital structure",
+    "priorities"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 73,
+   "pwc": 78,
+   "section": "Other Shapes",
+   "type": "Pyramid",
+   "use": [
+    "hierarchy",
+    "capital structure",
+    "priorities"
+   ],
+   "picture": false,
+   "objects": 22
+  },
+  {
+   "no": 74,
+   "pwc": 79,
+   "section": "Other Shapes",
+   "type": "Square and hexagon",
+   "use": [
+    "pillars",
+    "capabilities"
+   ],
+   "picture": false,
+   "objects": 4
+  },
+  {
+   "no": 75,
+   "pwc": 80,
+   "section": "Other Shapes",
+   "type": "Hexagon",
+   "use": [
+    "pillars",
+    "capabilities"
+   ],
+   "picture": false,
+   "objects": 19
+  },
+  {
+   "no": 76,
+   "pwc": 81,
+   "section": "Other Shapes",
+   "type": "Hexagon",
+   "use": [
+    "pillars",
+    "capabilities"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 77,
+   "pwc": 82,
+   "section": "Other Shapes",
+   "type": "Hexagon",
+   "use": [
+    "pillars",
+    "capabilities"
+   ],
+   "picture": false,
+   "objects": 7
+  },
+  {
+   "no": 78,
+   "pwc": 83,
+   "section": "Other Shapes",
+   "type": "Octogan",
+   "use": [
+    "pillars"
+   ],
+   "picture": false,
+   "objects": 3
+  },
+  {
+   "no": 79,
+   "pwc": 84,
+   "section": "Other Shapes",
+   "type": "Spider diagram",
+   "use": [
+    "competitive scoring"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 80,
+   "pwc": 85,
+   "section": "Other Shapes",
+   "type": "Radar diagram",
+   "use": [
+    "competitive scoring"
+   ],
+   "picture": false,
+   "objects": 4
+  },
+  {
+   "no": 81,
+   "pwc": 86,
+   "section": "Other Shapes",
+   "type": "Jigsaw puzzle pieces",
+   "use": [
+    "mix",
+    "split",
+    "fit",
+    "integration",
+    "building blocks"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 82,
+   "pwc": 87,
+   "section": "Other Shapes",
+   "type": "Jigsaw puzzle pieces",
+   "use": [
+    "mix",
+    "split",
+    "fit",
+    "integration",
+    "building blocks"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 83,
+   "pwc": 88,
+   "section": "Other Shapes",
+   "type": "Jigsaw puzzle pieces",
+   "use": [
+    "mix",
+    "split",
+    "fit",
+    "integration",
+    "building blocks"
+   ],
+   "picture": false,
+   "objects": 11
+  },
+  {
+   "no": 84,
+   "pwc": 89,
+   "section": "Other Shapes",
+   "type": "Jigsaw puzzle pieces",
+   "use": [
+    "mix",
+    "split",
+    "fit",
+    "integration",
+    "building blocks"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 85,
+   "pwc": 90,
+   "section": "Other Shapes",
+   "type": "Jigsaw puzzle pieces",
+   "use": [
+    "mix",
+    "split",
+    "fit",
+    "integration",
+    "building blocks"
+   ],
+   "picture": false,
+   "objects": 35
+  },
+  {
+   "no": 86,
+   "pwc": 91,
+   "section": "Other Shapes",
+   "type": "Jigsaw puzzle pieces",
+   "use": [
+    "mix",
+    "split",
+    "fit",
+    "integration",
+    "building blocks"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 87,
+   "pwc": 92,
+   "section": "Other Shapes",
+   "type": "Jigsaw puzzle pieces",
+   "use": [
+    "mix",
+    "split",
+    "fit",
+    "integration",
+    "building blocks"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 88,
+   "pwc": 93,
+   "section": "Other Shapes",
+   "type": "Jigsaw puzzle wheel",
+   "use": [
+    "fit",
+    "integration",
+    "building blocks"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 89,
+   "pwc": 94,
+   "section": "Other Shapes",
+   "type": "Cog wheels",
+   "use": [
+    "operating model",
+    "integration"
+   ],
+   "picture": false,
+   "objects": 10
+  },
+  {
+   "no": 90,
+   "pwc": 95,
+   "section": "Other Shapes",
+   "type": "Cog wheels",
+   "use": [
+    "operating model",
+    "integration"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 91,
+   "pwc": 96,
+   "section": "Other Shapes",
+   "type": "Cog wheels",
+   "use": [
+    "operating model",
+    "integration"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 92,
+   "pwc": 97,
+   "section": "Other Shapes",
+   "type": "Cog wheels",
+   "use": [
+    "operating model",
+    "integration"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 93,
+   "pwc": 99,
+   "section": "Processes",
+   "type": "Bridge diagram / waterfall chart",
+   "use": [
+    "EBITDA bridge",
+    "value bridge",
+    "process"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 94,
+   "pwc": 100,
+   "section": "Processes",
+   "type": "Thermometer",
+   "use": [
+    "progress vs target",
+    "process"
+   ],
+   "picture": false,
+   "objects": 21
+  },
+  {
+   "no": 95,
+   "pwc": 101,
+   "section": "Processes",
+   "type": "Bar chart",
+   "use": [
+    "ranking",
+    "peers",
+    "process"
+   ],
+   "picture": false,
+   "objects": 5
+  },
+  {
+   "no": 96,
+   "pwc": 102,
+   "section": "Processes",
+   "type": "Bar chart",
+   "use": [
+    "ranking",
+    "peers",
+    "process"
+   ],
+   "picture": false,
+   "objects": 28
+  },
+  {
+   "no": 97,
+   "pwc": 103,
+   "section": "Processes",
+   "type": "Line chart",
+   "use": [
+    "trend",
+    "process"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 98,
+   "pwc": 104,
+   "section": "Processes",
+   "type": "Bottle neck",
+   "use": [
+    "constraint",
+    "bottleneck",
+    "process"
+   ],
+   "picture": false,
+   "objects": 22
+  },
+  {
+   "no": 99,
+   "pwc": 105,
+   "section": "Processes",
+   "type": "Bottle neck",
+   "use": [
+    "constraint",
+    "bottleneck",
+    "process"
+   ],
+   "picture": false,
+   "objects": 20
+  },
+  {
+   "no": 100,
+   "pwc": 106,
+   "section": "Processes",
+   "type": "Maze",
+   "use": [
+    "complexity",
+    "process"
+   ],
+   "picture": false,
+   "objects": 3
+  },
+  {
+   "no": 101,
+   "pwc": 107,
+   "section": "Processes",
+   "type": "Linear flow",
+   "use": [
+    "process",
+    "deal steps"
+   ],
+   "picture": false,
+   "objects": 7
+  },
+  {
+   "no": 102,
+   "pwc": 108,
+   "section": "Processes",
+   "type": "Linear flow",
+   "use": [
+    "process",
+    "deal steps"
+   ],
+   "picture": false,
+   "objects": 16
+  },
+  {
+   "no": 103,
+   "pwc": 109,
+   "section": "Processes",
+   "type": "Linear flow",
+   "use": [
+    "process",
+    "deal steps"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 104,
+   "pwc": 110,
+   "section": "Processes",
+   "type": "Linear flow",
+   "use": [
+    "process",
+    "deal steps"
+   ],
+   "picture": false,
+   "objects": 12
+  },
+  {
+   "no": 105,
+   "pwc": 111,
+   "section": "Processes",
+   "type": "Linear flow",
+   "use": [
+    "process",
+    "deal steps"
+   ],
+   "picture": false,
+   "objects": 11
+  },
+  {
+   "no": 106,
+   "pwc": 112,
+   "section": "Processes",
+   "type": "Linear flow",
+   "use": [
+    "process",
+    "deal steps"
+   ],
+   "picture": false,
+   "objects": 9
+  },
+  {
+   "no": 107,
+   "pwc": 113,
+   "section": "Processes",
+   "type": "Linear flow",
+   "use": [
+    "process",
+    "deal steps"
+   ],
+   "picture": false,
+   "objects": 35
+  },
+  {
+   "no": 108,
+   "pwc": 114,
+   "section": "Processes",
+   "type": "List",
+   "use": [
+    "key points",
+    "thesis",
+    "process"
+   ],
+   "picture": false,
+   "objects": 4
+  },
+  {
+   "no": 109,
+   "pwc": 115,
+   "section": "Processes",
+   "type": "Process charts",
+   "use": [
+    "process"
+   ],
+   "picture": false,
+   "objects": 37
+  },
+  {
+   "no": 110,
+   "pwc": 116,
+   "section": "Processes",
+   "type": "Process charts",
+   "use": [
+    "process"
+   ],
+   "picture": false,
+   "objects": 20
+  },
+  {
+   "no": 111,
+   "pwc": 117,
+   "section": "Processes",
+   "type": "Process charts",
+   "use": [
+    "process"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 112,
+   "pwc": 118,
+   "section": "Processes",
+   "type": "Scale",
+   "use": [
+    "rating",
+    "maturity",
+    "process"
+   ],
+   "picture": false,
+   "objects": 20
+  },
+  {
+   "no": 113,
+   "pwc": 119,
+   "section": "Processes",
+   "type": "Process charts",
+   "use": [
+    "process"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 114,
+   "pwc": 120,
+   "section": "Processes",
+   "type": "Process charts",
+   "use": [
+    "process"
+   ],
+   "picture": false,
+   "objects": 15
+  },
+  {
+   "no": 115,
+   "pwc": 121,
+   "section": "Processes",
+   "type": "Process charts",
+   "use": [
+    "process"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 116,
+   "pwc": 122,
+   "section": "Processes",
+   "type": "Funnel",
+   "use": [
+    "deal pipeline",
+    "buyer funnel",
+    "TAM to SOM",
+    "process"
+   ],
+   "picture": false,
+   "objects": 13
+  },
+  {
+   "no": 117,
+   "pwc": 123,
+   "section": "Processes",
+   "type": "Monopoly board",
+   "use": [
+    "process"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 118,
+   "pwc": 124,
+   "section": "Processes",
+   "type": "Phases",
+   "use": [
+    "100-day plan",
+    "workstreams",
+    "process"
+   ],
+   "picture": true,
+   "objects": 13
+  },
+  {
+   "no": 119,
+   "pwc": 125,
+   "section": "Processes",
+   "type": "Options",
+   "use": [
+    "strategic options",
+    "process"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 120,
+   "pwc": 126,
+   "section": "Processes",
+   "type": "Phases",
+   "use": [
+    "100-day plan",
+    "workstreams",
+    "process"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 121,
+   "pwc": 127,
+   "section": "Processes",
+   "type": "Road map",
+   "use": [
+    "roadmap",
+    "value creation plan",
+    "footprint",
+    "geographic mix",
+    "process"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 122,
+   "pwc": 128,
+   "section": "Processes",
+   "type": "Road map",
+   "use": [
+    "roadmap",
+    "value creation plan",
+    "footprint",
+    "geographic mix",
+    "process"
+   ],
+   "picture": false,
+   "objects": 14
+  },
+  {
+   "no": 123,
+   "pwc": 129,
+   "section": "Processes",
+   "type": "Timeline",
+   "use": [
+    "history",
+    "milestones",
+    "deal timetable",
+    "process"
+   ],
+   "picture": false,
+   "objects": 41
+  },
+  {
+   "no": 124,
+   "pwc": 130,
+   "section": "Processes",
+   "type": "Timelines",
+   "use": [
+    "history",
+    "milestones",
+    "deal timetable",
+    "process"
+   ],
+   "picture": false,
+   "objects": 9
+  },
+  {
+   "no": 125,
+   "pwc": 131,
+   "section": "Processes",
+   "type": "Timelines",
+   "use": [
+    "history",
+    "milestones",
+    "deal timetable",
+    "process"
+   ],
+   "picture": false,
+   "objects": 63
+  },
+  {
+   "no": 126,
+   "pwc": 132,
+   "section": "Processes",
+   "type": "Gantt chart example",
+   "use": [
+    "deal timetable",
+    "workstreams",
+    "process"
+   ],
+   "picture": false,
+   "objects": 22
+  },
+  {
+   "no": 127,
+   "pwc": 133,
+   "section": "Processes",
+   "type": "Timelines",
+   "use": [
+    "history",
+    "milestones",
+    "deal timetable",
+    "process"
+   ],
+   "picture": false,
+   "objects": 64
+  },
+  {
+   "no": 128,
+   "pwc": 134,
+   "section": "Processes",
+   "type": "Timelines",
+   "use": [
+    "history",
+    "milestones",
+    "deal timetable",
+    "process"
+   ],
+   "picture": false,
+   "objects": 21
+  },
+  {
+   "no": 129,
+   "pwc": 135,
+   "section": "Processes",
+   "type": "Timelines",
+   "use": [
+    "history",
+    "milestones",
+    "deal timetable",
+    "process"
+   ],
+   "picture": false,
+   "objects": 21
+  },
+  {
+   "no": 130,
+   "pwc": 136,
+   "section": "Processes",
+   "type": "Timelines",
+   "use": [
+    "history",
+    "milestones",
+    "deal timetable",
+    "process"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 131,
+   "pwc": 137,
+   "section": "Processes",
+   "type": "2014 Calendar",
+   "use": [
+    "timetable",
+    "process"
+   ],
+   "picture": false,
+   "objects": 27
+  },
+  {
+   "no": 132,
+   "pwc": 138,
+   "section": "Processes",
+   "type": "Balance chart",
+   "use": [
+    "pros vs cons",
+    "trade-off",
+    "process"
+   ],
+   "picture": false,
+   "objects": 6
+  },
+  {
+   "no": 133,
+   "pwc": 139,
+   "section": "Processes",
+   "type": "Balance chart",
+   "use": [
+    "pros vs cons",
+    "trade-off",
+    "process"
+   ],
+   "picture": false,
+   "objects": 8
+  },
+  {
+   "no": 134,
+   "pwc": 141,
+   "section": "Maps",
+   "type": "UK offices",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 30
+  },
+  {
+   "no": 135,
+   "pwc": 142,
+   "section": "Maps",
+   "type": "UK offices",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 166
+  },
+  {
+   "no": 136,
+   "pwc": 143,
+   "section": "Maps",
+   "type": "Our presence in London",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": true,
+   "objects": 1
+  },
+  {
+   "no": 137,
+   "pwc": 144,
+   "section": "Maps",
+   "type": "South East offices",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 18
+  },
+  {
+   "no": 138,
+   "pwc": 145,
+   "section": "Maps",
+   "type": "UK – countries and counties",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 139,
+   "pwc": 146,
+   "section": "Maps",
+   "type": "UK - postcodes",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 150
+  },
+  {
+   "no": 140,
+   "pwc": 147,
+   "section": "Maps",
+   "type": "UK – local authorities",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 141,
+   "pwc": 148,
+   "section": "Maps",
+   "type": "England – local authorities",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 6
+  },
+  {
+   "no": 142,
+   "pwc": 149,
+   "section": "Maps",
+   "type": "London boroughs",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 143,
+   "pwc": 150,
+   "section": "Maps",
+   "type": "Map with contacts",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 31
+  },
+  {
+   "no": 144,
+   "pwc": 151,
+   "section": "Maps",
+   "type": "World map with Atlantic Ocean in the centre",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 145,
+   "pwc": 152,
+   "section": "Maps",
+   "type": "World map with European countries enlarged for ease of reference",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 4
+  },
+  {
+   "no": 146,
+   "pwc": 153,
+   "section": "Maps",
+   "type": "World map with Pacific Ocean in the centre",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 147,
+   "pwc": 154,
+   "section": "Maps",
+   "type": "Territory sites - world coverage",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 148,
+   "pwc": 155,
+   "section": "Maps",
+   "type": "Territory sites - Europe",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 149,
+   "pwc": 156,
+   "section": "Maps",
+   "type": "Territory sites - Americas",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 150,
+   "pwc": 157,
+   "section": "Maps",
+   "type": "Territory sites – Asia Pacific",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 151,
+   "pwc": 158,
+   "section": "Maps",
+   "type": "Territory sites – Middle East",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 152,
+   "pwc": 159,
+   "section": "Maps",
+   "type": "Territory sites - Africa",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 153,
+   "pwc": 160,
+   "section": "Maps",
+   "type": "Australia and Pacific Rim",
+   "use": [
+    "footprint",
+    "geographic mix"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 154,
+   "pwc": 161,
+   "section": "Maps",
+   "type": "Globe",
+   "use": [
+    "footprint",
+    "geographic mix",
+    "global footprint"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 155,
+   "pwc": 162,
+   "section": "Maps",
+   "type": "Globes",
+   "use": [
+    "footprint",
+    "geographic mix",
+    "global footprint"
+   ],
+   "picture": false,
+   "objects": 20
+  },
+  {
+   "no": 156,
+   "pwc": 163,
+   "section": "Maps",
+   "type": "Globes",
+   "use": [
+    "footprint",
+    "geographic mix",
+    "global footprint"
+   ],
+   "picture": false,
+   "objects": 15
+  },
+  {
+   "no": 157,
+   "pwc": 166,
+   "section": "Icons",
+   "type": "Quotes / speech bubbles",
+   "use": [
+    "icon source",
+    "management quote",
+    "customer quote"
+   ],
+   "picture": false,
+   "objects": 9
+  },
+  {
+   "no": 158,
+   "pwc": 167,
+   "section": "Icons",
+   "type": "Industry sectors",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 82
+  },
+  {
+   "no": 159,
+   "pwc": 168,
+   "section": "Icons",
+   "type": "Assorted",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 88
+  },
+  {
+   "no": 160,
+   "pwc": 169,
+   "section": "Icons",
+   "type": "Assorted",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 88
+  },
+  {
+   "no": 161,
+   "pwc": 170,
+   "section": "Icons",
+   "type": "Assorted",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 31
+  },
+  {
+   "no": 162,
+   "pwc": 171,
+   "section": "Icons",
+   "type": "Green team",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 42
+  },
+  {
+   "no": 163,
+   "pwc": 172,
+   "section": "Icons",
+   "type": "Green team",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 9
+  },
+  {
+   "no": 164,
+   "pwc": 173,
+   "section": "Icons",
+   "type": "Unofficial",
+   "use": [
+    "icon source"
+   ],
+   "picture": true,
+   "objects": 69
+  },
+  {
+   "no": 165,
+   "pwc": 174,
+   "section": "Icons",
+   "type": "Unofficial",
+   "use": [
+    "icon source"
+   ],
+   "picture": true,
+   "objects": 62
+  },
+  {
+   "no": 166,
+   "pwc": 175,
+   "section": "Icons",
+   "type": "Unofficial",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 27
+  },
+  {
+   "no": 167,
+   "pwc": 176,
+   "section": "Icons",
+   "type": "Editable buttons / icons for interactive documents",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 82
+  },
+  {
+   "no": 168,
+   "pwc": 177,
+   "section": "Icons",
+   "type": "Editable buttons / icons for interactive documents",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 52
+  },
+  {
+   "no": 169,
+   "pwc": 178,
+   "section": "Icons",
+   "type": "Silhouettes",
+   "use": [
+    "icon source",
+    "people",
+    "headcount"
+   ],
+   "picture": true,
+   "objects": 43
+  },
+  {
+   "no": 170,
+   "pwc": 179,
+   "section": "Icons",
+   "type": "Silhouettes",
+   "use": [
+    "icon source",
+    "people",
+    "headcount"
+   ],
+   "picture": false,
+   "objects": 50
+  },
+  {
+   "no": 171,
+   "pwc": 180,
+   "section": "Icons",
+   "type": "Traffic lights",
+   "use": [
+    "icon source",
+    "RAG status"
+   ],
+   "picture": false,
+   "objects": 10
+  },
+  {
+   "no": 172,
+   "pwc": 181,
+   "section": "Icons",
+   "type": "MCBD Hungary spark page",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 3
+  },
+  {
+   "no": 173,
+   "pwc": 182,
+   "section": "Icons",
+   "type": "Network",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 68
+  },
+  {
+   "no": 174,
+   "pwc": 183,
+   "section": "Icons",
+   "type": "City scape",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 15
+  },
+  {
+   "no": 175,
+   "pwc": 184,
+   "section": "Icons",
+   "type": "People",
+   "use": [
+    "icon source",
+    "headcount",
+    "customers"
+   ],
+   "picture": false,
+   "objects": 10
+  },
+  {
+   "no": 176,
+   "pwc": 185,
+   "section": "Icons",
+   "type": "City scape",
+   "use": [
+    "icon source"
+   ],
+   "picture": true,
+   "objects": 33
+  },
+  {
+   "no": 177,
+   "pwc": 186,
+   "section": "Icons",
+   "type": "Sections and percentages",
+   "use": [
+    "mix",
+    "market share",
+    "margin",
+    "icon source",
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 14
+  },
+  {
+   "no": 178,
+   "pwc": 187,
+   "section": "Icons",
+   "type": "Sections and percentages",
+   "use": [
+    "mix",
+    "market share",
+    "margin",
+    "icon source",
+    "pillars",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 80
+  },
+  {
+   "no": 179,
+   "pwc": 188,
+   "section": "Icons",
+   "type": "Doughnut charts",
+   "use": [
+    "mix",
+    "market share",
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 19
+  },
+  {
+   "no": 180,
+   "pwc": 189,
+   "section": "Icons",
+   "type": "List",
+   "use": [
+    "key points",
+    "thesis",
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 6
+  },
+  {
+   "no": 181,
+   "pwc": 190,
+   "section": "Icons",
+   "type": "Segments",
+   "use": [
+    "icon source",
+    "segments"
+   ],
+   "picture": false,
+   "objects": 30
+  },
+  {
+   "no": 182,
+   "pwc": 191,
+   "section": "Icons",
+   "type": "Layers",
+   "use": [
+    "icon source",
+    "layers",
+    "stack"
+   ],
+   "picture": false,
+   "objects": 12
+  },
+  {
+   "no": 183,
+   "pwc": 192,
+   "section": "Icons",
+   "type": "Travel infographic",
+   "use": [
+    "icon source"
+   ],
+   "picture": true,
+   "objects": 2
+  },
+  {
+   "no": 184,
+   "pwc": 193,
+   "section": "Icons",
+   "type": "Rating",
+   "use": [
+    "icon source",
+    "rating",
+    "scoring"
+   ],
+   "picture": false,
+   "objects": 31
+  },
+  {
+   "no": 185,
+   "pwc": 194,
+   "section": "Icons",
+   "type": "Map",
+   "use": [
+    "footprint",
+    "geographic mix",
+    "icon source"
+   ],
+   "picture": true,
+   "objects": 25
+  },
+  {
+   "no": 186,
+   "pwc": 195,
+   "section": "Icons",
+   "type": "Icons in action",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 3
+  },
+  {
+   "no": 187,
+   "pwc": 196,
+   "section": "Icons",
+   "type": "Dice",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 188,
+   "pwc": 197,
+   "section": "Icons",
+   "type": "Hangers",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 189,
+   "pwc": 198,
+   "section": "Icons",
+   "type": "Paint",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 190,
+   "pwc": 199,
+   "section": "Icons",
+   "type": "Circles",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 3
+  },
+  {
+   "no": 191,
+   "pwc": 201,
+   "section": "Audit Pages",
+   "type": "Introduction",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 4
+  },
+  {
+   "no": 192,
+   "pwc": 202,
+   "section": "Audit Pages",
+   "type": "Our new graduate programme",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 193,
+   "pwc": 203,
+   "section": "Audit Pages",
+   "type": "Essential skills",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 194,
+   "pwc": 205,
+   "section": "Audit Pages",
+   "type": "Capturing value",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 17
+  },
+  {
+   "no": 195,
+   "pwc": 206,
+   "section": "Audit Pages",
+   "type": "Identifying audit risk",
+   "use": [
+    "risk map"
+   ],
+   "picture": false,
+   "objects": 2
+  },
+  {
+   "no": 196,
+   "pwc": 207,
+   "section": "Audit Pages",
+   "type": "Risk map",
+   "use": [
+    "footprint",
+    "geographic mix",
+    "risk map"
+   ],
+   "picture": false,
+   "objects": 37
+  },
+  {
+   "no": 197,
+   "pwc": 208,
+   "section": "Audit Pages",
+   "type": "Testing strategy",
+   "use": [
+    "workplan"
+   ],
+   "picture": false,
+   "objects": 1
+  },
+  {
+   "no": 198,
+   "pwc": 209,
+   "section": "Audit Pages",
+   "type": "Illustrative audit scope",
+   "use": [
+    "scope"
+   ],
+   "picture": false,
+   "objects": 23
+  },
+  {
+   "no": 199,
+   "pwc": 216,
+   "section": "Graphic Sets",
+   "type": "Editable graphics",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 66
+  },
+  {
+   "no": 200,
+   "pwc": 217,
+   "section": "Graphic Sets",
+   "type": "Editable graphics",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 21
+  },
+  {
+   "no": 201,
+   "pwc": 218,
+   "section": "Graphic Sets",
+   "type": "Editable graphics",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 23
+  },
+  {
+   "no": 202,
+   "pwc": 219,
+   "section": "Graphic Sets",
+   "type": "Editable graphics",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 11
+  },
+  {
+   "no": 203,
+   "pwc": 220,
+   "section": "Graphic Sets",
+   "type": "Editable graphics",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 35
+  },
+  {
+   "no": 204,
+   "pwc": 221,
+   "section": "Graphic Sets",
+   "type": "Editable graphics",
+   "use": [
+    "icon source"
+   ],
+   "picture": false,
+   "objects": 19
+  },
+  {
+   "no": 205,
+   "pwc": 222,
+   "section": "Graphic Sets",
+   "type": "Icon set",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 88
+  },
+  {
+   "no": 206,
+   "pwc": 223,
+   "section": "Graphic Sets",
+   "type": "Icon set",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 102
+  },
+  {
+   "no": 207,
+   "pwc": 224,
+   "section": "Graphic Sets",
+   "type": "Icon set",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 100
+  },
+  {
+   "no": 208,
+   "pwc": 225,
+   "section": "Graphic Sets",
+   "type": "Icon set",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 100
+  },
+  {
+   "no": 209,
+   "pwc": 226,
+   "section": "Graphic Sets",
+   "type": "Icon set",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 93
+  },
+  {
+   "no": 210,
+   "pwc": 227,
+   "section": "Graphic Sets",
+   "type": "Icon set",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 51
+  },
+  {
+   "no": 211,
+   "pwc": 228,
+   "section": "Graphic Sets",
+   "type": "Icon set",
+   "use": [
+    "general diagram"
+   ],
+   "picture": false,
+   "objects": 65
+  }
+ ]
+}

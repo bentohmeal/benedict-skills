@@ -1,0 +1,40 @@
+{
+  "_note": "Dummy numbers used only to test build_lbo_template.py. They never ship in the blank template.",
+  "case_name": "Project Test – LBO template (test fill)",
+  "case": 1,
+  "historical": {
+    "revenue": [400, 430, 460],
+    "cogs": [240, 256, 272],
+    "opex": [90, 95, 100],
+    "da": [15, 16, 17],
+    "capex": [16, 17, 18],
+    "nwc": [40, 43, 46]
+  },
+  "drivers": {
+    "base":     {"growth": [0.06, 0.06, 0.055, 0.05, 0.05], "gm": [0.41, 0.41, 0.415, 0.415, 0.42],
+                 "opex": [0.215, 0.21, 0.21, 0.205, 0.205], "da": [0.037, 0.037, 0.037, 0.037, 0.037],
+                 "capex": [0.04, 0.04, 0.04, 0.04, 0.04], "nwc": [0.10, 0.10, 0.10, 0.10, 0.10]},
+    "upside":   {"growth": [0.08, 0.08, 0.075, 0.07, 0.07], "gm": [0.415, 0.415, 0.42, 0.42, 0.425],
+                 "opex": [0.21, 0.205, 0.205, 0.2, 0.2], "da": [0.037, 0.037, 0.037, 0.037, 0.037],
+                 "capex": [0.04, 0.04, 0.04, 0.04, 0.04], "nwc": [0.10, 0.10, 0.10, 0.10, 0.10]},
+    "downside": {"growth": [0.0, -0.02, 0.02, 0.03, 0.03], "gm": [0.395, 0.39, 0.395, 0.4, 0.4],
+                 "opex": [0.225, 0.225, 0.22, 0.22, 0.22], "da": [0.037, 0.037, 0.037, 0.037, 0.037],
+                 "capex": [0.045, 0.045, 0.04, 0.04, 0.04], "nwc": [0.11, 0.11, 0.105, 0.105, 0.105]}
+  },
+  "tax_rate": 0.25,
+  "min_cash": 10,
+  "cash_rate": 0.02,
+  "base_rate": [0.04, 0.0375, 0.035, 0.035, 0.035],
+  "rcf": {"commitment": 40, "drawn": 5, "float": 1, "margin": 0.03, "floor": 0.0, "undrawn_fee": 0.005,
+          "fee_pct": 0.01, "fee_years": 5},
+  "tla": {"x_ebitda": 1.5, "float": 1, "margin": 0.03, "floor": 0.005, "fee_pct": 0.015, "fee_years": 5,
+          "amort": [0.10, 0.15, 0.20, 0.25, 0.30], "sweep": 1.0},
+  "tlb": {"x_ebitda": 2.5, "float": 1, "margin": 0.0375, "floor": 0.005, "fee_pct": 0.02, "fee_years": 7,
+          "amort": [0.01, 0.01, 0.01, 0.01, 0.01], "sweep": 0.75},
+  "notes": {"x_ebitda": 1.0, "float": 0, "margin": 0.08, "floor": 0.0, "fee_pct": 0.02, "fee_years": 8,
+            "maturity": 8},
+  "covenants": {"max_net_leverage": [5.5, 5.0, 4.5, 4.0, 3.5], "min_interest_cover": [2.0, 2.25, 2.5, 2.5, 2.75]},
+  "deal": {"entry_multiple": 10.0, "existing_net_debt": 150, "transaction_fee_pct": 0.02, "exit_multiple": 10.0,
+           "exit_cost_pct": 0.015},
+  "steps": {"entry": 0.5, "exit": 0.5, "growth": 0.01, "margin": 0.01}
+}

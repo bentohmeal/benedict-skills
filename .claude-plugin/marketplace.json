@@ -1,0 +1,11 @@
+{
+  "name": "benedict-skills",
+  "owner": { "name": "Benedict Toh" },
+  "plugins": [
+    {
+      "name": "benedict-skills",
+      "source": "./plugins/benedict-skills",
+      "description": "Benedict's personal skills: deal-desk, recruiting-prep, school-work, capabilities."
+    }
+  ]
+}
