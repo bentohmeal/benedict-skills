@@ -1,6 +1,6 @@
 ---
 name: recruiting-prep
-description: "Benedict's interview & application prep engine (IB / PE / private credit). Builds firm dossiers, tailored CVs and cover letters, and firm research on top of a reusable Master Bank of verified answers, and keeps that bank up to date. Use for: preparing for an interview at a firm, 'prep me for <firm>', tailoring a CV or cover letter to a job description, researching a target firm, updating or improving a stored interview answer, and mock interviews. Replaces prep-firm and extract-general. Triggers: /recruiting-prep, 'interview prep', 'prep for <firm>', 'cover letter for <firm>', 'tailor my CV', 'update my answer'."
+description: "Benedict's interview & application prep engine (IB / PE / private credit). Builds firm dossiers, tailored CVs and cover letters, and firm research on top of a reusable Master Bank of verified answers, and keeps that bank up to date. Use for: preparing for an interview at a firm, 'prep me for [firm]', tailoring a CV or cover letter to a job description, researching a target firm, updating or improving a stored interview answer, and mock interviews. Replaces prep-firm and extract-general. Triggers: /recruiting-prep, 'interview prep', 'prep for [firm]', 'cover letter for [firm]', 'tailor my CV', 'update my answer'."
 ---
 
 # Recruiting Prep: Master Bank + Firm Delta
