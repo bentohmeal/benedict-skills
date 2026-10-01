@@ -52,7 +52,9 @@ Y_SRC, Y_BAR, BAR_H = 6.6, 7.06, 0.3      # sources / notes, contents table (flu
 HERE = os.path.dirname(os.path.abspath(__file__))
 ICON_DIR = os.path.join(HERE, "..", "assets", "icons")
 ICON_CACHE = os.path.join(ICON_DIR, "_png")
-LIBRARY = r"C:\Users\user\Documents\Google Drive\Claude Things\output\_Deal Desk Toolkit\Infographic Library.pptx"   # infographic()
+TOOLKIT = os.environ.get("DEAL_DESK_TOOLKIT",
+                         r"C:\Users\user\Documents\Google Drive\Claude Things\output\_Deal Desk Toolkit")
+LIBRARY = os.path.join(TOOLKIT, "Infographic Library.pptx")   # infographic()
 
 # components that count as "visual" layouts for the AI-tells lint (a deck needs some of these)
 VISUAL = {"icon", "stat_icons", "stat_rings", "hero_number", "pictogram", "tam_sam_som", "pill_rows", "side_tabs",

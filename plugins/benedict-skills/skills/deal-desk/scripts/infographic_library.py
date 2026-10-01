@@ -433,10 +433,8 @@ def fit(rng, box):
 
 
 def assemble(tmp, out, meta):
-    import pythoncom
-    import win32com.client as win32
-    pythoncom.CoInitialize()
-    pp = win32.DispatchEx("PowerPoint.Application")
+    from office import _powerpoint, _quit_ppt
+    pp = _powerpoint()
     try:
         src = pp.Presentations.Open(os.path.abspath(tmp), True, False, False)
         dst = pp.Presentations.Open(os.path.abspath(out), False, False, False)
@@ -478,7 +476,7 @@ def assemble(tmp, out, meta):
         dst.Close()
         src.Close()
     finally:
-        pp.Quit()
+        _quit_ppt(pp)
 
 
 HOUSE_SZ = (800, 1000, 1200, 1600, 2000)

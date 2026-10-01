@@ -42,6 +42,33 @@ def _excel():
     return xl
 
 
+def _ppt_running():
+    import subprocess
+    return "POWERPNT.EXE" in subprocess.run(["tasklist", "/FI", "IMAGENAME eq POWERPNT.EXE", "/NH"],
+                                            capture_output=True, text=True).stdout
+
+
+def _powerpoint():
+    """PowerPoint is single-instance: DispatchEx attaches to Benedict's open PowerPoint if there is one. Only an
+    instance this script started is remembered for _quit_ppt() to close (and kill if it lingers)."""
+    pythoncom.CoInitialize()
+    was_running = _ppt_running()
+    pp = win32.DispatchEx("PowerPoint.Application")
+    if not was_running:
+        try:
+            import win32process
+            _PIDS[id(pp)] = win32process.GetWindowThreadProcessId(pp.HWND)[1]
+        except Exception:
+            _PIDS[id(pp)] = None
+    return pp
+
+
+def _quit_ppt(pp):
+    """Close PowerPoint only if _powerpoint() started it; never touch Benedict's own open session."""
+    if id(pp) in _PIDS:
+        _quit(pp)
+
+
 def _quit(app):
     """Quit Excel / PowerPoint, then end the process if COM left it running (hidden instances blocked Benedict's
     Excel from opening files, 2026-09-27)."""
@@ -151,10 +178,9 @@ def datatable(path, table_ref, row_input_ref, col_input_ref):
 
 
 def render(pptx, out_dir, width=1600, height=900):
-    pythoncom.CoInitialize()
     out_dir = _abs(out_dir)
     os.makedirs(out_dir, exist_ok=True)
-    pp = win32.DispatchEx("PowerPoint.Application")
+    pp = _powerpoint()
     files = []
     try:
         pres = pp.Presentations.Open(_abs(pptx), True, False, False)  # ReadOnly, Untitled, WithWindow
@@ -164,7 +190,7 @@ def render(pptx, out_dir, width=1600, height=900):
             files.append(f)
         pres.Close()
     finally:
-        pp.Quit()
+        _quit_ppt(pp)
     print("\n".join(files))
     return files
 
@@ -172,14 +198,13 @@ def render(pptx, out_dir, width=1600, height=900):
 def pdf(src, out):
     src, out = _abs(src), _abs(out)
     if src.lower().endswith((".pptx", ".ppt")):
-        pythoncom.CoInitialize()
-        pp = win32.DispatchEx("PowerPoint.Application")
+        pp = _powerpoint()
         try:
             pres = pp.Presentations.Open(src, True, False, False)
             pres.SaveAs(out, 32)  # ppSaveAsPDF
             pres.Close()
         finally:
-            pp.Quit()
+            _quit_ppt(pp)
     else:
         xl = _excel()
         try:
