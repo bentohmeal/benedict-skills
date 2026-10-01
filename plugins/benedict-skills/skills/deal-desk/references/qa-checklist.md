@@ -19,7 +19,7 @@
 - [ ] **No stale facts:** search for news dated after the newest source (tender results, deals, guidance, rule changes) and update the deck; the SG DC deck missed the Aug 2026 DC-CFA2 awards until QC
 - [ ] **Density:** `save()` prints no `SPARSE`; `office.py density deck.pptx` shows every slide ≥ 0.70 fill, no empty band; the page follows the reference chosen in `slide-layouts.md` → Which reference to use
 - [ ] ib-check-deck's number script groups all % values together: treat its flags as prompts and check each against its source by hand
-- [ ] `save()` printed no LAYOUT WARNING; `office.py render deck.pptx <dir>`, then **look at every PNG**: no overflow, no overlap, nothing cut off, charts readable
+- [ ] `save()` printed no LAYOUT WARNING (this includes `d.layout()` text that won't fit even at 10pt, and slot names that don't exist); no placeholder text ("Text", "[ ]", "Lorem") left on any slide; `office.py render deck.pptx <dir>`, then **look at every PNG**: no overflow, no overlap, nothing cut off, charts readable
 - [ ] `save()` printed no `AI TELL`: no accent-bar cards (thin strip plus pale box, any colour), no two slides in a row with the same body layout, at least one visual layout, at most 2 bullet blocks per slide
 - [ ] The layout plan (slide → message → layout from `slide-layouts.md`) was shown before building
 - [ ] Main header = the contents section (20pt navy); subheader = one line (16pt grey); only 20 / 16 / 12 / 10 sizes, with Sources / Notes on two lines, 8pt italic

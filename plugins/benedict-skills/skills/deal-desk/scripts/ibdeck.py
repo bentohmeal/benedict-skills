@@ -59,11 +59,11 @@ LIBRARY = os.path.join(TOOLKIT, "Infographic Library.pptx")   # infographic()
 # components that count as "visual" layouts for the AI-tells lint (a deck needs some of these)
 VISUAL = {"icon", "stat_icons", "stat_rings", "hero_number", "pictogram", "tam_sam_som", "pill_rows", "side_tabs",
           "chevrons", "timeline", "numbered_steps", "hub_spoke", "pros_cons", "risk_matrix", "harvey", "logo_row",
-          "infographic", "photo"}
+          "infographic", "layout", "photo"}
 CHROME = {"header", "footer", "section_tracker", "takeaway", "icon", "exhibit_takeaway", "pin"}  # not in the layout sig.
 # exhibits: every content slide needs at least one (density standard, lessons #32)
 EXHIBITS = {"table", "fin_table", "heatmap", "column", "bar", "stacked", "line", "fin_chart", "football_field", "photo",
-            "logo_row", "infographic", "timeline", "harvey", "risk_matrix", "tam_sam_som", "stat_rings", "pictogram",
+            "logo_row", "infographic", "layout", "timeline", "harvey", "risk_matrix", "tam_sam_som", "stat_rings", "pictogram",
             "side_tabs"}
 # argument blocks (lessons #35): a thesis pillar = bold claim + evidence -> so what -> implication; a risk / mitigant
 # cell = bold title + 1-2 sentences. Fewer words than this is a bare fact fragment.
@@ -92,6 +92,7 @@ class Deck:
         self.content = []     # slide_ids made with slide()
         self.credits = {}     # slide_id -> image credits, appended to the Sources line by footer()
         self.args = {}        # slide_id -> [(kind, label, words)] for argument blocks (THIN ARGUMENT lint, lessons #35)
+        self.overflow = []    # layout(): slots whose text may not fit, unknown slot names
 
     # ---------- layout helpers ----------
     @property
@@ -1255,15 +1256,24 @@ class Deck:
         index.pdf) into slide s: the original objects (freeforms, groups, tables, charts), scaled into box
         (x, y, w, h in inches; default the whole body). Returns the new shapes; edit their text in place.
         highlight = names of shapes (as in the library, e.g. "IG Oval 12") to fill gold (one per slide)."""
-        import copy
         self._tag(s, f"infographic {no}")      # different library numbers = different layouts
-        path = library or LIBRARY
-        if path not in Deck._libs:
-            Deck._libs[path] = Presentation(path)
-        src = Deck._libs[path].slides[no - 1]
+        src = self._libslide(no, library)
         shapes = [sh for sh in src.shapes if sh.name.startswith("IG ")]
         if not shapes:
             raise ValueError(f"library slide {no} has no infographic shapes")
+        out, _ = self._paste(s, src, shapes, box)
+        self._highlight(out, highlight)
+        return out
+
+    def _libslide(self, no, library=None):
+        path = library or LIBRARY
+        if path not in Deck._libs:
+            Deck._libs[path] = Presentation(path)
+        return Deck._libs[path].slides[no - 1]
+
+    def _paste(self, s, src, shapes, box):
+        """Deep-copy library shapes into slide s, scaled (aspect kept) and centred in box. -> (elements, scale)."""
+        import copy
         x0 = min(sh.left for sh in shapes)
         y0 = min(sh.top for sh in shapes)
         bw_ = max(sh.left + sh.width for sh in shapes) - x0
@@ -1289,6 +1299,10 @@ class Deck:
                     e.set(attr, str(int(int(e.get(attr)) * f)))
             tree.append(el)
             out.append(el)
+        return out, f
+
+    @staticmethod
+    def _highlight(out, highlight):
         if highlight:
             for el in out:
                 for e in el.iter():
@@ -1297,6 +1311,131 @@ class Deck:
                             if clr.getparent().tag == qn("a:solidFill") and clr.getparent().getparent().tag == qn("p:spPr"):
                                 clr.set("val", GOLD)
         return out
+
+    # ---------- layout library (assets/layout_library.json; built by layout_tag.py) ----------
+    _tags = None
+
+    def layout(self, s, lid, variant=1, box=None, data=None, drop=(), highlight=None, library=None):
+        """Place one variant (sub-diagram) of library layout `lid` ("ig045") in box and fill its text slots.
+        data: role lists in slot order, {"head": [...], "text": [...], "num": [...]}, and/or single slots by name,
+        {"head2": "...", "v1.text3": "..."} (slot names: layout_library.json "variants" -> "slots"). A "\\n" in a value
+        starts a new paragraph. Unfilled slots are emptied (bare text boxes deleted), so no placeholder text is left.
+        drop = slot names whose whole shape should go (an optional arm, a spare segment). Text that would overflow its
+        shape steps down 12 -> 10 pt, then is reported as a LAYOUT WARNING by save().
+        Coded components and page recipes (ids without "ig") are called directly: see the record's "call"."""
+        import layout_tag
+        if not lid.startswith("ig"):
+            raise ValueError(f"{lid} is a coded component / page recipe; use its call in assets/layout_library.json")
+        no = int(lid[2:])
+        if Deck._tags is None:
+            Deck._tags = layout_tag._load(layout_tag.TAGS, {}).get("ig", {})
+        src = self._libslide(no, library)
+        vs = layout_tag.variants(src, Deck._tags.get(lid, {}))
+        match = [v for v in vs if v[0] == variant]
+        if not match:
+            raise ValueError(f"{lid} has variants 1-{len(vs)}, not {variant}")
+        _, shapes, _, slots = match[0]
+        self._tag(s, f"layout {lid}.{variant}")
+        out, f = self._paste(s, src, shapes, box)
+        self._highlight(out, highlight)
+        # copied slot shapes, by slot name
+        els = {}
+        for el in out:
+            for e in el.iter(qn("p:cNvPr")):
+                if e.get("name", "").startswith("IG slot:"):
+                    els[e.get("name")[8:]] = e.getparent().getparent()
+        k = variant
+        want = {}
+        for key, val in (data or {}).items():
+            if isinstance(val, (list, tuple)):
+                want.update({f"v{k}.{key}{i}": v for i, v in enumerate(val, 1) if v is not None})
+            else:
+                want[key if key.startswith("v") and "." in key else f"v{k}.{key}"] = val
+        for name in want:
+            if name not in els:
+                self.overflow.append(f"slide {self.n}: {lid} v{k} has no slot {name} "
+                                     f"(slots: {', '.join(n for n, _, _ in slots)})")
+        top = {id(e) for e in out}
+        for name in drop:
+            name = name if "." in name else f"v{k}.{name}"
+            el = els.get(name)
+            while el is not None and id(el) not in top:   # climb to the top-level shape
+                el = el.getparent()
+            if el is not None and el.getparent() is not None:
+                el.getparent().remove(el)
+        for name, sh, b in slots:
+            sp = els.get(name)
+            if sp is None or sp.getparent() is None:
+                continue
+            if name in want:
+                w_in, h_in = (b[2] - b[0]) * f, (b[3] - b[1]) * f
+                self._fill_slot(sp, str(want[name]), w_in, h_in, f"slide {self.n}: {lid} {name}")
+            elif id(sp) in top and not layout_tag._filled(sh):
+                sp.getparent().remove(sp)                   # spare annotation text box
+            else:
+                self._fill_slot(sp, "", 1, 1, "")
+        return out
+
+    def _fill_slot(self, sp, text, w_in, h_in, where):
+        """Replace a copied shape's text, keeping its first run's formatting; shrink to fit, else note an overflow."""
+        import copy
+        from lxml import etree
+        tb = sp.find(qn("p:txBody"))
+        if tb is None:
+            return
+        paras = tb.findall(qn("a:p"))
+        p0 = paras[0]
+        ppr = p0.find(qn("a:pPr"))
+        rpr = next((r.find(qn("a:rPr")) for r in p0.iter(qn("a:r")) if r.find(qn("a:rPr")) is not None), None)
+        orig = "\n".join("".join(t.text or "" for t in p.iter(qn("a:t"))) for p in paras)
+        for p in paras:
+            tb.remove(p)
+        size = int(rpr.get("sz")) / 100 if rpr is not None and rpr.get("sz") else F_BODY
+        bpr = tb.find(qn("a:bodyPr"))
+        nowrap = bpr is not None and bpr.get("wrap") == "none"
+        ins = (int(bpr.get("lIns", 91440)) + int(bpr.get("rIns", 91440))) / 914400 if bpr is not None else 0.2
+        # capacity = what the shape is drawn to hold (its height) or what the original placeholder held, if more
+        cap = max(self._lines(orig, size, w_in - ins, nowrap) or 1, int((h_in * 1.1 + 0.05) / (size * 1.2 / 72)))
+
+        def fits(z):
+            n = self._lines(text, z, w_in - ins, nowrap)
+            return n is not None and n * z <= cap * size
+        if text and size > 10:   # step down (to 12, then 10) until the text fits the shape
+            for cand in [size] + [z for z in (12, 10) if z < size]:
+                size = cand
+                if fits(cand):
+                    break
+        if text and not fits(size):
+            self.overflow.append(f"{where}: text may overflow ({len(text)} chars in {w_in:.1f} x {h_in:.1f} in)")
+        for line in text.split("\n"):
+            p = etree.SubElement(tb, qn("a:p"))
+            if ppr is not None:
+                p.append(copy.deepcopy(ppr))
+            if line:
+                r = etree.SubElement(p, qn("a:r"))
+                rp = copy.deepcopy(rpr) if rpr is not None else etree.Element(qn("a:rPr"))
+                rp.set("sz", str(int(size * 100)))
+                r.append(rp)
+                etree.SubElement(r, qn("a:t")).text = line
+
+    @staticmethod
+    def _lines(text, size, usable, nowrap=False):
+        """Rough Arial word-wrap line count (average glyph 0.5 em); None when one word is wider than the shape."""
+        if nowrap:
+            return len(text.split("\n"))
+        cw, usable, lines = size * 0.5 / 72, max(usable, 0.1), 0
+        for para in text.split("\n"):
+            n, cur = 1, 0.0
+            for word in para.split():
+                ww = len(word) * cw
+                if ww > usable * 1.15:
+                    return None
+                if cur and cur + cw + ww > usable:
+                    n, cur = n + 1, ww
+                else:
+                    cur += (cw if cur else 0) + ww
+            lines += n
+        return lines
 
     @staticmethod
     def _relink(el, src_part, dst_part):
@@ -1371,6 +1510,7 @@ class Deck:
                     continue
                 if bottom > BOTTOM + 0.05 or right > W - R_ + 0.05:
                     issues.append(f"slide {i}: '{shp.name}' ends at {bottom:.2f}in down / {right:.2f}in across")
+        issues += self.overflow
         for msg in issues:
             print("LAYOUT WARNING:", msg)
         tells = self.tells()

@@ -1,0 +1,3631 @@
+{
+ "ig": {
+  "ig001": {
+   "name": "Circular arrow loops",
+   "data_type": "cycle",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "A loop with no text inside (flywheel, recurring revenue, recycling); label the stages beside it",
+   "dont_use_when": "Stages that need text inside the shapes (use ig002 v3 or the cycles 20-28)",
+   "items": [
+    3,
+    6
+   ],
+   "crops": [
+    [
+     1.5,
+     1.4,
+     3.55,
+     3.5
+    ],
+    [
+     3.75,
+     1.4,
+     5.8,
+     3.5
+    ],
+    [
+     6.1,
+     1.4,
+     8.15,
+     3.5
+    ],
+    [
+     9.7,
+     1.3,
+     11.75,
+     3.55
+    ],
+    [
+     1.5,
+     4.3,
+     3.55,
+     6.35
+    ],
+    [
+     3.7,
+     4.3,
+     5.75,
+     6.35
+    ],
+    [
+     6.1,
+     4.4,
+     8.3,
+     6.55
+    ],
+    [
+     8.05,
+     2.85,
+     10.0,
+     4.8
+    ],
+    [
+     9.78,
+     4.15,
+     11.8,
+     6.2
+    ]
+   ],
+   "variant_items": {
+    "1": 3,
+    "2": 4,
+    "3": 2,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 3,
+    "8": 2,
+    "9": 4
+   }
+  },
+  "ig002": {
+   "name": "Four-arrow operating loop",
+   "data_type": "cycle",
+   "sections": [
+    "company",
+    "process",
+    "thesis"
+   ],
+   "use_when": "A 4-stage repeating loop with a one-word label inside each arrow (plan, analyse, control, track)",
+   "dont_use_when": "Stages that need a sentence each; more or fewer than 4 stages (v1/v2/v4 are small text-free loops)",
+   "items": [
+    3,
+    4
+   ],
+   "order": "clockwise"
+  },
+  "ig003": {
+   "name": "Curved arrow shapes",
+   "kind": "icon_set",
+   "use_when": "Icon / arrow shapes to copy into another layout",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig004": {
+   "name": "Square arrows: converge, diverge, loop",
+   "data_type": "process",
+   "sections": [
+    "process",
+    "thesis"
+   ],
+   "use_when": "Four forces pushing in (converge) or out (diverge), a square 4-step loop, or a short 3-chevron flow",
+   "dont_use_when": "Steps that need text inside (use chevrons or ig101-107)",
+   "items": [
+    3,
+    4
+   ]
+  },
+  "ig005": {
+   "name": "2x2 notched quadrant / merging streams",
+   "data_type": "matrix",
+   "sections": [
+    "thesis",
+    "company",
+    "process"
+   ],
+   "use_when": "Four text blocks in a 2x2 (strengths / weaknesses style), or two streams merging into one (a merger)",
+   "dont_use_when": "Long text per quadrant; a real 2x2 with axes (use harvey or a table)",
+   "items": [
+    2,
+    4
+   ]
+  },
+  "ig006": {
+   "name": "Chevron-topped columns",
+   "data_type": "list",
+   "sections": [
+    "process",
+    "thesis",
+    "risks"
+   ],
+   "use_when": "5-6 parallel workstreams or pillars, each a title plus 3 bullets; or a risks vs opportunities two-panel",
+   "dont_use_when": "A sequence where order matters (use chevrons)",
+   "items": [
+    2,
+    6
+   ]
+  },
+  "ig007": {
+   "name": "Clock: four-step cycle",
+   "data_type": "cycle",
+   "sections": [
+    "process",
+    "company"
+   ],
+   "use_when": "A 4-step quarterly or annual cycle (budget, review, report...), each step with a heading and 2-line text",
+   "dont_use_when": "Steps not tied to a calendar; more than 4 steps",
+   "items": [
+    4,
+    4
+   ],
+   "order": "clockwise"
+  },
+  "ig008": {
+   "name": "Four inputs to one outcome",
+   "data_type": "relationship",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "Four numbered drivers (heading + 2-line text) feeding one central result",
+   "dont_use_when": "Drivers with no shared outcome (use stat_icons)",
+   "items": [
+    4,
+    4
+   ],
+   "order": "clockwise"
+  },
+  "ig009": {
+   "name": "Venn diagrams (2-4 circles)",
+   "data_type": "relationship",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "Overlap, strategic fit or synergies between 2-4 businesses or capabilities",
+   "dont_use_when": "Parts that do not overlap (use pie sections or pill_rows)",
+   "items": [
+    2,
+    4
+   ]
+  },
+  "ig010": {
+   "name": "Four-ellipse Venn with % values",
+   "data_type": "relationship",
+   "sections": [
+    "market",
+    "company"
+   ],
+   "use_when": "Overlap shares between 4 customer groups or products, % in each region",
+   "dont_use_when": "Fewer than 4 sets (use ig009)",
+   "items": [
+    4,
+    4
+   ],
+   "numbers": true
+  },
+  "ig011": {
+   "name": "Concentric rings and quadrant discs",
+   "data_type": "hierarchy",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "Core-to-periphery layers (core business, adjacencies, new markets) or 4 equal quadrants; label beside",
+   "dont_use_when": "Real proportions (use stat_rings or a chart)",
+   "items": [
+    2,
+    4
+   ]
+  },
+  "ig012": {
+   "name": "Pie sections (2-12 equal slices)",
+   "data_type": "composition",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "A numbered split into 2-12 equal parts with labels beside (segments, product lines)",
+   "dont_use_when": "Real proportions (use stacked or stat_rings); the pies are one group, so delete the counts you don't need",
+   "items": [
+    2,
+    12
+   ],
+   "numbers": true
+  },
+  "ig013": {
+   "name": "16-part wheel with outer ring",
+   "data_type": "composition",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "12-16 parts around a core (a portfolio of assets, a product range) with short labels in the segments",
+   "dont_use_when": "Fewer than 8 parts (use ig015 or ig019)",
+   "items": [
+    12,
+    16
+   ],
+   "order": "clockwise"
+  },
+  "ig014": {
+   "name": "Phase wheels (3-7 segments)",
+   "data_type": "cycle",
+   "sections": [
+    "company",
+    "process"
+   ],
+   "use_when": "3-7 components or phases around a central title, 1-3 words per segment",
+   "dont_use_when": "Segments that need sentences (use ig019 or ig036)",
+   "items": [
+    3,
+    7
+   ],
+   "order": "clockwise",
+   "crops": [
+    [
+     1.4,
+     1.5,
+     4.0,
+     3.95
+    ],
+    [
+     4.8,
+     1.5,
+     7.4,
+     3.95
+    ],
+    [
+     8.1,
+     1.5,
+     10.7,
+     3.95
+    ],
+    [
+     3.2,
+     4.1,
+     5.9,
+     6.4
+    ],
+    [
+     6.6,
+     4.1,
+     9.3,
+     6.4
+    ]
+   ],
+   "variant_items": {
+    "1": 3,
+    "2": 4,
+    "3": 5,
+    "4": 6,
+    "5": 7
+   }
+  },
+  "ig015": {
+   "name": "Five-section wheel with centre",
+   "data_type": "composition",
+   "sections": [
+    "company",
+    "thesis"
+   ],
+   "use_when": "Five business pillars or segments around a centre theme, one short line in each segment (v3)",
+   "dont_use_when": "Numbers per segment (use ig019 with numbered bubbles); v1-v7 are text-free 2-8 part rings",
+   "items": [
+    2,
+    8
+   ],
+   "order": "clockwise"
+  },
+  "ig016": {
+   "name": "Sectioned rings with arrows",
+   "data_type": "cycle",
+   "sections": [
+    "company",
+    "process"
+   ],
+   "use_when": "A continuous loop of 2-6 stages; text-free, label the stages beside it",
+   "dont_use_when": "Stages that need text inside",
+   "items": [
+    2,
+    6
+   ]
+  },
+  "ig017": {
+   "name": "Five-part arrow wheel and pinwheel",
+   "data_type": "cycle",
+   "sections": [
+    "company",
+    "thesis"
+   ],
+   "use_when": "A 5-step value cycle with 1-2 words per segment, or 4 quadrants with ring labels",
+   "dont_use_when": "Long text per step",
+   "items": [
+    4,
+    5
+   ],
+   "order": "clockwise"
+  },
+  "ig018": {
+   "name": "Numbered seven-part wheel",
+   "data_type": "composition",
+   "sections": [
+    "company",
+    "process"
+   ],
+   "use_when": "Up to 7 numbered parts around a wheel, explained in a list beside it",
+   "dont_use_when": "Text inside the segments",
+   "items": [
+    2,
+    8
+   ],
+   "numbers": true,
+   "order": "clockwise"
+  },
+  "ig019": {
+   "name": "Five pillars around a goal",
+   "data_type": "cycle",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "Five numbered strategic pillars around a central goal, one line of text in each segment",
+   "dont_use_when": "Pillars needing more than ~8 words (use side_tabs)",
+   "items": [
+    3,
+    8
+   ],
+   "order": "clockwise"
+  },
+  "ig020": {
+   "name": "Three-part ring around a globe",
+   "data_type": "cycle",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "A global 3-stage loop (source, make, distribute) with labels on the ring",
+   "dont_use_when": "Local / single-country stories",
+   "items": [
+    3,
+    3
+   ],
+   "order": "clockwise"
+  },
+  "ig021": {
+   "name": "Three arrows around a globe; progress rings",
+   "data_type": "cycle",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "A global loop of 3 stages (v2); progress rings 1/6 to 6/6 (v1) for completion status",
+   "dont_use_when": "Stages that need sentences",
+   "items": [
+    3,
+    6
+   ],
+   "order": "clockwise"
+  },
+  "ig022": {
+   "name": "Core radiating into four segments",
+   "data_type": "relationship",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "One core offering serving 4 markets or segments, labels on the ring (v3)",
+   "dont_use_when": "Unrelated segments",
+   "items": [
+    4,
+    4
+   ],
+   "order": "clockwise"
+  },
+  "ig023": {
+   "name": "Three-part ring with globe; progress donuts",
+   "data_type": "composition",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "A 3-way global split around a globe (v3)",
+   "dont_use_when": "Exact proportions (use stat_rings)",
+   "items": [
+    3,
+    3
+   ]
+  },
+  "ig024": {
+   "name": "Circular icon layouts",
+   "kind": "icon_set",
+   "use_when": "Icon / arrow shapes to copy into another layout",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig025": {
+   "name": "Six-segment wheel; entry into a loop",
+   "data_type": "cycle",
+   "sections": [
+    "company",
+    "thesis"
+   ],
+   "use_when": "A 6-part wheel with labels on the segments (v1), or an entry arrow feeding a recurring loop (v2)",
+   "dont_use_when": "More than 6 stages",
+   "items": [
+    3,
+    6
+   ],
+   "order": "clockwise"
+  },
+  "ig026": {
+   "name": "M&A deal cycle",
+   "data_type": "process",
+   "sections": [
+    "process"
+   ],
+   "use_when": "The deal lifecycle: strategy, due diligence, financing, execution, post-deal integration (v2); a 4-arc loop (v1)",
+   "dont_use_when": "A deal timetable with dates (use timeline)",
+   "items": [
+    4,
+    8
+   ],
+   "order": "clockwise"
+  },
+  "ig027": {
+   "name": "Entry arrow into a four-step cycle",
+   "data_type": "cycle",
+   "sections": [
+    "thesis",
+    "returns"
+   ],
+   "use_when": "Capital entering a repeating cycle (invest, grow, harvest, reinvest), short labels",
+   "dont_use_when": "One-off sequences (use chevrons)",
+   "items": [
+    4,
+    5
+   ],
+   "order": "clockwise",
+   "crops": [
+    [
+     1.0,
+     1.3,
+     6.4,
+     6.6
+    ],
+    [
+     6.4,
+     1.3,
+     12.0,
+     6.6
+    ]
+   ]
+  },
+  "ig028": {
+   "name": "Twelve-step lifecycle with text blocks",
+   "data_type": "process",
+   "sections": [
+    "process",
+    "company"
+   ],
+   "use_when": "A detailed 8-12 step lifecycle with a header and text block per step (dense one-page process)",
+   "dont_use_when": "Fewer than 6 steps (use chevrons)",
+   "items": [
+    8,
+    12
+   ],
+   "order": "clockwise"
+  },
+  "ig029": {
+   "name": "Hubs with radiating arms",
+   "data_type": "relationship",
+   "sections": [
+    "company"
+   ],
+   "use_when": "A centre splitting into 3-4 outputs or channels, short labels on each arm",
+   "dont_use_when": "A sequence",
+   "items": [
+    3,
+    4
+   ]
+  },
+  "ig030": {
+   "name": "Three stakeholders around a shared centre",
+   "data_type": "relationship",
+   "sections": [
+    "company",
+    "thesis"
+   ],
+   "use_when": "Three parties or values converging on one shared centre (company, employer, assignees; values triangle)",
+   "dont_use_when": "More than 3 parties (use hub_spoke)",
+   "items": [
+    3,
+    3
+   ]
+  },
+  "ig031": {
+   "name": "Target operating model",
+   "data_type": "relationship",
+   "sections": [
+    "company"
+   ],
+   "use_when": "Operating model: functions across the top, geographies below, the target model in the centre",
+   "dont_use_when": "Simple org charts (use ig071-073 pyramids or a table)",
+   "items": [
+    4,
+    8
+   ]
+  },
+  "ig032": {
+   "name": "Core with three satellites; quadrant disc",
+   "data_type": "relationship",
+   "sections": [
+    "company",
+    "thesis"
+   ],
+   "use_when": "A core with 3 linked satellites (v2) or 4 quadrants with ring labels (v1)",
+   "dont_use_when": "Sequences",
+   "items": [
+    3,
+    4
+   ],
+   "order": "clockwise"
+  },
+  "ig033": {
+   "name": "Quadrants with circular arrows; spiral",
+   "data_type": "cycle",
+   "sections": [
+    "company"
+   ],
+   "use_when": "Four stages of a loop set in quadrants, short labels",
+   "dont_use_when": "Long text",
+   "items": [
+    4,
+    4
+   ],
+   "order": "clockwise"
+  },
+  "ig034": {
+   "name": "Quadrant background with central loop",
+   "data_type": "matrix",
+   "sections": [
+    "company",
+    "thesis"
+   ],
+   "use_when": "Four corner labels around a 4-part central loop",
+   "dont_use_when": "Text-heavy quadrants (use ig005)",
+   "items": [
+    4,
+    4
+   ],
+   "order": "clockwise"
+  },
+  "ig035": {
+   "name": "Quadrant pie in arrows; 12-part wheel",
+   "data_type": "cycle",
+   "sections": [
+    "company",
+    "process"
+   ],
+   "use_when": "Four quadrants inside a loop of arrows (v1) or a 12-part wheel with ring text (v2)",
+   "dont_use_when": "Long text",
+   "items": [
+    4,
+    12
+   ],
+   "order": "clockwise",
+   "crops": [
+    [
+     1.0,
+     1.3,
+     6.3,
+     6.6
+    ],
+    [
+     6.3,
+     1.3,
+     12.0,
+     6.6
+    ]
+   ]
+  },
+  "ig036": {
+   "name": "Interlocking numbered pillars with icons",
+   "data_type": "relationship",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "3 (v1) or 4 (v2) numbered pillars, each with icon, heading and 2-line text, around a central heading",
+   "dont_use_when": "Pillars needing argued paragraphs (use side_tabs)",
+   "items": [
+    3,
+    4
+   ],
+   "order": "clockwise",
+   "crops": [
+    [
+     1.0,
+     1.3,
+     6.6,
+     6.6
+    ],
+    [
+     6.6,
+     1.3,
+     12.0,
+     6.6
+    ]
+   ],
+   "variant_items": {
+    "1": 3,
+    "2": 4
+   }
+  },
+  "ig037": {
+   "name": "Four numbered bubbles around a hub",
+   "data_type": "list",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "4 numbered themes, each a title plus ~25 words, of unequal weight (bubble sizes differ)",
+   "dont_use_when": "Equal-weight items (use ig036 or stat_icons)",
+   "items": [
+    4,
+    4
+   ],
+   "order": "clockwise"
+  },
+  "ig038": {
+   "name": "Layered target wheel; nested rings with arrows",
+   "data_type": "hierarchy",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "Layers from core to edge, 4 quadrants x 3 rings with short labels (v1), or nested rings around a two-way flow (v2)",
+   "dont_use_when": "Sentences per segment",
+   "items": [
+    4,
+    8
+   ]
+  },
+  "ig039": {
+   "name": "Four-section ring with bullet corners",
+   "data_type": "list",
+   "sections": [
+    "company",
+    "thesis"
+   ],
+   "use_when": "Four sections around a centre, each with a title on the ring and 4 bullets in its corner",
+   "dont_use_when": "More than 4 sections",
+   "items": [
+    4,
+    4
+   ],
+   "order": "clockwise"
+  },
+  "ig040": {
+   "name": "Four-quadrant ring with corner text",
+   "data_type": "matrix",
+   "sections": [
+    "company",
+    "thesis"
+   ],
+   "use_when": "Four themes on a ring with a short phrase each and a longer note in each corner",
+   "dont_use_when": "Long bullet lists (use ig039)",
+   "items": [
+    4,
+    4
+   ],
+   "order": "clockwise"
+  },
+  "ig041": {
+   "name": "Arrow wheel with icons; four numbered dials",
+   "data_type": "process",
+   "sections": [
+    "process",
+    "company"
+   ],
+   "use_when": "6 steps with icon, heading and short text around a wheel plus a heading/paragraph (v1); 4 numbered steps as dials (v2)",
+   "dont_use_when": "More than 6 steps",
+   "items": [
+    4,
+    6
+   ],
+   "order": "clockwise",
+   "crops": [
+    [
+     1.4,
+     1.3,
+     6.6,
+     6.6
+    ],
+    [
+     6.6,
+     1.3,
+     12.0,
+     6.6
+    ]
+   ]
+  },
+  "ig042": {
+   "name": "Six-section wheel with bullet panels",
+   "data_type": "list",
+   "sections": [
+    "company",
+    "thesis"
+   ],
+   "use_when": "6 sections on a wheel, each with a title, and bullet panels left and right explaining them",
+   "dont_use_when": "Fewer than 5 sections (use ig039)",
+   "items": [
+    5,
+    6
+   ],
+   "order": "clockwise",
+   "crops": [
+    [
+     1.0,
+     1.3,
+     12.4,
+     6.6
+    ]
+   ]
+  },
+  "ig043": {
+   "name": "Six pillars of success with risk text",
+   "data_type": "list",
+   "sections": [
+    "risks",
+    "thesis",
+    "process"
+   ],
+   "use_when": "6 pillars around a goal, each with a 4-5 bullet text block (risk areas, success factors)",
+   "dont_use_when": "Fewer than 6 pillars",
+   "items": [
+    6,
+    6
+   ],
+   "order": "clockwise"
+  },
+  "ig044": {
+   "name": "Seven and six-part ringed wheels",
+   "data_type": "composition",
+   "sections": [
+    "company"
+   ],
+   "use_when": "6 (v2) or 7 (v1) labelled segments around a numbered or titled centre",
+   "dont_use_when": "Long text",
+   "items": [
+    6,
+    7
+   ],
+   "order": "clockwise",
+   "crops": [
+    [
+     1.0,
+     1.3,
+     6.2,
+     6.6
+    ],
+    [
+     6.2,
+     1.3,
+     12.0,
+     6.6
+    ]
+   ]
+  },
+  "ig045": {
+   "name": "Seven petals with icons",
+   "data_type": "composition",
+   "sections": [
+    "company",
+    "thesis"
+   ],
+   "use_when": "7 offerings or values around a central heading, each with icon, title and ~20 words",
+   "dont_use_when": "Fewer than 6 items",
+   "items": [
+    7,
+    7
+   ],
+   "order": "clockwise"
+  },
+  "ig046": {
+   "name": "Eight and nine-petal star wheels",
+   "data_type": "composition",
+   "sections": [
+    "company"
+   ],
+   "use_when": "8-9 numbered parts around a centre, one word each",
+   "dont_use_when": "Text-heavy items",
+   "items": [
+    8,
+    9
+   ],
+   "order": "clockwise",
+   "crops": [
+    [
+     1.0,
+     1.4,
+     6.0,
+     6.6
+    ],
+    [
+     6.0,
+     1.4,
+     12.0,
+     6.6
+    ]
+   ],
+   "variant_items": {
+    "1": 8,
+    "2": 9
+   }
+  },
+  "ig047": {
+   "name": "Nested ring cycles",
+   "data_type": "cycle",
+   "sections": [
+    "company",
+    "process"
+   ],
+   "use_when": "A loop of 3-4 stages inside an outer ring of themes, short labels on the ring",
+   "dont_use_when": "Sentences",
+   "items": [
+    3,
+    4
+   ],
+   "order": "clockwise"
+  },
+  "ig048": {
+   "name": "Three-level sunburst",
+   "data_type": "hierarchy",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "A 3-level breakdown (group, division, product) as a sunburst with short labels",
+   "dont_use_when": "Real proportions (use a chart)",
+   "items": [
+    6,
+    16
+   ]
+  },
+  "ig049": {
+   "name": "Ring of 12 labelled points; ringed 12-part wheel",
+   "data_type": "cycle",
+   "sections": [
+    "company",
+    "process"
+   ],
+   "use_when": "12 short items around a centre (months, product lines, process points), one or two words each",
+   "dont_use_when": "Fewer than 8 items",
+   "items": [
+    8,
+    12
+   ],
+   "order": "clockwise",
+   "crops": [
+    [
+     1.0,
+     1.4,
+     6.0,
+     6.6
+    ],
+    [
+     6.0,
+     1.4,
+     12.0,
+     6.6
+    ]
+   ]
+  },
+  "ig050": {
+   "name": "Eight-spoke star; arrows around a core",
+   "data_type": "relationship",
+   "sections": [
+    "company"
+   ],
+   "use_when": "8 short items radiating from a numbered core (v1), or 4-5 arrows circling a core value (v2)",
+   "dont_use_when": "Text longer than 3 words",
+   "items": [
+    4,
+    8
+   ],
+   "order": "clockwise"
+  },
+  "ig051": {
+   "name": "Team wheel (core team and partners)",
+   "data_type": "hierarchy",
+   "sections": [
+    "company",
+    "process"
+   ],
+   "use_when": "A deal or advisory team: core team in the centre, names and titles around, senior partners on the arcs",
+   "dont_use_when": "Org charts with reporting lines (use ig071-073 or a table)",
+   "items": [
+    6,
+    24
+   ]
+  },
+  "ig052": {
+   "name": "Main heading with six bubbles and side text",
+   "data_type": "list",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "6-8 themes around a main heading, each with a short heading on the bubble and ~30 words of text outside",
+   "dont_use_when": "Fewer than 5 themes (use ig036/ig039)",
+   "items": [
+    6,
+    8
+   ],
+   "order": "clockwise"
+  },
+  "ig053": {
+   "name": "Eight-node flower around a title",
+   "data_type": "composition",
+   "sections": [
+    "company"
+   ],
+   "use_when": "8 short items around one title (product lines, markets)",
+   "dont_use_when": "Text longer than 2 words",
+   "items": [
+    6,
+    8
+   ],
+   "order": "clockwise"
+  },
+  "ig054": {
+   "name": "One central solution with 10 bands",
+   "data_type": "relationship",
+   "sections": [
+    "company"
+   ],
+   "use_when": "One platform serving 8-10 named services or modules, listed in bands left and right",
+   "dont_use_when": "Unrelated items (use pill_rows)",
+   "items": [
+    8,
+    10
+   ]
+  },
+  "ig055": {
+   "name": "Concentric bubbles of client value",
+   "data_type": "hierarchy",
+   "sections": [
+    "company",
+    "thesis"
+   ],
+   "use_when": "A value proposition: a core statement, inner ring of 6-8 strengths, outer ring of 6-8 outcomes, 2-4 words each",
+   "dont_use_when": "Fewer than 6 items",
+   "items": [
+    8,
+    16
+   ]
+  },
+  "ig056": {
+   "name": "Labelled sunburst around a core",
+   "data_type": "composition",
+   "sections": [
+    "company",
+    "risks"
+   ],
+   "use_when": "A capability or risk universe: 12-16 labelled segments around a core function (e.g. IT assurance, internal audit)",
+   "dont_use_when": "Fewer than 8 segments",
+   "items": [
+    12,
+    16
+   ],
+   "crops": [
+    [
+     1.0,
+     1.3,
+     6.6,
+     6.6
+    ],
+    [
+     6.6,
+     1.3,
+     12.0,
+     6.6
+    ]
+   ]
+  },
+  "ig057": {
+   "name": "Speedometer gauges (%)",
+   "data_type": "kpi_set",
+   "sections": [
+    "company",
+    "financials",
+    "thesis"
+   ],
+   "use_when": "1-3 percentage scores shown as gauges (utilisation, occupancy, margin vs target)",
+   "dont_use_when": "Values with no natural 0-100 scale",
+   "items": [
+    1,
+    3
+   ],
+   "numbers": true
+  },
+  "ig058": {
+   "name": "Large speedometer with average",
+   "data_type": "kpi_set",
+   "sections": [
+    "company",
+    "financials"
+   ],
+   "use_when": "One headline score on a 0-100 scale with an average (customer score, utilisation)",
+   "dont_use_when": "Several KPIs (use ig057)",
+   "items": [
+    1,
+    1
+   ],
+   "numbers": true,
+   "crops": [
+    [
+     1.0,
+     1.4,
+     6.8,
+     6.6
+    ]
+   ]
+  },
+  "ig059": {
+   "name": "Radial heat map",
+   "data_type": "matrix",
+   "sections": [
+    "risks",
+    "company"
+   ],
+   "use_when": "Scores for 6-8 areas on a radial scale (maturity or risk assessment by area)",
+   "dont_use_when": "Exact values (use heatmap)",
+   "items": [
+    6,
+    8
+   ],
+   "crops": [
+    [
+     2.0,
+     1.4,
+     8.0,
+     6.6
+    ]
+   ]
+  },
+  "ig060": {
+   "name": "Circular bar chart (target vs current)",
+   "data_type": "comparison",
+   "sections": [
+    "company",
+    "financials"
+   ],
+   "use_when": "Target vs current scores across 10-20 areas in one compact radial chart",
+   "dont_use_when": "Few data points (use bar)",
+   "items": [
+    10,
+    20
+   ],
+   "numbers": true
+  },
+  "ig061": {
+   "name": "Four-quadrant stacked ring of % bars",
+   "data_type": "comparison",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "4 categories, each with up to 10 stacked % rings (survey results by region or segment)",
+   "dont_use_when": "One simple split (use stat_rings)",
+   "items": [
+    4,
+    4
+   ],
+   "numbers": true
+  },
+  "ig062": {
+   "name": "Alphabet wheel with % markers",
+   "data_type": "composition",
+   "sections": [
+    "market"
+   ],
+   "use_when": "A share split across up to 26 small categories with % markers around the rim",
+   "dont_use_when": "Fewer than 10 categories",
+   "items": [
+    10,
+    26
+   ],
+   "numbers": true
+  },
+  "ig063": {
+   "name": "Three donuts with % segments",
+   "data_type": "composition",
+   "sections": [
+    "financials",
+    "company",
+    "market"
+   ],
+   "use_when": "Mix by category for 3 entities or years (revenue mix, cost mix), with a shared legend",
+   "dont_use_when": "More than 4 segments each (use stacked)",
+   "items": [
+    3,
+    3
+   ],
+   "numbers": true,
+   "crops": [
+    [
+     1.0,
+     1.4,
+     12.5,
+     6.6
+    ]
+   ]
+  },
+  "ig064": {
+   "name": "Three % rings with captions",
+   "data_type": "kpi_set",
+   "sections": [
+    "company",
+    "market",
+    "thesis"
+   ],
+   "use_when": "3 headline percentages, each with a one-line caption (survey answers, adoption rates)",
+   "dont_use_when": "Numbers that are not shares of a whole",
+   "items": [
+    3,
+    3
+   ],
+   "numbers": true,
+   "crops": [
+    [
+     0.3,
+     1.6,
+     12.6,
+     6.6
+    ]
+   ]
+  },
+  "ig065": {
+   "name": "Arc bars by country (3 questions)",
+   "data_type": "comparison",
+   "sections": [
+    "market"
+   ],
+   "use_when": "Survey or market results: 3 questions x 4 countries as arcs with % values",
+   "dont_use_when": "Exact comparisons (use bar)",
+   "items": [
+    3,
+    4
+   ],
+   "numbers": true,
+   "crops": [
+    [
+     1.0,
+     1.4,
+     12.0,
+     6.6
+    ]
+   ]
+  },
+  "ig066": {
+   "name": "Spiral ranking of scores",
+   "data_type": "comparison",
+   "sections": [
+    "market",
+    "company"
+   ],
+   "use_when": "A ranked list of 6-9 items with scores, drawn as concentric arcs",
+   "dont_use_when": "Values that need precise reading (use bar)",
+   "items": [
+    6,
+    9
+   ],
+   "numbers": true
+  },
+  "ig067": {
+   "name": "Year-on-year spiral arcs",
+   "data_type": "comparison",
+   "sections": [
+    "financials",
+    "market"
+   ],
+   "use_when": "Two years compared as concentric arcs (2011 vs 2012)",
+   "dont_use_when": "More than 2 periods (use column)",
+   "items": [
+    2,
+    2
+   ],
+   "numbers": true
+  },
+  "ig068": {
+   "name": "Odds bubbles (risk ratios)",
+   "data_type": "comparison",
+   "sections": [
+    "risks"
+   ],
+   "use_when": "Likelihood ratios for 2-3 scenarios shown as bubbles on a line",
+   "dont_use_when": "Ordinary % data",
+   "items": [
+    2,
+    4
+   ],
+   "numbers": true,
+   "crops": [
+    [
+     1.0,
+     1.4,
+     9.0,
+     6.8
+    ]
+   ]
+  },
+  "ig069": {
+   "name": "Radar screen (positioning arcs)",
+   "data_type": "matrix",
+   "sections": [
+    "market",
+    "thesis"
+   ],
+   "use_when": "Positioning 3-6 players or opportunities on a semicircle by segment and distance from the centre (priority)",
+   "dont_use_when": "Exact values",
+   "items": [
+    3,
+    6
+   ]
+  },
+  "ig070": {
+   "name": "Hub of measure bars by risk area",
+   "data_type": "kpi_set",
+   "sections": [
+    "risks",
+    "company"
+   ],
+   "use_when": "Scores for 10-16 areas grouped into 3-4 themes around an identify/measure/manage/monitor hub",
+   "dont_use_when": "Fewer than 8 areas",
+   "items": [
+    10,
+    16
+   ],
+   "numbers": true
+  },
+  "ig071": {
+   "name": "Pyramids (3-4 levels)",
+   "data_type": "hierarchy",
+   "sections": [
+    "company",
+    "market",
+    "structure"
+   ],
+   "use_when": "3-4 tiers from base to top (customer tiers, capital structure, Maslow-style priorities), short label per tier",
+   "dont_use_when": "Tiers that need sentences (use ig072)",
+   "items": [
+    3,
+    4
+   ],
+   "crops": [
+    [
+     1.2,
+     2.0,
+     3.9,
+     4.3
+    ],
+    [
+     6.4,
+     1.9,
+     9.3,
+     4.3
+    ],
+    [
+     9.3,
+     1.9,
+     12.0,
+     4.25
+    ],
+    [
+     3.4,
+     2.9,
+     7.7,
+     6.8
+    ],
+    [
+     9.5,
+     4.25,
+     12.3,
+     6.7
+    ]
+   ]
+  },
+  "ig072": {
+   "name": "Governance pyramid with notes",
+   "data_type": "hierarchy",
+   "sections": [
+    "company",
+    "structure"
+   ],
+   "use_when": "A 5-tier pyramid (intent, goals, strategy, plans, results) with a note per tier and KPI brackets",
+   "dont_use_when": "Fewer than 4 tiers (use ig071)",
+   "items": [
+    5,
+    5
+   ]
+  },
+  "ig073": {
+   "name": "Value pyramid (protection to enhancement)",
+   "data_type": "hierarchy",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "Value creation levers in tiers: value protection at the base, enhancement at the top, 3-6 boxes per tier",
+   "dont_use_when": "Simple 3-tier lists (use ig071)",
+   "items": [
+    8,
+    16
+   ]
+  },
+  "ig074": {
+   "name": "Hexagon pillars, tabs, honeycomb, network",
+   "data_type": "relationship",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "Three-sided strengths around a hexagon (v1), 4 stacked numbered tabs (v2), a honeycomb cluster (v3), or a network of 6 nodes around a hub (v4)",
+   "dont_use_when": "Long text",
+   "items": [
+    3,
+    7
+   ],
+   "crops": [
+    [
+     2.2,
+     2.5,
+     5.8,
+     5.9
+    ],
+    [
+     5.9,
+     1.4,
+     8.7,
+     4.0
+    ],
+    [
+     5.2,
+     4.1,
+     8.25,
+     6.7
+    ],
+    [
+     8.25,
+     3.7,
+     11.4,
+     6.7
+    ]
+   ]
+  },
+  "ig075": {
+   "name": "Six hexagon columns with icons",
+   "data_type": "list",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "6 numbered pillars, each with icon, heading and ~20 words (capabilities, strengths)",
+   "dont_use_when": "Fewer than 4 items (use stat_icons)",
+   "items": [
+    4,
+    6
+   ],
+   "order": "columns"
+  },
+  "ig076": {
+   "name": "Honeycomb with section text",
+   "data_type": "list",
+   "sections": [
+    "company",
+    "thesis"
+   ],
+   "use_when": "6 sections on a honeycomb around a centre, each with a title and ~25 words beside",
+   "dont_use_when": "Fewer than 5 sections",
+   "items": [
+    6,
+    6
+   ],
+   "order": "clockwise"
+  },
+  "ig077": {
+   "name": "Six arrows converging on a hexagon",
+   "data_type": "relationship",
+   "sections": [
+    "thesis",
+    "market"
+   ],
+   "use_when": "6 drivers or market forces pushing in on one point, short label on each arrow",
+   "dont_use_when": "Sentences per driver",
+   "items": [
+    4,
+    6
+   ]
+  },
+  "ig078": {
+   "name": "Octagon clusters",
+   "data_type": "relationship",
+   "sections": [
+    "company"
+   ],
+   "use_when": "2-3 linked units each with 8 surrounding parts; text-free, labels beside",
+   "dont_use_when": "Text inside",
+   "items": [
+    2,
+    3
+   ]
+  },
+  "ig079": {
+   "name": "Spider diagram with points",
+   "data_type": "matrix",
+   "sections": [
+    "market",
+    "company"
+   ],
+   "use_when": "Plotting 2-4 items on 8 axes (positioning, capability scores)",
+   "dont_use_when": "Exact values (use a table)",
+   "items": [
+    6,
+    8
+   ]
+  },
+  "ig080": {
+   "name": "Radar overlay diagram",
+   "data_type": "comparison",
+   "sections": [
+    "market",
+    "company"
+   ],
+   "use_when": "Comparing 2-3 profiles across 6-8 criteria as overlapping shapes (us vs peers)",
+   "dont_use_when": "Exact values (use harvey or a table)",
+   "items": [
+    6,
+    8
+   ]
+  },
+  "ig081": {
+   "name": "Jigsaw grid",
+   "data_type": "relationship",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "Pieces that fit together (bolt-on acquisitions completing a platform); text-free, colour the key pieces",
+   "dont_use_when": "Text inside the pieces",
+   "items": [
+    4,
+    30
+   ]
+  },
+  "ig082": {
+   "name": "Large jigsaw panel",
+   "data_type": "relationship",
+   "sections": [
+    "thesis"
+   ],
+   "use_when": "Large 2x5 jigsaw for a 'missing piece' story, one piece highlighted",
+   "dont_use_when": "Text inside the pieces",
+   "items": [
+    4,
+    10
+   ]
+  },
+  "ig083": {
+   "name": "Jigsaw ring; jigsaw column",
+   "data_type": "relationship",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "A ring of 8 interlocking pieces around a core (v2) or 4 stacked pieces (v1); text-free",
+   "dont_use_when": "Text inside",
+   "items": [
+    4,
+    8
+   ]
+  },
+  "ig084": {
+   "name": "Loose and locked jigsaw pieces",
+   "data_type": "relationship",
+   "sections": [
+    "thesis"
+   ],
+   "use_when": "Fit between businesses: loose pieces vs a completed square (strategic fit, merger)",
+   "dont_use_when": "Text inside",
+   "items": [
+    2,
+    4
+   ]
+  },
+  "ig085": {
+   "name": "Three-column jigsaw (process, brand, ROI)",
+   "data_type": "relationship",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "3 workstreams as jigsaw columns with short labels on the pieces",
+   "dont_use_when": "Long text",
+   "items": [
+    3,
+    3
+   ],
+   "order": "columns"
+  },
+  "ig086": {
+   "name": "Two-by-three large jigsaw",
+   "data_type": "relationship",
+   "sections": [
+    "thesis"
+   ],
+   "use_when": "A 6-piece 'missing piece' visual, text-free (complete the platform)",
+   "dont_use_when": "Text inside",
+   "items": [
+    4,
+    6
+   ]
+  },
+  "ig087": {
+   "name": "Jigsaw pattern texture",
+   "kind": "icon_set",
+   "use_when": "Background texture for a cover or divider",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig088": {
+   "name": "Eight-piece jigsaw wheel",
+   "data_type": "list",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "8 numbered parts of one whole (e.g. an integrated offering), each with ~20 words, around a centre title",
+   "dont_use_when": "Fewer than 6 parts",
+   "items": [
+    8,
+    8
+   ],
+   "order": "clockwise"
+  },
+  "ig089": {
+   "name": "Chain of cog wheels",
+   "data_type": "process",
+   "sections": [
+    "company",
+    "process"
+   ],
+   "use_when": "6-10 interlocking steps or functions that drive each other, 1-2 words in each cog",
+   "dont_use_when": "Long text",
+   "items": [
+    6,
+    10
+   ]
+  },
+  "ig090": {
+   "name": "Two interlocking cogs",
+   "data_type": "relationship",
+   "sections": [
+    "thesis"
+   ],
+   "use_when": "Two businesses or functions working together (synergy), labels beside",
+   "dont_use_when": "Text inside",
+   "items": [
+    2,
+    2
+   ]
+  },
+  "ig091": {
+   "name": "Cogs in a conveyor loop",
+   "data_type": "process",
+   "sections": [
+    "company",
+    "process"
+   ],
+   "use_when": "Two engines driving a continuous loop (operating model, flywheel); text-free",
+   "dont_use_when": "Text inside",
+   "items": [
+    2,
+    2
+   ]
+  },
+  "ig092": {
+   "name": "Two cogs with icons and options",
+   "data_type": "relationship",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "Two capability engines (4 icons each) with option notes beside",
+   "dont_use_when": "More than 2 groups",
+   "items": [
+    2,
+    2
+   ]
+  },
+  "ig093": {
+   "name": "Bridge / waterfall chart",
+   "data_type": "bridge",
+   "sections": [
+    "financials",
+    "valuation",
+    "returns"
+   ],
+   "use_when": "Walk from a start value to an end value through 3-6 drivers (EBITDA bridge, value creation bridge)",
+   "dont_use_when": "Use only when python charts are unavailable; prefer fin_chart / native waterfall",
+   "items": [
+    3,
+    6
+   ],
+   "numbers": true,
+   "crops": [
+    [
+     1.3,
+     2.3,
+     12.0,
+     6.7
+    ]
+   ]
+  },
+  "ig094": {
+   "name": "Thermometer (progress to target)",
+   "data_type": "kpi_set",
+   "sections": [
+    "company",
+    "process"
+   ],
+   "use_when": "One measure rising between two years or toward a target (fundraising progress)",
+   "dont_use_when": "Several measures (use ig096)",
+   "items": [
+    1,
+    1
+   ],
+   "numbers": true
+  },
+  "ig095": {
+   "name": "Percentage columns with bubbles",
+   "data_type": "kpi_set",
+   "sections": [
+    "company",
+    "market",
+    "financials"
+   ],
+   "use_when": "3-5 categories with a headline % each, drawn as filled columns (utilisation, margin by segment)",
+   "dont_use_when": "Values that are not %",
+   "items": [
+    3,
+    5
+   ],
+   "numbers": true
+  },
+  "ig096": {
+   "name": "Four thermometer bars with icons",
+   "data_type": "kpi_set",
+   "sections": [
+    "company"
+   ],
+   "use_when": "4 numbered measures with a level marker and a short caption each",
+   "dont_use_when": "More than 4 measures",
+   "items": [
+    4,
+    4
+   ],
+   "numbers": true,
+   "order": "columns",
+   "crops": [
+    [
+     4.2,
+     1.4,
+     9.2,
+     6.8
+    ]
+   ]
+  },
+  "ig097": {
+   "name": "Dot plot with value labels",
+   "data_type": "time_series",
+   "sections": [
+    "financials",
+    "market"
+   ],
+   "use_when": "8-10 values over time or categories as labelled dots",
+   "dont_use_when": "Prefer fin_chart line; use only for a stylised look",
+   "items": [
+    6,
+    10
+   ],
+   "numbers": true
+  },
+  "ig098": {
+   "name": "Bottleneck funnel over time",
+   "data_type": "process",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "A shift over time from one model to another (local to shared services), with 4-6 short labels",
+   "dont_use_when": "Many steps (use chevrons)",
+   "items": [
+    4,
+    6
+   ]
+  },
+  "ig099": {
+   "name": "Five icon blocks feeding one output",
+   "data_type": "list",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "5 inputs (icon + ~25 words each) combining into one outcome line",
+   "dont_use_when": "More than 5 inputs",
+   "items": [
+    5,
+    5
+   ],
+   "order": "rows"
+  },
+  "ig100": {
+   "name": "Maze (complexity to clarity)",
+   "data_type": "process",
+   "sections": [
+    "thesis",
+    "process"
+   ],
+   "use_when": "A complex path we navigate for the client (regulatory approvals, deal complexity); text-free",
+   "dont_use_when": "Text inside",
+   "items": [
+    1,
+    1
+   ],
+   "crops": [
+    [
+     1.5,
+     1.4,
+     11.5,
+     6.8
+    ]
+   ]
+  },
+  "ig101": {
+   "name": "Three streams into one big arrow",
+   "data_type": "relationship",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "3 inputs merging into one outcome with 3 bullets (how 3 sources combine into the thesis)",
+   "dont_use_when": "Inputs needing sentences",
+   "items": [
+    3,
+    3
+   ]
+  },
+  "ig102": {
+   "name": "Bull and bear two-way arrows",
+   "data_type": "comparison",
+   "sections": [
+    "market",
+    "risks",
+    "thesis"
+   ],
+   "use_when": "Upside vs downside case (bull vs bear), each with heading and ~25 words",
+   "dont_use_when": "More than 2 cases",
+   "items": [
+    2,
+    2
+   ]
+  },
+  "ig103": {
+   "name": "Nested chevron of six layers",
+   "data_type": "list",
+   "sections": [
+    "thesis",
+    "process"
+   ],
+   "use_when": "6 stacked layers ending in one point (6 drivers building to one result), short label each",
+   "dont_use_when": "Text longer than 6 words",
+   "items": [
+    4,
+    6
+   ],
+   "order": "rows"
+  },
+  "ig104": {
+   "name": "Three numbered branches into blocks",
+   "data_type": "process",
+   "sections": [
+    "process",
+    "structure"
+   ],
+   "use_when": "3 numbered streams branching into 3 stacked blocks with text (fund flows, workstreams)",
+   "dont_use_when": "More than 3 streams",
+   "items": [
+    3,
+    3
+   ]
+  },
+  "ig105": {
+   "name": "Diagonal numbered steps; icon list",
+   "data_type": "process",
+   "sections": [
+    "process",
+    "company"
+   ],
+   "use_when": "4 numbered steps with ~15 words each on a diagonal band (v1) or 4 icon rows with numbered bubbles (v2)",
+   "dont_use_when": "More than 4 steps",
+   "items": [
+    4,
+    4
+   ],
+   "crops": [
+    [
+     1.0,
+     1.4,
+     7.0,
+     6.8
+    ],
+    [
+     7.3,
+     1.4,
+     12.5,
+     6.8
+    ]
+   ]
+  },
+  "ig106": {
+   "name": "Four steps with icons and text",
+   "data_type": "process",
+   "sections": [
+    "process",
+    "thesis"
+   ],
+   "use_when": "4 sequential steps, each with icon, step name and ~30 words to the right (deal process, value plan)",
+   "dont_use_when": "More than 5 steps (use timeline)",
+   "items": [
+    4,
+    4
+   ],
+   "order": "rows"
+  },
+  "ig107": {
+   "name": "Funnel of inputs to one output",
+   "data_type": "process",
+   "sections": [
+    "process",
+    "company"
+   ],
+   "use_when": "Many inputs narrowing into one output (deal screening: universe to shortlist), short labels",
+   "dont_use_when": "Exact numbers per stage (use ig127 or a table)",
+   "items": [
+    3,
+    12
+   ],
+   "crops": [
+    [
+     2.5,
+     1.4,
+     10.5,
+     6.8
+    ]
+   ]
+  },
+  "ig108": {
+   "name": "Numbered options with speech panels",
+   "data_type": "list",
+   "sections": [
+    "process",
+    "thesis",
+    "recommendation"
+   ],
+   "use_when": "4 numbered options, each with ~40 words in a panel (strategic options, exit routes)",
+   "dont_use_when": "More than 4 options",
+   "items": [
+    4,
+    4
+   ],
+   "order": "rows"
+  },
+  "ig109": {
+   "name": "House with roots (foundations)",
+   "data_type": "hierarchy",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "One roof message supported by 6-8 foundation items (platform built on capabilities)",
+   "dont_use_when": "Items needing sentences (use ig006)",
+   "items": [
+    4,
+    8
+   ]
+  },
+  "ig110": {
+   "name": "Five chevrons with notes above and below",
+   "data_type": "process",
+   "sections": [
+    "process",
+    "thesis"
+   ],
+   "use_when": "5 sequential phases with a title in each chevron and ~15 words alternating above and below",
+   "dont_use_when": "More than 6 phases (use timeline)",
+   "items": [
+    4,
+    5
+   ],
+   "order": "columns"
+  },
+  "ig111": {
+   "name": "Numbered milestone rows",
+   "data_type": "process",
+   "sections": [
+    "process"
+   ],
+   "use_when": "5 milestones with ~20 words each (v1) or 7 numbered steps with one line each (v2)",
+   "dont_use_when": "Dates on a scale (use timeline)",
+   "items": [
+    5,
+    7
+   ],
+   "order": "columns"
+  },
+  "ig112": {
+   "name": "1-5 rating scales",
+   "data_type": "matrix",
+   "sections": [
+    "company",
+    "risks"
+   ],
+   "use_when": "Rating 3-5 items on a 1-5 scale (maturity, risk score) or strong/average/weak dots (v3)",
+   "dont_use_when": "Exact values",
+   "items": [
+    3,
+    5
+   ],
+   "numbers": true
+  },
+  "ig113": {
+   "name": "Branching process (protect vs enhance)",
+   "data_type": "process",
+   "sections": [
+    "process",
+    "thesis"
+   ],
+   "use_when": "A process that splits into two paths of 4-5 steps (value protection vs value enhancement)",
+   "dont_use_when": "Single linear process (use chevrons)",
+   "items": [
+    6,
+    12
+   ]
+  },
+  "ig114": {
+   "name": "Three-step spiral with tasks",
+   "data_type": "process",
+   "sections": [
+    "process"
+   ],
+   "use_when": "3 steps, each a title in a circular arrow plus 3 task bullets",
+   "dont_use_when": "More than 3 steps",
+   "items": [
+    3,
+    3
+   ],
+   "crops": [
+    [
+     1.0,
+     1.4,
+     12.5,
+     6.8
+    ]
+   ]
+  },
+  "ig115": {
+   "name": "Converging and diverging arrows",
+   "data_type": "relationship",
+   "sections": [
+    "thesis",
+    "market"
+   ],
+   "use_when": "Two sets of flows meeting (capital in, returns out; buyers meet sellers); 2 labels",
+   "dont_use_when": "Text-heavy",
+   "items": [
+    2,
+    2
+   ]
+  },
+  "ig116": {
+   "name": "Inputs-funnel-outputs",
+   "data_type": "process",
+   "sections": [
+    "process",
+    "company"
+   ],
+   "use_when": "6 inputs through a funnel into 2 output boxes of bullets (business model, deal sourcing funnel)",
+   "dont_use_when": "Exact stage counts",
+   "items": [
+    6,
+    6
+   ],
+   "crops": [
+    [
+     1.0,
+     1.4,
+     12.5,
+     6.8
+    ]
+   ]
+  },
+  "ig117": {
+   "name": "Monopoly board timeline",
+   "data_type": "process",
+   "sections": [
+    "process",
+    "company"
+   ],
+   "use_when": "A dense two-year programme with 12-16 boxed steps around a board and a central loop",
+   "dont_use_when": "Simple processes",
+   "items": [
+    12,
+    16
+   ]
+  },
+  "ig118": {
+   "name": "Phase chevron rows",
+   "data_type": "process",
+   "sections": [
+    "process"
+   ],
+   "use_when": "5 phases with name and short description (v1) or 6 numbered phases in 1-2 rows (v2)",
+   "dont_use_when": "Phases needing more than 8 words (use ig110 or timeline)",
+   "items": [
+    5,
+    6
+   ],
+   "order": "columns",
+   "crops": [
+    [
+     4.2,
+     2.6,
+     11.8,
+     3.7
+    ],
+    [
+     2.8,
+     4.2,
+     11.8,
+     6.8
+    ]
+   ],
+   "variant_items": {
+    "1": 5,
+    "2": 6
+   }
+  },
+  "ig119": {
+   "name": "Five option columns with icons",
+   "data_type": "list",
+   "sections": [
+    "process",
+    "recommendation",
+    "thesis"
+   ],
+   "use_when": "5 options or alternatives, each with number, heading, ~40 words and an icon",
+   "dont_use_when": "Fewer than 3 options",
+   "items": [
+    3,
+    5
+   ],
+   "order": "columns"
+  },
+  "ig120": {
+   "name": "Three workstreams x three steps",
+   "data_type": "process",
+   "sections": [
+    "process",
+    "thesis"
+   ],
+   "use_when": "3 lettered workstreams (A, B, C) each with 3 steps of ~15 words (value creation plan, 100-day plan)",
+   "dont_use_when": "One workstream (use ig106)",
+   "items": [
+    3,
+    3
+   ],
+   "order": "rows"
+  },
+  "ig121": {
+   "name": "Winding road map",
+   "data_type": "process",
+   "sections": [
+    "process",
+    "thesis"
+   ],
+   "use_when": "A 6-step journey (prioritise, analyse, target, communicate, implement, develop) with ~25 words per step",
+   "dont_use_when": "Dated milestones (use timeline)",
+   "items": [
+    5,
+    7
+   ]
+  },
+  "ig122": {
+   "name": "Snake road with four titled steps",
+   "data_type": "process",
+   "sections": [
+    "process"
+   ],
+   "use_when": "4 numbered steps down a winding road, each a title and 2 text blocks",
+   "dont_use_when": "More than 4 steps",
+   "items": [
+    4,
+    4
+   ],
+   "order": "rows"
+  },
+  "ig123": {
+   "name": "Company history timeline",
+   "data_type": "time_series",
+   "sections": [
+    "company"
+   ],
+   "use_when": "A company's history: 8-10 dated milestones on a curved line with ~20 words each",
+   "dont_use_when": "Future plans (use ig121 or timeline)",
+   "items": [
+    6,
+    10
+   ],
+   "numbers": true
+  },
+  "ig124": {
+   "name": "Dense dated timeline with team key",
+   "data_type": "time_series",
+   "sections": [
+    "process",
+    "company"
+   ],
+   "use_when": "A detailed project or deal timetable: 20-40 dated events above and below a line, coloured by team",
+   "dont_use_when": "Fewer than 10 events (use timeline)",
+   "items": [
+    10,
+    40
+   ],
+   "numbers": true,
+   "crops": [
+    [
+     0.3,
+     1.3,
+     12.9,
+     6.95
+    ]
+   ]
+  },
+  "ig125": {
+   "name": "Year axis with event markers",
+   "data_type": "time_series",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "A 20-year history with 6-10 labelled events and a shaded volume band (company history, market cycles)",
+   "dont_use_when": "Few events (use timeline)",
+   "items": [
+    6,
+    10
+   ],
+   "numbers": true,
+   "crops": [
+    [
+     0.3,
+     1.3,
+     12.9,
+     6.95
+    ]
+   ]
+  },
+  "ig126": {
+   "name": "Gantt chart",
+   "data_type": "time_series",
+   "sections": [
+    "process"
+   ],
+   "use_when": "A workplan or 100-day plan: 5-8 workstreams across weeks or months",
+   "dont_use_when": "Fewer than 3 workstreams (use timeline)",
+   "items": [
+    5,
+    8
+   ],
+   "crops": [
+    [
+     0.3,
+     1.3,
+     12.9,
+     6.95
+    ]
+   ]
+  },
+  "ig127": {
+   "name": "Methodology cycle with workplan grid",
+   "data_type": "process",
+   "sections": [
+    "process"
+   ],
+   "use_when": "An audit or diligence methodology: a 5-step cycle, phases strip and activity boxes, with side text",
+   "dont_use_when": "Simple processes",
+   "items": [
+    5,
+    5
+   ]
+  },
+  "ig128": {
+   "name": "Twelve-month ring with notes",
+   "data_type": "time_series",
+   "sections": [
+    "process",
+    "company"
+   ],
+   "use_when": "An annual cycle by month with 8-10 notes pointing to months (reporting calendar, seasonality)",
+   "dont_use_when": "Multi-year timelines",
+   "items": [
+    6,
+    12
+   ],
+   "crops": [
+    [
+     0.3,
+     1.3,
+     12.9,
+     6.95
+    ]
+   ]
+  },
+  "ig129": {
+   "name": "Annual communication rings by audience",
+   "data_type": "time_series",
+   "sections": [
+    "process"
+   ],
+   "use_when": "Who gets what update in which month: 5 audiences as rings over 12 months",
+   "dont_use_when": "Single audience",
+   "items": [
+    5,
+    5
+   ]
+  },
+  "ig130": {
+   "name": "Annual timetable wheel",
+   "data_type": "time_series",
+   "sections": [
+    "process",
+    "company"
+   ],
+   "use_when": "An annual plan: 12 months in a ring with 6-8 activity sectors (audit cycle, budget cycle)",
+   "dont_use_when": "Multi-year plans",
+   "items": [
+    6,
+    8
+   ]
+  },
+  "ig131": {
+   "name": "Year calendar (ring and grid)",
+   "data_type": "time_series",
+   "sections": [
+    "process"
+   ],
+   "use_when": "A full-year calendar to mark key dates; v1 ring, v2 grid",
+   "dont_use_when": "Anything but a calendar",
+   "items": [
+    12,
+    12
+   ]
+  },
+  "ig132": {
+   "name": "Balance (seesaw) of two panels",
+   "data_type": "comparison",
+   "sections": [
+    "thesis",
+    "risks",
+    "valuation"
+   ],
+   "use_when": "Weighing two sides (benefits vs costs, upside vs risks), 3-4 bullets each",
+   "dont_use_when": "More than 2 sides",
+   "items": [
+    2,
+    2
+   ],
+   "crops": [
+    [
+     0.3,
+     1.3,
+     12.9,
+     6.95
+    ]
+   ]
+  },
+  "ig133": {
+   "name": "Hanging balance panels",
+   "data_type": "comparison",
+   "sections": [
+    "thesis",
+    "valuation"
+   ],
+   "use_when": "Two hanging panels compared side by side (before vs after), text added in each",
+   "dont_use_when": "More than 2 sides",
+   "items": [
+    2,
+    2
+   ]
+  },
+  "ig134": {
+   "name": "UK and Ireland with region highlight",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "UK footprint: shade the home region, dots for sites",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map",
+   "crops": [
+    [
+     0.3,
+     1.3,
+     12.9,
+     6.95
+    ]
+   ]
+  },
+  "ig135": {
+   "name": "UK offices with city labels",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "UK office or asset locations (30 named cities)",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map",
+   "crops": [
+    [
+     0.3,
+     1.3,
+     12.9,
+     6.95
+    ]
+   ]
+  },
+  "ig136": {
+   "name": "London street map with site tags",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "Sites or properties in central London (real estate, offices)",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map"
+  },
+  "ig137": {
+   "name": "South East England sites",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "6-8 sites in South East England (assets, depots)",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map"
+  },
+  "ig138": {
+   "name": "UK nations and counties",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "Coverage by UK nation (v1) or county (v2)",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map"
+  },
+  "ig139": {
+   "name": "UK postcode areas",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "Coverage or demand by UK postcode area",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map"
+  },
+  "ig140": {
+   "name": "UK local authorities",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "Coverage by UK local authority",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map"
+  },
+  "ig141": {
+   "name": "England local authorities with London inset",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "Regional coverage across England with a London zoom",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map"
+  },
+  "ig142": {
+   "name": "London boroughs",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "Coverage or demand by London borough",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map"
+  },
+  "ig143": {
+   "name": "World map with country contact boxes",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "Global presence: 10-12 countries with a contact or fact box each",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    6,
+    12
+   ],
+   "kind": "map"
+  },
+  "ig144": {
+   "name": "World map (Atlantic centred)",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "Global footprint by country: shade the countries where the company operates",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map"
+  },
+  "ig145": {
+   "name": "World map with Europe enlarged",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "Global footprint where European countries need to be readable",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map"
+  },
+  "ig146": {
+   "name": "World map (Pacific centred)",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "Asia-Pacific-led global footprint (Asia in the middle)",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map"
+  },
+  "ig147": {
+   "name": "World coverage by territory",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "Global coverage: shade served vs unserved countries in two tones",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map"
+  },
+  "ig148": {
+   "name": "Europe by country",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "European presence or market split by country",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map"
+  },
+  "ig149": {
+   "name": "Americas by country",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "North and South American presence by country",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map"
+  },
+  "ig150": {
+   "name": "Asia Pacific by country",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "APAC presence by country (Singapore, SEA, Australia deals)",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map"
+  },
+  "ig151": {
+   "name": "Middle East by country",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "Middle East presence by country",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map"
+  },
+  "ig152": {
+   "name": "Africa by country",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "African presence by country",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map"
+  },
+  "ig153": {
+   "name": "Australia and Pacific Rim",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "Australia and SEA / Pacific Rim presence",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    30
+   ],
+   "kind": "map"
+  },
+  "ig154": {
+   "name": "Globe (Atlantic view)",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "A single globe for a cover, divider or global theme",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    1
+   ],
+   "kind": "map"
+  },
+  "ig155": {
+   "name": "Regional globes",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "A small globe per region (Africa, Americas, Europe-Asia) as a section icon",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    6
+   ],
+   "kind": "map",
+   "crops": [
+    [
+     2.0,
+     2.4,
+     11.5,
+     6.8
+    ]
+   ]
+  },
+  "ig156": {
+   "name": "Asia, Australia and Europe globes",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "A small globe per region as a section icon",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend",
+   "items": [
+    1,
+    4
+   ],
+   "kind": "map",
+   "crops": [
+    [
+     2.5,
+     2.4,
+     9.5,
+     6.8
+    ],
+    [
+     9.5,
+     2.4,
+     12.5,
+     6.8
+    ]
+   ]
+  },
+  "ig157": {
+   "name": "Quote bubbles (3x3)",
+   "data_type": "list",
+   "sections": [
+    "company",
+    "thesis"
+   ],
+   "use_when": "Short quotes or key messages (management, customer or expert views), up to 15 words each; one variant per bubble",
+   "dont_use_when": "Long quotes (use a text panel)",
+   "items": [
+    1,
+    9
+   ]
+  },
+  "ig158": {
+   "name": "Industry sector icons",
+   "kind": "icon_set",
+   "use_when": "Sector icons (aerospace, banking, energy, healthcare, private equity, real estate, TMT, utilities...) for sector lists, coverage pages and deal tombstones",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig159": {
+   "name": "Assorted icons (health, finance, green, travel)",
+   "kind": "icon_set",
+   "use_when": "Single icons beside headings: documents, healthcare, calculator, tax, globe, energy, utilities, education",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig160": {
+   "name": "Assorted icons (industry, awards, security)",
+   "kind": "icon_set",
+   "use_when": "Single icons: industry, shipping, checklist, trophy, talent, stock exchange, strategy, insurance, savings",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig161": {
+   "name": "Assorted icons (charts, clock, mail, travel)",
+   "kind": "icon_set",
+   "use_when": "Single icons: pie chart, line graph, dashboard, transport, clock, email, travel; pin markers (v11)",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig162": {
+   "name": "Sustainability icons and symbols",
+   "kind": "icon_set",
+   "use_when": "ESG / sustainability pages: energy, recycling, transport, people, cities, with % call-outs",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig163": {
+   "name": "Recycling diagram",
+   "kind": "icon_set",
+   "use_when": "Recycling / waste process illustration (bins, materials)",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig164": {
+   "name": "Business, people and industry icons",
+   "kind": "icon_set",
+   "use_when": "Single icons: currency, %, people, industry, health",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig165": {
+   "name": "Signs, agriculture, weather, transport icons",
+   "kind": "icon_set",
+   "use_when": "Single icons: safety signs, agriculture, weather, transport modes",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig166": {
+   "name": "Miscellaneous icons (money, ideas)",
+   "kind": "icon_set",
+   "use_when": "Single icons: money bags by currency, idea bulb, tools",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig167": {
+   "name": "Navigation buttons (labelled)",
+   "kind": "reference",
+   "use_when": "Interactive PDF / navigation buttons",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig168": {
+   "name": "Navigation buttons (short set)",
+   "kind": "reference",
+   "use_when": "Interactive PDF / navigation buttons",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig169": {
+   "name": "Business people silhouettes",
+   "kind": "icon_set",
+   "use_when": "People silhouettes for team, management or customer pages",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig170": {
+   "name": "Assorted people silhouettes",
+   "kind": "icon_set",
+   "use_when": "Single people silhouettes (walking, working, sport)",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig171": {
+   "name": "Traffic lights and Harvey rows",
+   "data_type": "matrix",
+   "sections": [
+    "risks",
+    "company"
+   ],
+   "use_when": "RAG status of 1-4 items as traffic lights (v1-v4) or a Harvey ball scale per row (v5-v7)",
+   "dont_use_when": "More than 4 statuses (use harvey or risk_matrix)",
+   "items": [
+    1,
+    4
+   ]
+  },
+  "ig172": {
+   "name": "Service hubs with icon bubbles",
+   "data_type": "relationship",
+   "sections": [
+    "company"
+   ],
+   "use_when": "2-3 service lines, each a hub with 5-8 icon bubbles (offering map)",
+   "dont_use_when": "A sequence",
+   "items": [
+    2,
+    3
+   ]
+  },
+  "ig173": {
+   "name": "Client network spark",
+   "data_type": "relationship",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "A client or partner network radiating from one node (customer base, ecosystem), short labels",
+   "dont_use_when": "Exact counts (use a chart)",
+   "items": [
+    8,
+    16
+   ]
+  },
+  "ig174": {
+   "name": "City skyline with six icon panels",
+   "data_type": "list",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "6 facts or themes about a city or location, each ~10 words with an icon (location advantages)",
+   "dont_use_when": "Not about a place",
+   "items": [
+    6,
+    6
+   ],
+   "order": "columns"
+  },
+  "ig175": {
+   "name": "People portraits with captions",
+   "data_type": "list",
+   "sections": [
+    "company",
+    "thesis"
+   ],
+   "use_when": "8 stakeholder or customer types, each with a caption above and below the silhouette (customer personas)",
+   "dont_use_when": "Fewer than 4 personas",
+   "items": [
+    4,
+    8
+   ],
+   "order": "columns"
+  },
+  "ig176": {
+   "name": "City scene with callouts",
+   "data_type": "list",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "4-5 callouts on a city scene (urban demand drivers, real estate, infrastructure)",
+   "dont_use_when": "Not about a place",
+   "items": [
+    4,
+    5
+   ]
+  },
+  "ig177": {
+   "name": "Headline KPIs with icons and rings",
+   "data_type": "kpi_set",
+   "sections": [
+    "exec_summary",
+    "company",
+    "financials"
+   ],
+   "use_when": "3-6 headline numbers (hours, payments, % rate) as icon dials with a short explanation below",
+   "dont_use_when": "Numbers needing a trend (use fin_chart)",
+   "items": [
+    3,
+    6
+   ],
+   "numbers": true,
+   "crops": [
+    [
+     0.3,
+     1.3,
+     12.9,
+     6.95
+    ]
+   ]
+  },
+  "ig178": {
+   "name": "Survey donuts with person and icons",
+   "data_type": "composition",
+   "sections": [
+    "market"
+   ],
+   "use_when": "Survey results: two-year donuts, a headline % dial and an icon legend",
+   "dont_use_when": "Simple splits (use stat_rings)",
+   "items": [
+    3,
+    8
+   ],
+   "numbers": true,
+   "crops": [
+    [
+     0.3,
+     1.3,
+     12.9,
+     6.95
+    ]
+   ]
+  },
+  "ig179": {
+   "name": "Donut speech bubbles above people",
+   "data_type": "composition",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "Mix split for 4 groups (e.g. tax mix by type), each donut above a person",
+   "dont_use_when": "More than 3 segments per donut",
+   "items": [
+    4,
+    4
+   ],
+   "numbers": true,
+   "crops": [
+    [
+     1.0,
+     1.4,
+     3.5,
+     6.8
+    ],
+    [
+     3.5,
+     1.4,
+     5.6,
+     6.8
+    ],
+    [
+     5.6,
+     1.4,
+     7.9,
+     6.8
+    ],
+    [
+     7.9,
+     1.4,
+     10.2,
+     6.8
+    ]
+   ]
+  },
+  "ig180": {
+   "name": "Icon list rows",
+   "data_type": "list",
+   "sections": [
+    "company",
+    "thesis",
+    "exec_summary"
+   ],
+   "use_when": "6 points each with an icon and ~30 words (key messages, product list)",
+   "dont_use_when": "Fewer than 3 points (use pill_rows)",
+   "items": [
+    3,
+    6
+   ],
+   "order": "rows",
+   "crops": [
+    [
+     0.3,
+     1.3,
+     12.9,
+     6.95
+    ]
+   ]
+  },
+  "ig181": {
+   "name": "Icon ring; % disc; people pictogram; money disc",
+   "data_type": "kpi_set",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "A ring of 12 sector icons (v1), a headline % disc (v3), a 1-in-N people pictogram (v4), or an icon disc (v5-v6)",
+   "dont_use_when": "Several numbers needing comparison (use bar)",
+   "items": [
+    1,
+    12
+   ],
+   "numbers": true
+  },
+  "ig182": {
+   "name": "Layered rings with four headings",
+   "data_type": "list",
+   "sections": [
+    "company",
+    "thesis"
+   ],
+   "use_when": "4 layers or capabilities, each an icon on a ring with heading and ~25 words to the right",
+   "dont_use_when": "More than 4 items",
+   "items": [
+    4,
+    4
+   ],
+   "order": "rows"
+  },
+  "ig183": {
+   "name": "Travel map with % bars",
+   "data_type": "geography",
+   "sections": [
+    "market",
+    "company"
+   ],
+   "use_when": "Global flows (routes, tourism, trade) with a % bar per city or destination",
+   "dont_use_when": "No geographic angle",
+   "items": [
+    8,
+    16
+   ],
+   "numbers": true,
+   "kind": "map"
+  },
+  "ig184": {
+   "name": "Ranked city rows with icons",
+   "data_type": "comparison",
+   "sections": [
+    "market"
+   ],
+   "use_when": "Ranking 3 metrics across cities (#1-#8) with icon markers (location benchmarking)",
+   "dont_use_when": "Exact values",
+   "items": [
+    3,
+    3
+   ],
+   "order": "rows"
+  },
+  "ig185": {
+   "name": "Europe map with headed callouts",
+   "data_type": "geography",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "5-6 European locations, each with a heading and ~15 words (sites, offices, deals)",
+   "dont_use_when": "Global footprint",
+   "items": [
+    4,
+    6
+   ],
+   "kind": "map"
+  },
+  "ig186": {
+   "name": "Connectivity hub; stopwatch; client network",
+   "data_type": "relationship",
+   "sections": [
+    "company"
+   ],
+   "use_when": "Connectivity theme with 4 icons (v1), a client at the centre of a network of 12 people (v2), a timing icon (v3)",
+   "dont_use_when": "Text-heavy pages",
+   "items": [
+    1,
+    12
+   ]
+  },
+  "ig187": {
+   "name": "Dice net with icons",
+   "data_type": "list",
+   "sections": [
+    "company",
+    "thesis"
+   ],
+   "use_when": "6 sides of one business, an icon or number per face",
+   "dont_use_when": "Text inside",
+   "items": [
+    6,
+    6
+   ]
+  },
+  "ig188": {
+   "name": "Door hanger cards",
+   "data_type": "list",
+   "sections": [
+    "process",
+    "thesis"
+   ],
+   "use_when": "4 numbered actions or principles, each icon, title and ~6 words",
+   "dont_use_when": "Long text",
+   "items": [
+    4,
+    4
+   ],
+   "order": "columns"
+  },
+  "ig189": {
+   "name": "Paint drops at staggered heights",
+   "data_type": "process",
+   "sections": [
+    "process",
+    "thesis"
+   ],
+   "use_when": "4 numbered steps rising or falling, each a title and ~20 words",
+   "dont_use_when": "More than 4 steps",
+   "items": [
+    4,
+    4
+   ],
+   "order": "columns"
+  },
+  "ig190": {
+   "name": "Single large icons (people, satellite, bulb)",
+   "kind": "icon_set",
+   "use_when": "A single big icon for a section divider",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig191": {
+   "name": "Six-step list with three pillars",
+   "data_type": "list",
+   "sections": [
+    "process",
+    "company"
+   ],
+   "use_when": "A numbered 6-step approach plus 3 pillar icons that add up to an outcome (people + approach + technology)",
+   "dont_use_when": "Fewer than 4 steps",
+   "items": [
+    6,
+    6
+   ],
+   "order": "rows"
+  },
+  "ig192": {
+   "name": "Six-petal flower around a core",
+   "data_type": "relationship",
+   "sections": [
+    "company"
+   ],
+   "use_when": "6 traits or capabilities around a core idea, 2-3 short lines in each petal",
+   "dont_use_when": "Long text",
+   "items": [
+    6,
+    6
+   ],
+   "order": "clockwise"
+  },
+  "ig193": {
+   "name": "Three-circle Venn around a person",
+   "data_type": "relationship",
+   "sections": [
+    "company",
+    "thesis"
+   ],
+   "use_when": "Three skills or capabilities overlapping in one person or team (management quality), one word per circle",
+   "dont_use_when": "More than 3 sets (use ig009)",
+   "items": [
+    3,
+    3
+   ]
+  },
+  "ig194": {
+   "name": "Value cycle with word cloud",
+   "data_type": "cycle",
+   "sections": [
+    "thesis",
+    "company"
+   ],
+   "use_when": "A 3-stage loop (understand, plan, deliver) around a cloud of 10-16 value words",
+   "dont_use_when": "Sentences",
+   "items": [
+    3,
+    3
+   ],
+   "order": "clockwise"
+  },
+  "ig195": {
+   "name": "Funnel of dot pyramids",
+   "data_type": "hierarchy",
+   "sections": [
+    "risks",
+    "process"
+   ],
+   "use_when": "Many items filtered down in 3 tiers (risks, deal screening: universe, long list, shortlist) with tier labels",
+   "dont_use_when": "Exact counts (use ig127 or a table)",
+   "items": [
+    3,
+    3
+   ]
+  },
+  "ig196": {
+   "name": "Risk map with movement arrows",
+   "data_type": "matrix",
+   "sections": [
+    "risks"
+   ],
+   "use_when": "5-8 numbered risks on likelihood vs impact, with arrows showing change, plus a risk table (v2)",
+   "dont_use_when": "Fewer than 3 risks",
+   "items": [
+    4,
+    8
+   ],
+   "numbers": true,
+   "crops": [
+    [
+     0.3,
+     1.4,
+     6.0,
+     6.9
+    ],
+    [
+     6.4,
+     1.4,
+     12.9,
+     4.0
+    ]
+   ]
+  },
+  "ig197": {
+   "name": "Testing strategy grid",
+   "data_type": "matrix",
+   "sections": [
+    "risks",
+    "process"
+   ],
+   "use_when": "15-20 risks or items rated across 3 groups of columns with marker squares (diligence scope, risk testing)",
+   "dont_use_when": "Few items (use harvey)",
+   "items": [
+    10,
+    20
+   ],
+   "crops": [
+    [
+     0.3,
+     1.3,
+     12.9,
+     6.95
+    ]
+   ]
+  },
+  "ig198": {
+   "name": "Scope comparison year to year",
+   "data_type": "comparison",
+   "sections": [
+    "process",
+    "structure"
+   ],
+   "use_when": "How a structure or scope changes between two years: before and after block diagrams",
+   "dont_use_when": "One period",
+   "items": [
+    2,
+    2
+   ],
+   "crops": [
+    [
+     0.3,
+     1.3,
+     12.9,
+     6.95
+    ]
+   ]
+  },
+  "ig199": {
+   "name": "Editable line graphics (arrows, rings)",
+   "kind": "icon_set",
+   "use_when": "Outline shapes to build a custom diagram",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig200": {
+   "name": "Editable world map outlines",
+   "kind": "map",
+   "use_when": "Outline world maps (line, dot, network styles) as a background",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig201": {
+   "name": "Editable flow and hexagon outlines",
+   "kind": "icon_set",
+   "use_when": "Outline flow, timeline and hexagon shapes to build a diagram",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig202": {
+   "name": "Editable table and Gantt outlines",
+   "kind": "icon_set",
+   "use_when": "Outline grids and Gantt bars to build a table or plan",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig203": {
+   "name": "Editable circle and puzzle outlines",
+   "kind": "icon_set",
+   "use_when": "Outline circles, cogs, puzzles and loops to build a diagram",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig204": {
+   "name": "Editable chart and pictogram outlines",
+   "kind": "icon_set",
+   "use_when": "Outline bar charts, pictograms, funnels and pyramids",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig205": {
+   "name": "Line icon set: business and general",
+   "kind": "icon_set",
+   "use_when": "Line icons for headings, stat_icons and lists (business, retail, communication)",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig206": {
+   "name": "Line icon set: education, science, health",
+   "kind": "icon_set",
+   "use_when": "Line icons: education, science, health, tools",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig207": {
+   "name": "Line icon set: finance and strategy",
+   "kind": "icon_set",
+   "use_when": "Line icons: finance, money, banking, strategy, charts (best for IB decks)",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig208": {
+   "name": "Line icon set: people and jobs",
+   "kind": "icon_set",
+   "use_when": "Line icons: people, faces, professions",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig209": {
+   "name": "Line icon set: arts, design, leisure",
+   "kind": "icon_set",
+   "use_when": "Line icons: design, media, entertainment, leisure",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig210": {
+   "name": "Line icon set: nature and animals",
+   "kind": "icon_set",
+   "use_when": "Line icons: agriculture, nature, food, animals (ESG, agri deals)",
+   "dont_use_when": "As a slide layout on its own"
+  },
+  "ig211": {
+   "name": "Line icon set: digital and social media",
+   "kind": "icon_set",
+   "use_when": "Line icons: digital, SEO, social media logos, devices",
+   "dont_use_when": "As a slide layout on its own"
+  }
+ },
+ "gallery": {
+  "stat_icons": {
+   "thumb": "layout_thumbs/gal-02.png"
+  },
+  "stat_strip": {
+   "thumb": "layout_thumbs/gal-02.png"
+  },
+  "hero_number": {
+   "thumb": "layout_thumbs/gal-02.png"
+  },
+  "pictogram": {
+   "thumb": "layout_thumbs/gal-02.png"
+  },
+  "fin_table": {
+   "thumb": "layout_thumbs/gal-03.png"
+  },
+  "fin_chart": {
+   "thumb": "layout_thumbs/gal-03.png"
+  },
+  "stat_rings": {
+   "thumb": "layout_thumbs/gal-04.png"
+  },
+  "tam_sam_som": {
+   "thumb": "layout_thumbs/gal-04.png"
+  },
+  "logo_row": {
+   "thumb": "layout_thumbs/gal-04.png"
+  },
+  "side_tabs": {
+   "thumb": "layout_thumbs/gal-05.png"
+  },
+  "pill_rows": {
+   "thumb": "layout_thumbs/gal-05.png"
+  },
+  "chevrons": {
+   "thumb": "layout_thumbs/gal-06.png"
+  },
+  "timeline": {
+   "thumb": "layout_thumbs/gal-06.png"
+  },
+  "hub_spoke": {
+   "thumb": "layout_thumbs/gal-07.png"
+  },
+  "numbered_steps": {
+   "thumb": "layout_thumbs/gal-07.png"
+  },
+  "harvey": {
+   "thumb": "layout_thumbs/gal-07.png"
+  },
+  "risk_matrix": {
+   "thumb": "layout_thumbs/gal-08.png"
+  },
+  "pros_cons": {
+   "thumb": "layout_thumbs/gal-08.png"
+  },
+  "column": {
+   "thumb": "layout_thumbs/gal-09.png"
+  },
+  "bar": {
+   "thumb": "layout_thumbs/gal-10.png"
+  },
+  "photo": {
+   "thumb": "layout_thumbs/gal-10.png"
+  },
+  "table": {
+   "thumb": "layout_thumbs/gal-13.png"
+  },
+  "page_market": {
+   "recipe": true,
+   "name": "Market page: framing strip over three exhibits",
+   "data_type": "comparison",
+   "sections": [
+    "market",
+    "thesis"
+   ],
+   "use_when": "A market argument: cause on the left, constraint on the right, then 3 exhibits (chart, bar, evidence table)",
+   "dont_use_when": "Fewer than 3 pieces of evidence (use page_overview)",
+   "items": [
+    3,
+    3
+   ],
+   "call": "framing strip (2 boxes + arrow) at top; d.column / d.bar / d.table below, each under a header bar + takeaway",
+   "components": [
+    "column",
+    "bar",
+    "table"
+   ],
+   "thumb": "layout_thumbs/gal-09.png"
+  },
+  "page_overview": {
+   "recipe": true,
+   "name": "Overview page: photo, fact strip, chart and commentary",
+   "data_type": "kpi_set",
+   "sections": [
+    "company",
+    "market"
+   ],
+   "use_when": "An asset or market overview: photo with bullets, 5 key numbers across the top, a ranked bar and commentary",
+   "dont_use_when": "No real photo of the asset (use page_market)",
+   "items": [
+    4,
+    6
+   ],
+   "call": "d.photo left + bullets; d.stat_icons across the top right; d.bar + commentary bullets below",
+   "components": [
+    "photo",
+    "stat_icons",
+    "bar"
+   ],
+   "thumb": "layout_thumbs/gal-10.png"
+  },
+  "page_geography": {
+   "recipe": true,
+   "name": "Geography page: labelled map beside a comparison table",
+   "data_type": "geography",
+   "sections": [
+    "market",
+    "company"
+   ],
+   "use_when": "Comparing 2-4 places (sites, countries, cities): map with pins and labels beside a metric table + commentary",
+   "dont_use_when": "A single location; more than ~5 places (use a table)",
+   "items": [
+    2,
+    5
+   ],
+   "call": "d.photo(map) + pins left; d.table and commentary bullets right",
+   "components": [
+    "photo",
+    "table"
+   ],
+   "thumb": "layout_thumbs/gal-11.png"
+  },
+  "page_landscape": {
+   "recipe": true,
+   "name": "Landscape page: logo wall by segment beside a chart",
+   "data_type": "comparison",
+   "sections": [
+    "market",
+    "process"
+   ],
+   "use_when": "Competitive landscape or buyer universe: logos grouped into 3 segments, a scale bar chart beside it",
+   "dont_use_when": "Fewer than 6 players (use logo_row)",
+   "items": [
+    6,
+    20
+   ],
+   "call": "d.logo_row per segment column (outline=False); d.bar right with bullets below",
+   "components": [
+    "logo_row",
+    "bar"
+   ],
+   "thumb": "layout_thumbs/gal-12.png"
+  },
+  "page_deals": {
+   "recipe": true,
+   "name": "Deal page: full-width table, chart and takeaways",
+   "data_type": "comparison",
+   "sections": [
+    "valuation",
+    "market"
+   ],
+   "use_when": "Precedent transactions or comps: full-width table, a bar of the implied multiple and takeaways",
+   "dont_use_when": "Fewer than 4 deals (use a table on a mixed page)",
+   "items": [
+    4,
+    12
+   ],
+   "call": "d.table full width; d.bar + takeaway bullets below",
+   "components": [
+    "table",
+    "bar"
+   ],
+   "thumb": "layout_thumbs/gal-13.png"
+  },
+  "page_text": {
+   "recipe": true,
+   "name": "Text page: framing box, two-level bullets, number strip",
+   "data_type": "text",
+   "sections": [
+    "recommendation",
+    "exec_summary",
+    "thesis"
+   ],
+   "use_when": "Executive summary or recommendation: dashed framing sentence, two columns of two-level bullets, 4-6 numbers",
+   "dont_use_when": "Content that can be shown as a chart or diagram",
+   "items": [
+    2,
+    2
+   ],
+   "call": "d.takeaway framing box; two header bars + two-level bullets; d.stat_strip at the bottom",
+   "components": [
+    "stat_strip"
+   ],
+   "thumb": "layout_thumbs/gal-14.png"
+  },
+  "page_risks": {
+   "recipe": true,
+   "name": "Risks page: risk matrix beside strengths and watch-points",
+   "data_type": "matrix",
+   "sections": [
+    "risks"
+   ],
+   "use_when": "Risk section: 3-5 risks with mitigants and severity, strengths vs watch-points on the right",
+   "dont_use_when": "No mitigants to show",
+   "items": [
+    3,
+    5
+   ],
+   "call": "d.risk_matrix left (2/3); d.pros_cons right",
+   "components": [
+    "risk_matrix",
+    "pros_cons"
+   ],
+   "thumb": "layout_thumbs/gal-08.png"
+  },
+  "page_thesis": {
+   "recipe": true,
+   "name": "Thesis page: side tabs beside pill rows",
+   "data_type": "list",
+   "sections": [
+    "thesis",
+    "exec_summary"
+   ],
+   "use_when": "Investment thesis: 3-5 argued pillars with a supporting overview panel",
+   "dont_use_when": "Short facts only (use pill_rows)",
+   "items": [
+    3,
+    5
+   ],
+   "call": "d.side_tabs left; d.pill_rows right",
+   "components": [
+    "side_tabs",
+    "pill_rows"
+   ],
+   "thumb": "layout_thumbs/gal-05.png"
+  }
+ }
+}

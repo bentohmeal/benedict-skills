@@ -18,19 +18,30 @@ Read this **before planning any deck**. First write the plan as a table (slide �
 3. **The numbers:** the model first, then primary sources (filings, regulators, company releases), then research houses (CBRE, JLL...), then press. Press-only figures are cited as such ("The Real Deal citing CBRE"). Before handing over, search for news after the newest source date (tender results, deals, guidance) so nothing is stale.
 4. **Every page, whatever the reference:** the density standard (Rule 0) applies.
 
-Gallery: `output\_Deal Desk Toolkit\Deck Layout Gallery.pptx` → the **Dense Pages** section shows six full-page recipes, built by `scripts/layout_gallery.py`. Worked example: `assets/examples/sg_dc_slides.py` → `output\Singapore Data Centres Sector Overview.pptx`.
+## The layout library: one catalogue of every layout (`assets/layout_library.json`)
+245 records, each with use when / don't use when, sections, data type, item range, slots and a thumbnail (`assets/layout_thumbs/`):
+- **Coded components** (`table`, `fin_table`, `football_field`, `side_tabs`, `risk_matrix`…): drawn by `ibdeck.py`.
+- **Page recipes** (`page_market`, `page_overview`, `page_geography`, `page_landscape`, `page_deals`, `page_text`, `page_thesis`, `page_risks`): full dense pages copied from real bank pages; see the gallery's Dense Pages section.
+- **Infographics** (`ig001`–`ig211`): PwC's originals, restyled (colours, fonts, sizes and shadows only; lessons #29). Use them for shapes the components lack: cycle, pyramid, funnel, Venn, bridge, map. 16 are text-free (maps, icon sets): label them beside with `d.text`.
+- **Real bank pages:** `assets/real_deck_pages.json` holds 389 pages from `Real IB-PE Decks`, each tagged with the layouts it uses. The library lists the best 4 under each layout as `exemplars` (deck, page, thumb). Real banks build most pages from `table`, `fin_table` and `page_text`, with `column`, `line` and `heatmap` next; infographics almost never appear, so use one only where its shape *is* the message.
 
-## Dense page recipes (copied from real bank pages)
-| Recipe | Build | Real page |
-|---|---|---|
-| Framing strip + 3 exhibits (market page) | two header bars with 2 bullets each and an arrow between; below, 3 columns of header + `exhibit_takeaway` + chart / table | Qatalyst Autonomy p4; Gallery: Dense Pages 1 |
-| Photo + fact strip + chart | photo and bullets on the left; `stat_icons` across the top right; chart + bullets below | Gallery: Dense Pages 2; SG DC deck slide 1 |
-| Map + comparison table | `photo(map)` + `pin()` labels on the left; comparison table and bullets on the right | Gallery: Dense Pages 3; SG DC deck slide 4 |
-| Logo wall by segment + chart | a header bar per segment with a one-line role under it; `logo_row(logos=…, outline=False, cols=1–2)`; chart + bullets on the right | Qatalyst Autonomy p8; Gallery: Dense Pages 4 |
-| Full-width table + chart + takeaways | table across the top (units in the header bar); bar chart and bullets below | Evercore Diversey p8; Gallery: Dense Pages 5 |
-| Full-width two-level text | framing box, then bold lead bullets with 3–5 dash sub-points, each with a number (~250 words) | GS PowerSchool p3; Gallery: Dense Pages 6 |
-| Thesis page | dashed "Why invest" `takeaway` on top; `side_tabs` with (claim, text) rows left; "Return drivers in numbers" `stat_icons` (2 cols) right | SG DC deck slide 10; Gallery: Thesis |
-| Risks page | full-width `risk_matrix` with (title, text) cells and Harvey balls; `stat_strip` of the risk numbers underneath | SG DC deck slide 11; Gallery: Risks |
+**Pick a layout for each slide:**
+1. `python scripts/layout_tag.py find <section> [data_type] [items]` → a shortlist, with layouts used on real bank pages first and an example page for each.
+2. Look at the thumbnail and open the exemplar page before using it.
+3. Put the layout id in the plan table (slide → message → layout id).
+
+**Insert an infographic with its text filled:**
+```python
+d.layout(s, "ig075", variant=1, box=(x, y, w, h),
+         data={"head": ["Pricing", "Sites", ...], "text": [...], "num": ["1", "2", ...]},
+         drop=("v1.text6",), highlight=None)
+```
+- `data` takes role lists (`head` / `num` / `text`, filled in the slot order from the record's `variants[].slots`) or single slot names (`"v1.head2": "..."`).
+- Unused optional pieces are removed; other unused slots are blanked. `drop` removes a whole piece.
+- The variant (one sub-diagram of a PwC page) is scaled into `box`.
+- Text that won't fit, even at 12pt and then 10pt, is reported by `save()` as a `LAYOUT WARNING`. Shorten the text or pick a bigger variant.
+- `d.infographic(s, no)` still pastes the whole PwC page unfilled (for editing by hand).
+- Rebuild or check the library: `layout_tag.py build`, then `validate` (after `scan` and `name` if `infographic_library.py` rebuilt the pptx). Hand tags live in `assets/layout_tags.json`; never edit the built JSON.
 
 ## Rules
 0. **Fill the page (lessons #32).** At least one exhibit plus numbered commentary per slide; blocks run to the bottom; `lint()` SPARSE and `office.py density` must pass (see `house-style.md` → Density).
@@ -48,7 +59,7 @@ Gallery: `output\_Deal Desk Toolkit\Deck Layout Gallery.pptx` → the **Dense Pa
 | Tell | Why it reads as AI | Use instead |
 |---|---|---|
 | **Accent-bar card:** a thin coloured strip down the side or across the top of a pale filled box, in any colour, used as a KPI tile, callout or quote | Claude's default card, reused in every deck with only the colours changed | `stat_icons`, `stat_strip`, `hero_number`, or `takeaway` (dashed outline) |
-| The same grid (3 equal columns: header, chart, bullets) on every slide | Template feel; nothing adapts to the content | Pick from the catalogue below and vary it |
+| The same grid (3 equal columns: header, chart, bullets) on every slide | Template feel; nothing adapts to the content | Pick from the layout library above and vary it |
 | ■ square bullets, and walls of bullets (3+ bullet blocks on a slide) | Unedited AI output | `side_tabs`, `pill_rows`, `numbered_steps`, `pros_cons`, a table |
 | A thin rule under every block header | Looks unfinished next to real bank decks | Filled navy header bars |
 | Decorative icons with no meaning | Clip-art feel | An icon only where it names the number or item next to it |
@@ -57,56 +68,6 @@ Gallery: `output\_Deal Desk Toolkit\Deck Layout Gallery.pptx` → the **Dense Pa
 | Two filled bands stacked: a navy header bar with a navy table header row right under it | Heavy and templated; no real bank page does it | Keep the bar; table column headers bold black with a navy rule (`table()` auto) |
 
 `lint()` (run by `save()`) prints `AI TELL:` lines for all of these except decorative icons. Treat them like layout warnings: fix them before handing over.
-
-## Catalogue: message → layout options
-Inspiration files are in `01. IB PE\Investment Banking Library\Slide Inspiration\` (slide numbers in brackets). "Seen in" records where a layout was first spotted. **The case tests and student decks there (Favour test, Tesla, FMI, CRFA, strategy projects…) are not style references:** Benedict judged them below the Real IB-PE Decks (27 Sep 2026). Take page structure and polish from `Real IB-PE Decks` only.
-
-| Content | Layout options (ibdeck call) | Seen in |
-|---|---|---|
-| **Key numbers / company at a glance** | `stat_icons` grid (icon, number, label) · `stat_strip` under a chart · `hero_number` with 2–3 support points · `pictogram` for a share | Favour test (3); Pantheon Korea (2); PwC pack (186) |
-| **Shares, margins, mix** | `stat_rings` (% in the centre) · stacked column · `pictogram` | PwC (67, 68, 186); Sygnum pitch (22) |
-| **Market sizing** | `tam_sam_som` nested circles · column chart with CAGR in the header | Favour (4); PwC (13, 15) |
-| **Investment thesis / summary** | `side_tabs` with (claim, text) rows: bold claim + evidence → so what → "For returns:" (lessons #35), under a "Why invest" takeaway · `pill_rows` · numbered theses | Favour (2, 8); Pantheon (3); SG DC slide 10 |
-| **Business overview / model** | `pill_rows` · `hub_spoke` (company in the centre) · icon row of segments | Pantheon (3, 9); PwC (47, 56) |
-| **Peers / buyers / sponsors** | `logo_row` tiles (target highlighted) · bar chart with the target navy, the rest grey · `harvey` scoring grid | Keppel V3 (1); PwC (118) |
-| **Growth drivers** | `hub_spoke` · icon row (`stat_icons` with text labels) · `chevrons` | Favour (6); SATS (6) |
-| **Process / plan / 100-day plan** | `chevrons` · `numbered_steps` (down or across) | PwC (107–116, 124, 126); SATS value chain (5) |
-| **History / milestones** | `timeline` (labels alternate above / below; highlight today) | PwC (129–131); Sygnum (19) |
-| **Risks** | `risk_matrix` with (title, text) cells: risk = impact on returns, quantified; mitigant = action + "What remains:" (lessons #35); severity Harvey ball · `pros_cons` for strengths / watch-points | Favour (2); NSE (12, 13); SG DC slide 11 |
-| **Financials** | `fin_chart` for the trend (CAGR, A/E split, % strip) · `fin_table` for line items (bank format; `assets/references/bank-financials/`) + `takeaway` · `hero_number` for the headline metric | Favour (9); Keppel V3 (2) |
-| **Valuation / returns** | `football_field` · `heatmap` · `stat_strip` of EVs vs price · `hero_number` IRR | Keppel V3 (2); SATS (15) |
-| **Funding / sources & uses** | S&U table · `stat_rings` for the debt / equity split | Keppel V3 (2) |
-| **Recommendation** | `hero_number` (Buy / price / IRR) with `side_tabs` (claim, text) rows for the reasons · `takeaway` | SATS conclusion (16) |
-| **Deck navigation** | `section_tracker(sections, current)` on every content slide | SATS, NSE, Sygnum decks |
-
-## Infographic Library (PwC originals, restyled)
-When a message needs a shape the coded layouts don't have, use the library:
-- **Files:** `Claude Things\output\_Deal Desk Toolkit\Infographic Library.pptx`, numbered thumbnails in `…\_Deal Desk Toolkit\Infographic Library – index.pdf`, and `assets/infographic_index.json` (number → PwC slide, type, uses, picture flag).
-- **What's in it:** 211 of PwC's Infographic Templates (2014) copied as the original objects. Tables are still tables, charts are still native charts with data, and groups and freeforms are editable.
-- **What changed:** colours, fonts, sizes and shadows only (lessons #29).
-- **Insert:** `d.infographic(s, no, box=(x, y, w, h), highlight=["IG Oval 12"])`. It scales into the box; `highlight` fills one shape gold.
-- **After inserting:**
-  - Edit the placeholder text ("Text", "[ ]") in place with real content.
-  - Delete the sub-diagrams you don't need: most PwC slides show 2–5 variants side by side.
-  - Render and look.
-
-| Message | Library numbers |
-|---|---|
-| Process / deal steps / flow | Arrows 1–8 · linear flow 101–107 · process charts 108–115 · bottleneck / maze 98–100 |
-| Overlap, synergies, strategic fit | Venn 9–10 |
-| Pillars, segments, mix | Sections / pie sections 11–19 · sections and percentages 61–68 · hexagons / octagon 74–78 · petals 45–46 |
-| Value creation loop, operating model | Cycles 20–28 and the other circular diagrams to 70 · cogs 89–92 |
-| Scoring, utilisation, leverage vs covenant | Speedometers 57–58 · heat map 59 · circular bar chart 60 · spider / radar 79–80 · rating 184 · traffic lights 171 |
-| Business model / ecosystem | Hub and spoke 70 · jigsaw 81–88 |
-| Hierarchy, capital structure, priorities | Pyramids 71–73 · layers (icons in action) 172–190 |
-| EBITDA / value bridge | Bridge (native chart) 93 · thermometer 94 · bar / line charts 95–97 |
-| Pipeline / buyer funnel / TAM → SOM | Funnel 116 |
-| Workstreams, 100-day plan, options | Phases / options 118–120 · road maps 121–122 · Gantt 126 |
-| History, milestones, timetable | Timelines 123–130 · balance (trade-off) 132–133 |
-| Footprint / geographic mix | UK maps 134–143 · world maps 144–146 · regional maps 147–153 · globes 154–156 |
-| Key numbers with icons | Icons in action 172–190 · quotes / speech bubbles 157 |
-| Risk map / scoping | Audit pages 191–198 (risk map 196) |
-| Icon sources | PwC icons 158–170 · editable graphics 199–204 · icon sets 205–211 |
 
 ## What credible sources say
 - **Consistency of chrome, variety of visuals:**

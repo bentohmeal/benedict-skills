@@ -1,0 +1,6439 @@
+{
+ "version": 1,
+ "root": "C:\\Users\\user\\Documents\\Google Drive\\01. IB PE\\Investment Banking Library\\Real IB-PE Decks",
+ "note": "Built by deck_library/pages.py build; thumbs are relative to root",
+ "pages": [
+  {
+   "id": "000_003",
+   "bank": "BofA Securities",
+   "deck": "BofA Presentation to Taro Pharmaceuticals (17-Jan-2024)",
+   "file": "BofA Securities\\Taro-Pharmaceuticals-Discussion-Materials-2024.01.17.pdf",
+   "page": 3,
+   "year": 2024,
+   "title": "Transaction Overview – Overview of Transaction Premiums and Multiples",
+   "section": "company",
+   "fill": 0.81,
+   "thumb": "_pages/000_003.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Offer summary table: prices, premiums and implied values at each offer"
+  },
+  {
+   "id": "000_007",
+   "bank": "BofA Securities",
+   "deck": "BofA Presentation to Taro Pharmaceuticals (17-Jan-2024)",
+   "file": "BofA Securities\\Taro-Pharmaceuticals-Discussion-Materials-2024.01.17.pdf",
+   "page": 7,
+   "year": 2024,
+   "title": "Turtle Management Projections Summary",
+   "section": "financials",
+   "fill": 0.97,
+   "thumb": "_pages/000_007.png",
+   "layouts": [
+    "fin_table",
+    "page_text"
+   ],
+   "note": "Projections table over a numbered commentary box"
+  },
+  {
+   "id": "000_009",
+   "bank": "BofA Securities",
+   "deck": "BofA Presentation to Taro Pharmaceuticals (17-Jan-2024)",
+   "file": "BofA Securities\\Taro-Pharmaceuticals-Discussion-Materials-2024.01.17.pdf",
+   "page": 9,
+   "year": 2024,
+   "title": "Discounted Cash Flow Financial Analysis – Turtle Management Projections",
+   "section": "valuation",
+   "fill": 0.9,
+   "thumb": "_pages/000_009.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "DCF build with two sensitivity grids underneath"
+  },
+  {
+   "id": "000_011",
+   "bank": "BofA Securities",
+   "deck": "BofA Presentation to Taro Pharmaceuticals (17-Jan-2024)",
+   "file": "BofA Securities\\Taro-Pharmaceuticals-Discussion-Materials-2024.01.17.pdf",
+   "page": 11,
+   "year": 2024,
+   "title": "Selected Publicly Traded Companies Analysis CalendarizedFinancials – Selected Publicly Traded Generics Compani",
+   "section": "valuation",
+   "fill": 0.89,
+   "thumb": "_pages/000_011.png",
+   "layouts": [
+    "table",
+    "logo_row"
+   ],
+   "note": "Trading comps table with peer logos in the first column"
+  },
+  {
+   "id": "000_012",
+   "bank": "BofA Securities",
+   "deck": "BofA Presentation to Taro Pharmaceuticals (17-Jan-2024)",
+   "file": "BofA Securities\\Taro-Pharmaceuticals-Discussion-Materials-2024.01.17.pdf",
+   "page": 12,
+   "year": 2024,
+   "title": "For Reference On* – Precedent Minority Squeeze-Out Premiums Paid",
+   "section": "valuation",
+   "fill": 0.91,
+   "thumb": "_pages/000_012.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Premiums-paid table, full page"
+  },
+  {
+   "id": "000_014",
+   "bank": "BofA Securities",
+   "deck": "BofA Presentation to Taro Pharmaceuticals (17-Jan-2024)",
+   "file": "BofA Securities\\Taro-Pharmaceuticals-Discussion-Materials-2024.01.17.pdf",
+   "page": 14,
+   "year": 2024,
+   "title": "Overview of Financial Presentation – • Turtle's historical financial results for fiscal year ending March 31, ",
+   "section": "company",
+   "fill": 0.97,
+   "thumb": "_pages/000_014.png",
+   "layouts": [
+    "pill_rows",
+    "page_text"
+   ],
+   "note": "Navy label column beside long bullet text"
+  },
+  {
+   "id": "000_015",
+   "bank": "BofA Securities",
+   "deck": "BofA Presentation to Taro Pharmaceuticals (17-Jan-2024)",
+   "file": "BofA Securities\\Taro-Pharmaceuticals-Discussion-Materials-2024.01.17.pdf",
+   "page": 15,
+   "year": 2024,
+   "title": "Turtle Management Projections Summary",
+   "section": "financials",
+   "fill": 0.97,
+   "thumb": "_pages/000_015.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Projections table with numbered commentary"
+  },
+  {
+   "id": "000_016",
+   "bank": "BofA Securities",
+   "deck": "BofA Presentation to Taro Pharmaceuticals (17-Jan-2024)",
+   "file": "BofA Securities\\Taro-Pharmaceuticals-Discussion-Materials-2024.01.17.pdf",
+   "page": 16,
+   "year": 2024,
+   "title": "For Reference Only: Per Special Committee guidance – Turtle Financial Summary — Illustrative Sensitivity Scena",
+   "section": "financials",
+   "fill": 0.95,
+   "thumb": "_pages/000_016.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Sensitivity scenario table with numbered commentary"
+  },
+  {
+   "id": "001_004",
+   "bank": "BofA Securities",
+   "deck": "BofA Presentation to Green Plains Inc. (27-Apr-2023)",
+   "file": "BofA Securities\\Green-Plains-Discussion-Materials-2023.04.27.pdf",
+   "page": 4,
+   "year": 2023,
+   "title": "Introduction – Executive Summary",
+   "section": "exec_summary",
+   "fill": 0.86,
+   "thumb": "_pages/001_004.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Executive summary: framing box, then bold-lead bullets"
+  },
+  {
+   "id": "001_008",
+   "bank": "BofA Securities",
+   "deck": "BofA Presentation to Green Plains Inc. (27-Apr-2023)",
+   "file": "BofA Securities\\Green-Plains-Discussion-Materials-2023.04.27.pdf",
+   "page": 8,
+   "year": 2023,
+   "title": "Introduction – Exchange Ratio Analysis",
+   "section": "structure",
+   "fill": 0.88,
+   "thumb": "_pages/001_008.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Exchange-ratio analysis table"
+  },
+  {
+   "id": "001_009",
+   "bank": "BofA Securities",
+   "deck": "BofA Presentation to Green Plains Inc. (27-Apr-2023)",
+   "file": "BofA Securities\\Green-Plains-Discussion-Materials-2023.04.27.pdf",
+   "page": 9,
+   "year": 2023,
+   "title": "Introduction – Overview of Key Considerations",
+   "section": "exec_summary",
+   "fill": 0.94,
+   "thumb": "_pages/001_009.png",
+   "layouts": [
+    "pill_rows"
+   ],
+   "note": "Key considerations: navy label column beside descriptions"
+  },
+  {
+   "id": "001_016",
+   "bank": "BofA Securities",
+   "deck": "BofA Presentation to Green Plains Inc. (27-Apr-2023)",
+   "file": "BofA Securities\\Green-Plains-Discussion-Materials-2023.04.27.pdf",
+   "page": 16,
+   "year": 2023,
+   "title": "Preliminary Take Private Analysis – Standalone GPP Financial Projections I Management",
+   "section": "financials",
+   "fill": 0.81,
+   "thumb": "_pages/001_016.png",
+   "layouts": [
+    "column",
+    "stacked"
+   ],
+   "note": "Four-chart grid of projections"
+  },
+  {
+   "id": "001_021",
+   "bank": "BofA Securities",
+   "deck": "BofA Presentation to Green Plains Inc. (27-Apr-2023)",
+   "file": "BofA Securities\\Green-Plains-Discussion-Materials-2023.04.27.pdf",
+   "page": 21,
+   "year": 2023,
+   "title": "Process Overview – Illustrative GPP Buy-in Process Overview (Public or Private Approach)",
+   "section": "process",
+   "fill": 0.83,
+   "thumb": "_pages/001_021.png",
+   "layouts": [
+    "chevrons",
+    "page_text"
+   ],
+   "note": "Process phases as navy blocks down the left, bullets beside"
+  },
+  {
+   "id": "001_023",
+   "bank": "BofA Securities",
+   "deck": "BofA Presentation to Green Plains Inc. (27-Apr-2023)",
+   "file": "BofA Securities\\Green-Plains-Discussion-Materials-2023.04.27.pdf",
+   "page": 23,
+   "year": 2023,
+   "title": "Process Overview – Illustrative GPRE and GPP Calendar of Events (if Take Private is Management and Board Appro",
+   "section": "process",
+   "fill": 0.92,
+   "thumb": "_pages/001_023.png",
+   "layouts": [
+    "timeline",
+    "table"
+   ],
+   "note": "Calendar grids beside a dates-and-events table"
+  },
+  {
+   "id": "001_026",
+   "bank": "BofA Securities",
+   "deck": "BofA Presentation to Green Plains Inc. (27-Apr-2023)",
+   "file": "BofA Securities\\Green-Plains-Discussion-Materials-2023.04.27.pdf",
+   "page": 26,
+   "year": 2023,
+   "title": "Initial Proposal Considerations – Premiums Paid in Selected Precedent MLP Buy-ins — 100% Stock Transactions",
+   "section": "valuation",
+   "fill": 0.83,
+   "thumb": "_pages/001_026.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Premiums paid, full-width table"
+  },
+  {
+   "id": "001_027",
+   "bank": "BofA Securities",
+   "deck": "BofA Presentation to Green Plains Inc. (27-Apr-2023)",
+   "file": "BofA Securities\\Green-Plains-Discussion-Materials-2023.04.27.pdf",
+   "page": 27,
+   "year": 2023,
+   "title": "Initial Proposal Considerations – Summary of Selected Precedent Transactions",
+   "section": "valuation",
+   "fill": 0.87,
+   "thumb": "_pages/001_027.png",
+   "layouts": [
+    "table",
+    "harvey"
+   ],
+   "note": "Precedent summary table with tick marks"
+  },
+  {
+   "id": "002_005",
+   "bank": "BofA Securities",
+   "deck": "BAML Presentation to ArcLight Capital (14-Mar-2019)",
+   "file": "BofA Securities\\BAML-Presentation-to-ArcLight-Capital-14-Mar-2019.pdf",
+   "page": 5,
+   "year": 2019,
+   "title": "Illustrative Valuation Analysis – Selected Publicly Traded Comparables",
+   "section": "valuation",
+   "fill": 0.89,
+   "thumb": "_pages/002_005.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Trading comps table"
+  },
+  {
+   "id": "002_006",
+   "bank": "BofA Securities",
+   "deck": "BAML Presentation to ArcLight Capital (14-Mar-2019)",
+   "file": "BofA Securities\\BAML-Presentation-to-ArcLight-Capital-14-Mar-2019.pdf",
+   "page": 6,
+   "year": 2019,
+   "title": "Illustrative Valuation Analysis – Selected Precedent Transactions",
+   "section": "valuation",
+   "fill": 0.74,
+   "thumb": "_pages/002_006.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Precedent transactions table"
+  },
+  {
+   "id": "002_007",
+   "bank": "BofA Securities",
+   "deck": "BAML Presentation to ArcLight Capital (14-Mar-2019)",
+   "file": "BofA Securities\\BAML-Presentation-to-ArcLight-Capital-14-Mar-2019.pdf",
+   "page": 7,
+   "year": 2019,
+   "title": "Illustrative Valuation Analysis – Discounted Cash Flow Analysis — 3/1/2019 Adjusted Case",
+   "section": "valuation",
+   "fill": 0.82,
+   "thumb": "_pages/002_007.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "DCF with sensitivity tables"
+  },
+  {
+   "id": "002_009",
+   "bank": "BofA Securities",
+   "deck": "BAML Presentation to ArcLight Capital (14-Mar-2019)",
+   "file": "BofA Securities\\BAML-Presentation-to-ArcLight-Capital-14-Mar-2019.pdf",
+   "page": 9,
+   "year": 2019,
+   "title": "Appendix – AMID Summary Financial Projections — 3/1/2019 Adjusted Case",
+   "section": "financials",
+   "fill": 0.72,
+   "thumb": "_pages/002_009.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Projections table, full page"
+  },
+  {
+   "id": "003_006",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to Nuvei (2024.04)",
+   "file": "Barclays\\Barclays-Investment-Banking-Presentation-to-Nuvei-2024.04.pdf",
+   "page": 6,
+   "year": 2024,
+   "title": "Transaction Financial Metrics – Analysis at Various Prices (Mgmt. Projections)",
+   "section": "financials",
+   "fill": 0.93,
+   "thumb": "_pages/003_006.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Financial metrics at various prices, grouped bands"
+  },
+  {
+   "id": "003_008",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to Nuvei (2024.04)",
+   "file": "Barclays\\Barclays-Investment-Banking-Presentation-to-Nuvei-2024.04.pdf",
+   "page": 8,
+   "year": 2024,
+   "title": "Neon Trading Performance Since IPO – Neon Stock Price Performance Since IPO",
+   "section": "valuation",
+   "fill": 0.88,
+   "thumb": "_pages/003_008.png",
+   "layouts": [
+    "line",
+    "table"
+   ],
+   "note": "Share price since IPO with events table"
+  },
+  {
+   "id": "003_010",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to Nuvei (2024.04)",
+   "file": "Barclays\\Barclays-Investment-Banking-Presentation-to-Nuvei-2024.04.pdf",
+   "page": 10,
+   "year": 2024,
+   "title": "Overview of Neon's Management Plan – Historical Financials and Management Projections",
+   "section": "company",
+   "fill": 0.85,
+   "thumb": "_pages/003_010.png",
+   "layouts": [
+    "fin_table",
+    "column"
+   ],
+   "note": "Projections table with three small charts on the right"
+  },
+  {
+   "id": "003_011",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to Nuvei (2024.04)",
+   "file": "Barclays\\Barclays-Investment-Banking-Presentation-to-Nuvei-2024.04.pdf",
+   "page": 11,
+   "year": 2024,
+   "title": "Neon: Management Plan vs Consensus Estimates – Management Plan vs. Wall Street Consensus Estimates",
+   "section": "financials",
+   "fill": 0.9,
+   "thumb": "_pages/003_011.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Management plan vs consensus table"
+  },
+  {
+   "id": "003_015",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to Nuvei (2024.04)",
+   "file": "Barclays\\Barclays-Investment-Banking-Presentation-to-Nuvei-2024.04.pdf",
+   "page": 15,
+   "year": 2024,
+   "title": "Neon Valuation Summary – Price per Share",
+   "section": "valuation",
+   "fill": 0.85,
+   "thumb": "_pages/003_015.png",
+   "layouts": [
+    "football_field"
+   ],
+   "note": "Valuation summary football field with assumptions column"
+  },
+  {
+   "id": "003_016",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to Nuvei (2024.04)",
+   "file": "Barclays\\Barclays-Investment-Banking-Presentation-to-Nuvei-2024.04.pdf",
+   "page": 16,
+   "year": 2024,
+   "title": "Benchmarking Operating and Valuation Metrics – CY24E Revenue Growth",
+   "section": "valuation",
+   "fill": 0.93,
+   "thumb": "_pages/003_016.png",
+   "layouts": [
+    "bar",
+    "table"
+   ],
+   "note": "Benchmarking: bar columns per metric for each peer"
+  },
+  {
+   "id": "003_018",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to Nuvei (2024.04)",
+   "file": "Barclays\\Barclays-Investment-Banking-Presentation-to-Nuvei-2024.04.pdf",
+   "page": 18,
+   "year": 2024,
+   "title": "DCF Analysis (Management Plan) – Discounted Cash Flow Analysis\"'",
+   "section": "valuation",
+   "fill": 0.84,
+   "thumb": "_pages/003_018.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "DCF with equity value build and sensitivity grid"
+  },
+  {
+   "id": "003_020",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to Nuvei (2024.04)",
+   "file": "Barclays\\Barclays-Investment-Banking-Presentation-to-Nuvei-2024.04.pdf",
+   "page": 20,
+   "year": 2024,
+   "title": "Overview of Neon's Management Plan by Revenue Segment – Historical Financials and Management Projections",
+   "section": "company",
+   "fill": 0.79,
+   "thumb": "_pages/003_020.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Segment projections table, full page"
+  },
+  {
+   "id": "004_012",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to Medley Management (28-Jul-2019)",
+   "file": "Barclays\\Barclays-Presentation-to-Medley-Management-28-Jul-2019.pdf",
+   "page": 12,
+   "year": 2019,
+   "title": "MDLY Valuation Summary per Class A Share (combination with – MCC and MDLY)",
+   "section": "valuation",
+   "fill": 0.73,
+   "thumb": "_pages/004_012.png",
+   "layouts": [
+    "football_field"
+   ],
+   "note": "Valuation per share football field"
+  },
+  {
+   "id": "004_015",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to Medley Management (28-Jul-2019)",
+   "file": "Barclays\\Barclays-Presentation-to-Medley-Management-28-Jul-2019.pdf",
+   "page": 15,
+   "year": 2019,
+   "title": "U.S. Precedent Transactions: Premium Analysis",
+   "section": "valuation",
+   "fill": 0.8,
+   "thumb": "_pages/004_015.png",
+   "layouts": [
+    "stacked",
+    "column"
+   ],
+   "note": "Premiums analysis: stacked columns over grouped columns"
+  },
+  {
+   "id": "004_020",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to Medley Management (28-Jul-2019)",
+   "file": "Barclays\\Barclays-Presentation-to-Medley-Management-28-Jul-2019.pdf",
+   "page": 20,
+   "year": 2019,
+   "title": "Pro Forma SIC Financial Information (combination with MCC – and MDLY)",
+   "section": "structure",
+   "fill": 0.69,
+   "thumb": "_pages/004_020.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Pro forma financials table"
+  },
+  {
+   "id": "004_022",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to Medley Management (28-Jul-2019)",
+   "file": "Barclays\\Barclays-Presentation-to-Medley-Management-28-Jul-2019.pdf",
+   "page": 22,
+   "year": 2019,
+   "title": "Asset Mix and Industry Diversification (combination with MCC – and MDLY)",
+   "section": "market",
+   "fill": 0.66,
+   "thumb": "_pages/004_022.png",
+   "layouts": [
+    "stat_rings",
+    "page_market"
+   ],
+   "note": "Asset-mix pies, four exhibits in a grid"
+  },
+  {
+   "id": "004_030",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to Medley Management (28-Jul-2019)",
+   "file": "Barclays\\Barclays-Presentation-to-Medley-Management-28-Jul-2019.pdf",
+   "page": 30,
+   "year": 2019,
+   "title": "MDLY Valuation Summary per Class A Share (combination with – SIC only)",
+   "section": "valuation",
+   "fill": 0.73,
+   "thumb": "_pages/004_030.png",
+   "layouts": [
+    "football_field"
+   ],
+   "note": "Valuation football field"
+  },
+  {
+   "id": "004_032",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to Medley Management (28-Jul-2019)",
+   "file": "Barclays\\Barclays-Presentation-to-Medley-Management-28-Jul-2019.pdf",
+   "page": 32,
+   "year": 2019,
+   "title": "Pro Forma SIC Financial Information (combination with SIC – only)",
+   "section": "structure",
+   "fill": 0.7,
+   "thumb": "_pages/004_032.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Pro forma financials table"
+  },
+  {
+   "id": "004_038",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to Medley Management (28-Jul-2019)",
+   "file": "Barclays\\Barclays-Presentation-to-Medley-Management-28-Jul-2019.pdf",
+   "page": 38,
+   "year": 2019,
+   "title": "MDLY Projections Comparison (Current vs. Prior — Aug 201 8) – (combination with SIC and MCC)",
+   "section": "financials",
+   "fill": 0.63,
+   "thumb": "_pages/004_038.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Projections comparison, current vs prior"
+  },
+  {
+   "id": "004_040",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to Medley Management (28-Jul-2019)",
+   "file": "Barclays\\Barclays-Presentation-to-Medley-Management-28-Jul-2019.pdf",
+   "page": 40,
+   "year": 2019,
+   "title": "Cost of Equity Calculation: Pro Forma SIC",
+   "section": "structure",
+   "fill": 0.68,
+   "thumb": "_pages/004_040.png",
+   "layouts": [
+    "table",
+    "page_text"
+   ],
+   "note": "Cost of equity table with bullets beside"
+  },
+  {
+   "id": "006_003",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to ArcLight Capital (Aug-2018)",
+   "file": "Barclays\\Barclays-Presentation-to-ArcLight-Capital-Aug-2018.pdf",
+   "page": 3,
+   "year": 2018,
+   "title": "Trans Am Price Performance",
+   "section": "valuation",
+   "fill": 0.84,
+   "thumb": "_pages/006_003.png",
+   "layouts": [
+    "line",
+    "table"
+   ],
+   "note": "Share price charts over a performance table"
+  },
+  {
+   "id": "006_009",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to ArcLight Capital (Aug-2018)",
+   "file": "Barclays\\Barclays-Presentation-to-ArcLight-Capital-Aug-2018.pdf",
+   "page": 9,
+   "year": 2018,
+   "title": "Trans Am Peer Trading Comparables",
+   "section": "valuation",
+   "fill": 0.82,
+   "thumb": "_pages/006_009.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Trading comps, full page"
+  },
+  {
+   "id": "006_010",
+   "bank": "Barclays",
+   "deck": "Barclays Presentation to ArcLight Capital (Aug-2018)",
+   "file": "Barclays\\Barclays-Presentation-to-ArcLight-Capital-Aug-2018.pdf",
+   "page": 10,
+   "year": 2018,
+   "title": "Trans Am Peer Trading Comparables (Cont'd)",
+   "section": "valuation",
+   "fill": 0.75,
+   "thumb": "_pages/006_010.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Trading comps continued"
+  },
+  {
+   "id": "009_010",
+   "bank": "Barclays",
+   "deck": "Barclays Fairness Presentation to Kinder Morgan (09-Aug-2014)",
+   "file": "Barclays\\Barclays-Fairness-Presentation-to-Kinder-Morgan-09-Aug-2014.pdf",
+   "page": 10,
+   "year": 2014,
+   "title": "Approach to Analysis – Key considerations",
+   "section": "exec_summary",
+   "fill": 0.55,
+   "thumb": "_pages/009_010.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Approach to analysis: full-page bullets"
+  },
+  {
+   "id": "010_006",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation to Endeavor (08-Mar-2024)",
+   "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.08.pdf",
+   "page": 6,
+   "year": 2024,
+   "title": "Current Status – Pro forma historical financials (e.g., Kilimanjaro formation, divestiture Of IMG Academy)",
+   "section": "structure",
+   "fill": 0.77,
+   "thumb": "_pages/010_006.png",
+   "layouts": [
+    "pill_rows",
+    "page_text"
+   ],
+   "note": "Label blocks down the left with two-level bullets"
+  },
+  {
+   "id": "010_008",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation to Endeavor (08-Mar-2024)",
+   "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.08.pdf",
+   "page": 8,
+   "year": 2024,
+   "title": "Everest Stock Price Performance Since IPO",
+   "section": "valuation",
+   "fill": 0.84,
+   "thumb": "_pages/010_008.png",
+   "layouts": [
+    "line",
+    "table"
+   ],
+   "note": "Share price chart with lettered events list"
+  },
+  {
+   "id": "010_011",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation to Endeavor (08-Mar-2024)",
+   "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.08.pdf",
+   "page": 11,
+   "year": 2024,
+   "title": "Overview Of Strategic – Review, Everest Management Plan And Preparation Process",
+   "section": "company",
+   "fill": 0.78,
+   "thumb": "_pages/010_011.png",
+   "layouts": [
+    "pill_rows",
+    "page_text"
+   ],
+   "note": "Navy label column beside bullet text"
+  },
+  {
+   "id": "010_013",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation to Endeavor (08-Mar-2024)",
+   "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.08.pdf",
+   "page": 13,
+   "year": 2024,
+   "title": "Overview Of Everest Consensus Estimates",
+   "section": "company",
+   "fill": 0.73,
+   "thumb": "_pages/010_013.png",
+   "layouts": [
+    "bar",
+    "table"
+   ],
+   "note": "Consensus ranges in a 2x3 grid of small charts"
+  },
+  {
+   "id": "010_015",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation to Endeavor (08-Mar-2024)",
+   "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.08.pdf",
+   "page": 15,
+   "year": 2024,
+   "title": "Overview Of Key Revenue Models By Segment – Owned Sports Properties",
+   "section": "company",
+   "fill": 0.9,
+   "thumb": "_pages/010_015.png",
+   "layouts": [
+    "pill_rows"
+   ],
+   "note": "Revenue models by segment: label boxes with bullets in four panels"
+  },
+  {
+   "id": "010_016",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation to Endeavor (08-Mar-2024)",
+   "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.08.pdf",
+   "page": 16,
+   "year": 2024,
+   "title": "Segment Financial Overview: Owned Sports Properties – 2027E",
+   "section": "financials",
+   "fill": 0.9,
+   "thumb": "_pages/010_016.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Segment table with numbered commentary column"
+  },
+  {
+   "id": "010_018",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation to Endeavor (08-Mar-2024)",
+   "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.08.pdf",
+   "page": 18,
+   "year": 2024,
+   "title": "Segment Financial Overview: Events, Experiences & Rights – 2027E",
+   "section": "financials",
+   "fill": 0.93,
+   "thumb": "_pages/010_018.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Segment table with commentary column"
+  },
+  {
+   "id": "010_020",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation to Endeavor (08-Mar-2024)",
+   "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.08.pdf",
+   "page": 20,
+   "year": 2024,
+   "title": "Segment Financial Overview: Representation – 2024E",
+   "section": "financials",
+   "fill": 0.92,
+   "thumb": "_pages/010_020.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Segment table with commentary column"
+  },
+  {
+   "id": "011_007",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation to Endeavor (21-Mar-2024)",
+   "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.21.pdf",
+   "page": 7,
+   "year": 2024,
+   "title": "Reminder: – Everest Management Plan Vs. Consensus",
+   "section": "financials",
+   "fill": 0.89,
+   "thumb": "_pages/011_007.png",
+   "layouts": [
+    "fin_table",
+    "line"
+   ],
+   "note": "Plan vs consensus: rows of small line charts with figures"
+  },
+  {
+   "id": "011_015",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation to Endeavor (21-Mar-2024)",
+   "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.21.pdf",
+   "page": 15,
+   "year": 2024,
+   "title": "Segment Financial Overview: Events, Experiences & Rights – 2027E",
+   "section": "financials",
+   "fill": 0.95,
+   "thumb": "_pages/011_015.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Segment table with commentary column"
+  },
+  {
+   "id": "011_019",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation to Endeavor (21-Mar-2024)",
+   "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.21.pdf",
+   "page": 19,
+   "year": 2024,
+   "title": "Segment Financial Overview: Representation – 2024E",
+   "section": "financials",
+   "fill": 0.94,
+   "thumb": "_pages/011_019.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Segment table with commentary column"
+  },
+  {
+   "id": "011_023",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation to Endeavor (21-Mar-2024)",
+   "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.21.pdf",
+   "page": 23,
+   "year": 2024,
+   "title": "Segment Financial Overview: Sports Data & Technology",
+   "section": "financials",
+   "fill": 0.91,
+   "thumb": "_pages/011_023.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Segment table with commentary column"
+  },
+  {
+   "id": "011_027",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation to Endeavor (21-Mar-2024)",
+   "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.21.pdf",
+   "page": 27,
+   "year": 2024,
+   "title": "Overview Of Key Components Of Corporate Expense – Corporate Spend",
+   "section": "company",
+   "fill": 0.92,
+   "thumb": "_pages/011_027.png",
+   "layouts": [
+    "pill_rows",
+    "fin_table"
+   ],
+   "note": "Cost lines as navy label boxes with figures and commentary"
+  },
+  {
+   "id": "011_028",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation to Endeavor (21-Mar-2024)",
+   "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.21.pdf",
+   "page": 28,
+   "year": 2024,
+   "title": "Pro Forma Everest Revenue Growth Profile – Pro •ection",
+   "section": "structure",
+   "fill": 0.81,
+   "thumb": "_pages/011_028.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Revenue growth profile table, historical vs projection"
+  },
+  {
+   "id": "011_029",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation to Endeavor (21-Mar-2024)",
+   "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.21.pdf",
+   "page": 29,
+   "year": 2024,
+   "title": "Pro Forma Everest Adj. EBITDA Margin Profile",
+   "section": "structure",
+   "fill": 0.85,
+   "thumb": "_pages/011_029.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Margin profile table"
+  },
+  {
+   "id": "011_037",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation to Endeavor (21-Mar-2024)",
+   "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.21.pdf",
+   "page": 37,
+   "year": 2024,
+   "title": "Kilimanjaro In Everest Management Plan Vs. Consensus – 2023A",
+   "section": "financials",
+   "fill": 0.9,
+   "thumb": "_pages/011_037.png",
+   "layouts": [
+    "fin_table",
+    "line"
+   ],
+   "note": "Plan vs consensus: line strips per metric"
+  },
+  {
+   "id": "012_002",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation on Avaya (13-Jul-2017)",
+   "file": "Centerview\\Centerview-Presentation-on-Avaya-13-Jul-2017.pdf",
+   "page": 2,
+   "year": 2017,
+   "title": "— Prehninory gnd Confi&ntial Dr<t — St*ct to Mmerial Chmge — – Executive Summary",
+   "section": "exec_summary",
+   "fill": 0.59,
+   "thumb": "_pages/012_002.png",
+   "layouts": [
+    "page_text",
+    "pill_rows"
+   ],
+   "note": "Executive summary: two text columns, one label block"
+  },
+  {
+   "id": "012_007",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation on Avaya (13-Jul-2017)",
+   "file": "Centerview\\Centerview-Presentation-on-Avaya-13-Jul-2017.pdf",
+   "page": 7,
+   "year": 2017,
+   "title": "— Prehninory gnd Confi&ntial Dr<t — St*ct to Mmerial Chmge — – Summary Liquidity Analysis",
+   "section": "structure",
+   "fill": 0.76,
+   "thumb": "_pages/012_007.png",
+   "layouts": [
+    "stacked",
+    "table"
+   ],
+   "note": "Liquidity: stacked columns beside commentary, table below"
+  },
+  {
+   "id": "013_006",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation on Project Canine (12-Dec-2012)",
+   "file": "Centerview\\Centerview-Presentation-on-Project-Canine-12-Dec-2012.pdf",
+   "page": 6,
+   "year": 2012,
+   "title": "Overview of Shepherd Proposal",
+   "section": "company",
+   "fill": 0.74,
+   "thumb": "_pages/013_006.png",
+   "layouts": [
+    "pill_rows",
+    "table"
+   ],
+   "note": "Proposal terms: label column beside terms text"
+  },
+  {
+   "id": "013_011",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation on Project Canine (12-Dec-2012)",
+   "file": "Centerview\\Centerview-Presentation-on-Project-Canine-12-Dec-2012.pdf",
+   "page": 11,
+   "year": 2012,
+   "title": "Dilution Associated with Conversion of Interim Financing",
+   "section": "structure",
+   "fill": 0.71,
+   "thumb": "_pages/013_011.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Dilution table by scenario"
+  },
+  {
+   "id": "013_014",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation on Project Canine (12-Dec-2012)",
+   "file": "Centerview\\Centerview-Presentation-on-Project-Canine-12-Dec-2012.pdf",
+   "page": 14,
+   "year": 2012,
+   "title": "Overview of Valuation Methodologies Employed",
+   "section": "company",
+   "fill": 0.78,
+   "thumb": "_pages/013_014.png",
+   "layouts": [
+    "pill_rows",
+    "table"
+   ],
+   "note": "Valuation methods: label column beside comments and observations"
+  },
+  {
+   "id": "013_018",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation on Project Canine (12-Dec-2012)",
+   "file": "Centerview\\Centerview-Presentation-on-Project-Canine-12-Dec-2012.pdf",
+   "page": 18,
+   "year": 2012,
+   "title": "Precedent Spectrum Acquisitions",
+   "section": "valuation",
+   "fill": 0.77,
+   "thumb": "_pages/013_018.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Precedent acquisitions table with grouped side bands"
+  },
+  {
+   "id": "013_020",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation on Project Canine (12-Dec-2012)",
+   "file": "Centerview\\Centerview-Presentation-on-Project-Canine-12-Dec-2012.pdf",
+   "page": 20,
+   "year": 2012,
+   "title": "Precedent Minority Squeeze-Out Transactions",
+   "section": "valuation",
+   "fill": 0.78,
+   "thumb": "_pages/013_020.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Minority squeeze-out precedents table"
+  },
+  {
+   "id": "013_022",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation on Project Canine (12-Dec-2012)",
+   "file": "Centerview\\Centerview-Presentation-on-Project-Canine-12-Dec-2012.pdf",
+   "page": 22,
+   "year": 2012,
+   "title": "Management Plan Overview – Financial Summary",
+   "section": "financials",
+   "fill": 0.76,
+   "thumb": "_pages/013_022.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Management plan summary table"
+  },
+  {
+   "id": "013_025",
+   "bank": "Centerview",
+   "deck": "Centerview Presentation on Project Canine (12-Dec-2012)",
+   "file": "Centerview\\Centerview-Presentation-on-Project-Canine-12-Dec-2012.pdf",
+   "page": 25,
+   "year": 2012,
+   "title": "Overview of Alternatives Considered",
+   "section": "company",
+   "fill": 0.72,
+   "thumb": "_pages/013_025.png",
+   "layouts": [
+    "harvey",
+    "table"
+   ],
+   "note": "Alternatives compared: label rows, ticks and crosses per option"
+  },
+  {
+   "id": "017_005",
+   "bank": "Citi",
+   "deck": "Citi Presentation to Aircastle (28-Oct-2019)",
+   "file": "Citi\\Citi-Presentation-to-Aircastle-28-Oct-2019.pdf",
+   "page": 5,
+   "year": 2019,
+   "title": "Benchmarking Select Publicly-Listed Aircraft Lessors – Firm Value and Equity Value",
+   "section": "valuation",
+   "fill": 0.62,
+   "thumb": "_pages/017_005.png",
+   "layouts": [
+    "column",
+    "logo_row"
+   ],
+   "note": "Peer benchmarking: 2x2 grid of column charts"
+  },
+  {
+   "id": "017_006",
+   "bank": "Citi",
+   "deck": "Citi Presentation to Aircastle (28-Oct-2019)",
+   "file": "Citi\\Citi-Presentation-to-Aircastle-28-Oct-2019.pdf",
+   "page": 6,
+   "year": 2019,
+   "title": "Benchmarking Select Publicly-Listed Aircraft Lessors (Cont'd) – Portfolio Yield (1)",
+   "section": "valuation",
+   "fill": 0.79,
+   "thumb": "_pages/017_006.png",
+   "layouts": [
+    "column"
+   ],
+   "note": "Peer benchmarking continued: 2x2 grid of column charts"
+  },
+  {
+   "id": "017_009",
+   "bank": "Citi",
+   "deck": "Citi Presentation to Aircastle (28-Oct-2019)",
+   "file": "Citi\\Citi-Presentation-to-Aircastle-28-Oct-2019.pdf",
+   "page": 9,
+   "year": 2019,
+   "title": "Overview of Base Case and Sensitivities",
+   "section": "company",
+   "fill": 0.72,
+   "thumb": "_pages/017_009.png",
+   "layouts": [
+    "pill_rows"
+   ],
+   "note": "Base case and sensitivities: navy label blocks with bullets"
+  },
+  {
+   "id": "017_016",
+   "bank": "Citi",
+   "deck": "Citi Presentation to Aircastle (28-Oct-2019)",
+   "file": "Citi\\Citi-Presentation-to-Aircastle-28-Oct-2019.pdf",
+   "page": 16,
+   "year": 2019,
+   "title": "Share Price Performance over the Last Twelve Months – For purposes and",
+   "section": "valuation",
+   "fill": 0.58,
+   "thumb": "_pages/017_016.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Share price over 12 months with offer range band"
+  },
+  {
+   "id": "017_019",
+   "bank": "Citi",
+   "deck": "Citi Presentation to Aircastle (28-Oct-2019)",
+   "file": "Citi\\Citi-Presentation-to-Aircastle-28-Oct-2019.pdf",
+   "page": 19,
+   "year": 2019,
+   "title": "Selected Premiums Paid Analysis – For purpos« and",
+   "section": "valuation",
+   "fill": 0.62,
+   "thumb": "_pages/017_019.png",
+   "layouts": [
+    "column"
+   ],
+   "note": "Premiums paid by year, single column chart"
+  },
+  {
+   "id": "018_007",
+   "bank": "Citi",
+   "deck": "Citi Presentation to Aircastle (05-Nov-2019)",
+   "file": "Citi\\Citi-Presentation-to-Aircastle-05-Nov-2019.pdf",
+   "page": 7,
+   "year": 2019,
+   "title": "Europa Management Forecast – Total Revenue (1)",
+   "section": "financials",
+   "fill": 0.63,
+   "thumb": "_pages/018_007.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Management forecast: 2x2 grid of line charts"
+  },
+  {
+   "id": "018_016",
+   "bank": "Citi",
+   "deck": "Citi Presentation to Aircastle (05-Nov-2019)",
+   "file": "Citi\\Citi-Presentation-to-Aircastle-05-Nov-2019.pdf",
+   "page": 16,
+   "year": 2019,
+   "title": "Selected Precedent Premiums Paid Analysis – F« Musraüve Purposes and Reference Only",
+   "section": "valuation",
+   "fill": 0.62,
+   "thumb": "_pages/018_016.png",
+   "layouts": [
+    "column"
+   ],
+   "note": "Premiums paid by year, single column chart"
+  },
+  {
+   "id": "019_008",
+   "bank": "Citi",
+   "deck": "Citi Presentation to Trina Solar Special Committee (01-Aug-2016)",
+   "file": "Citi\\Citi-Presentation-to-Trina-Solar-Special-Committee-01-Aug-2016.pdf",
+   "page": 8,
+   "year": 2016,
+   "title": "Business Overview of Trina – Founded in 1997, Trina engages in the manufacture and sale of integrated solar-po",
+   "section": "company",
+   "fill": 0.66,
+   "thumb": "_pages/019_008.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Business overview: full-page two-level bullets"
+  },
+  {
+   "id": "019_010",
+   "bank": "Citi",
+   "deck": "Citi Presentation to Trina Solar Special Committee (01-Aug-2016)",
+   "file": "Citi\\Citi-Presentation-to-Trina-Solar-Special-Committee-01-Aug-2016.pdf",
+   "page": 10,
+   "year": 2016,
+   "title": "Trina Solar Valuation Summary – Implied Share Price(l)",
+   "section": "valuation",
+   "fill": 0.97,
+   "thumb": "_pages/019_010.png",
+   "layouts": [
+    "football_field"
+   ],
+   "note": "Valuation summary bars with multiples and commentary columns"
+  },
+  {
+   "id": "019_012",
+   "bank": "Citi",
+   "deck": "Citi Presentation to Trina Solar Special Committee (01-Aug-2016)",
+   "file": "Citi\\Citi-Presentation-to-Trina-Solar-Special-Committee-01-Aug-2016.pdf",
+   "page": 12,
+   "year": 2016,
+   "title": "DCF Valuation – Key Assumptions",
+   "section": "valuation",
+   "fill": 0.84,
+   "thumb": "_pages/019_012.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "DCF: assumptions, projections and sensitivity grid"
+  },
+  {
+   "id": "019_013",
+   "bank": "Citi",
+   "deck": "Citi Presentation to Trina Solar Special Committee (01-Aug-2016)",
+   "file": "Citi\\Citi-Presentation-to-Trina-Solar-Special-Committee-01-Aug-2016.pdf",
+   "page": 13,
+   "year": 2016,
+   "title": "DCF Valuation – Of Metrics",
+   "section": "valuation",
+   "fill": 0.83,
+   "thumb": "_pages/019_013.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "WACC build tables"
+  },
+  {
+   "id": "019_015",
+   "bank": "Citi",
+   "deck": "Citi Presentation to Trina Solar Special Committee (01-Aug-2016)",
+   "file": "Citi\\Citi-Presentation-to-Trina-Solar-Special-Committee-01-Aug-2016.pdf",
+   "page": 15,
+   "year": 2016,
+   "title": "Trina Solar's Share Last 3 Years Price Performance – Last",
+   "section": "valuation",
+   "fill": 0.86,
+   "thumb": "_pages/019_015.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Share price with annotated event boxes"
+  },
+  {
+   "id": "019_016",
+   "bank": "Citi",
+   "deck": "Citi Presentation to Trina Solar Special Committee (01-Aug-2016)",
+   "file": "Citi\\Citi-Presentation-to-Trina-Solar-Special-Committee-01-Aug-2016.pdf",
+   "page": 16,
+   "year": 2016,
+   "title": "Precedent US-Iisted Chinese Take Private Transactionsl – I-Day premium (%)",
+   "section": "valuation",
+   "fill": 0.76,
+   "thumb": "_pages/019_016.png",
+   "layouts": [
+    "column"
+   ],
+   "note": "Take-private premiums: two column charts stacked"
+  },
+  {
+   "id": "021_002",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to NewStar (13-Apr-2017)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-NewStar-13-Apr-2017.pdf",
+   "page": 2,
+   "year": 2017,
+   "title": "Executive summary",
+   "section": "exec_summary",
+   "fill": 0.69,
+   "thumb": "_pages/021_002.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Executive summary: lead paragraph and numbered bullets"
+  },
+  {
+   "id": "021_009",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to NewStar (13-Apr-2017)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-NewStar-13-Apr-2017.pdf",
+   "page": 9,
+   "year": 2017,
+   "title": "Preliminary sources & uses – Asset sale into fund",
+   "section": "structure",
+   "fill": 0.64,
+   "thumb": "_pages/021_009.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Sources and uses tables side by side"
+  },
+  {
+   "id": "021_014",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to NewStar (13-Apr-2017)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-NewStar-13-Apr-2017.pdf",
+   "page": 14,
+   "year": 2017,
+   "title": "Preliminary credit manager benchmarking – Selected operating metrics",
+   "section": "valuation",
+   "fill": 0.8,
+   "thumb": "_pages/021_014.png",
+   "layouts": [
+    "table",
+    "stat_rings"
+   ],
+   "note": "Peer benchmarking table with small pies"
+  },
+  {
+   "id": "022_004",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to NewStar (7-Oct-2017)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-NewStar-7-Oct-2017.pdf",
+   "page": 4,
+   "year": 2017,
+   "title": "Executive summary – • FolbNing the August 31 , 2017 Board of Directors telephonic meeting to review the latest",
+   "section": "exec_summary",
+   "fill": 0.84,
+   "thumb": "_pages/022_004.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Executive summary: full-page bullets"
+  },
+  {
+   "id": "022_012",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to NewStar (7-Oct-2017)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-NewStar-7-Oct-2017.pdf",
+   "page": 12,
+   "year": 2017,
+   "title": "Osprey annotated historical stock price performance – Orrent",
+   "section": "valuation",
+   "fill": 0.79,
+   "thumb": "_pages/022_012.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Annotated share price with event callouts"
+  },
+  {
+   "id": "022_013",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to NewStar (7-Oct-2017)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-NewStar-7-Oct-2017.pdf",
+   "page": 13,
+   "year": 2017,
+   "title": "Osprey YTD indexed stock price performance – one. Three-",
+   "section": "valuation",
+   "fill": 0.8,
+   "thumb": "_pages/022_013.png",
+   "layouts": [
+    "line",
+    "table"
+   ],
+   "note": "Indexed share price vs index with returns table"
+  },
+  {
+   "id": "022_026",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to NewStar (7-Oct-2017)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-NewStar-7-Oct-2017.pdf",
+   "page": 26,
+   "year": 2017,
+   "title": "Preliminary Osprey standalone financial summary – Cash flow assumptions per Osprey management as of September ",
+   "section": "financials",
+   "fill": 0.84,
+   "thumb": "_pages/022_026.png",
+   "layouts": [
+    "fin_table",
+    "page_text"
+   ],
+   "note": "Standalone summary: bullets around a cash flow table"
+  },
+  {
+   "id": "022_028",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to NewStar (7-Oct-2017)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-NewStar-7-Oct-2017.pdf",
+   "page": 28,
+   "year": 2017,
+   "title": "Preliminary Osprey standalone projections comparison – Osprey management revised FY' 1 7 guidance in Osprey 02",
+   "section": "financials",
+   "fill": 0.82,
+   "thumb": "_pages/022_028.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Projections comparison with revised-guidance markers"
+  },
+  {
+   "id": "022_030",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to NewStar (7-Oct-2017)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-NewStar-7-Oct-2017.pdf",
+   "page": 30,
+   "year": 2017,
+   "title": "Preliminary Osprey standalone projections comparison (cont'd) – Updated forecast (Sept. 2017) versus prior 201",
+   "section": "financials",
+   "fill": 0.84,
+   "thumb": "_pages/022_030.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Projections comparison continued"
+  },
+  {
+   "id": "022_031",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to NewStar (7-Oct-2017)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-NewStar-7-Oct-2017.pdf",
+   "page": 31,
+   "year": 2017,
+   "title": "Preliminary Osprey standalone projections comparison (cont'd) – Osprey management forecast versus Wall Street ",
+   "section": "financials",
+   "fill": 0.9,
+   "thumb": "_pages/022_031.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Projections vs research estimates"
+  },
+  {
+   "id": "022_033",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to NewStar (7-Oct-2017)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-NewStar-7-Oct-2017.pdf",
+   "page": 33,
+   "year": 2017,
+   "title": "Relative overview of business model and financial profile – Business development",
+   "section": "company",
+   "fill": 0.85,
+   "thumb": "_pages/022_033.png",
+   "layouts": [
+    "table",
+    "pill_rows"
+   ],
+   "note": "Business model comparison matrix with side label"
+  },
+  {
+   "id": "023_013",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to NewStar (20-Nov-2017)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-NewStar-20-Nov-2017.pdf",
+   "page": 13,
+   "year": 2017,
+   "title": "O Hypothetical Osprey standalone financial summary sensitivity – FY' 17E — FY'20E per Osprey management as of ",
+   "section": "financials",
+   "fill": 0.78,
+   "thumb": "_pages/023_013.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Standalone sensitivity table"
+  },
+  {
+   "id": "026_021",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to McMoRan Exploration (03-Dec-2012)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-McMoRan-Exploration-03-Dec-2012.pdf",
+   "page": 21,
+   "year": 2012,
+   "title": "Illustrative pro forma financial impact – Merger consideration 100% cash for Maine, 50/50 stocWcash for",
+   "section": "structure",
+   "fill": 0.72,
+   "thumb": "_pages/026_021.png",
+   "layouts": [
+    "page_text",
+    "fin_table"
+   ],
+   "note": "Pro forma impact: assumptions bullets beside results table"
+  },
+  {
+   "id": "027_004",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (14-Dec-2004)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-14-Dec-2004.pdf",
+   "page": 4,
+   "year": 2004,
+   "title": "Situation Overview",
+   "section": "exec_summary",
+   "fill": 0.59,
+   "thumb": "_pages/027_004.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Situation overview: dated bullets"
+  },
+  {
+   "id": "027_010",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (14-Dec-2004)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-14-Dec-2004.pdf",
+   "page": 10,
+   "year": 2004,
+   "title": "Preliminary LBO Analysis",
+   "section": "returns",
+   "fill": 0.74,
+   "thumb": "_pages/027_010.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "LBO analysis: sources and uses, returns, credit stats"
+  },
+  {
+   "id": "027_011",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (14-Dec-2004)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-14-Dec-2004.pdf",
+   "page": 11,
+   "year": 2004,
+   "title": "Preliminary LBO Sensitivity",
+   "section": "returns",
+   "fill": 0.62,
+   "thumb": "_pages/027_011.png",
+   "layouts": [
+    "heatmap"
+   ],
+   "note": "LBO sensitivity grids, price and leverage"
+  },
+  {
+   "id": "027_016",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (14-Dec-2004)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-14-Dec-2004.pdf",
+   "page": 16,
+   "year": 2004,
+   "title": "Precedent Saturn Case Studies",
+   "section": "valuation",
+   "fill": 0.76,
+   "thumb": "_pages/027_016.png",
+   "layouts": [
+    "table",
+    "logo_row"
+   ],
+   "note": "Precedent case studies side by side with logos"
+  },
+  {
+   "id": "027_023",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (14-Dec-2004)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-14-Dec-2004.pdf",
+   "page": 23,
+   "year": 2004,
+   "title": "Iverson Comparable Company Analysis",
+   "section": "valuation",
+   "fill": 0.75,
+   "thumb": "_pages/027_023.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Comparable companies table"
+  },
+  {
+   "id": "027_028",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (14-Dec-2004)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-14-Dec-2004.pdf",
+   "page": 28,
+   "year": 2004,
+   "title": "Allen Comparable Company Analysis",
+   "section": "valuation",
+   "fill": 0.76,
+   "thumb": "_pages/027_028.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Comparable companies table"
+  },
+  {
+   "id": "028_002",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (01-Feb-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-01-Feb-2005.pdf",
+   "page": 2,
+   "year": 2005,
+   "title": "Situation Overview",
+   "section": "exec_summary",
+   "fill": 0.75,
+   "thumb": "_pages/028_002.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Situation overview: dated bullets"
+  },
+  {
+   "id": "028_003",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (01-Feb-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-01-Feb-2005.pdf",
+   "page": 3,
+   "year": 2005,
+   "title": "Overview of Saturn Proposal",
+   "section": "company",
+   "fill": 0.74,
+   "thumb": "_pages/028_003.png",
+   "layouts": [
+    "pros_cons",
+    "table"
+   ],
+   "note": "Proposal vs assumptions: two labelled columns"
+  },
+  {
+   "id": "028_006",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (01-Feb-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-01-Feb-2005.pdf",
+   "page": 6,
+   "year": 2005,
+   "title": "Overview of Alternatives",
+   "section": "company",
+   "fill": 0.76,
+   "thumb": "_pages/028_006.png",
+   "layouts": [
+    "hub_spoke",
+    "fin_table"
+   ],
+   "note": "Alternatives tree with per-case value table"
+  },
+  {
+   "id": "028_007",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (01-Feb-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-01-Feb-2005.pdf",
+   "page": 7,
+   "year": 2005,
+   "title": "Solar Preliminary Valuation Summary",
+   "section": "valuation",
+   "fill": 0.79,
+   "thumb": "_pages/028_007.png",
+   "layouts": [
+    "football_field",
+    "fin_table"
+   ],
+   "note": "Valuation summary columns over metrics table"
+  },
+  {
+   "id": "028_014",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (01-Feb-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-01-Feb-2005.pdf",
+   "page": 14,
+   "year": 2005,
+   "title": "Solar LBO Analysis",
+   "section": "returns",
+   "fill": 0.68,
+   "thumb": "_pages/028_014.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "LBO analysis tables"
+  },
+  {
+   "id": "028_021",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (01-Feb-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-01-Feb-2005.pdf",
+   "page": 21,
+   "year": 2005,
+   "title": "Solar Financial Projections",
+   "section": "financials",
+   "fill": 0.8,
+   "thumb": "_pages/028_021.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Financial projections with highlighted year"
+  },
+  {
+   "id": "028_031",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (01-Feb-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-01-Feb-2005.pdf",
+   "page": 31,
+   "year": 2005,
+   "title": "Allen Discounted Cash Flow Analysis",
+   "section": "valuation",
+   "fill": 0.75,
+   "thumb": "_pages/028_031.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "DCF matrix with growth and margin sensitivity"
+  },
+  {
+   "id": "029_002",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (22-Mar-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-22-Mar-2005.pdf",
+   "page": 2,
+   "year": 2005,
+   "title": "Situation Overview",
+   "section": "exec_summary",
+   "fill": 0.71,
+   "thumb": "_pages/029_002.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Situation overview: dated bullets"
+  },
+  {
+   "id": "029_003",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (22-Mar-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-22-Mar-2005.pdf",
+   "page": 3,
+   "year": 2005,
+   "title": "Situation Overview (cont'd)",
+   "section": "exec_summary",
+   "fill": 0.71,
+   "thumb": "_pages/029_003.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Situation overview continued"
+  },
+  {
+   "id": "029_008",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (22-Mar-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-22-Mar-2005.pdf",
+   "page": 8,
+   "year": 2005,
+   "title": "Overview of Saturn Proposal",
+   "section": "company",
+   "fill": 0.76,
+   "thumb": "_pages/029_008.png",
+   "layouts": [
+    "fin_table",
+    "page_text"
+   ],
+   "note": "Proposal summary beside sources and uses"
+  },
+  {
+   "id": "029_009",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (22-Mar-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-22-Mar-2005.pdf",
+   "page": 9,
+   "year": 2005,
+   "title": "Overview of Saturn Proposal (Cont'd)",
+   "section": "company",
+   "fill": 0.65,
+   "thumb": "_pages/029_009.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Implied premiums and multiples table"
+  },
+  {
+   "id": "029_031",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (22-Mar-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-22-Mar-2005.pdf",
+   "page": 31,
+   "year": 2005,
+   "title": "Comparable Company Multiple Analysis",
+   "section": "valuation",
+   "fill": 0.86,
+   "thumb": "_pages/029_031.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Peer and non-peer multiples, two tables"
+  },
+  {
+   "id": "029_032",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (22-Mar-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-22-Mar-2005.pdf",
+   "page": 32,
+   "year": 2005,
+   "title": "Illustrative Theoretical Stock Price Performance - – Based on Current Multiple of 16.1x",
+   "section": "valuation",
+   "fill": 0.75,
+   "thumb": "_pages/029_032.png",
+   "layouts": [
+    "line",
+    "fin_table"
+   ],
+   "note": "Future and present share value, two line charts"
+  },
+  {
+   "id": "029_035",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (22-Mar-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-22-Mar-2005.pdf",
+   "page": 35,
+   "year": 2005,
+   "title": "Illustrative LBO Analysis",
+   "section": "returns",
+   "fill": 0.72,
+   "thumb": "_pages/029_035.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "LBO analysis tables"
+  },
+  {
+   "id": "029_036",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (22-Mar-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-22-Mar-2005.pdf",
+   "page": 36,
+   "year": 2005,
+   "title": "Illustrative LBO Sensitivity Analysis",
+   "section": "returns",
+   "fill": 0.62,
+   "thumb": "_pages/029_036.png",
+   "layouts": [
+    "heatmap"
+   ],
+   "note": "LBO sensitivity grids"
+  },
+  {
+   "id": "030_002",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (27-Mar-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-27-Mar-2005.pdf",
+   "page": 2,
+   "year": 2005,
+   "title": "Situation Overview",
+   "section": "exec_summary",
+   "fill": 0.71,
+   "thumb": "_pages/030_002.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Situation overview: dated bullets"
+  },
+  {
+   "id": "030_003",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (27-Mar-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-27-Mar-2005.pdf",
+   "page": 3,
+   "year": 2005,
+   "title": "Situation Overview (Cont'd)",
+   "section": "exec_summary",
+   "fill": 0.75,
+   "thumb": "_pages/030_003.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Situation overview continued"
+  },
+  {
+   "id": "030_008",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (27-Mar-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-27-Mar-2005.pdf",
+   "page": 8,
+   "year": 2005,
+   "title": "Overview of Saturn Proposal",
+   "section": "company",
+   "fill": 0.76,
+   "thumb": "_pages/030_008.png",
+   "layouts": [
+    "fin_table",
+    "page_text"
+   ],
+   "note": "Proposal summary beside sources and uses"
+  },
+  {
+   "id": "030_031",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (27-Mar-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-27-Mar-2005.pdf",
+   "page": 31,
+   "year": 2005,
+   "title": "Illustrative LBO Analysis",
+   "section": "returns",
+   "fill": 0.72,
+   "thumb": "_pages/030_031.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "LBO analysis tables"
+  },
+  {
+   "id": "030_032",
+   "bank": "Credit Suisse",
+   "deck": "Credit Suisse Presentation to SunGard (27-Mar-2005)",
+   "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-27-Mar-2005.pdf",
+   "page": 32,
+   "year": 2005,
+   "title": "Illustrative LBO Sensitivity Analysis",
+   "section": "returns",
+   "fill": 0.62,
+   "thumb": "_pages/030_032.png",
+   "layouts": [
+    "heatmap"
+   ],
+   "note": "LBO sensitivity grids"
+  },
+  {
+   "id": "032_007",
+   "bank": "Deutsche Bank",
+   "deck": "Deutsche Bank Presentation to AmTrust Financial Services (05-Feb-2018)",
+   "file": "Deutsche Bank\\Deutsche-Bank-Presentation-to-AmTrust-Financial-Services-05-Feb-2018.pdf",
+   "page": 7,
+   "year": 2018,
+   "title": "Preliminary management projection summary",
+   "section": "financials",
+   "fill": 0.88,
+   "thumb": "_pages/032_007.png",
+   "layouts": [
+    "pill_rows",
+    "table"
+   ],
+   "note": "Plan summary: navy row labels, two-period comparison text"
+  },
+  {
+   "id": "032_008",
+   "bank": "Deutsche Bank",
+   "deck": "Deutsche Bank Presentation to AmTrust Financial Services (05-Feb-2018)",
+   "file": "Deutsche Bank\\Deutsche-Bank-Presentation-to-AmTrust-Financial-Services-05-Feb-2018.pdf",
+   "page": 8,
+   "year": 2018,
+   "title": "Key differences between Case 1 and Case 2 over the – projection period",
+   "section": "financials",
+   "fill": 0.86,
+   "thumb": "_pages/032_008.png",
+   "layouts": [
+    "column",
+    "stacked"
+   ],
+   "note": "Case comparison: grid of column charts with tables"
+  },
+  {
+   "id": "032_011",
+   "bank": "Deutsche Bank",
+   "deck": "Deutsche Bank Presentation to AmTrust Financial Services (05-Feb-2018)",
+   "file": "Deutsche Bank\\Deutsche-Bank-Presentation-to-AmTrust-Financial-Services-05-Feb-2018.pdf",
+   "page": 11,
+   "year": 2018,
+   "title": "Preliminary valuation framework – Overview of valuation methodologies considered",
+   "section": "company",
+   "fill": 0.77,
+   "thumb": "_pages/032_011.png",
+   "layouts": [
+    "side_tabs",
+    "page_text"
+   ],
+   "note": "Valuation framework: coloured method blocks beside descriptions"
+  },
+  {
+   "id": "032_022",
+   "bank": "Deutsche Bank",
+   "deck": "Deutsche Bank Presentation to AmTrust Financial Services (05-Feb-2018)",
+   "file": "Deutsche Bank\\Deutsche-Bank-Presentation-to-AmTrust-Financial-Services-05-Feb-2018.pdf",
+   "page": 22,
+   "year": 2018,
+   "title": "Precedent insurance transactions",
+   "section": "valuation",
+   "fill": 0.87,
+   "thumb": "_pages/032_022.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Precedent transactions table"
+  },
+  {
+   "id": "033_005",
+   "bank": "Deutsche Bank",
+   "deck": "Deutsche Bank Presentation to Dole Foods (02-May-2013)",
+   "file": "Deutsche Bank\\Deutsche-Bank-Presentation-to-Dole-Foods-02-May-2013.pdf",
+   "page": 5,
+   "year": 2013,
+   "title": "Recent consumer sector LBO capitalization (pg I of 2) – Jo-Ann Academy BJ's",
+   "section": "market",
+   "fill": 0.64,
+   "thumb": "_pages/033_005.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "LBO capitalisation comparison table"
+  },
+  {
+   "id": "033_006",
+   "bank": "Deutsche Bank",
+   "deck": "Deutsche Bank Presentation to Dole Foods (02-May-2013)",
+   "file": "Deutsche Bank\\Deutsche-Bank-Presentation-to-Dole-Foods-02-May-2013.pdf",
+   "page": 6,
+   "year": 2013,
+   "title": "Recent consumer sector LBO capitalization (pg 2 of 2) – Amscan",
+   "section": "market",
+   "fill": 0.64,
+   "thumb": "_pages/033_006.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "LBO capitalisation comparison continued"
+  },
+  {
+   "id": "035_007",
+   "bank": "Deutsche Bank",
+   "deck": "Deutsche Bank Presentation to Dole Foods (24-Jun-2013) – Main Deck",
+   "file": "Deutsche Bank\\Deutsche-Bank-Presentation-to-Dole-Foods-24-Jun-2013.pdf",
+   "page": 7,
+   "year": 2013,
+   "title": "Dawn operates in an unpredictable and volatile sector – Financial performance consistently deteriorating due t",
+   "section": "market",
+   "fill": 0.73,
+   "thumb": "_pages/035_007.png",
+   "layouts": [
+    "column",
+    "pill_rows"
+   ],
+   "note": "Volatile sector: charts with callout boxes and label column"
+  },
+  {
+   "id": "036_003",
+   "bank": "Deutsche Bank",
+   "deck": "Deutsche Bank Presentation to Dole Foods (15-Jul-2013)",
+   "file": "Deutsche Bank\\Deutsche-Bank-Presentation-to-Dole-Foods-15-Jul-2013.pdf",
+   "page": 3,
+   "year": 2013,
+   "title": "Illustrative timeline – Tender offer process — assumes no cooperation from Dawn",
+   "section": "process",
+   "fill": 0.59,
+   "thumb": "_pages/036_003.png",
+   "layouts": [
+    "timeline"
+   ],
+   "note": "Gantt-style process timeline"
+  },
+  {
+   "id": "036_004",
+   "bank": "Deutsche Bank",
+   "deck": "Deutsche Bank Presentation to Dole Foods (15-Jul-2013)",
+   "file": "Deutsche Bank\\Deutsche-Bank-Presentation-to-Dole-Foods-15-Jul-2013.pdf",
+   "page": 4,
+   "year": 2013,
+   "title": "Illustrative timeline – Proxy process",
+   "section": "process",
+   "fill": 0.57,
+   "thumb": "_pages/036_004.png",
+   "layouts": [
+    "timeline"
+   ],
+   "note": "Gantt-style process timeline"
+  },
+  {
+   "id": "039_008",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to Diversey (01-Feb-2023)",
+   "file": "Evercore\\Evercore-Investment-Banking-Presentation-to-Diversey-01-Feb-2023.pdf",
+   "page": 8,
+   "year": 2023,
+   "title": "Analysis At Various Prices",
+   "section": "any",
+   "fill": 0.9,
+   "thumb": "_pages/039_008.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Analysis at various prices"
+  },
+  {
+   "id": "039_030",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to Diversey (01-Feb-2023)",
+   "file": "Evercore\\Evercore-Investment-Banking-Presentation-to-Diversey-01-Feb-2023.pdf",
+   "page": 30,
+   "year": 2023,
+   "title": "ooooeø – Company Management Forecast Section Overview",
+   "section": "financials",
+   "fill": 0.95,
+   "thumb": "_pages/039_030.png",
+   "layouts": [
+    "numbered_steps",
+    "page_text"
+   ],
+   "note": "Section overview: numbered pills with descriptions"
+  },
+  {
+   "id": "039_034",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to Diversey (01-Feb-2023)",
+   "file": "Evercore\\Evercore-Investment-Banking-Presentation-to-Diversey-01-Feb-2023.pdf",
+   "page": 34,
+   "year": 2023,
+   "title": "Company Management Forecast: Background (Cont'd)",
+   "section": "financials",
+   "fill": 0.94,
+   "thumb": "_pages/039_034.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Forecast background: headed bullet sections"
+  },
+  {
+   "id": "039_044",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to Diversey (01-Feb-2023)",
+   "file": "Evercore\\Evercore-Investment-Banking-Presentation-to-Diversey-01-Feb-2023.pdf",
+   "page": 44,
+   "year": 2023,
+   "title": "Company Historical & Company Management Forecast – (All financials in Smm unless otherwise",
+   "section": "financials",
+   "fill": 0.99,
+   "thumb": "_pages/039_044.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Historical and forecast financials table"
+  },
+  {
+   "id": "039_047",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to Diversey (01-Feb-2023)",
+   "file": "Evercore\\Evercore-Investment-Banking-Presentation-to-Diversey-01-Feb-2023.pdf",
+   "page": 47,
+   "year": 2023,
+   "title": "Discounted Cash Flow Analysis – (All financials in Smm unless otherwise",
+   "section": "valuation",
+   "fill": 0.98,
+   "thumb": "_pages/039_047.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "DCF table with two sensitivity grids"
+  },
+  {
+   "id": "039_049",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to Diversey (01-Feb-2023)",
+   "file": "Evercore\\Evercore-Investment-Banking-Presentation-to-Diversey-01-Feb-2023.pdf",
+   "page": 49,
+   "year": 2023,
+   "title": "Diamond: Companies Universe – Trad inq",
+   "section": "process",
+   "fill": 0.99,
+   "thumb": "_pages/039_049.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Companies universe table"
+  },
+  {
+   "id": "039_050",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to Diversey (01-Feb-2023)",
+   "file": "Evercore\\Evercore-Investment-Banking-Presentation-to-Diversey-01-Feb-2023.pdf",
+   "page": 50,
+   "year": 2023,
+   "title": "Precedent Transactions Analysis",
+   "section": "valuation",
+   "fill": 0.92,
+   "thumb": "_pages/039_050.png",
+   "layouts": [
+    "column",
+    "logo_row"
+   ],
+   "note": "Precedent multiples columns with logo and metric table"
+  },
+  {
+   "id": "039_052",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to Diversey (01-Feb-2023)",
+   "file": "Evercore\\Evercore-Investment-Banking-Presentation-to-Diversey-01-Feb-2023.pdf",
+   "page": 52,
+   "year": 2023,
+   "title": "Chemicals P2P Summary (PE Buyers)",
+   "section": "process",
+   "fill": 0.93,
+   "thumb": "_pages/039_052.png",
+   "layouts": [
+    "column",
+    "logo_row"
+   ],
+   "note": "Buyer comparison: logo header over grid of column charts"
+  },
+  {
+   "id": "039_053",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to Diversey (01-Feb-2023)",
+   "file": "Evercore\\Evercore-Investment-Banking-Presentation-to-Diversey-01-Feb-2023.pdf",
+   "page": 53,
+   "year": 2023,
+   "title": "Discounted Future Share Price Analysis – (All financials in Smm unless otherwise",
+   "section": "valuation",
+   "fill": 0.95,
+   "thumb": "_pages/039_053.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Discounted future share price table"
+  },
+  {
+   "id": "040_003",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to Vanguard Natural Resources (March-2019)",
+   "file": "Evercore\\Evercore-Presentation-to-Vanguard-Natural-Resources-March-2019.pdf",
+   "page": 3,
+   "year": 2019,
+   "title": "Executive Summary",
+   "section": "exec_summary",
+   "fill": 0.81,
+   "thumb": "_pages/040_003.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Executive summary: bullets"
+  },
+  {
+   "id": "040_004",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to Vanguard Natural Resources (March-2019)",
+   "file": "Evercore\\Evercore-Presentation-to-Vanguard-Natural-Resources-March-2019.pdf",
+   "page": 4,
+   "year": 2019,
+   "title": "Near-Term Timeline – ($ in millions)",
+   "section": "process",
+   "fill": 0.59,
+   "thumb": "_pages/040_004.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Liquidity forecast line with annotated events"
+  },
+  {
+   "id": "040_007",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to Vanguard Natural Resources (March-2019)",
+   "file": "Evercore\\Evercore-Presentation-to-Vanguard-Natural-Resources-March-2019.pdf",
+   "page": 7,
+   "year": 2019,
+   "title": "Illustrative Sources & Uses and Pro Forma Capitalization – ($ in millions)",
+   "section": "structure",
+   "fill": 0.77,
+   "thumb": "_pages/040_007.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Sources and uses over pro forma capitalisation table"
+  },
+  {
+   "id": "040_008",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to Vanguard Natural Resources (March-2019)",
+   "file": "Evercore\\Evercore-Presentation-to-Vanguard-Natural-Resources-March-2019.pdf",
+   "page": 8,
+   "year": 2019,
+   "title": "Business Plan Operating Summary – ($ in millions)",
+   "section": "financials",
+   "fill": 0.65,
+   "thumb": "_pages/040_008.png",
+   "layouts": [
+    "column",
+    "stacked",
+    "page_text"
+   ],
+   "note": "Plan summary: key assumptions box beside four charts"
+  },
+  {
+   "id": "040_009",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to Vanguard Natural Resources (March-2019)",
+   "file": "Evercore\\Evercore-Presentation-to-Vanguard-Natural-Resources-March-2019.pdf",
+   "page": 9,
+   "year": 2019,
+   "title": "Financial Projections – ($ in millions)",
+   "section": "financials",
+   "fill": 0.58,
+   "thumb": "_pages/040_009.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Financial projections: 2x2 grid of line charts"
+  },
+  {
+   "id": "040_013",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to Vanguard Natural Resources (March-2019)",
+   "file": "Evercore\\Evercore-Presentation-to-Vanguard-Natural-Resources-March-2019.pdf",
+   "page": 13,
+   "year": 2019,
+   "title": "Financial Projections – ($ in millions)",
+   "section": "financials",
+   "fill": 0.85,
+   "thumb": "_pages/040_013.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Financial projections, full-page table"
+  },
+  {
+   "id": "042_008",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to McMoRan Exploration (09-Nov-2012)",
+   "file": "Evercore\\Evercore-Presentation-to-McMoRan-Exploration-09-Nov-2012.pdf",
+   "page": 8,
+   "year": 2012,
+   "title": "Introduction – Evercore Evaluation Process and Due Diligence",
+   "section": "process",
+   "fill": 0.68,
+   "thumb": "_pages/042_008.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Process and due diligence: full-page bullets"
+  },
+  {
+   "id": "042_009",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to McMoRan Exploration (09-Nov-2012)",
+   "file": "Evercore\\Evercore-Presentation-to-McMoRan-Exploration-09-Nov-2012.pdf",
+   "page": 9,
+   "year": 2012,
+   "title": "Introduction – Evercore Evaluation Process and Due Diligence (cont'd)",
+   "section": "process",
+   "fill": 0.69,
+   "thumb": "_pages/042_009.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Process and due diligence continued"
+  },
+  {
+   "id": "042_013",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to McMoRan Exploration (09-Nov-2012)",
+   "file": "Evercore\\Evercore-Presentation-to-McMoRan-Exploration-09-Nov-2012.pdf",
+   "page": 13,
+   "year": 2012,
+   "title": "McMoRan Situation Analysis – Historical Share Trading Performance",
+   "section": "valuation",
+   "fill": 0.79,
+   "thumb": "_pages/042_013.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Share price with annotated event boxes"
+  },
+  {
+   "id": "042_028",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to McMoRan Exploration (09-Nov-2012)",
+   "file": "Evercore\\Evercore-Presentation-to-McMoRan-Exploration-09-Nov-2012.pdf",
+   "page": 28,
+   "year": 2012,
+   "title": "Preliminary Financial Analysis – Ultra-Deep Assets — Overview of Geological Risk Factors",
+   "section": "company",
+   "fill": 0.7,
+   "thumb": "_pages/042_028.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Risk factors matrix: factor, question, commentary"
+  },
+  {
+   "id": "042_034",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to McMoRan Exploration (09-Nov-2012)",
+   "file": "Evercore\\Evercore-Presentation-to-McMoRan-Exploration-09-Nov-2012.pdf",
+   "page": 34,
+   "year": 2012,
+   "title": "Preliminary Financial Analysis – Peer Group Trading Analysis",
+   "section": "valuation",
+   "fill": 0.84,
+   "thumb": "_pages/042_034.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Peer trading tables, two blocks"
+  },
+  {
+   "id": "042_036",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to McMoRan Exploration (09-Nov-2012)",
+   "file": "Evercore\\Evercore-Presentation-to-McMoRan-Exploration-09-Nov-2012.pdf",
+   "page": 36,
+   "year": 2012,
+   "title": "Preliminary Financial Analysis – Precedent Transactions — Gulf of Mexico Shelf",
+   "section": "valuation",
+   "fill": 0.8,
+   "thumb": "_pages/042_036.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Precedent transactions table"
+  },
+  {
+   "id": "042_039",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to McMoRan Exploration (09-Nov-2012)",
+   "file": "Evercore\\Evercore-Presentation-to-McMoRan-Exploration-09-Nov-2012.pdf",
+   "page": 39,
+   "year": 2012,
+   "title": "Preliminary Financial Analysis – Precedent Transactions — Ultra-Deep Shelf Value",
+   "section": "valuation",
+   "fill": 0.8,
+   "thumb": "_pages/042_039.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Precedent transactions table, grouped"
+  },
+  {
+   "id": "042_044",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to McMoRan Exploration (09-Nov-2012)",
+   "file": "Evercore\\Evercore-Presentation-to-McMoRan-Exploration-09-Nov-2012.pdf",
+   "page": 44,
+   "year": 2012,
+   "title": "Preliminary Financial Analysis – Discounted Cash Flow Analysis",
+   "section": "valuation",
+   "fill": 0.78,
+   "thumb": "_pages/042_044.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "DCF summary with two sensitivity grids"
+  },
+  {
+   "id": "044_007",
+   "bank": "Evercore",
+   "deck": "Evercore Fairness Presentation to McMoRan Exploration (04-Dec-2012)",
+   "file": "Evercore\\Evercore-Fairness-Presentation-to-McMoRan-Exploration-04-Dec-2012.pdf",
+   "page": 7,
+   "year": 2012,
+   "title": "Transaction Overview – Evercore Evaluation Process",
+   "section": "process",
+   "fill": 0.8,
+   "thumb": "_pages/044_007.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Evaluation process: full-page bullets"
+  },
+  {
+   "id": "044_021",
+   "bank": "Evercore",
+   "deck": "Evercore Fairness Presentation to McMoRan Exploration (04-Dec-2012)",
+   "file": "Evercore\\Evercore-Fairness-Presentation-to-McMoRan-Exploration-04-Dec-2012.pdf",
+   "page": 21,
+   "year": 2012,
+   "title": "Financial Analysis – Peer Group Trading Analysis",
+   "section": "valuation",
+   "fill": 0.87,
+   "thumb": "_pages/044_021.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Peer trading tables, two blocks"
+  },
+  {
+   "id": "044_026",
+   "bank": "Evercore",
+   "deck": "Evercore Fairness Presentation to McMoRan Exploration (04-Dec-2012)",
+   "file": "Evercore\\Evercore-Fairness-Presentation-to-McMoRan-Exploration-04-Dec-2012.pdf",
+   "page": 26,
+   "year": 2012,
+   "title": "Financial Analysis – Precedent Transactions — Ultra-Deep Shelf Value",
+   "section": "valuation",
+   "fill": 0.86,
+   "thumb": "_pages/044_026.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Precedent transactions table, grouped"
+  },
+  {
+   "id": "044_037",
+   "bank": "Evercore",
+   "deck": "Evercore Fairness Presentation to McMoRan Exploration (04-Dec-2012)",
+   "file": "Evercore\\Evercore-Fairness-Presentation-to-McMoRan-Exploration-04-Dec-2012.pdf",
+   "page": 37,
+   "year": 2012,
+   "title": "Appendix – Unrisked Discounted Cash Flow Analvsis",
+   "section": "valuation",
+   "fill": 0.93,
+   "thumb": "_pages/044_037.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "DCF summary with two sensitivity grids"
+  },
+  {
+   "id": "048_020",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to M&F Worldwide (10-Aug-2011)",
+   "file": "Evercore\\Evercore-Presentation-to-MF-Worldwide-10-Aug-2011.pdf",
+   "page": 20,
+   "year": 2011,
+   "title": "Process Considerations – Potential Strategic Alternatives",
+   "section": "process",
+   "fill": 0.6,
+   "thumb": "_pages/048_020.png",
+   "layouts": [
+    "pill_rows",
+    "pros_cons"
+   ],
+   "note": "Strategic alternatives: label column, benefits vs considerations"
+  },
+  {
+   "id": "048_022",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to M&F Worldwide (10-Aug-2011)",
+   "file": "Evercore\\Evercore-Presentation-to-MF-Worldwide-10-Aug-2011.pdf",
+   "page": 22,
+   "year": 2011,
+   "title": "Process Considerations – Financial Sponsor Illustrative Ability to Pay",
+   "section": "returns",
+   "fill": 0.59,
+   "thumb": "_pages/048_022.png",
+   "layouts": [
+    "heatmap"
+   ],
+   "note": "Ability to pay: four sensitivity grids"
+  },
+  {
+   "id": "048_024",
+   "bank": "Evercore",
+   "deck": "Evercore Presentation to M&F Worldwide (10-Aug-2011)",
+   "file": "Evercore\\Evercore-Presentation-to-MF-Worldwide-10-Aug-2011.pdf",
+   "page": 24,
+   "year": 2011,
+   "title": "Process Considerations – Potential Divestitures (cont'd)",
+   "section": "process",
+   "fill": 0.56,
+   "thumb": "_pages/048_024.png",
+   "layouts": [
+    "pill_rows",
+    "table"
+   ],
+   "note": "Potential directions: label column, buyer type and comments"
+  },
+  {
+   "id": "052_003",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to PowerSchool (05-Mar-2024)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-PowerSchool-05-Mar-2024.pdf",
+   "page": 3,
+   "year": 2024,
+   "title": "Executive Summary I GS Perspectives – 01dman",
+   "section": "exec_summary",
+   "fill": 0.88,
+   "thumb": "_pages/052_003.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Executive summary: framing box over two-level bullets"
+  },
+  {
+   "id": "052_007",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to PowerSchool (05-Mar-2024)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-PowerSchool-05-Mar-2024.pdf",
+   "page": 7,
+   "year": 2024,
+   "title": "Sponsors Remained Most Active Buyers – 01dman",
+   "section": "process",
+   "fill": 0.63,
+   "thumb": "_pages/052_007.png",
+   "layouts": [
+    "column"
+   ],
+   "note": "Buyer activity: three column charts side by side with callouts"
+  },
+  {
+   "id": "052_011",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to PowerSchool (05-Mar-2024)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-PowerSchool-05-Mar-2024.pdf",
+   "page": 11,
+   "year": 2024,
+   "title": "Picasso Share Price Performance Since IPO – 01dman",
+   "section": "valuation",
+   "fill": 0.64,
+   "thumb": "_pages/052_011.png",
+   "layouts": [
+    "line",
+    "table"
+   ],
+   "note": "Indexed share price since IPO with performance table"
+  },
+  {
+   "id": "052_012",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to PowerSchool (05-Mar-2024)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-PowerSchool-05-Mar-2024.pdf",
+   "page": 12,
+   "year": 2024,
+   "title": "Picasso's Stock Price has Been Mostly Range Bound – 01dman",
+   "section": "valuation",
+   "fill": 0.59,
+   "thumb": "_pages/052_012.png",
+   "layouts": [
+    "line",
+    "table"
+   ],
+   "note": "Share price range with VWAP table beside"
+  },
+  {
+   "id": "052_023",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to PowerSchool (05-Mar-2024)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-PowerSchool-05-Mar-2024.pdf",
+   "page": 23,
+   "year": 2024,
+   "title": "The Level And Quality Of Buyer Interest Will Impact The – Breadth Of The Sale Process",
+   "section": "process",
+   "fill": 0.9,
+   "thumb": "_pages/052_023.png",
+   "layouts": [
+    "table",
+    "harvey"
+   ],
+   "note": "Process options compared: three columns with ticks, recommended one highlighted"
+  },
+  {
+   "id": "052_028",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to PowerSchool (05-Mar-2024)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-PowerSchool-05-Mar-2024.pdf",
+   "page": 28,
+   "year": 2024,
+   "title": "or more investment banking materials, visit https://www.l Oxebitda.com/ – Framing Potential Process Timelines",
+   "section": "process",
+   "fill": 0.78,
+   "thumb": "_pages/052_028.png",
+   "layouts": [
+    "timeline"
+   ],
+   "note": "Gantt process timeline with milestones"
+  },
+  {
+   "id": "055_004",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to Dell (13-Aug-2019)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-Dell-13-Aug-2019.pdf",
+   "page": 4,
+   "year": 2019,
+   "title": "Historical Exchange Ratio Analysis – ($ in millions, except per share values)",
+   "section": "structure",
+   "fill": 0.75,
+   "thumb": "_pages/055_004.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Exchange ratio analysis table"
+  },
+  {
+   "id": "055_005",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to Dell (13-Aug-2019)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-Dell-13-Aug-2019.pdf",
+   "page": 5,
+   "year": 2019,
+   "title": "'01 man – Overview of Potential Collar Structures",
+   "section": "company",
+   "fill": 0.81,
+   "thumb": "_pages/055_005.png",
+   "layouts": [
+    "table",
+    "line"
+   ],
+   "note": "Collar structures compared: four columns with small payoff charts"
+  },
+  {
+   "id": "055_007",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to Dell (13-Aug-2019)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-Dell-13-Aug-2019.pdf",
+   "page": 7,
+   "year": 2019,
+   "title": "'01 man – Historical Trading Performance",
+   "section": "valuation",
+   "fill": 0.64,
+   "thumb": "_pages/055_007.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Trading performance: two line charts side by side"
+  },
+  {
+   "id": "055_008",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to Dell (13-Aug-2019)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-Dell-13-Aug-2019.pdf",
+   "page": 8,
+   "year": 2019,
+   "title": "•o man – Raven I Vail Exchange Ratio Analysis",
+   "section": "structure",
+   "fill": 0.62,
+   "thumb": "_pages/055_008.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Exchange ratio: two line charts side by side"
+  },
+  {
+   "id": "055_012",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to Dell (13-Aug-2019)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-Dell-13-Aug-2019.pdf",
+   "page": 12,
+   "year": 2019,
+   "title": "•old man – Summary Statistics from Precedent Collars",
+   "section": "valuation",
+   "fill": 0.82,
+   "thumb": "_pages/055_012.png",
+   "layouts": [
+    "page_text",
+    "pill_rows"
+   ],
+   "note": "Collar statistics: summary box, label column with bullets"
+  },
+  {
+   "id": "056_004",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to Dell (21-Aug-2019)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-Dell-21-Aug-2019.pdf",
+   "page": 4,
+   "year": 2019,
+   "title": "'o man – Historical Trading Performance",
+   "section": "valuation",
+   "fill": 0.67,
+   "thumb": "_pages/056_004.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Trading performance: two line charts with callouts"
+  },
+  {
+   "id": "056_007",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to Dell (21-Aug-2019)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-Dell-21-Aug-2019.pdf",
+   "page": 7,
+   "year": 2019,
+   "title": "'01 man – Historical Exchange Ratio Analysis",
+   "section": "structure",
+   "fill": 0.76,
+   "thumb": "_pages/056_007.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Exchange ratio analysis table"
+  },
+  {
+   "id": "056_008",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to Dell (21-Aug-2019)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-Dell-21-Aug-2019.pdf",
+   "page": 8,
+   "year": 2019,
+   "title": "'01 man – Historical Exchange Ratio Analysis",
+   "section": "structure",
+   "fill": 0.76,
+   "thumb": "_pages/056_008.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Exchange ratio analysis table"
+  },
+  {
+   "id": "056_009",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to Dell (21-Aug-2019)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-Dell-21-Aug-2019.pdf",
+   "page": 9,
+   "year": 2019,
+   "title": "'o man – Raven I Vail Exchange Ratio Analysis",
+   "section": "structure",
+   "fill": 0.65,
+   "thumb": "_pages/056_009.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Exchange ratio: two line charts side by side"
+  },
+  {
+   "id": "056_010",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to Dell (21-Aug-2019)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-Dell-21-Aug-2019.pdf",
+   "page": 10,
+   "year": 2019,
+   "title": "'o man – Pro Forma Vail Capitalization",
+   "section": "structure",
+   "fill": 0.76,
+   "thumb": "_pages/056_010.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Pro forma capitalisation with adjustments columns"
+  },
+  {
+   "id": "057_011",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to Dell (10-Oct-2012)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-Dell-10-Oct-2012.pdf",
+   "page": 11,
+   "year": 2012,
+   "title": "ioldman – O Illustrative Leveraged Buyout Analysis",
+   "section": "returns",
+   "fill": 0.74,
+   "thumb": "_pages/057_011.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "LBO: sources and uses, returns grids"
+  },
+  {
+   "id": "057_019",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to Dell (10-Oct-2012)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-Dell-10-Oct-2012.pdf",
+   "page": 19,
+   "year": 2012,
+   "title": "ioldman – Selected Recent Precedent M&A Transactions",
+   "section": "valuation",
+   "fill": 0.77,
+   "thumb": "_pages/057_019.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Precedent M&A transactions, two tables"
+  },
+  {
+   "id": "058_010",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to Dell (18-Oct-2012)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-Dell-18-Oct-2012.pdf",
+   "page": 10,
+   "year": 2012,
+   "title": "ioldman – O Illustrative Leveraged Buyout Analysis",
+   "section": "returns",
+   "fill": 0.73,
+   "thumb": "_pages/058_010.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "LBO: framing bullet, sources and uses, returns grid"
+  },
+  {
+   "id": "058_016",
+   "bank": "Goldman Sachs",
+   "deck": "Goldman Sachs Presentation to Dell (18-Oct-2012)",
+   "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-Dell-18-Oct-2012.pdf",
+   "page": 16,
+   "year": 2012,
+   "title": "ioldman – O Illustrative Leveraged Buyout Analysis",
+   "section": "returns",
+   "fill": 0.74,
+   "thumb": "_pages/058_016.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "LBO: sources and uses, returns grids"
+  },
+  {
+   "id": "059_002",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Lokey Presentation to Astra Space (25-Feb-2024)",
+   "file": "Houlihan Lokey\\Houlihan-Lokey-Presentation-to-Astra-Space-25-Feb-2024.pdf",
+   "page": 2,
+   "year": 2024,
+   "title": "Founder Proposal Sources & Uses – Sources & Uses (Excerpt from Founder proposal)",
+   "section": "structure",
+   "fill": 0.65,
+   "thumb": "_pages/059_002.png",
+   "layouts": [
+    "fin_table",
+    "page_text"
+   ],
+   "note": "Sources and uses tables over considerations bullets"
+  },
+  {
+   "id": "059_004",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Lokey Presentation to Astra Space (25-Feb-2024)",
+   "file": "Houlihan Lokey\\Houlihan-Lokey-Presentation-to-Astra-Space-25-Feb-2024.pdf",
+   "page": 4,
+   "year": 2024,
+   "title": "Founder Proposal Financing Observations – • The following observations are based on discussions with the Found",
+   "section": "structure",
+   "fill": 0.77,
+   "thumb": "_pages/059_004.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Financing observations: full-page bullets"
+  },
+  {
+   "id": "060_004",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Lokey Presentation to Astra Space (04-Mar-2024)",
+   "file": "Houlihan Lokey\\Houlihan-Lokey-Presentation-to-Astra-Space-04-Mar-2024.pdf",
+   "page": 4,
+   "year": 2024,
+   "title": "Illustrative Transaction Sources and Uses – Total Sources & Uses Including Closing Payments",
+   "section": "structure",
+   "fill": 0.74,
+   "thumb": "_pages/060_004.png",
+   "layouts": [
+    "fin_table",
+    "page_text"
+   ],
+   "note": "Sources and uses with commitments table and side note"
+  },
+  {
+   "id": "060_005",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Lokey Presentation to Astra Space (04-Mar-2024)",
+   "file": "Houlihan Lokey\\Houlihan-Lokey-Presentation-to-Astra-Space-04-Mar-2024.pdf",
+   "page": 5,
+   "year": 2024,
+   "title": "Illustrative Interim Financing Sources and Uses – From Signing to Closing",
+   "section": "structure",
+   "fill": 0.75,
+   "thumb": "_pages/060_005.png",
+   "layouts": [
+    "fin_table",
+    "page_text"
+   ],
+   "note": "Interim sources and uses with side note"
+  },
+  {
+   "id": "061_002",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Lokey Presentation to Astra Space (05-Mar-2024)",
+   "file": "Houlihan Lokey\\Houlihan-Lokey-Presentation-to-Astra-Space-05-Mar-2024.pdf",
+   "page": 2,
+   "year": 2024,
+   "title": "Illustrative Transaction Sources and Uses – Total Sources & Uses Including Closing Payments",
+   "section": "structure",
+   "fill": 0.79,
+   "thumb": "_pages/061_002.png",
+   "layouts": [
+    "fin_table",
+    "page_text"
+   ],
+   "note": "Sources and uses with commitments table and side note"
+  },
+  {
+   "id": "061_003",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Lokey Presentation to Astra Space (05-Mar-2024)",
+   "file": "Houlihan Lokey\\Houlihan-Lokey-Presentation-to-Astra-Space-05-Mar-2024.pdf",
+   "page": 3,
+   "year": 2024,
+   "title": "Illustrative Interim Financing Sources and Uses – From Signing to Closing",
+   "section": "structure",
+   "fill": 0.75,
+   "thumb": "_pages/061_003.png",
+   "layouts": [
+    "fin_table",
+    "page_text"
+   ],
+   "note": "Interim sources and uses with side note"
+  },
+  {
+   "id": "062_004",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Parker Drilling (30-Aug-2019)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-30-Aug-2019.pdf",
+   "page": 4,
+   "year": 2019,
+   "title": "Executive Summary – + The illustrative financial analyses and information contained in this presentation do no",
+   "section": "exec_summary",
+   "fill": 0.6,
+   "thumb": "_pages/062_004.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Executive summary: two-level bullets with highlighted caveat"
+  },
+  {
+   "id": "062_007",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Parker Drilling (30-Aug-2019)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-30-Aug-2019.pdf",
+   "page": 7,
+   "year": 2019,
+   "title": "Selected Illustrative Accretion I Dilution Calculations – Adjusted EBITDA",
+   "section": "structure",
+   "fill": 0.64,
+   "thumb": "_pages/062_007.png",
+   "layouts": [
+    "fin_table",
+    "page_text"
+   ],
+   "note": "Accretion/dilution table with lead bullets and callout"
+  },
+  {
+   "id": "062_008",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Parker Drilling (30-Aug-2019)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-30-Aug-2019.pdf",
+   "page": 8,
+   "year": 2019,
+   "title": "Selected Illustrative Accretion I Dilution Calculations – (cont.)",
+   "section": "structure",
+   "fill": 0.74,
+   "thumb": "_pages/062_008.png",
+   "layouts": [
+    "fin_table",
+    "page_text"
+   ],
+   "note": "Accretion/dilution table with lead bullets and callout"
+  },
+  {
+   "id": "062_009",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Parker Drilling (30-Aug-2019)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-30-Aug-2019.pdf",
+   "page": 9,
+   "year": 2019,
+   "title": "Selected Illustrative Accretion I Dilution Calculations – (cont.)",
+   "section": "structure",
+   "fill": 0.72,
+   "thumb": "_pages/062_009.png",
+   "layouts": [
+    "fin_table",
+    "page_text"
+   ],
+   "note": "Accretion/dilution table with lead bullets and callout"
+  },
+  {
+   "id": "062_015",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Parker Drilling (30-Aug-2019)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-30-Aug-2019.pdf",
+   "page": 15,
+   "year": 2019,
+   "title": "Selected Illustrative \"Going-Dark\" Transactions – Selected Transaction and Benchmarking Observations",
+   "section": "valuation",
+   "fill": 0.68,
+   "thumb": "_pages/062_015.png",
+   "layouts": [
+    "column"
+   ],
+   "note": "Going-dark premiums: one wide column chart over two smaller ones"
+  },
+  {
+   "id": "062_019",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Parker Drilling (30-Aug-2019)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-30-Aug-2019.pdf",
+   "page": 19,
+   "year": 2019,
+   "title": "Selected Illustrative Precedent \"Going-Dark\" Transactions",
+   "section": "valuation",
+   "fill": 0.86,
+   "thumb": "_pages/062_019.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Going-dark precedent transactions table"
+  },
+  {
+   "id": "062_020",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Parker Drilling (30-Aug-2019)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-30-Aug-2019.pdf",
+   "page": 20,
+   "year": 2019,
+   "title": "Selected Illustrative Precedent \"Going-Dark\" Transactions (cont.)",
+   "section": "valuation",
+   "fill": 0.88,
+   "thumb": "_pages/062_020.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Going-dark precedent transactions continued"
+  },
+  {
+   "id": "063_005",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Parker Drilling (06-Sep-2019)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-06-Sep-2019.pdf",
+   "page": 5,
+   "year": 2019,
+   "title": "Selected Changes from August 23, 2019 Discussion Materials – Stock Price Movements",
+   "section": "valuation",
+   "fill": 0.64,
+   "thumb": "_pages/063_005.png",
+   "layouts": [
+    "line",
+    "page_text"
+   ],
+   "note": "Indexed share price vs peers under lead bullets"
+  },
+  {
+   "id": "063_015",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Parker Drilling (06-Sep-2019)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-06-Sep-2019.pdf",
+   "page": 15,
+   "year": 2019,
+   "title": "Selected Benchmarking Data – LTM Total Revenue",
+   "section": "valuation",
+   "fill": 0.61,
+   "thumb": "_pages/063_015.png",
+   "layouts": [
+    "column"
+   ],
+   "note": "Benchmarking: two column charts stacked with median lines"
+  },
+  {
+   "id": "063_017",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Parker Drilling (06-Sep-2019)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-06-Sep-2019.pdf",
+   "page": 17,
+   "year": 2019,
+   "title": "Selected Benchmarking Data (cont.) – LTM International Revenue to LTM Total Revenue",
+   "section": "valuation",
+   "fill": 0.62,
+   "thumb": "_pages/063_017.png",
+   "layouts": [
+    "column"
+   ],
+   "note": "Benchmarking continued: two column charts stacked"
+  },
+  {
+   "id": "063_022",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Parker Drilling (06-Sep-2019)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-06-Sep-2019.pdf",
+   "page": 22,
+   "year": 2019,
+   "title": "Stock Trading History – Selected Trading Prices Since Re-Listing",
+   "section": "valuation",
+   "fill": 0.73,
+   "thumb": "_pages/063_022.png",
+   "layouts": [
+    "line",
+    "page_text"
+   ],
+   "note": "Share price history under lead bullets"
+  },
+  {
+   "id": "063_031",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Parker Drilling (06-Sep-2019)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-06-Sep-2019.pdf",
+   "page": 31,
+   "year": 2019,
+   "title": "Weighted Average Cost of Capital Calculations (cont.) – Existing Capital Structure",
+   "section": "structure",
+   "fill": 0.62,
+   "thumb": "_pages/063_031.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "WACC calculation tables side by side"
+  },
+  {
+   "id": "063_032",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Parker Drilling (06-Sep-2019)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-06-Sep-2019.pdf",
+   "page": 32,
+   "year": 2019,
+   "title": "Weighted Average Cost of Capital Calculations (cont.) – Potential Refinancing — Counterparty Offer",
+   "section": "structure",
+   "fill": 0.63,
+   "thumb": "_pages/063_032.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "WACC calculation tables side by side"
+  },
+  {
+   "id": "063_033",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Parker Drilling (06-Sep-2019)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-06-Sep-2019.pdf",
+   "page": 33,
+   "year": 2019,
+   "title": "Weighted Average Cost of Capital Calculations (cont.) – Potential Refinancing — Company Management Counter",
+   "section": "structure",
+   "fill": 0.63,
+   "thumb": "_pages/063_033.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "WACC calculation tables side by side"
+  },
+  {
+   "id": "063_036",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Parker Drilling (06-Sep-2019)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-06-Sep-2019.pdf",
+   "page": 36,
+   "year": 2019,
+   "title": "Summary of Selected Implied Premiums Paid Observations – Based on reviewed transactions. median implied premiu",
+   "section": "valuation",
+   "fill": 0.58,
+   "thumb": "_pages/063_036.png",
+   "layouts": [
+    "column"
+   ],
+   "note": "Implied premiums: grouped column chart with summary pills above"
+  },
+  {
+   "id": "064_021",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Synutra Special Committee (03-Jun-2016)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Synutra-Special-Committee-03-Jun-2016.pdf",
+   "page": 21,
+   "year": 2016,
+   "title": "Industry Transactions Statistics",
+   "section": "market",
+   "fill": 0.82,
+   "thumb": "_pages/064_021.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Industry transactions table"
+  },
+  {
+   "id": "064_024",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Synutra Special Committee (03-Jun-2016)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Synutra-Special-Committee-03-Jun-2016.pdf",
+   "page": 24,
+   "year": 2016,
+   "title": "Industry Benchmarking",
+   "section": "market",
+   "fill": 0.74,
+   "thumb": "_pages/064_024.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Industry benchmarking: grid of six small tables"
+  },
+  {
+   "id": "064_025",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Synutra Special Committee (03-Jun-2016)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Synutra-Special-Committee-03-Jun-2016.pdf",
+   "page": 25,
+   "year": 2016,
+   "title": "Industry Benchmarking (cont.)",
+   "section": "market",
+   "fill": 0.69,
+   "thumb": "_pages/064_025.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Industry benchmarking: grid of small tables"
+  },
+  {
+   "id": "065_025",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Synutra Special Committee (08-Sep-2016)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Synutra-Special-Committee-08-Sep-2016.pdf",
+   "page": 25,
+   "year": 2016,
+   "title": "Selected Transactions Statistics",
+   "section": "valuation",
+   "fill": 0.81,
+   "thumb": "_pages/065_025.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Selected transactions table"
+  },
+  {
+   "id": "065_030",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Synutra Special Committee (08-Sep-2016)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Synutra-Special-Committee-08-Sep-2016.pdf",
+   "page": 30,
+   "year": 2016,
+   "title": "Industry Benchmarking",
+   "section": "market",
+   "fill": 0.7,
+   "thumb": "_pages/065_030.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Industry benchmarking: grid of small tables"
+  },
+  {
+   "id": "065_031",
+   "bank": "Houlihan Lokey",
+   "deck": "Houlihan Presentation to Synutra Special Committee (08-Sep-2016)",
+   "file": "Houlihan Lokey\\Houlihan-Presentation-to-Synutra-Special-Committee-08-Sep-2016.pdf",
+   "page": 31,
+   "year": 2016,
+   "title": "Industry Benchmarking (cont.)",
+   "section": "market",
+   "fill": 0.81,
+   "thumb": "_pages/065_031.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Industry benchmarking: grid of small tables"
+  },
+  {
+   "id": "066_004",
+   "bank": "Jefferies",
+   "deck": "Jefferies Fairness Opinion for Focus Financial Partners (February 2023)",
+   "file": "Jefferies\\Jefferies-Fairness-Opinion-for-Focus-Financial-Partners-February-2023.pdf",
+   "page": 4,
+   "year": 2023,
+   "title": "Ferdinand Public Market Overview I as F&uzy 1, 2023, the day prior to releaæ – disclosing non-binding and excl",
+   "section": "market",
+   "fill": 0.68,
+   "thumb": "_pages/066_004.png",
+   "layouts": [
+    "line",
+    "table"
+   ],
+   "note": "Annotated share price chart with market data panel"
+  },
+  {
+   "id": "066_008",
+   "bank": "Jefferies",
+   "deck": "Jefferies Fairness Opinion for Focus Financial Partners (February 2023)",
+   "file": "Jefferies\\Jefferies-Fairness-Opinion-for-Focus-Financial-Partners-February-2023.pdf",
+   "page": 8,
+   "year": 2023,
+   "title": "Management Forecast Assumptions – Revenue is driven by",
+   "section": "financials",
+   "fill": 0.76,
+   "thumb": "_pages/066_008.png",
+   "layouts": [
+    "pill_rows",
+    "page_text"
+   ],
+   "note": "Forecast assumptions: navy label column beside bullets"
+  },
+  {
+   "id": "066_010",
+   "bank": "Jefferies",
+   "deck": "Jefferies Fairness Opinion for Focus Financial Partners (February 2023)",
+   "file": "Jefferies\\Jefferies-Fairness-Opinion-for-Focus-Financial-Partners-February-2023.pdf",
+   "page": 10,
+   "year": 2023,
+   "title": "Management Forecast Summary – Revenue ($ in millions)",
+   "section": "financials",
+   "fill": 0.82,
+   "thumb": "_pages/066_010.png",
+   "layouts": [
+    "column",
+    "stat_rings"
+   ],
+   "note": "Forecast summary: column charts with growth tags and pies"
+  },
+  {
+   "id": "066_015",
+   "bank": "Jefferies",
+   "deck": "Jefferies Fairness Opinion for Focus Financial Partners (February 2023)",
+   "file": "Jefferies\\Jefferies-Fairness-Opinion-for-Focus-Financial-Partners-February-2023.pdf",
+   "page": 15,
+   "year": 2023,
+   "title": "Precedent Transactions Analysis – Enterprise uue L TM EBITDA",
+   "section": "valuation",
+   "fill": 0.76,
+   "thumb": "_pages/066_015.png",
+   "layouts": [
+    "bar",
+    "logo_row"
+   ],
+   "note": "Precedent multiples as horizontal bars with logos and figures"
+  },
+  {
+   "id": "066_016",
+   "bank": "Jefferies",
+   "deck": "Jefferies Fairness Opinion for Focus Financial Partners (February 2023)",
+   "file": "Jefferies\\Jefferies-Fairness-Opinion-for-Focus-Financial-Partners-February-2023.pdf",
+   "page": 16,
+   "year": 2023,
+   "title": "Management Forecast of Unlevered Free Cash Flow – S in millims. shn data",
+   "section": "financials",
+   "fill": 0.82,
+   "thumb": "_pages/066_016.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Unlevered free cash flow forecast with notes"
+  },
+  {
+   "id": "066_017",
+   "bank": "Jefferies",
+   "deck": "Jefferies Fairness Opinion for Focus Financial Partners (February 2023)",
+   "file": "Jefferies\\Jefferies-Fairness-Opinion-for-Focus-Financial-Partners-February-2023.pdf",
+   "page": 17,
+   "year": 2023,
+   "title": "Discounted Cash Flow Analysis – For Reference Only: Components of Discounted Cash Flow Value (Sin millions. ex",
+   "section": "valuation",
+   "fill": 0.74,
+   "thumb": "_pages/066_017.png",
+   "layouts": [
+    "column",
+    "heatmap"
+   ],
+   "note": "DCF value bridge columns over sensitivity grids"
+  },
+  {
+   "id": "066_019",
+   "bank": "Jefferies",
+   "deck": "Jefferies Fairness Opinion for Focus Financial Partners (February 2023)",
+   "file": "Jefferies\\Jefferies-Fairness-Opinion-for-Focus-Financial-Partners-February-2023.pdf",
+   "page": 19,
+   "year": 2023,
+   "title": "Discounted Cash Flow Analysis: Tax Attributes (TRA) – Ensting Tax Receivable Agreement Flows",
+   "section": "valuation",
+   "fill": 0.79,
+   "thumb": "_pages/066_019.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Tax attributes value tables side by side"
+  },
+  {
+   "id": "066_029",
+   "bank": "Jefferies",
+   "deck": "Jefferies Fairness Opinion for Focus Financial Partners (February 2023)",
+   "file": "Jefferies\\Jefferies-Fairness-Opinion-for-Focus-Financial-Partners-February-2023.pdf",
+   "page": 29,
+   "year": 2023,
+   "title": "No Perfect Peer Set Exists for Ferdinand in the Public Markets – Aswt Uuugemenl",
+   "section": "valuation",
+   "fill": 0.79,
+   "thumb": "_pages/066_029.png",
+   "layouts": [
+    "pill_rows",
+    "table",
+    "logo_row"
+   ],
+   "note": "Peer sets compared: label rows, three coloured columns, logos"
+  },
+  {
+   "id": "067_003",
+   "bank": "J.P. Morgan",
+   "deck": "JPMorgan Presentation to Searchlight (March 2023)",
+   "file": "J.P. Morgan\\JPMorgan-Investment-Banking-Presentation-to-Searchlight-March-2023.pdf",
+   "page": 3,
+   "year": 2023,
+   "title": "CNSL public market overview",
+   "section": "market",
+   "fill": 0.74,
+   "thumb": "_pages/067_003.png",
+   "layouts": [
+    "line",
+    "fin_table"
+   ],
+   "note": "Share price with events beside public market overview table"
+  },
+  {
+   "id": "067_007",
+   "bank": "J.P. Morgan",
+   "deck": "JPMorgan Presentation to Searchlight (March 2023)",
+   "file": "J.P. Morgan\\JPMorgan-Investment-Banking-Presentation-to-Searchlight-March-2023.pdf",
+   "page": 7,
+   "year": 2023,
+   "title": "Macroeconomic backdrop has compressed both multiples and share prices – Competition from FttH and FWA has take",
+   "section": "market",
+   "fill": 0.93,
+   "thumb": "_pages/067_007.png",
+   "layouts": [
+    "bar",
+    "logo_row",
+    "table"
+   ],
+   "note": "Peer multiples: logo rows with horizontal bars, grouped bands"
+  },
+  {
+   "id": "067_009",
+   "bank": "J.P. Morgan",
+   "deck": "JPMorgan Presentation to Searchlight (March 2023)",
+   "file": "J.P. Morgan\\JPMorgan-Investment-Banking-Presentation-to-Searchlight-March-2023.pdf",
+   "page": 9,
+   "year": 2023,
+   "title": "Summary of CNSL's financial projections – O Consolidated'",
+   "section": "financials",
+   "fill": 0.68,
+   "thumb": "_pages/067_009.png",
+   "layouts": [
+    "column"
+   ],
+   "note": "Financial projections: 2x2 grid of column charts with growth tags"
+  },
+  {
+   "id": "068_003",
+   "bank": "J.P. Morgan",
+   "deck": "JPMorgan Presentation to UGI Corporation (January-2019)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-UGI-Corporation-January-2019.pdf",
+   "page": 3,
+   "year": 2019,
+   "title": "Situation overview",
+   "section": "exec_summary",
+   "fill": 0.75,
+   "thumb": "_pages/068_003.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Situation overview: full-page two-level bullets"
+  },
+  {
+   "id": "068_009",
+   "bank": "J.P. Morgan",
+   "deck": "JPMorgan Presentation to UGI Corporation (January-2019)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-UGI-Corporation-January-2019.pdf",
+   "page": 9,
+   "year": 2019,
+   "title": "Burin \"APu – IJGI summary status quo financial projections",
+   "section": "financials",
+   "fill": 0.67,
+   "thumb": "_pages/068_009.png",
+   "layouts": [
+    "column",
+    "page_text"
+   ],
+   "note": "Status quo projections: commentary over 2x2 column charts"
+  },
+  {
+   "id": "068_010",
+   "bank": "J.P. Morgan",
+   "deck": "JPMorgan Presentation to UGI Corporation (January-2019)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-UGI-Corporation-January-2019.pdf",
+   "page": 10,
+   "year": 2019,
+   "title": "C ON F IO ENTIA L – APU summary status quo financial projections",
+   "section": "financials",
+   "fill": 0.68,
+   "thumb": "_pages/068_010.png",
+   "layouts": [
+    "column",
+    "page_text"
+   ],
+   "note": "Status quo projections: commentary over 2x2 column charts"
+  },
+  {
+   "id": "068_011",
+   "bank": "J.P. Morgan",
+   "deck": "JPMorgan Presentation to UGI Corporation (January-2019)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-UGI-Corporation-January-2019.pdf",
+   "page": 11,
+   "year": 2019,
+   "title": "C ON F IO ENTIA L – Illustrative buy-in of APU by IJGI transaction assumptions and sources and uses",
+   "section": "structure",
+   "fill": 0.74,
+   "thumb": "_pages/068_011.png",
+   "layouts": [
+    "page_text",
+    "stat_rings",
+    "fin_table"
+   ],
+   "note": "Buy-in assumptions, ownership rings, sources and uses"
+  },
+  {
+   "id": "068_020",
+   "bank": "J.P. Morgan",
+   "deck": "JPMorgan Presentation to UGI Corporation (January-2019)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-UGI-Corporation-January-2019.pdf",
+   "page": 20,
+   "year": 2019,
+   "title": "Appen&x Additional of APU cms&rotims – Premiums paid in precedent affiliate MLP buy-in deals",
+   "section": "valuation",
+   "fill": 0.79,
+   "thumb": "_pages/068_020.png",
+   "layouts": [
+    "column",
+    "table"
+   ],
+   "note": "Affiliate buy-in premiums: wide column chart over stats table"
+  },
+  {
+   "id": "068_021",
+   "bank": "J.P. Morgan",
+   "deck": "JPMorgan Presentation to UGI Corporation (January-2019)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-UGI-Corporation-January-2019.pdf",
+   "page": 21,
+   "year": 2019,
+   "title": "Appen\".x Additional of APU cmsderotims – Illustrative impact to UGI share price based on various pro forma EPS",
+   "section": "valuation",
+   "fill": 0.74,
+   "thumb": "_pages/068_021.png",
+   "layouts": [
+    "heatmap",
+    "pill_rows"
+   ],
+   "note": "Accretion grids under scenario labels, two cases side by side"
+  },
+  {
+   "id": "068_025",
+   "bank": "J.P. Morgan",
+   "deck": "JPMorgan Presentation to UGI Corporation (January-2019)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-UGI-Corporation-January-2019.pdf",
+   "page": 25,
+   "year": 2019,
+   "title": "Appen&x EinSnatenct GP / IDRs •n excha* Rs – APU summary status quo financial projections",
+   "section": "financials",
+   "fill": 0.74,
+   "thumb": "_pages/068_025.png",
+   "layouts": [
+    "column",
+    "page_text"
+   ],
+   "note": "Status quo projections: commentary over 2x2 column charts"
+  },
+  {
+   "id": "068_026",
+   "bank": "J.P. Morgan",
+   "deck": "JPMorgan Presentation to UGI Corporation (January-2019)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-UGI-Corporation-January-2019.pdf",
+   "page": 26,
+   "year": 2019,
+   "title": "Appen&x EinSnatenct GP / IDRs •n excha* Rs – Transaction assumptions and sources and uses",
+   "section": "structure",
+   "fill": 0.7,
+   "thumb": "_pages/068_026.png",
+   "layouts": [
+    "page_text",
+    "fin_table"
+   ],
+   "note": "Transaction assumptions in two columns over sources and uses"
+  },
+  {
+   "id": "069_004",
+   "bank": "J.P. Morgan",
+   "deck": "JPMorgan Presentation to UGI Corporation (01-Apr-2019)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-UGI-Corporation-01-Apr-2019.pdf",
+   "page": 4,
+   "year": 2019,
+   "title": "Comparison of APU management versus broker projections – Broker research",
+   "section": "financials",
+   "fill": 0.7,
+   "thumb": "_pages/069_004.png",
+   "layouts": [
+    "column"
+   ],
+   "note": "Management vs broker: rows of small grouped column charts with CAGR tags"
+  },
+  {
+   "id": "069_005",
+   "bank": "J.P. Morgan",
+   "deck": "JPMorgan Presentation to UGI Corporation (01-Apr-2019)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-UGI-Corporation-01-Apr-2019.pdf",
+   "page": 5,
+   "year": 2019,
+   "title": "Comparison of I-JGI management versus broker projections – Broker research",
+   "section": "financials",
+   "fill": 0.68,
+   "thumb": "_pages/069_005.png",
+   "layouts": [
+    "column"
+   ],
+   "note": "Management vs broker: rows of grouped column charts"
+  },
+  {
+   "id": "069_006",
+   "bank": "J.P. Morgan",
+   "deck": "JPMorgan Presentation to UGI Corporation (01-Apr-2019)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-UGI-Corporation-01-Apr-2019.pdf",
+   "page": 6,
+   "year": 2019,
+   "title": "Overview of valuation methodologies",
+   "section": "company",
+   "fill": 0.7,
+   "thumb": "_pages/069_006.png",
+   "layouts": [
+    "side_tabs",
+    "page_text"
+   ],
+   "note": "Valuation methods: coloured label column with bullets"
+  },
+  {
+   "id": "069_010",
+   "bank": "J.P. Morgan",
+   "deck": "JPMorgan Presentation to UGI Corporation (01-Apr-2019)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-UGI-Corporation-01-Apr-2019.pdf",
+   "page": 10,
+   "year": 2019,
+   "title": "APU LP unlevered discounted cash flow",
+   "section": "valuation",
+   "fill": 0.76,
+   "thumb": "_pages/069_010.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Unlevered DCF table, full page"
+  },
+  {
+   "id": "069_016",
+   "bank": "J.P. Morgan",
+   "deck": "JPMorgan Presentation to UGI Corporation (01-Apr-2019)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-UGI-Corporation-01-Apr-2019.pdf",
+   "page": 16,
+   "year": 2019,
+   "title": "IJGI deconsolidated discounted cash flow analysis",
+   "section": "valuation",
+   "fill": 0.75,
+   "thumb": "_pages/069_016.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Deconsolidated DCF table, full page"
+  },
+  {
+   "id": "070_010",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Focus Media (19-Dec-2012)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Focus-Media-19-Dec-2012.pdf",
+   "page": 10,
+   "year": 2012,
+   "title": "Valuation summary of Focus Media",
+   "section": "valuation",
+   "fill": 0.85,
+   "thumb": "_pages/070_010.png",
+   "layouts": [
+    "football_field"
+   ],
+   "note": "Valuation summary dot ranges with method labels"
+  },
+  {
+   "id": "070_016",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Focus Media (19-Dec-2012)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Focus-Media-19-Dec-2012.pdf",
+   "page": 16,
+   "year": 2012,
+   "title": "Focus Media public market overview",
+   "section": "market",
+   "fill": 0.78,
+   "thumb": "_pages/070_016.png",
+   "layouts": [
+    "line",
+    "football_field"
+   ],
+   "note": "Share price chart beside trading range chart"
+  },
+  {
+   "id": "070_017",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Focus Media (19-Dec-2012)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Focus-Media-19-Dec-2012.pdf",
+   "page": 17,
+   "year": 2012,
+   "title": "Premium for precedent completed take-private transactions for – US-Iisted Chinese companies",
+   "section": "valuation",
+   "fill": 0.79,
+   "thumb": "_pages/070_017.png",
+   "layouts": [
+    "bar",
+    "logo_row"
+   ],
+   "note": "Take-private premiums: horizontal bars by logo, three periods"
+  },
+  {
+   "id": "071_008",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (27-Feb-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-27-Feb-2006.pdf",
+   "page": 8,
+   "year": 2006,
+   "title": "Process considerations",
+   "section": "process",
+   "fill": 0.68,
+   "thumb": "_pages/071_008.png",
+   "layouts": [
+    "chevrons",
+    "page_text"
+   ],
+   "note": "Process considerations: arrow steps with text, recommendation box"
+  },
+  {
+   "id": "071_011",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (27-Feb-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-27-Feb-2006.pdf",
+   "page": 11,
+   "year": 2006,
+   "title": "A strategic buyer could realize at least $25 million of cost – synergies, implying approximately $9.00 of equi",
+   "section": "process",
+   "fill": 0.73,
+   "thumb": "_pages/071_011.png",
+   "layouts": [
+    "fin_table",
+    "column"
+   ],
+   "note": "Synergy table over cost-as-%-of-revenue column chart"
+  },
+  {
+   "id": "071_013",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (27-Feb-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-27-Feb-2006.pdf",
+   "page": 13,
+   "year": 2006,
+   "title": "Cost of capital and leverage Mill drive buyers' ability to pay",
+   "section": "returns",
+   "fill": 0.75,
+   "thumb": "_pages/071_013.png",
+   "layouts": [
+    "table",
+    "page_text"
+   ],
+   "note": "Ability to pay: leverage table with analysis box and banner"
+  },
+  {
+   "id": "071_015",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (27-Feb-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-27-Feb-2006.pdf",
+   "page": 15,
+   "year": 2006,
+   "title": "The ability to maintain Kerzner's Bahamian corporate structure – should allow a buyer to not pay tax on Kerzne",
+   "section": "process",
+   "fill": 0.74,
+   "thumb": "_pages/071_015.png",
+   "layouts": [
+    "chevrons",
+    "pros_cons"
+   ],
+   "note": "Tax structure: issue vs response panels with arrows"
+  },
+  {
+   "id": "071_022",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (27-Feb-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-27-Feb-2006.pdf",
+   "page": 22,
+   "year": 2006,
+   "title": "Preliminary valuation summary",
+   "section": "valuation",
+   "fill": 0.76,
+   "thumb": "_pages/071_022.png",
+   "layouts": [
+    "football_field",
+    "page_text"
+   ],
+   "note": "Valuation summary ranges with commentary column"
+  },
+  {
+   "id": "071_024",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (27-Feb-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-27-Feb-2006.pdf",
+   "page": 24,
+   "year": 2006,
+   "title": "Illustrative LBO analysis",
+   "section": "returns",
+   "fill": 0.71,
+   "thumb": "_pages/071_024.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "LBO analysis tables with sensitivity grids"
+  },
+  {
+   "id": "072_006",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (08-Mar-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-08-Mar-2006.pdf",
+   "page": 6,
+   "year": 2006,
+   "title": "Public market overview",
+   "section": "market",
+   "fill": 0.7,
+   "thumb": "_pages/072_006.png",
+   "layouts": [
+    "fin_table",
+    "column"
+   ],
+   "note": "Public market overview table over three small column charts"
+  },
+  {
+   "id": "072_012",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (08-Mar-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-08-Mar-2006.pdf",
+   "page": 12,
+   "year": 2006,
+   "title": "Valuation summary",
+   "section": "valuation",
+   "fill": 0.83,
+   "thumb": "_pages/072_012.png",
+   "layouts": [
+    "football_field"
+   ],
+   "note": "Valuation summary ranges by method"
+  },
+  {
+   "id": "072_022",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (08-Mar-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-08-Mar-2006.pdf",
+   "page": 22,
+   "year": 2006,
+   "title": "Discounted cash flow analysis — Upside Case",
+   "section": "valuation",
+   "fill": 0.81,
+   "thumb": "_pages/072_022.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "DCF projections with sensitivity grids underneath"
+  },
+  {
+   "id": "072_023",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (08-Mar-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-08-Mar-2006.pdf",
+   "page": 23,
+   "year": 2006,
+   "title": "Discounted cash flow analysis — Adjusted Upside Case",
+   "section": "valuation",
+   "fill": 0.81,
+   "thumb": "_pages/072_023.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "DCF projections with sensitivity grids underneath"
+  },
+  {
+   "id": "072_024",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (08-Mar-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-08-Mar-2006.pdf",
+   "page": 24,
+   "year": 2006,
+   "title": "Leveraged buyout analysis — Upside Case, 67% leverage",
+   "section": "returns",
+   "fill": 0.75,
+   "thumb": "_pages/072_024.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "LBO analysis tables, full page"
+  },
+  {
+   "id": "072_025",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (08-Mar-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-08-Mar-2006.pdf",
+   "page": 25,
+   "year": 2006,
+   "title": "Leveraged buyout analysis — Adjusted Upside Case, 67% leverage",
+   "section": "returns",
+   "fill": 0.76,
+   "thumb": "_pages/072_025.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "LBO analysis tables, full page"
+  },
+  {
+   "id": "072_026",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (08-Mar-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-08-Mar-2006.pdf",
+   "page": 26,
+   "year": 2006,
+   "title": "Leveraged buyout analysis — K-2 case, 62% leverage",
+   "section": "returns",
+   "fill": 0.74,
+   "thumb": "_pages/072_026.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "LBO analysis tables, full page"
+  },
+  {
+   "id": "073_007",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (20-Mar-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-20-Mar-2006.pdf",
+   "page": 7,
+   "year": 2006,
+   "title": "Public market overview",
+   "section": "market",
+   "fill": 0.72,
+   "thumb": "_pages/073_007.png",
+   "layouts": [
+    "fin_table",
+    "column"
+   ],
+   "note": "Public market overview table over three small column charts"
+  },
+  {
+   "id": "073_014",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (20-Mar-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-20-Mar-2006.pdf",
+   "page": 14,
+   "year": 2006,
+   "title": "Valuation summary",
+   "section": "valuation",
+   "fill": 0.78,
+   "thumb": "_pages/073_014.png",
+   "layouts": [
+    "football_field"
+   ],
+   "note": "Valuation summary ranges with offer price line"
+  },
+  {
+   "id": "073_015",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (20-Mar-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-20-Mar-2006.pdf",
+   "page": 15,
+   "year": 2006,
+   "title": "Leveraged buyout analysis",
+   "section": "returns",
+   "fill": 0.75,
+   "thumb": "_pages/073_015.png",
+   "layouts": [
+    "page_text",
+    "heatmap"
+   ],
+   "note": "LBO assumptions bullets over four sensitivity grids"
+  },
+  {
+   "id": "075_006",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (29-Apr-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-29-Apr-2006.pdf",
+   "page": 6,
+   "year": 2006,
+   "title": "Public market overview",
+   "section": "market",
+   "fill": 0.71,
+   "thumb": "_pages/075_006.png",
+   "layouts": [
+    "fin_table",
+    "column"
+   ],
+   "note": "Public market overview table over three small column charts"
+  },
+  {
+   "id": "075_013",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (29-Apr-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-29-Apr-2006.pdf",
+   "page": 13,
+   "year": 2006,
+   "title": "Valuation summary",
+   "section": "valuation",
+   "fill": 0.78,
+   "thumb": "_pages/075_013.png",
+   "layouts": [
+    "football_field"
+   ],
+   "note": "Valuation summary ranges with offer price line"
+  },
+  {
+   "id": "075_014",
+   "bank": "J.P. Morgan",
+   "deck": "J.P. Morgan Presentation to Kerzner (29-Apr-2006)",
+   "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-29-Apr-2006.pdf",
+   "page": 14,
+   "year": 2006,
+   "title": "Leveraged buyout analysis",
+   "section": "returns",
+   "fill": 0.75,
+   "thumb": "_pages/075_014.png",
+   "layouts": [
+    "page_text",
+    "heatmap"
+   ],
+   "note": "LBO assumptions bullets over four sensitivity grids"
+  },
+  {
+   "id": "077_045",
+   "bank": "Lazard",
+   "deck": "Lazard Presentation to VMWare Special Committee (21-Aug-2019)",
+   "file": "Lazard\\Lazard-Presentation-to-VMWare-Special-Committee-21-Aug-2019.pdf",
+   "page": 45,
+   "year": 2019,
+   "title": "PROJECT RAVEN – VAIL PRO FORMA WPACI",
+   "section": "structure",
+   "fill": 0.58,
+   "thumb": "_pages/077_045.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Beta evolution: two line charts side by side"
+  },
+  {
+   "id": "078_021",
+   "bank": "Lazard",
+   "deck": "Lazard Presentation to iPayment (27-Dec-2005)",
+   "file": "Lazard\\Lazard-Presentation-to-iPayment-27-Dec-2005-1.pdf",
+   "page": 21,
+   "year": 2005,
+   "title": "111 VALUATION – Publicly Traded Comparables — Business Overview",
+   "section": "company",
+   "fill": 0.71,
+   "thumb": "_pages/078_021.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Comparables business overview matrix over four small tables"
+  },
+  {
+   "id": "078_032",
+   "bank": "Lazard",
+   "deck": "Lazard Presentation to iPayment (27-Dec-2005)",
+   "file": "Lazard\\Lazard-Presentation-to-iPayment-27-Dec-2005-1.pdf",
+   "page": 32,
+   "year": 2005,
+   "title": "APPENDIX – Summary LBO Analysis",
+   "section": "returns",
+   "fill": 0.71,
+   "thumb": "_pages/078_032.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "Summary LBO tables with sensitivity grid"
+  },
+  {
+   "id": "080_004",
+   "bank": "LionTree",
+   "deck": "LionTree Presentation to Starz (14-Jun-2016)",
+   "file": "LionTree\\LionTree-Presentation-to-Starz-14-Jun-2016.pdf",
+   "page": 4,
+   "year": 2016,
+   "title": "Process Update",
+   "section": "process",
+   "fill": 0.62,
+   "thumb": "_pages/080_004.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Process update: bullets inside one rounded box"
+  },
+  {
+   "id": "080_016",
+   "bank": "LionTree",
+   "deck": "LionTree Presentation to Starz (14-Jun-2016)",
+   "file": "LionTree\\LionTree-Presentation-to-Starz-14-Jun-2016.pdf",
+   "page": 16,
+   "year": 2016,
+   "title": "Overview of Luna Proposal – Luna Proposal",
+   "section": "company",
+   "fill": 0.79,
+   "thumb": "_pages/080_016.png",
+   "layouts": [
+    "page_text",
+    "fin_table"
+   ],
+   "note": "Proposal terms bullets beside ownership and leverage tables"
+  },
+  {
+   "id": "080_017",
+   "bank": "LionTree",
+   "deck": "LionTree Presentation to Starz (14-Jun-2016)",
+   "file": "LionTree\\LionTree-Presentation-to-Starz-14-Jun-2016.pdf",
+   "page": 17,
+   "year": 2016,
+   "title": "Preliminary Transaction Financing Structure – Luna will require —S4bn of new capital commitment to finance the",
+   "section": "structure",
+   "fill": 0.68,
+   "thumb": "_pages/080_017.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Financing structure: debt tables with sources and uses"
+  },
+  {
+   "id": "080_021",
+   "bank": "LionTree",
+   "deck": "LionTree Presentation to Starz (14-Jun-2016)",
+   "file": "LionTree\\LionTree-Presentation-to-Starz-14-Jun-2016.pdf",
+   "page": 21,
+   "year": 2016,
+   "title": "Luna Financial Projections — Per Luna – Fiscal Year Ended March 31,",
+   "section": "financials",
+   "fill": 0.76,
+   "thumb": "_pages/080_021.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Financial projections table, full page"
+  },
+  {
+   "id": "080_023",
+   "bank": "LionTree",
+   "deck": "LionTree Presentation to Starz (14-Jun-2016)",
+   "file": "LionTree\\LionTree-Presentation-to-Starz-14-Jun-2016.pdf",
+   "page": 23,
+   "year": 2016,
+   "title": "Value of Luna Offer — Sensitivity on Luna Stock Price – Uuna Stock Price",
+   "section": "valuation",
+   "fill": 0.82,
+   "thumb": "_pages/080_023.png",
+   "layouts": [
+    "heatmap"
+   ],
+   "note": "Offer value sensitivity grid, full page"
+  },
+  {
+   "id": "080_035",
+   "bank": "LionTree",
+   "deck": "LionTree Presentation to Starz (14-Jun-2016)",
+   "file": "LionTree\\LionTree-Presentation-to-Starz-14-Jun-2016.pdf",
+   "page": 35,
+   "year": 2016,
+   "title": "Discounted Cash Flow Analysis of Luna Synergiesl",
+   "section": "valuation",
+   "fill": 0.83,
+   "thumb": "_pages/080_035.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "Synergy DCF with two sensitivity grids"
+  },
+  {
+   "id": "081_007",
+   "bank": "LionTree",
+   "deck": "LionTree Presentation to Starz (22-Jun-2016)",
+   "file": "LionTree\\LionTree-Presentation-to-Starz-22-Jun-2016.pdf",
+   "page": 7,
+   "year": 2016,
+   "title": "Sources & Uses – Overview of Cunx•nt Capital Structure",
+   "section": "company",
+   "fill": 0.67,
+   "thumb": "_pages/081_007.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Sources and uses with debt tables"
+  },
+  {
+   "id": "081_013",
+   "bank": "LionTree",
+   "deck": "LionTree Presentation to Starz (22-Jun-2016)",
+   "file": "LionTree\\LionTree-Presentation-to-Starz-22-Jun-2016.pdf",
+   "page": 13,
+   "year": 2016,
+   "title": "Saturn Discounted Cash Flow Analysisl",
+   "section": "valuation",
+   "fill": 0.76,
+   "thumb": "_pages/081_013.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "DCF table with sensitivity grid"
+  },
+  {
+   "id": "081_019",
+   "bank": "LionTree",
+   "deck": "LionTree Presentation to Starz (22-Jun-2016)",
+   "file": "LionTree\\LionTree-Presentation-to-Starz-22-Jun-2016.pdf",
+   "page": 19,
+   "year": 2016,
+   "title": "Pro Forma Financial Overview – Calendar Year Ended December 31,",
+   "section": "financials",
+   "fill": 0.79,
+   "thumb": "_pages/081_019.png",
+   "layouts": [
+    "pill_rows",
+    "fin_table"
+   ],
+   "note": "Pro forma financials with navy row-group labels"
+  },
+  {
+   "id": "082_009",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Avangrid (17-May-2024)",
+   "file": "Moelis\\Moelis-Investment-Banking-Presentation-to-Avangrid-17-May-2024.pdf",
+   "page": 9,
+   "year": 2024,
+   "title": "Summary of the Management Forecast",
+   "section": "financials",
+   "fill": 0.94,
+   "thumb": "_pages/082_009.png",
+   "layouts": [
+    "page_text",
+    "stacked",
+    "column"
+   ],
+   "note": "Forecast summary: overview bullets beside three charts"
+  },
+  {
+   "id": "082_023",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Avangrid (17-May-2024)",
+   "file": "Moelis\\Moelis-Investment-Banking-Presentation-to-Avangrid-17-May-2024.pdf",
+   "page": 23,
+   "year": 2024,
+   "title": "Networks — Discounted Cash Flow Analysis",
+   "section": "valuation",
+   "fill": 0.99,
+   "thumb": "_pages/082_023.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "DCF cash flows over two sensitivity grids"
+  },
+  {
+   "id": "082_024",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Avangrid (17-May-2024)",
+   "file": "Moelis\\Moelis-Investment-Banking-Presentation-to-Avangrid-17-May-2024.pdf",
+   "page": 24,
+   "year": 2024,
+   "title": "Renewables — Discounted Cash Flow Analysis",
+   "section": "valuation",
+   "fill": 0.99,
+   "thumb": "_pages/082_024.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "DCF cash flows over two sensitivity grids"
+  },
+  {
+   "id": "082_040",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Avangrid (17-May-2024)",
+   "file": "Moelis\\Moelis-Investment-Banking-Presentation-to-Avangrid-17-May-2024.pdf",
+   "page": 40,
+   "year": 2024,
+   "title": "Overview of Preliminary WACC Analysis – • TO estimate the weighted average costofcapital (\"WACC) for each busi",
+   "section": "company",
+   "fill": 0.85,
+   "thumb": "_pages/082_040.png",
+   "layouts": [
+    "page_text",
+    "table"
+   ],
+   "note": "WACC overview bullets over inputs table"
+  },
+  {
+   "id": "082_043",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Avangrid (17-May-2024)",
+   "file": "Moelis\\Moelis-Investment-Banking-Presentation-to-Avangrid-17-May-2024.pdf",
+   "page": 43,
+   "year": 2024,
+   "title": "Networks — cost of debt references",
+   "section": "structure",
+   "fill": 1.0,
+   "thumb": "_pages/082_043.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Cost of debt references, grouped table"
+  },
+  {
+   "id": "082_053",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Avangrid (17-May-2024)",
+   "file": "Moelis\\Moelis-Investment-Banking-Presentation-to-Avangrid-17-May-2024.pdf",
+   "page": 53,
+   "year": 2024,
+   "title": "Arizona share price performance",
+   "section": "valuation",
+   "fill": 0.97,
+   "thumb": "_pages/082_053.png",
+   "layouts": [
+    "line",
+    "timeline"
+   ],
+   "note": "Share price with markers over numbered key developments"
+  },
+  {
+   "id": "082_058",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Avangrid (17-May-2024)",
+   "file": "Moelis\\Moelis-Investment-Banking-Presentation-to-Avangrid-17-May-2024.pdf",
+   "page": 58,
+   "year": 2024,
+   "title": "Projected FFO-to-debt (S&P methodology) – Management Forecast",
+   "section": "financials",
+   "fill": 0.87,
+   "thumb": "_pages/082_058.png",
+   "layouts": [
+    "column",
+    "fin_table"
+   ],
+   "note": "FFO-to-debt column chart over forecast table"
+  },
+  {
+   "id": "082_064",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Avangrid (17-May-2024)",
+   "file": "Moelis\\Moelis-Investment-Banking-Presentation-to-Avangrid-17-May-2024.pdf",
+   "page": 64,
+   "year": 2024,
+   "title": "Summary management financial projections — Consolidated",
+   "section": "financials",
+   "fill": 0.91,
+   "thumb": "_pages/082_064.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Consolidated financial projections table"
+  },
+  {
+   "id": "083_005",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Empire Resorts (06-Aug-2019)",
+   "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-06-Aug-2019.pdf",
+   "page": 5,
+   "year": 2019,
+   "title": "Executive Summary",
+   "section": "exec_summary",
+   "fill": 0.81,
+   "thumb": "_pages/083_005.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Executive summary: dated bullets with bold leads"
+  },
+  {
+   "id": "083_008",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Empire Resorts (06-Aug-2019)",
+   "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-06-Aug-2019.pdf",
+   "page": 8,
+   "year": 2019,
+   "title": "Framing the Analysis & Initial Observations – Overview of Management's Financial Scenarios",
+   "section": "company",
+   "fill": 0.78,
+   "thumb": "_pages/083_008.png",
+   "layouts": [
+    "pros_cons",
+    "column"
+   ],
+   "note": "Two scenarios side by side: bullets over column charts, banner below"
+  },
+  {
+   "id": "083_012",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Empire Resorts (06-Aug-2019)",
+   "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-06-Aug-2019.pdf",
+   "page": 12,
+   "year": 2019,
+   "title": "Analysis of the Joint Proposal – Annotated Stock Price - NYSE:NYNY",
+   "section": "valuation",
+   "fill": 0.65,
+   "thumb": "_pages/083_012.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Annotated share price with event callouts"
+  },
+  {
+   "id": "083_014",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Empire Resorts (06-Aug-2019)",
+   "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-06-Aug-2019.pdf",
+   "page": 14,
+   "year": 2019,
+   "title": "Analysis of the Joint Proposal – Premiums Paid Analysis (I-Day)",
+   "section": "valuation",
+   "fill": 0.72,
+   "thumb": "_pages/083_014.png",
+   "layouts": [
+    "column",
+    "line"
+   ],
+   "note": "Premiums paid columns with median line"
+  },
+  {
+   "id": "083_016",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Empire Resorts (06-Aug-2019)",
+   "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-06-Aug-2019.pdf",
+   "page": 16,
+   "year": 2019,
+   "title": "Preliminary Overview of MOC Cash Flow Scenarios (FULLY CONSOLIDA TED) – Summary Comparison of Empire Resorts' ",
+   "section": "company",
+   "fill": 0.79,
+   "thumb": "_pages/083_016.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Projected cash position: four stacked line strips"
+  },
+  {
+   "id": "083_018",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Empire Resorts (06-Aug-2019)",
+   "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-06-Aug-2019.pdf",
+   "page": 18,
+   "year": 2019,
+   "title": "Management Base Case – Overview of Management's Base Case Financial Projections",
+   "section": "company",
+   "fill": 0.86,
+   "thumb": "_pages/083_018.png",
+   "layouts": [
+    "fin_table",
+    "page_text"
+   ],
+   "note": "Base case projections with numbered commentary column"
+  },
+  {
+   "id": "083_029",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Empire Resorts (06-Aug-2019)",
+   "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-06-Aug-2019.pdf",
+   "page": 29,
+   "year": 2019,
+   "title": "M&A Process Timeline",
+   "section": "process",
+   "fill": 0.88,
+   "thumb": "_pages/083_029.png",
+   "layouts": [
+    "timeline",
+    "pill_rows"
+   ],
+   "note": "Process timeline: Gantt with grouped label column"
+  },
+  {
+   "id": "083_030",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Empire Resorts (06-Aug-2019)",
+   "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-06-Aug-2019.pdf",
+   "page": 30,
+   "year": 2019,
+   "title": "Restructuring Process Timeline — No Waiver",
+   "section": "process",
+   "fill": 0.71,
+   "thumb": "_pages/083_030.png",
+   "layouts": [
+    "timeline",
+    "pill_rows"
+   ],
+   "note": "Restructuring timeline: Gantt with grouped label column"
+  },
+  {
+   "id": "084_005",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Empire Resorts (18-Aug-2019)",
+   "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-18-Aug-2019.pdf",
+   "page": 5,
+   "year": 2019,
+   "title": "Executive Summary",
+   "section": "exec_summary",
+   "fill": 0.85,
+   "thumb": "_pages/084_005.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Executive summary: dated bullets with banner below"
+  },
+  {
+   "id": "084_007",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Empire Resorts (18-Aug-2019)",
+   "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-18-Aug-2019.pdf",
+   "page": 7,
+   "year": 2019,
+   "title": "Overview of Key Dates",
+   "section": "company",
+   "fill": 0.68,
+   "thumb": "_pages/084_007.png",
+   "layouts": [
+    "timeline",
+    "page_text"
+   ],
+   "note": "Key dates: dated bold-lead bullets"
+  },
+  {
+   "id": "084_008",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Empire Resorts (18-Aug-2019)",
+   "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-18-Aug-2019.pdf",
+   "page": 8,
+   "year": 2019,
+   "title": "Overview of Key Dates (Cont'd)",
+   "section": "company",
+   "fill": 0.67,
+   "thumb": "_pages/084_008.png",
+   "layouts": [
+    "timeline",
+    "page_text"
+   ],
+   "note": "Key dates continued"
+  },
+  {
+   "id": "084_013",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Empire Resorts (18-Aug-2019)",
+   "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-18-Aug-2019.pdf",
+   "page": 13,
+   "year": 2019,
+   "title": "Empire Financial Projection Assumptions",
+   "section": "financials",
+   "fill": 0.82,
+   "thumb": "_pages/084_013.png",
+   "layouts": [
+    "pill_rows"
+   ],
+   "note": "Projection assumptions: navy label column beside bullets"
+  },
+  {
+   "id": "084_015",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Empire Resorts (18-Aug-2019)",
+   "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-18-Aug-2019.pdf",
+   "page": 15,
+   "year": 2019,
+   "title": "Summary of Empire Financial Projections — Including Online Sports Betting",
+   "section": "financials",
+   "fill": 0.74,
+   "thumb": "_pages/084_015.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Financial projections table with highlighted rows"
+  },
+  {
+   "id": "084_017",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Empire Resorts (18-Aug-2019)",
+   "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-18-Aug-2019.pdf",
+   "page": 17,
+   "year": 2019,
+   "title": "Selected Publicly Traded Companies Analysis",
+   "section": "valuation",
+   "fill": 0.86,
+   "thumb": "_pages/084_017.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Publicly traded companies table"
+  },
+  {
+   "id": "084_019",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Empire Resorts (18-Aug-2019)",
+   "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-18-Aug-2019.pdf",
+   "page": 19,
+   "year": 2019,
+   "title": "Discounted Cash Flow Analysis — Excluding Online Sports Betting",
+   "section": "valuation",
+   "fill": 0.85,
+   "thumb": "_pages/084_019.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "DCF with two sensitivity grids"
+  },
+  {
+   "id": "084_020",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Empire Resorts (18-Aug-2019)",
+   "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-18-Aug-2019.pdf",
+   "page": 20,
+   "year": 2019,
+   "title": "Discounted Cash Flow Analysis — Including Online Sports Betting",
+   "section": "valuation",
+   "fill": 0.85,
+   "thumb": "_pages/084_020.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "DCF with two sensitivity grids"
+  },
+  {
+   "id": "085_007",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Oracle (19-Apr-2016)",
+   "file": "Moelis\\Moelis-Presentation-to-Oracle-19-Apr-2016.pdf",
+   "page": 7,
+   "year": 2016,
+   "title": "Select Software Sector Expertise – MOE LIS & c OMPANY",
+   "section": "market",
+   "fill": 0.79,
+   "thumb": "_pages/085_007.png",
+   "layouts": [
+    "logo_row",
+    "side_tabs"
+   ],
+   "note": "Sector expertise: logo grids in coloured panels"
+  },
+  {
+   "id": "085_010",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Oracle (19-Apr-2016)",
+   "file": "Moelis\\Moelis-Presentation-to-Oracle-19-Apr-2016.pdf",
+   "page": 10,
+   "year": 2016,
+   "title": "Potential Next Steps – C PAN v",
+   "section": "process",
+   "fill": 0.62,
+   "thumb": "_pages/085_010.png",
+   "layouts": [
+    "numbered_steps"
+   ],
+   "note": "Next steps: numbered circles with one line each"
+  },
+  {
+   "id": "085_014",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Oracle (19-Apr-2016)",
+   "file": "Moelis\\Moelis-Presentation-to-Oracle-19-Apr-2016.pdf",
+   "page": 14,
+   "year": 2016,
+   "title": "Moelis & Company Overview – MOELIS&COMPANY",
+   "section": "company",
+   "fill": 0.77,
+   "thumb": "_pages/085_014.png",
+   "layouts": [
+    "pill_rows",
+    "stat_strip"
+   ],
+   "note": "Firm overview: label column, bullets, big numbers down the right"
+  },
+  {
+   "id": "085_022",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Oracle (19-Apr-2016)",
+   "file": "Moelis\\Moelis-Presentation-to-Oracle-19-Apr-2016.pdf",
+   "page": 22,
+   "year": 2016,
+   "title": "Napa At A Glance – M E LIS C MP AN v",
+   "section": "company",
+   "fill": 0.68,
+   "thumb": "_pages/085_022.png",
+   "layouts": [
+    "page_text",
+    "fin_table",
+    "hub_spoke"
+   ],
+   "note": "Company at a glance: overview bullets, summary tables, wheel"
+  },
+  {
+   "id": "085_023",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Oracle (19-Apr-2016)",
+   "file": "Moelis\\Moelis-Presentation-to-Oracle-19-Apr-2016.pdf",
+   "page": 23,
+   "year": 2016,
+   "title": "Summary of Current Cloud ERP Market Dynamics – MOE LIS & c OMPANY",
+   "section": "market",
+   "fill": 0.7,
+   "thumb": "_pages/085_023.png",
+   "layouts": [
+    "tam_sam_som",
+    "stacked"
+   ],
+   "note": "Market dynamics: stacked columns beside market-size triangle"
+  },
+  {
+   "id": "086_003",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Oracle (20-May-2016)",
+   "file": "Moelis\\Moelis-Presentation-to-Oracle-20-May-2016.pdf",
+   "page": 3,
+   "year": 2016,
+   "title": "Executive Summary – C PAN v",
+   "section": "exec_summary",
+   "fill": 0.63,
+   "thumb": "_pages/086_003.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Executive summary: bullets with gold conclusion banner"
+  },
+  {
+   "id": "090_007",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Oracle (25-Jul-2016)",
+   "file": "Moelis\\Moelis-Presentation-to-Oracle-25-Jul-2016.pdf",
+   "page": 7,
+   "year": 2016,
+   "title": "Summary of Key Napa Process Events – MOELIS&COMPANY",
+   "section": "process",
+   "fill": 0.76,
+   "thumb": "_pages/090_007.png",
+   "layouts": [
+    "line",
+    "timeline"
+   ],
+   "note": "Process events on a share price line with dated list below"
+  },
+  {
+   "id": "090_020",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Oracle (25-Jul-2016)",
+   "file": "Moelis\\Moelis-Presentation-to-Oracle-25-Jul-2016.pdf",
+   "page": 20,
+   "year": 2016,
+   "title": "Napa Projections — Summary Comparison – MOELIS&COMPANY",
+   "section": "financials",
+   "fill": 0.79,
+   "thumb": "_pages/090_020.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Projections comparison table by scenario"
+  },
+  {
+   "id": "090_030",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to Oracle (25-Jul-2016)",
+   "file": "Moelis\\Moelis-Presentation-to-Oracle-25-Jul-2016.pdf",
+   "page": 30,
+   "year": 2016,
+   "title": "Napa Projections — Orlando Incremental Case Comparison Over Time – MOELIS&COMPANY",
+   "section": "financials",
+   "fill": 0.79,
+   "thumb": "_pages/090_030.png",
+   "layouts": [
+    "table",
+    "line"
+   ],
+   "note": "Case comparison table over two small line charts"
+  },
+  {
+   "id": "091_006",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to RealD (15-Oct-2015)",
+   "file": "Moelis\\Moelis-Presentation-to-RealD-15-Oct-2015.pdf",
+   "page": 6,
+   "year": 2015,
+   "title": "Strategic Alternatives Process Summary – & COMPANY",
+   "section": "process",
+   "fill": 0.62,
+   "thumb": "_pages/091_006.png",
+   "layouts": [
+    "tam_sam_som",
+    "table"
+   ],
+   "note": "Process funnel: buyers contacted to final bid, with counts table"
+  },
+  {
+   "id": "091_011",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to RealD (15-Oct-2015)",
+   "file": "Moelis\\Moelis-Presentation-to-RealD-15-Oct-2015.pdf",
+   "page": 11,
+   "year": 2015,
+   "title": "Summary Of Recent Buyer Activity – & COMPANY",
+   "section": "process",
+   "fill": 0.64,
+   "thumb": "_pages/091_011.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Recent buyer activity: party, date, commentary"
+  },
+  {
+   "id": "091_012",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to RealD (15-Oct-2015)",
+   "file": "Moelis\\Moelis-Presentation-to-RealD-15-Oct-2015.pdf",
+   "page": 12,
+   "year": 2015,
+   "title": "Discussion of Other Process Participants",
+   "section": "process",
+   "fill": 0.74,
+   "thumb": "_pages/091_012.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Other process participants: party, discussion, status"
+  },
+  {
+   "id": "091_017",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to RealD (15-Oct-2015)",
+   "file": "Moelis\\Moelis-Presentation-to-RealD-15-Oct-2015.pdf",
+   "page": 17,
+   "year": 2015,
+   "title": "Debt Capital Market Conditions",
+   "section": "structure",
+   "fill": 0.65,
+   "thumb": "_pages/091_017.png",
+   "layouts": [
+    "column",
+    "line"
+   ],
+   "note": "Debt market conditions: 2x2 grid of column and line charts"
+  },
+  {
+   "id": "091_021",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to RealD (15-Oct-2015)",
+   "file": "Moelis\\Moelis-Presentation-to-RealD-15-Oct-2015.pdf",
+   "page": 21,
+   "year": 2015,
+   "title": "Precedent Transactions Analysis – MOELIS & coupANY",
+   "section": "valuation",
+   "fill": 0.8,
+   "thumb": "_pages/091_021.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Precedent transactions table with grouped medians"
+  },
+  {
+   "id": "092_005",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to RealD (06-Nov-2015)",
+   "file": "Moelis\\Moelis-Presentation-to-RealD-06-Nov-2015.pdf",
+   "page": 5,
+   "year": 2015,
+   "title": "Situation Overview – MOE Lis QCOMPANY",
+   "section": "exec_summary",
+   "fill": 0.61,
+   "thumb": "_pages/092_005.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Situation overview: dated two-level bullets"
+  },
+  {
+   "id": "092_006",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to RealD (06-Nov-2015)",
+   "file": "Moelis\\Moelis-Presentation-to-RealD-06-Nov-2015.pdf",
+   "page": 6,
+   "year": 2015,
+   "title": "Situation Overview (cont'd) – MOELIS",
+   "section": "exec_summary",
+   "fill": 0.59,
+   "thumb": "_pages/092_006.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Situation overview continued"
+  },
+  {
+   "id": "092_009",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to RealD (06-Nov-2015)",
+   "file": "Moelis\\Moelis-Presentation-to-RealD-06-Nov-2015.pdf",
+   "page": 9,
+   "year": 2015,
+   "title": "Strategic Alternatives Process Summary – MOELIS Q C OM p ANY",
+   "section": "process",
+   "fill": 0.6,
+   "thumb": "_pages/092_009.png",
+   "layouts": [
+    "tam_sam_som",
+    "table"
+   ],
+   "note": "Process funnel with counts table"
+  },
+  {
+   "id": "092_038",
+   "bank": "Moelis",
+   "deck": "Moelis Presentation to RealD (06-Nov-2015)",
+   "file": "Moelis\\Moelis-Presentation-to-RealD-06-Nov-2015.pdf",
+   "page": 38,
+   "year": 2015,
+   "title": "Overview of Rhombus (cont'd) – MOELIS",
+   "section": "company",
+   "fill": 0.66,
+   "thumb": "_pages/092_038.png",
+   "layouts": [
+    "table",
+    "page_text"
+   ],
+   "note": "Company overview: product panels beside management table"
+  },
+  {
+   "id": "093_019",
+   "bank": "Morgan Stanley",
+   "deck": "Morgan Stanley Presentation to Pivotal Software (22-Aug-2019)",
+   "file": "Morgan Stanley\\Morgan-Stanley-Presentation-to-Pivotal-Software-22-Aug-2019.pdf",
+   "page": 19,
+   "year": 2019,
+   "title": "Morgan Stanley – Benchmarkina Yoda — Revenue Metrics",
+   "section": "valuation",
+   "fill": 0.57,
+   "thumb": "_pages/093_019.png",
+   "layouts": [
+    "column"
+   ],
+   "note": "Benchmarking: two wide grouped column charts with peer groups"
+  },
+  {
+   "id": "093_020",
+   "bank": "Morgan Stanley",
+   "deck": "Morgan Stanley Presentation to Pivotal Software (22-Aug-2019)",
+   "file": "Morgan Stanley\\Morgan-Stanley-Presentation-to-Pivotal-Software-22-Aug-2019.pdf",
+   "page": 20,
+   "year": 2019,
+   "title": "Morgan Stanley – Benchmarkina Yoda — Gross Profit Metrics",
+   "section": "valuation",
+   "fill": 0.55,
+   "thumb": "_pages/093_020.png",
+   "layouts": [
+    "column"
+   ],
+   "note": "Benchmarking: two wide grouped column charts with peer groups"
+  },
+  {
+   "id": "093_023",
+   "bank": "Morgan Stanley",
+   "deck": "Morgan Stanley Presentation to Pivotal Software (22-Aug-2019)",
+   "file": "Morgan Stanley\\Morgan-Stanley-Presentation-to-Pivotal-Software-22-Aug-2019.pdf",
+   "page": 23,
+   "year": 2019,
+   "title": "Morgan Stanley – Yoda Discounted Cash Flow Valuation",
+   "section": "valuation",
+   "fill": 0.8,
+   "thumb": "_pages/093_023.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "DCF build tables, full page"
+  },
+  {
+   "id": "093_024",
+   "bank": "Morgan Stanley",
+   "deck": "Morgan Stanley Presentation to Pivotal Software (22-Aug-2019)",
+   "file": "Morgan Stanley\\Morgan-Stanley-Presentation-to-Pivotal-Software-22-Aug-2019.pdf",
+   "page": 24,
+   "year": 2019,
+   "title": "Morgan Stanley – Yoda Discounted Cash Flow Valuation (cont'd)",
+   "section": "valuation",
+   "fill": 0.82,
+   "thumb": "_pages/093_024.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "DCF build tables, full page"
+  },
+  {
+   "id": "093_025",
+   "bank": "Morgan Stanley",
+   "deck": "Morgan Stanley Presentation to Pivotal Software (22-Aug-2019)",
+   "file": "Morgan Stanley\\Morgan-Stanley-Presentation-to-Pivotal-Software-22-Aug-2019.pdf",
+   "page": 25,
+   "year": 2019,
+   "title": "Morgan Stanley – Yoda Discounted Cash Flow Valuation (cont'd)",
+   "section": "valuation",
+   "fill": 0.82,
+   "thumb": "_pages/093_025.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "DCF build tables, full page"
+  },
+  {
+   "id": "093_026",
+   "bank": "Morgan Stanley",
+   "deck": "Morgan Stanley Presentation to Pivotal Software (22-Aug-2019)",
+   "file": "Morgan Stanley\\Morgan-Stanley-Presentation-to-Pivotal-Software-22-Aug-2019.pdf",
+   "page": 26,
+   "year": 2019,
+   "title": "Morgan Stanley – Yoda Discounted Cash Flow Valuation (cont'd)",
+   "section": "valuation",
+   "fill": 0.82,
+   "thumb": "_pages/093_026.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "DCF build tables, full page"
+  },
+  {
+   "id": "093_027",
+   "bank": "Morgan Stanley",
+   "deck": "Morgan Stanley Presentation to Pivotal Software (22-Aug-2019)",
+   "file": "Morgan Stanley\\Morgan-Stanley-Presentation-to-Pivotal-Software-22-Aug-2019.pdf",
+   "page": 27,
+   "year": 2019,
+   "title": "Morgan Stanley – Precedent Software Transactions — Ooerational Benchmarkina",
+   "section": "valuation",
+   "fill": 0.66,
+   "thumb": "_pages/093_027.png",
+   "layouts": [
+    "column"
+   ],
+   "note": "Precedent benchmarking: wide stacked column chart"
+  },
+  {
+   "id": "093_029",
+   "bank": "Morgan Stanley",
+   "deck": "Morgan Stanley Presentation to Pivotal Software (22-Aug-2019)",
+   "file": "Morgan Stanley\\Morgan-Stanley-Presentation-to-Pivotal-Software-22-Aug-2019.pdf",
+   "page": 29,
+   "year": 2019,
+   "title": "Morgan Stanley – Precedent Software Transactions — Valuation Benchmarkina",
+   "section": "valuation",
+   "fill": 0.65,
+   "thumb": "_pages/093_029.png",
+   "layouts": [
+    "column",
+    "table"
+   ],
+   "note": "Precedent multiples column chart with summary table"
+  },
+  {
+   "id": "098_007",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to Oaktree Capital (07-Mar-2019)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-Oaktree-Capital-07-Mar-2019.pdf",
+   "page": 7,
+   "year": 2019,
+   "title": "Historical Stock Price Performance",
+   "section": "valuation",
+   "fill": 0.64,
+   "thumb": "_pages/098_007.png",
+   "layouts": [
+    "line",
+    "table"
+   ],
+   "note": "Indexed share price with returns table and highlight box"
+  },
+  {
+   "id": "098_012",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to Oaktree Capital (07-Mar-2019)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-Oaktree-Capital-07-Mar-2019.pdf",
+   "page": 12,
+   "year": 2019,
+   "title": "Overview of Berlin",
+   "section": "company",
+   "fill": 0.66,
+   "thumb": "_pages/098_012.png",
+   "layouts": [
+    "page_text",
+    "fin_table",
+    "stat_rings"
+   ],
+   "note": "Company overview: description, financials table, line, pies"
+  },
+  {
+   "id": "098_015",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to Oaktree Capital (07-Mar-2019)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-Oaktree-Capital-07-Mar-2019.pdf",
+   "page": 15,
+   "year": 2019,
+   "title": "Overview of Selected Berlin Listed Entities(l) – (USS in millions)",
+   "section": "company",
+   "fill": 0.71,
+   "thumb": "_pages/098_015.png",
+   "layouts": [
+    "table",
+    "stat_rings"
+   ],
+   "note": "Listed entities compared: four columns with pies"
+  },
+  {
+   "id": "098_016",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to Oaktree Capital (07-Mar-2019)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-Oaktree-Capital-07-Mar-2019.pdf",
+   "page": 16,
+   "year": 2019,
+   "title": "Berlin Financial Summary — Historical – (USS in millions)",
+   "section": "financials",
+   "fill": 0.56,
+   "thumb": "_pages/098_016.png",
+   "layouts": [
+    "column"
+   ],
+   "note": "Historical financials: 2x2 grid of column charts"
+  },
+  {
+   "id": "098_019",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to Oaktree Capital (07-Mar-2019)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-Oaktree-Capital-07-Mar-2019.pdf",
+   "page": 19,
+   "year": 2019,
+   "title": "Berlin Financial Summary — Projections – (USS in millions)",
+   "section": "financials",
+   "fill": 0.63,
+   "thumb": "_pages/098_019.png",
+   "layouts": [
+    "column",
+    "stacked"
+   ],
+   "note": "Projections: 2x2 grid of column charts"
+  },
+  {
+   "id": "098_022",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to Oaktree Capital (07-Mar-2019)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-Oaktree-Capital-07-Mar-2019.pdf",
+   "page": 22,
+   "year": 2019,
+   "title": "Oslo Discounted Cash Flow Analysis Summary – Based on Oslo Management Projections — Non-Normalized Terminal Va",
+   "section": "valuation",
+   "fill": 0.72,
+   "thumb": "_pages/098_022.png",
+   "layouts": [
+    "page_text",
+    "heatmap"
+   ],
+   "note": "DCF: key assumptions bullets over two sensitivity grids"
+  },
+  {
+   "id": "098_023",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to Oaktree Capital (07-Mar-2019)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-Oaktree-Capital-07-Mar-2019.pdf",
+   "page": 23,
+   "year": 2019,
+   "title": "Precedent Premia Analysis Summary",
+   "section": "valuation",
+   "fill": 0.67,
+   "thumb": "_pages/098_023.png",
+   "layouts": [
+    "page_text",
+    "column"
+   ],
+   "note": "Premia summary: bullets over two column charts"
+  },
+  {
+   "id": "098_024",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to Oaktree Capital (07-Mar-2019)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-Oaktree-Capital-07-Mar-2019.pdf",
+   "page": 24,
+   "year": 2019,
+   "title": "Liquidity Mechanism Implied Prices – Excluding Distributions, PV at 9.7% Cost of Equity",
+   "section": "structure",
+   "fill": 0.58,
+   "thumb": "_pages/098_024.png",
+   "layouts": [
+    "page_text",
+    "line"
+   ],
+   "note": "Implied prices: bullets over annotated line chart"
+  },
+  {
+   "id": "099_030",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to rue21 (02-Nov-2012)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-rue21-02-Nov-2012.pdf",
+   "page": 30,
+   "year": 2012,
+   "title": "DRAFI' – POTENTIAL STRATEGIC BUYERS - US",
+   "section": "process",
+   "fill": 0.73,
+   "thumb": "_pages/099_030.png",
+   "layouts": [
+    "table",
+    "logo_row",
+    "stat_rings"
+   ],
+   "note": "Strategic buyers: logo rows with figures, commentary, Harvey balls"
+  },
+  {
+   "id": "099_031",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to rue21 (02-Nov-2012)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-rue21-02-Nov-2012.pdf",
+   "page": 31,
+   "year": 2012,
+   "title": "DRAFI' – POTENTIAL STRATEGIC BUYERS - INTERNATIONAL",
+   "section": "process",
+   "fill": 0.68,
+   "thumb": "_pages/099_031.png",
+   "layouts": [
+    "table",
+    "logo_row",
+    "stat_rings"
+   ],
+   "note": "Strategic buyers international: logo rows with Harvey balls"
+  },
+  {
+   "id": "099_032",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to rue21 (02-Nov-2012)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-rue21-02-Nov-2012.pdf",
+   "page": 32,
+   "year": 2012,
+   "title": "DRAFI' – LEVERAGED BUYOUT ANALYSIS",
+   "section": "returns",
+   "fill": 0.71,
+   "thumb": "_pages/099_032.png",
+   "layouts": [
+    "page_text",
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "LBO: summary bullets, sources and uses, returns grid"
+  },
+  {
+   "id": "099_033",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to rue21 (02-Nov-2012)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-rue21-02-Nov-2012.pdf",
+   "page": 33,
+   "year": 2012,
+   "title": "DRAFI' – IMPACI' OF LEVERAGE ON LBO ACTIVITY",
+   "section": "returns",
+   "fill": 0.71,
+   "thumb": "_pages/099_033.png",
+   "layouts": [
+    "column",
+    "line"
+   ],
+   "note": "LBO market: column chart over column-and-line chart"
+  },
+  {
+   "id": "099_041",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to rue21 (02-Nov-2012)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-rue21-02-Nov-2012.pdf",
+   "page": 41,
+   "year": 2012,
+   "title": "DRAFI' – LIMITED EXAMPLES OF SUCCESSFUL GO-SHOP PROCESSES",
+   "section": "process",
+   "fill": 0.66,
+   "thumb": "_pages/099_041.png",
+   "layouts": [
+    "page_text",
+    "table",
+    "harvey"
+   ],
+   "note": "Go-shop examples: side commentary, summary and ticked table"
+  },
+  {
+   "id": "099_063",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to rue21 (02-Nov-2012)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-rue21-02-Nov-2012.pdf",
+   "page": 63,
+   "year": 2012,
+   "title": "DRAFI' – OVERVIEW OF APAX'S U.S. GO-PRIVATE TRANSACI*IONS",
+   "section": "company",
+   "fill": 0.72,
+   "thumb": "_pages/099_063.png",
+   "layouts": [
+    "table",
+    "page_text"
+   ],
+   "note": "Go-private transactions table with side commentary"
+  },
+  {
+   "id": "099_067",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to rue21 (02-Nov-2012)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-rue21-02-Nov-2012.pdf",
+   "page": 67,
+   "year": 2012,
+   "title": "DRAFI' – COMPARABLE COMPANY ANALYSIS - KEY METRICS",
+   "section": "company",
+   "fill": 0.74,
+   "thumb": "_pages/099_067.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Comparable companies key metrics, grouped"
+  },
+  {
+   "id": "099_068",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to rue21 (02-Nov-2012)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-rue21-02-Nov-2012.pdf",
+   "page": 68,
+   "year": 2012,
+   "title": "DRAFI' – COMPARABLE COMPANY ANALYSIS - KEY METRICS (CONT'D)",
+   "section": "company",
+   "fill": 0.73,
+   "thumb": "_pages/099_068.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Comparable companies key metrics continued"
+  },
+  {
+   "id": "100_027",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to rue21 (22-May-2013)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-rue21-22-May-2013.pdf",
+   "page": 27,
+   "year": 2013,
+   "title": "DRAFI' – LEVERAGED BUYOUT ANALYSIS",
+   "section": "returns",
+   "fill": 0.71,
+   "thumb": "_pages/100_027.png",
+   "layouts": [
+    "page_text",
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "LBO: summary bullets, sources and uses, returns grid"
+  },
+  {
+   "id": "100_028",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to rue21 (22-May-2013)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-rue21-22-May-2013.pdf",
+   "page": 28,
+   "year": 2013,
+   "title": "DRAFI' – LEVERAGED BUYOUT ANALYSIS",
+   "section": "returns",
+   "fill": 0.62,
+   "thumb": "_pages/100_028.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "LBO projections and credit stats tables"
+  },
+  {
+   "id": "100_036",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to rue21 (22-May-2013)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-rue21-22-May-2013.pdf",
+   "page": 36,
+   "year": 2013,
+   "title": "DRAFI' – COMPARABLE COMPANY ANALYSIS - KEY METRICS",
+   "section": "company",
+   "fill": 0.73,
+   "thumb": "_pages/100_036.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Comparable companies key metrics, grouped"
+  },
+  {
+   "id": "100_037",
+   "bank": "Perella Weinberg",
+   "deck": "Perella Weinberg Presentation to rue21 (22-May-2013)",
+   "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-rue21-22-May-2013.pdf",
+   "page": 37,
+   "year": 2013,
+   "title": "DRAFI' – COMPARABLE COMPANY ANALYSIS - KEY METRICS (CONT'D)",
+   "section": "company",
+   "fill": 0.82,
+   "thumb": "_pages/100_037.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Comparable companies key metrics continued"
+  },
+  {
+   "id": "101_019",
+   "bank": "PJT Partners",
+   "deck": "PJT Presentation to EXCO (January-2018)",
+   "file": "PJT Partners\\PJT-Presentation-to-EXCO-January-2018.pdf",
+   "page": 19,
+   "year": 2018,
+   "title": "Existing Capital Structure",
+   "section": "structure",
+   "fill": 0.65,
+   "thumb": "_pages/101_019.png",
+   "layouts": [
+    "fin_table",
+    "column"
+   ],
+   "note": "Capital structure table over debt maturity columns"
+  },
+  {
+   "id": "102_003",
+   "bank": "PJT Partners",
+   "deck": "EXCO Resources Opportunity Overview by PJT (Q1-2018)",
+   "file": "PJT Partners\\EXCO-Resources-Opportunity-Overview-by-PJT-Q1-2018.pdf",
+   "page": 3,
+   "year": 2018,
+   "title": "Executive Summary – Diverse Portfolio with Substantial, High-Quality Drilling Inventory",
+   "section": "exec_summary",
+   "fill": 0.85,
+   "thumb": "_pages/102_003.png",
+   "layouts": [
+    "page_text",
+    "page_geography",
+    "fin_table"
+   ],
+   "note": "Executive summary: framing bar, bullets, asset map, summary table"
+  },
+  {
+   "id": "102_008",
+   "bank": "PJT Partners",
+   "deck": "EXCO Resources Opportunity Overview by PJT (Q1-2018)",
+   "file": "PJT Partners\\EXCO-Resources-Opportunity-Overview-by-PJT-Q1-2018.pdf",
+   "page": 8,
+   "year": 2018,
+   "title": "Process Timing and Contact Information",
+   "section": "process",
+   "fill": 0.75,
+   "thumb": "_pages/102_008.png",
+   "layouts": [
+    "timeline",
+    "page_text"
+   ],
+   "note": "Process timing: calendar grids with key contacts below"
+  },
+  {
+   "id": "104_009",
+   "bank": "PJT Partners",
+   "deck": "PJT Presentation to Lionsgate (23-Jun-2016)",
+   "file": "PJT Partners\\PJT-Presentation-to-Lionsgate-23-Jun-2016.pdf",
+   "page": 9,
+   "year": 2016,
+   "title": "Solar Share Price Performance (For Informational Purposes Only)",
+   "section": "valuation",
+   "fill": 0.77,
+   "thumb": "_pages/104_009.png",
+   "layouts": [
+    "line",
+    "table"
+   ],
+   "note": "Share price chart with statistics table beside"
+  },
+  {
+   "id": "104_016",
+   "bank": "PJT Partners",
+   "deck": "PJT Presentation to Lionsgate (23-Jun-2016)",
+   "file": "PJT Partners\\PJT-Presentation-to-Lionsgate-23-Jun-2016.pdf",
+   "page": 16,
+   "year": 2016,
+   "title": "Lunar Share Price Performance (For Informational Purposes Only)",
+   "section": "valuation",
+   "fill": 0.76,
+   "thumb": "_pages/104_016.png",
+   "layouts": [
+    "line",
+    "table"
+   ],
+   "note": "Share price chart with statistics table beside"
+  },
+  {
+   "id": "104_028",
+   "bank": "PJT Partners",
+   "deck": "PJT Presentation to Lionsgate (23-Jun-2016)",
+   "file": "PJT Partners\\PJT-Presentation-to-Lionsgate-23-Jun-2016.pdf",
+   "page": 28,
+   "year": 2016,
+   "title": "Lunar Financing Package Overview: $3,720mm of Funded Debt – with $4,570rnm of Total Commitments",
+   "section": "structure",
+   "fill": 0.87,
+   "thumb": "_pages/104_028.png",
+   "layouts": [
+    "side_tabs",
+    "table"
+   ],
+   "note": "Financing package terms with coloured side tabs per tranche"
+  },
+  {
+   "id": "104_040",
+   "bank": "PJT Partners",
+   "deck": "PJT Presentation to Lionsgate (23-Jun-2016)",
+   "file": "PJT Partners\\PJT-Presentation-to-Lionsgate-23-Jun-2016.pdf",
+   "page": 40,
+   "year": 2016,
+   "title": "DCF Valuation of Combined Synergies",
+   "section": "valuation",
+   "fill": 0.83,
+   "thumb": "_pages/104_040.png",
+   "layouts": [
+    "fin_table",
+    "heatmap"
+   ],
+   "note": "Synergy DCF build with value grids"
+  },
+  {
+   "id": "105_018",
+   "bank": "PJT Partners",
+   "deck": "Blackstone Advisory Presentation on CareFirst (11-Feb-2003)",
+   "file": "PJT Partners\\Blackstone-Advisory-Presentation-on-CareFirst-11-Feb-2003.pdf",
+   "page": 18,
+   "year": 2003,
+   "title": "Valuation Report on CareFirst, Inc. – SEI-ECI'ED PRECEDENT TRANSACTION ANALYSIS",
+   "section": "valuation",
+   "fill": 0.82,
+   "thumb": "_pages/105_018.png",
+   "layouts": [
+    "table",
+    "page_text"
+   ],
+   "note": "Precedent transactions table under framing box"
+  },
+  {
+   "id": "106_002",
+   "bank": "SVB Securities - Leerink",
+   "deck": "SVB Securities Presentation to Pardes Biosciences (12-Jun-2023)",
+   "file": "SVB Securities - Leerink\\SVB-Securities-Presentation-to-Pardes-Biosciences-12-Jun-2023.pdf",
+   "page": 2,
+   "year": 2023,
+   "title": "PROJECT PACIFIC – SUMMARY OF STRATEGIC ALTERNATIVES PROCESS AS OF JUNE 13, 2023",
+   "section": "process",
+   "fill": 0.88,
+   "thumb": "_pages/106_002.png",
+   "layouts": [
+    "page_text",
+    "tam_sam_som"
+   ],
+   "note": "Process summary bullets beside a three-stage funnel"
+  },
+  {
+   "id": "107_004",
+   "bank": "SVB Securities - Leerink",
+   "deck": "Leerink Partners Presentation to Pardes Biosciences (16-Jul-2023)",
+   "file": "SVB Securities - Leerink\\Leerink-Partners-Presentation-to-Pardes-Biosciences-16-Jul-2023.pdf",
+   "page": 4,
+   "year": 2023,
+   "title": "PROJECT PACIFIC – Pacific Process Overview",
+   "section": "process",
+   "fill": 0.95,
+   "thumb": "_pages/107_004.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Process overview: full-page dated bullets"
+  },
+  {
+   "id": "107_005",
+   "bank": "SVB Securities - Leerink",
+   "deck": "Leerink Partners Presentation to Pardes Biosciences (16-Jul-2023)",
+   "file": "SVB Securities - Leerink\\Leerink-Partners-Presentation-to-Pardes-Biosciences-16-Jul-2023.pdf",
+   "page": 5,
+   "year": 2023,
+   "title": "PROJECT PACIFIC – Pacific Process Overview",
+   "section": "process",
+   "fill": 0.82,
+   "thumb": "_pages/107_005.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Process overview continued"
+  },
+  {
+   "id": "107_006",
+   "bank": "SVB Securities - Leerink",
+   "deck": "Leerink Partners Presentation to Pardes Biosciences (16-Jul-2023)",
+   "file": "SVB Securities - Leerink\\Leerink-Partners-Presentation-to-Pardes-Biosciences-16-Jul-2023.pdf",
+   "page": 6,
+   "year": 2023,
+   "title": "PROJECT PACIFIC – Pacific Company Overview",
+   "section": "company",
+   "fill": 0.8,
+   "thumb": "_pages/107_006.png",
+   "layouts": [
+    "fin_table",
+    "line",
+    "page_text"
+   ],
+   "note": "Company overview: market data and holders tables, share price with notes"
+  },
+  {
+   "id": "108_004",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to R1 RCM (04-Jul-2024)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-R1-RCM-04-Jul-2024.pdf",
+   "page": 4,
+   "year": 2024,
+   "title": "Detailed Overview of NMC Revised Proposal – (S.w.lf)",
+   "section": "company",
+   "fill": 0.91,
+   "thumb": "_pages/108_004.png",
+   "layouts": [
+    "side_tabs",
+    "page_text",
+    "fin_table"
+   ],
+   "note": "Revised proposal: navy side tabs with text, sources and uses beside"
+  },
+  {
+   "id": "108_005",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to R1 RCM (04-Jul-2024)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-R1-RCM-04-Jul-2024.pdf",
+   "page": 5,
+   "year": 2024,
+   "title": "Rover Share Price Over Time and – Illustrative Statistics at Various Prices",
+   "section": "valuation",
+   "fill": 0.91,
+   "thumb": "_pages/108_005.png",
+   "layouts": [
+    "line",
+    "table"
+   ],
+   "note": "Share price with events beside statistics at various prices"
+  },
+  {
+   "id": "108_006",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to R1 RCM (04-Jul-2024)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-R1-RCM-04-Jul-2024.pdf",
+   "page": 6,
+   "year": 2024,
+   "title": "Overview of Rover Daily Trading – From Ireek Of Request for Ill'aipe•r Of Investor (Janna\" 22, 2024) to 3, 202",
+   "section": "company",
+   "fill": 0.87,
+   "thumb": "_pages/108_006.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Daily trading with dense annotated event callouts"
+  },
+  {
+   "id": "109_003",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to R1 RCM (31-Jul-2024)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-R1-RCM-31-Jul-2024.pdf",
+   "page": 3,
+   "year": 2024,
+   "title": "Comparison of Proposals vs. Rover Share Price Over Time – From 2, 2015 30, 2024)",
+   "section": "valuation",
+   "fill": 0.64,
+   "thumb": "_pages/109_003.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Proposals vs share price with annotated events"
+  },
+  {
+   "id": "109_004",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to R1 RCM (31-Jul-2024)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-R1-RCM-31-Jul-2024.pdf",
+   "page": 4,
+   "year": 2024,
+   "title": "Overview of Rover Daily Trading – From Of Request for Waiver Of Standsti// 22, 2024) fo 30, 2024)",
+   "section": "company",
+   "fill": 0.94,
+   "thumb": "_pages/109_004.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Daily trading with annotated event callouts"
+  },
+  {
+   "id": "109_007",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to R1 RCM (31-Jul-2024)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-R1-RCM-31-Jul-2024.pdf",
+   "page": 7,
+   "year": 2024,
+   "title": "Overview of Rover Management Plan vs. – (SMM)",
+   "section": "company",
+   "fill": 0.83,
+   "thumb": "_pages/109_007.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Management plan vs street: four line charts with callouts"
+  },
+  {
+   "id": "109_012",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to R1 RCM (31-Jul-2024)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-R1-RCM-31-Jul-2024.pdf",
+   "page": 12,
+   "year": 2024,
+   "title": "CY25E Trading Statistics of Selected Companies – ss.o",
+   "section": "valuation",
+   "fill": 0.61,
+   "thumb": "_pages/109_012.png",
+   "layouts": [
+    "column",
+    "side_tabs"
+   ],
+   "note": "Trading statistics: two rows of column charts with side labels"
+  },
+  {
+   "id": "109_013",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to R1 RCM (31-Jul-2024)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-R1-RCM-31-Jul-2024.pdf",
+   "page": 13,
+   "year": 2024,
+   "title": "Summary of Rover Unlevered Free Cash Flow Projections",
+   "section": "financials",
+   "fill": 0.73,
+   "thumb": "_pages/109_013.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Unlevered free cash flow projections table"
+  },
+  {
+   "id": "109_014",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to R1 RCM (31-Jul-2024)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-R1-RCM-31-Jul-2024.pdf",
+   "page": 14,
+   "year": 2024,
+   "title": "Rover Discounted Cash Flow Analysis",
+   "section": "valuation",
+   "fill": 0.76,
+   "thumb": "_pages/109_014.png",
+   "layouts": [
+    "fin_table",
+    "heatmap",
+    "page_text"
+   ],
+   "note": "DCF: assumptions box over value grid"
+  },
+  {
+   "id": "110_002",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to Ancestry (Jun-2012)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-Ancestry-com-Jun-2012.pdf",
+   "page": 2,
+   "year": 2012,
+   "title": "Process Overview",
+   "section": "process",
+   "fill": 0.57,
+   "thumb": "_pages/110_002.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Process overview: full-page bullets"
+  },
+  {
+   "id": "111_008",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to Ancestry (Jul-2012)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-Ancestry-com-Jul-2012.pdf",
+   "page": 8,
+   "year": 2012,
+   "title": "Process Overview",
+   "section": "process",
+   "fill": 0.71,
+   "thumb": "_pages/111_008.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Process overview: full-page bullets"
+  },
+  {
+   "id": "111_012",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to Ancestry (Jul-2012)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-Ancestry-com-Jul-2012.pdf",
+   "page": 12,
+   "year": 2012,
+   "title": "Permira Diligence Calendar",
+   "section": "process",
+   "fill": 0.62,
+   "thumb": "_pages/111_012.png",
+   "layouts": [
+    "timeline"
+   ],
+   "note": "Diligence calendar: weekly grid with coloured events"
+  },
+  {
+   "id": "111_016",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to Ancestry (Jul-2012)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-Ancestry-com-Jul-2012.pdf",
+   "page": 16,
+   "year": 2012,
+   "title": "Diligence Calendar",
+   "section": "process",
+   "fill": 0.65,
+   "thumb": "_pages/111_016.png",
+   "layouts": [
+    "timeline"
+   ],
+   "note": "Diligence calendar: weekly grid with coloured events"
+  },
+  {
+   "id": "112_020",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to Ancestry (Aug-2012)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-Ancestry-com-Aug-2012.pdf",
+   "page": 20,
+   "year": 2012,
+   "title": "Illustrative Dilution Factor Sensitivity Analysis",
+   "section": "structure",
+   "fill": 0.76,
+   "thumb": "_pages/112_020.png",
+   "layouts": [
+    "heatmap",
+    "page_text"
+   ],
+   "note": "Dilution sensitivity grid under assumptions box"
+  },
+  {
+   "id": "113_004",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to Ancestry (Oct-2012)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-Ancestry-com-Oct-2012.pdf",
+   "page": 4,
+   "year": 2012,
+   "title": "Arbor Trading Performance During Process",
+   "section": "valuation",
+   "fill": 0.75,
+   "thumb": "_pages/113_004.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Trading during process with annotated event boxes"
+  },
+  {
+   "id": "113_009",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to Ancestry (Oct-2012)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-Ancestry-com-Oct-2012.pdf",
+   "page": 9,
+   "year": 2012,
+   "title": "Summary of Analyst Estimates",
+   "section": "valuation",
+   "fill": 0.76,
+   "thumb": "_pages/113_009.png",
+   "layouts": [
+    "table",
+    "stacked"
+   ],
+   "note": "Analyst estimates table over ratings stacked area chart"
+  },
+  {
+   "id": "113_013",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to Ancestry (Oct-2012)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-Ancestry-com-Oct-2012.pdf",
+   "page": 13,
+   "year": 2012,
+   "title": "Process Overview",
+   "section": "process",
+   "fill": 0.71,
+   "thumb": "_pages/113_013.png",
+   "layouts": [
+    "harvey",
+    "table"
+   ],
+   "note": "Process overview: party grid with tick marks, grouped"
+  },
+  {
+   "id": "114_003",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to Ancestry (Late Oct-2012)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-Ancestry-com-Late-Oct-2012.pdf",
+   "page": 3,
+   "year": 2012,
+   "title": "Process Overview",
+   "section": "process",
+   "fill": 0.71,
+   "thumb": "_pages/114_003.png",
+   "layouts": [
+    "harvey",
+    "table"
+   ],
+   "note": "Process overview: party grid with tick marks, grouped"
+  },
+  {
+   "id": "114_004",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to Ancestry (Late Oct-2012)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-Ancestry-com-Late-Oct-2012.pdf",
+   "page": 4,
+   "year": 2012,
+   "title": "Selected Areas of Feedback From Prospective Buyers",
+   "section": "process",
+   "fill": 0.57,
+   "thumb": "_pages/114_004.png",
+   "layouts": [
+    "pros_cons",
+    "page_text"
+   ],
+   "note": "Buyer feedback: positives and negatives bullets"
+  },
+  {
+   "id": "114_006",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to Ancestry (Late Oct-2012)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-Ancestry-com-Late-Oct-2012.pdf",
+   "page": 6,
+   "year": 2012,
+   "title": "Arbor Trading Performance During Process",
+   "section": "valuation",
+   "fill": 0.75,
+   "thumb": "_pages/114_006.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Trading during process with annotated event boxes"
+  },
+  {
+   "id": "114_011",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Presentation to Ancestry (Late Oct-2012)",
+   "file": "Qatalyst\\Qatalyst-Presentation-to-Ancestry-com-Late-Oct-2012.pdf",
+   "page": 11,
+   "year": 2012,
+   "title": "Summary of Analyst Estimates",
+   "section": "valuation",
+   "fill": 0.76,
+   "thumb": "_pages/114_011.png",
+   "layouts": [
+    "table",
+    "stacked"
+   ],
+   "note": "Analyst estimates table over ratings stacked area chart"
+  },
+  {
+   "id": "115_004",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Pitch Book on Autonomy (Jan-2011)",
+   "file": "Qatalyst\\Qatalyst-Pitch-Book-on-Autonomy-Jan-2011.pdf",
+   "page": 4,
+   "year": 2011,
+   "title": "Data Management Market Dynamics – Autonomy",
+   "section": "market",
+   "fill": 0.86,
+   "thumb": "_pages/115_004.png",
+   "layouts": [
+    "tam_sam_som",
+    "line",
+    "column"
+   ],
+   "note": "Market dynamics: three panels with Venn, line and column charts"
+  },
+  {
+   "id": "115_008",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Pitch Book on Autonomy (Jan-2011)",
+   "file": "Qatalyst\\Qatalyst-Pitch-Book-on-Autonomy-Jan-2011.pdf",
+   "page": 8,
+   "year": 2011,
+   "title": "400+ Partners and 20,000+ Customers – Across Multiple Verticals",
+   "section": "any",
+   "fill": 0.88,
+   "thumb": "_pages/115_008.png",
+   "layouts": [
+    "logo_row",
+    "table"
+   ],
+   "note": "Customers: logo grid by vertical"
+  },
+  {
+   "id": "115_010",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Pitch Book on Autonomy (Jan-2011)",
+   "file": "Qatalyst\\Qatalyst-Pitch-Book-on-Autonomy-Jan-2011.pdf",
+   "page": 10,
+   "year": 2011,
+   "title": "Trading Statistics of Selected Companies – Ap I / D Ata Systems SoftWMe",
+   "section": "valuation",
+   "fill": 0.89,
+   "thumb": "_pages/115_010.png",
+   "layouts": [
+    "column",
+    "side_tabs"
+   ],
+   "note": "Trading statistics: five rows of column charts with side labels"
+  },
+  {
+   "id": "116_003",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Pitch Book on Autonomy Supplementary Materials (Jan-2011)",
+   "file": "Qatalyst\\Qatalyst-Pitch-Book-on-Autonomy-Supplementary-Materials-Jan-2011.pdf",
+   "page": 3,
+   "year": 2011,
+   "title": "Autonomy Recent Trading Performance – January 4, to January 24, 2011",
+   "section": "valuation",
+   "fill": 0.77,
+   "thumb": "_pages/116_003.png",
+   "layouts": [
+    "line"
+   ],
+   "note": "Trading performance with annotated events and volume"
+  },
+  {
+   "id": "116_004",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Pitch Book on Autonomy Supplementary Materials (Jan-2011)",
+   "file": "Qatalyst\\Qatalyst-Pitch-Book-on-Autonomy-Supplementary-Materials-Jan-2011.pdf",
+   "page": 4,
+   "year": 2011,
+   "title": "Recent Trading Volume At Various Prices – January 4, to January 24, 2011",
+   "section": "any",
+   "fill": 0.73,
+   "thumb": "_pages/116_004.png",
+   "layouts": [
+    "column",
+    "table"
+   ],
+   "note": "Volume at various prices column chart over statistics table"
+  },
+  {
+   "id": "116_008",
+   "bank": "Qatalyst",
+   "deck": "Qatalyst Pitch Book on Autonomy Supplementary Materials (Jan-2011)",
+   "file": "Qatalyst\\Qatalyst-Pitch-Book-on-Autonomy-Supplementary-Materials-Jan-2011.pdf",
+   "page": 8,
+   "year": 2011,
+   "title": "Trading Statistics of Selected Companies – Autonomy",
+   "section": "valuation",
+   "fill": 0.89,
+   "thumb": "_pages/116_008.png",
+   "layouts": [
+    "table"
+   ],
+   "note": "Trading statistics of selected companies, full page"
+  },
+  {
+   "id": "117_002",
+   "bank": "BIWS (training)",
+   "deck": "Jazz-Pharmaceuticals-Investment-Banking-Pitch-Book",
+   "file": "_Training pitch books\\Jazz-Pharmaceuticals-Investment-Banking-Pitch-Book.pdf",
+   "page": 2,
+   "year": 0,
+   "title": "Executive Summary",
+   "section": "exec_summary",
+   "fill": 0.63,
+   "thumb": "_pages/117_002.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Executive summary: full-page bullets"
+  },
+  {
+   "id": "117_005",
+   "bank": "BIWS (training)",
+   "deck": "Jazz-Pharmaceuticals-Investment-Banking-Pitch-Book",
+   "file": "_Training pitch books\\Jazz-Pharmaceuticals-Investment-Banking-Pitch-Book.pdf",
+   "page": 5,
+   "year": 0,
+   "title": "Management Case — Financial Projections – ($ USD in Millions)",
+   "section": "financials",
+   "fill": 0.85,
+   "thumb": "_pages/117_005.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Management case projections table"
+  },
+  {
+   "id": "117_013",
+   "bank": "BIWS (training)",
+   "deck": "Jazz-Pharmaceuticals-Investment-Banking-Pitch-Book",
+   "file": "_Training pitch books\\Jazz-Pharmaceuticals-Investment-Banking-Pitch-Book.pdf",
+   "page": 13,
+   "year": 0,
+   "title": "Jaguar DCF Analysis — Free Cash Flow Projections – ($ USD in Millions)",
+   "section": "valuation",
+   "fill": 0.82,
+   "thumb": "_pages/117_013.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "DCF free cash flow projections table"
+  },
+  {
+   "id": "117_014",
+   "bank": "BIWS (training)",
+   "deck": "Jazz-Pharmaceuticals-Investment-Banking-Pitch-Book",
+   "file": "_Training pitch books\\Jazz-Pharmaceuticals-Investment-Banking-Pitch-Book.pdf",
+   "page": 14,
+   "year": 0,
+   "title": "Jaguar DCF Analysis — Sensitivities – ($ USD in Dollars as Stated)",
+   "section": "valuation",
+   "fill": 0.97,
+   "thumb": "_pages/117_014.png",
+   "layouts": [
+    "page_text",
+    "heatmap"
+   ],
+   "note": "DCF sensitivities: bullets over two grids"
+  },
+  {
+   "id": "118_002",
+   "bank": "BIWS (training)",
+   "deck": "KeyBank-First-Niagara-MA-Discussion",
+   "file": "_Training pitch books\\KeyBank-First-Niagara-MA-Discussion.pdf",
+   "page": 2,
+   "year": 0,
+   "title": "M&A Recommendation and Executive Summary",
+   "section": "exec_summary",
+   "fill": 0.64,
+   "thumb": "_pages/118_002.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Recommendation and executive summary: full-page bullets"
+  },
+  {
+   "id": "119_002",
+   "bank": "BIWS (training)",
+   "deck": "Netflix-Equity-Debt-Convertible-Investment-Banking-Pitch-Book",
+   "file": "_Training pitch books\\Netflix-Equity-Debt-Convertible-Investment-Banking-Pitch-Book.pdf",
+   "page": 2,
+   "year": 0,
+   "title": "Executive Summary",
+   "section": "exec_summary",
+   "fill": 0.64,
+   "thumb": "_pages/119_002.png",
+   "layouts": [
+    "page_text"
+   ],
+   "note": "Executive summary: full-page bullets"
+  },
+  {
+   "id": "119_006",
+   "bank": "BIWS (training)",
+   "deck": "Netflix-Equity-Debt-Convertible-Investment-Banking-Pitch-Book",
+   "file": "_Training pitch books\\Netflix-Equity-Debt-Convertible-Investment-Banking-Pitch-Book.pdf",
+   "page": 6,
+   "year": 0,
+   "title": "Valuation Summary",
+   "section": "valuation",
+   "fill": 0.79,
+   "thumb": "_pages/119_006.png",
+   "layouts": [
+    "pill_rows",
+    "numbered_steps"
+   ],
+   "note": "Valuation summary: numbered navy labels beside grey text bars"
+  },
+  {
+   "id": "119_008",
+   "bank": "BIWS (training)",
+   "deck": "Netflix-Equity-Debt-Convertible-Investment-Banking-Pitch-Book",
+   "file": "_Training pitch books\\Netflix-Equity-Debt-Convertible-Investment-Banking-Pitch-Book.pdf",
+   "page": 8,
+   "year": 0,
+   "title": "Comparable Debt Issuances",
+   "section": "structure",
+   "fill": 0.87,
+   "thumb": "_pages/119_008.png",
+   "layouts": [
+    "page_text",
+    "table"
+   ],
+   "note": "Comparable debt: bullets over two tables"
+  },
+  {
+   "id": "119_009",
+   "bank": "BIWS (training)",
+   "deck": "Netflix-Equity-Debt-Convertible-Investment-Banking-Pitch-Book",
+   "file": "_Training pitch books\\Netflix-Equity-Debt-Convertible-Investment-Banking-Pitch-Book.pdf",
+   "page": 9,
+   "year": 0,
+   "title": "Pro-Forma Credit Statistics and Ratios – ($ USD in Millions Except for $ per Share Figures)",
+   "section": "structure",
+   "fill": 0.92,
+   "thumb": "_pages/119_009.png",
+   "layouts": [
+    "fin_table",
+    "page_text"
+   ],
+   "note": "Pro forma credit stats table between bullets"
+  },
+  {
+   "id": "119_013",
+   "bank": "BIWS (training)",
+   "deck": "Netflix-Equity-Debt-Convertible-Investment-Banking-Pitch-Book",
+   "file": "_Training pitch books\\Netflix-Equity-Debt-Convertible-Investment-Banking-Pitch-Book.pdf",
+   "page": 13,
+   "year": 0,
+   "title": "Pro-Forma Credit Statistics and Ratios – ($ USD in Millions Except for $ per Share Figures)",
+   "section": "structure",
+   "fill": 0.8,
+   "thumb": "_pages/119_013.png",
+   "layouts": [
+    "fin_table",
+    "page_text"
+   ],
+   "note": "Pro forma credit stats table between bullets"
+  },
+  {
+   "id": "120_007",
+   "bank": "Citi",
+   "deck": "Citi Presentation to Chindata Special Committee (11-Aug-2023)",
+   "file": "_Data centres & REITs\\Citi Presentation to Chindata Special Committee (11-Aug-2023).pdf",
+   "page": 7,
+   "year": 2023,
+   "title": "Valuation Methodologies – Discounted Cashflow Analysis (\"DCF\")",
+   "section": "valuation",
+   "fill": 0.55,
+   "thumb": "_pages/120_007.png",
+   "layouts": [
+    "pill_rows"
+   ],
+   "note": "Valuation methods: navy label column beside descriptions"
+  },
+  {
+   "id": "120_010",
+   "bank": "Citi",
+   "deck": "Citi Presentation to Chindata Special Committee (11-Aug-2023)",
+   "file": "_Data centres & REITs\\Citi Presentation to Chindata Special Committee (11-Aug-2023).pdf",
+   "page": 10,
+   "year": 2023,
+   "title": "Transaction Sources and Uses – Sources & Uses",
+   "section": "structure",
+   "fill": 0.55,
+   "thumb": "_pages/120_010.png",
+   "layouts": [
+    "fin_table"
+   ],
+   "note": "Sources and uses table, full width"
+  },
+  {
+   "id": "120_013",
+   "bank": "Citi",
+   "deck": "Citi Presentation to Chindata Special Committee (11-Aug-2023)",
+   "file": "_Data centres & REITs\\Citi Presentation to Chindata Special Committee (11-Aug-2023).pdf",
+   "page": 13,
+   "year": 2023,
+   "title": "Summary of Financial Analysis – Implied Per ADS Value",
+   "section": "valuation",
+   "fill": 0.74,
+   "thumb": "_pages/120_013.png",
+   "layouts": [
+    "football_field",
+    "side_tabs",
+    "page_text"
+   ],
+   "note": "Valuation summary bars with side tabs and commentary"
+  },
+  {
+   "id": "120_014",
+   "bank": "Citi",
+   "deck": "Citi Presentation to Chindata Special Committee (11-Aug-2023)",
+   "file": "_Data centres & REITs\\Citi Presentation to Chindata Special Committee (11-Aug-2023).pdf",
+   "page": 14,
+   "year": 2023,
+   "title": "Discounted Cash Flow Analysis – DCF Projections",
+   "section": "valuation",
+   "fill": 0.83,
+   "thumb": "_pages/120_014.png",
+   "layouts": [
+    "fin_table",
+    "heatmap",
+    "page_text"
+   ],
+   "note": "DCF table with sensitivity grids and key assumptions column"
+  },
+  {
+   "id": "121_013",
+   "bank": "Keppel DC REIT (issuer)",
+   "deck": "Keppel DC REIT Investor Presentation (Aug-2025)",
+   "file": "_Data centres & REITs\\Keppel DC REIT Investor Presentation (Aug-2025).pdf",
+   "page": 13,
+   "year": 2025,
+   "title": "Agile Capital Management – Key Metrics",
+   "section": "company",
+   "fill": 0.89,
+   "thumb": "_pages/121_013.png",
+   "layouts": [
+    "stat_strip",
+    "table",
+    "heatmap"
+   ],
+   "note": "Capital management: key metrics table with change arrows, ICR sensitivity"
+  },
+  {
+   "id": "121_014",
+   "bank": "Keppel DC REIT (issuer)",
+   "deck": "Keppel DC REIT Investor Presentation (Aug-2025)",
+   "file": "_Data centres & REITs\\Keppel DC REIT Investor Presentation (Aug-2025).pdf",
+   "page": 14,
+   "year": 2025,
+   "title": "Favourable Debt Profile – as at 30 Jun 2025",
+   "section": "structure",
+   "fill": 0.66,
+   "thumb": "_pages/121_014.png",
+   "layouts": [
+    "column",
+    "stat_rings"
+   ],
+   "note": "Debt profile: maturity columns beside fixed/floating and currency rings"
+  },
+  {
+   "id": "121_022",
+   "bank": "Keppel DC REIT (issuer)",
+   "deck": "Keppel DC REIT Investor Presentation (Aug-2025)",
+   "file": "_Data centres & REITs\\Keppel DC REIT Investor Presentation (Aug-2025).pdf",
+   "page": 22,
+   "year": 2025,
+   "title": "Overview of Contractual Arrangements – Responsibilities of Owner",
+   "section": "company",
+   "fill": 1.0,
+   "thumb": "_pages/121_022.png",
+   "layouts": [
+    "table",
+    "harvey"
+   ],
+   "note": "Contractual arrangements table with ticks per responsibility"
+  },
+  {
+   "id": "121_023",
+   "bank": "Keppel DC REIT (issuer)",
+   "deck": "Keppel DC REIT Investor Presentation (Aug-2025)",
+   "file": "_Data centres & REITs\\Keppel DC REIT Investor Presentation (Aug-2025).pdf",
+   "page": 23,
+   "year": 2025,
+   "title": "Overview of Contractual Arrangements – Responsibilities of Owner",
+   "section": "company",
+   "fill": 0.99,
+   "thumb": "_pages/121_023.png",
+   "layouts": [
+    "table",
+    "harvey"
+   ],
+   "note": "Contractual arrangements table with ticks per responsibility"
+  },
+  {
+   "id": "122_010",
+   "bank": "Keppel DC REIT (issuer)",
+   "deck": "Keppel DC REIT Acquisition of Keppel DC Singapore 3 & 4 (Dec-2025)",
+   "file": "_Data centres & REITs\\Keppel DC REIT Acquisition of Keppel DC Singapore 3 & 4 (Dec-2025).pdf",
+   "page": 10,
+   "year": 2025,
+   "title": "Method of Financing",
+   "section": "structure",
+   "fill": 0.71,
+   "thumb": "_pages/122_010.png",
+   "layouts": [
+    "fin_table",
+    "column",
+    "page_text"
+   ],
+   "note": "Financing method: banner, outlay table and funding column"
+  }
+ ]
+}
