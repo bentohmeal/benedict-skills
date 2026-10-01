@@ -1,6 +1,6 @@
 # Slide layouts: pick a shape for each message
 
-Read this **before planning any deck**. First write the plan as a table (slide → one-line message → body layout), show it to Benedict, then build. See every layout rendered in `Claude Things\output\_Deal Desk Toolkit\Deck Layout Gallery.pptx` (rebuild it with `scripts/layout_gallery.py`). A worked before/after: Keppel V2 vs V3 in `Interview Prep\Case Studies\_Worked examples\Keppel Tough Love\`.
+Read this **before planning any deck**. Build the plan with `deck-pipeline.md` (the `layout_match.py plan` table), show it to Benedict, then build. See every layout rendered in `Claude Things\output\_Deal Desk Toolkit\Deck Layout Gallery.pptx` (rebuild it with `scripts/layout_gallery.py`). A worked before/after: Keppel V2 vs V3 in `Interview Prep\Case Studies\_Worked examples\Keppel Tough Love\`.
 
 ## Which reference to use (decide per slide, before laying it out)
 1. **The look:** the firm's template or brief wins (case tests, work decks); otherwise the house style. References never change the palette or fonts.
@@ -19,16 +19,13 @@ Read this **before planning any deck**. First write the plan as a table (slide �
 4. **Every page, whatever the reference:** the density standard (Rule 0) applies.
 
 ## The layout library: one catalogue of every layout (`assets/layout_library.json`)
-245 records, each with use when / don't use when, sections, data type, item range, slots and a thumbnail (`assets/layout_thumbs/`):
+248 records, each with use when / don't use when, sections, data type, item range, slots and a thumbnail (`assets/layout_thumbs/`):
 - **Coded components** (`table`, `fin_table`, `football_field`, `side_tabs`, `risk_matrix`…): drawn by `ibdeck.py`.
 - **Page recipes** (`page_market`, `page_overview`, `page_geography`, `page_landscape`, `page_deals`, `page_text`, `page_thesis`, `page_risks`): full dense pages copied from real bank pages; see the gallery's Dense Pages section.
 - **Infographics** (`ig001`–`ig211`): PwC's originals, restyled (colours, fonts, sizes and shadows only; lessons #29). Use them for shapes the components lack: cycle, pyramid, funnel, Venn, bridge, map. 16 are text-free (maps, icon sets): label them beside with `d.text`.
 - **Real bank pages:** `assets/real_deck_pages.json` holds 389 pages from `Real IB-PE Decks`, each tagged with the layouts it uses. The library lists the best 4 under each layout as `exemplars` (deck, page, thumb). Real banks build most pages from `table`, `fin_table` and `page_text`, with `column`, `line` and `heatmap` next; infographics almost never appear, so use one only where its shape *is* the message.
 
-**Pick a layout for each slide:**
-1. `python scripts/layout_tag.py find <section> [data_type] [items]` → a shortlist, with layouts used on real bank pages first and an example page for each.
-2. Look at the thumbnail and open the exemplar page before using it.
-3. Put the layout id in the plan table (slide → message → layout id).
+**Pick a layout for each slide:** follow `deck-pipeline.md` (chunk → `layout_match.py match` → pick with a reason and 2 alternatives → `layout_match.py plan`). Look at each candidate sheet and open the exemplar page before choosing. For a quick one-off lookup, `python scripts/layout_tag.py find <section> [data_type] [items]` still gives a shortlist.
 
 **Insert an infographic with its text filled:**
 ```python

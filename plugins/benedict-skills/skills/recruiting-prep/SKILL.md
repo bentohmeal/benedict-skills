@@ -57,6 +57,8 @@ If his message already makes the choice obvious ("cover letter for KKR"), skip t
 - **Target Firm Research:** firm snapshot + why-firm only (quick, pre-application)
 - **Update Master Bank:** improve, add or fill an answer
 
+**Firm deck from dossier** (the menu holds 4 options, so it is chosen through "Other" and offered in one line at the end of every Full Dossier): turn `Firms/<Firm>/dossier.md` into a short firm overview deck (firm snapshot, strategy, recent deals, why-firm). Needs a dossier; offer Full Dossier first if there isn't one. Hand `dossier.md` to **deal-desk** → `references/deck-pipeline.md` (each dossier section becomes a topic; its cited figures become block content). Save the deck in `Firms/<Firm>/`.
+
 A mock interview or drill can be chosen through "Other". Run it using bank answers as the marking key, then go to Step 6.
 
 A firm's **case study or modelling test** (model + slides), practice cases and test reviews belong to the **deal-desk** skill. Hand over to it, and include the firm's dossier context if one exists.

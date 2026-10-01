@@ -20644,9 +20644,10 @@
    "data_type": "time_series",
    "sections": [
     "company",
-    "process"
+    "process",
+    "market"
    ],
-   "use_when": "History and milestones, or a deal timetable; highlight today",
+   "use_when": "History and milestones (company, policy or market events), or a deal timetable; highlight today",
    "dont_use_when": "Fewer than 4 dates; numeric trends (use a chart)",
    "items": [
     4,
@@ -21025,16 +21026,14 @@
    "sections": [
     "any"
    ],
-   "use_when": "Comparison tables, sources & uses, comps, deal terms",
-   "dont_use_when": "A trend (use a chart)",
+   "use_when": "Comparison tables, sources & uses, comps, precedent transactions, deal terms, requirements with detail",
+   "dont_use_when": "A trend or one number per item (use a chart)",
    "items": [
     2,
     15
    ],
    "numbers": true,
-   "words": {
-    "cell": 6
-   },
+   "words": {},
    "call": "d.table(s, x, y, w, rows)",
    "thumb": "layout_thumbs/gal-13.png",
    "exemplars": [
@@ -21542,6 +21541,81 @@
    "words": {},
    "call": "d.photo(s, path, x, y, w, h, credit=...)",
    "thumb": "layout_thumbs/gal-10.png",
+   "exemplars": [],
+   "real_pages": 0
+  },
+  {
+   "id": "map_pins",
+   "source": "component",
+   "name": "map pins",
+   "kind": "layout",
+   "data_type": "geography",
+   "sections": [
+    "market",
+    "company"
+   ],
+   "use_when": "Sites, markets or a corridor on a map, each pinned with a name and one fact (target pin in gold)",
+   "dont_use_when": "Places with no spatial story (use a table)",
+   "items": [
+    2,
+    6
+   ],
+   "numbers": true,
+   "words": {
+    "name": 4,
+    "fact": 8
+   },
+   "call": "d.photo(s, map_png, x, y, w, h); d.pin(s, px, py, [name, fact], label_box, hot=...)",
+   "thumb": "",
+   "exemplars": [],
+   "real_pages": 0
+  },
+  {
+   "id": "bullets",
+   "source": "component",
+   "name": "bullets",
+   "kind": "layout",
+   "data_type": "text",
+   "sections": [
+    "any"
+   ],
+   "use_when": "Numbered commentary beside an exhibit: bold lead-in + evidence + so what, 2-6 points",
+   "dont_use_when": "The main exhibit of a page (pick a chart, table or diagram); more than 2 bullet blocks on one slide",
+   "items": [
+    2,
+    6
+   ],
+   "numbers": false,
+   "words": {
+    "lead": 4,
+    "text": 25
+   },
+   "call": "d.bullets(s, x, y, w, h, ['**Lead-in:** evidence and so what', ...])",
+   "thumb": "",
+   "exemplars": [],
+   "real_pages": 0
+  },
+  {
+   "id": "takeaway",
+   "source": "component",
+   "name": "takeaway",
+   "kind": "layout",
+   "data_type": "text",
+   "sections": [
+    "any"
+   ],
+   "use_when": "One framing sentence or 'so what' in a dashed outline (Why invest line, page conclusion)",
+   "dont_use_when": "Lists or several points (use bullets / pill_rows)",
+   "items": [
+    1,
+    1
+   ],
+   "numbers": false,
+   "words": {
+    "text": 45
+   },
+   "call": "d.takeaway(s, x, y, w, h, '**So what:** ...')",
+   "thumb": "",
    "exemplars": [],
    "real_pages": 0
   },
