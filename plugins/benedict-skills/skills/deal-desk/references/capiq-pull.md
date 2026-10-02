@@ -52,7 +52,22 @@ Use this when a model or deck needs real company figures, trading comps or prece
 4. **Known gaps:**
    - Industry tags miss some well-known deals (e.g. Helen of Troy/Osprey, Crocs/HEYDUDE).
    - The value floor drops small ones.
-   - List them under `precedents_missing` in `curation.json`. Don't invent their multiples.
+   - Add the direct comparables it misses by hand (step 3b). List any you can't source under `precedents_missing`. Don't invent multiples.
+
+## 3b. Missing deals: add by hand from filings
+Use this when a must-have comparable (same category, same buyer set) isn't in the screen.
+1. Find the buyer's announcement press release (SEC 8-K ex-99.1) and the deal-call transcript or investor deck (buyer's IR site).
+2. Take only what the company states: EV, the EBITDA multiple **and its basis** (e.g. "less than 13.5x CY2022E adj. EBITDA"), revenue.
+3. Basis rule:
+   - The year just ending at announcement counts as LTM, e.g. CY2021E for a Dec 2021 deal.
+   - The next year counts as NTM. Most strategic buyers quote forward multiples.
+   - **If the LTM EBITDA isn't disclosed, say so.** Don't back it out of guesses.
+4. Add an entry to `manual_precedents` in `curation.json`:
+   - id (`MAN-<NAME>`), target, buyer, announced, ev.
+   - `ev_ebitda`, plus `ev_ebitda_qualifier` "<" when the multiple is quoted as "less than". It's used at the cap.
+   - `ebitda_basis` (words) and `ebitda_basis_type` LTM/NTM.
+   - revenue, `revenue_basis_type`, `ev_revenue`, note, `sources` (URLs).
+   - The parser adds each entry as a core precedent, files its multiple in the LTM or NTM column and computes implied EBITDA = EV ÷ multiple.
 
 ## 4. Curate: `curation.json` (by hand, then he reviews it)
 - `ticker`.
@@ -61,6 +76,10 @@ Use this when a model or deck needs real company figures, trading comps or prece
   - Exclude minority stakes, spin-offs, misclassified targets and multiple outliers.
   - Use "Reference" for deals with a revenue multiple only, or an adjacent sector.
 - `precedents_missing`.
+- `manual_precedents` (step 3b).
+- `peer_segments`: `{"<name>": {"tickers": [...], "why": "..."}}`.
+  - Split the peers so the football field shows segment medians, not one blended number. For YETI: DTC growth vs wholesale legacy.
+- `peer_nm`: `{"<ticker>": {"fields": [...], "why": "..."}}` blanks multiples that are not meaningful, e.g. EBITDA margin near 0, so they stay out of the stats.
 - Worked example: `capiq/YETI/curation.json`.
 
 ## 5. Parse and check
@@ -73,7 +92,8 @@ python scripts/capiq_parse.py check "<...>/capiq/<TICKER>"
 - **What `check` does:**
   - Prints the headline figures.
   - Ties out gross profit = revenue − COGS, assets = liabilities + equity, and CFO + CFI + CFF + FX = change in cash.
-  - Lists the comps and core precedents by role.
+  - Lists the comps and core precedents by role (hand-added ones show their stated basis).
+  - Prints the stats (n, median, mean, range) for core precedents (LTM and NTM, EV/EBITDA and EV/revenue) and for each peer segment. `deal_data.json` stores them in `comps.segments` and `precedents.stats`, the inputs for the football field.
   - Exits 1 on any failed tie-out.
 - **Then compare against the screen.** Open the company's Financial Highlights and match at least 10 figures (cash, total assets, net debt, total debt, equity, revenue) across 3 years.
 
@@ -86,7 +106,8 @@ python scripts/capiq_parse.py check "<...>/capiq/<TICKER>"
   - Labels are Capital IQ's own (e.g. "Total Revenue", "EBITDA", "Net Debt", "Cash from Ops.").
 - `multiples.series`: metric → average/high/low/close → date → x.
 - `comps.rows`: one dict per company. Contains ticker, exchange, `role` (target / core / excluded), `note` and every exported field (e.g. "Total Enterprise Value (CIQ)", "TEV/ EBITDA", "TEV/ Forward EBITDA").
-- `precedents.rows`: one dict per deal. Contains `role` (core / reference / excluded), `note`, value and multiples. `precedents.not_in_screen` lists the known gaps.
+- `precedents.rows`: one dict per deal. Contains `role` (core / reference / excluded), `note`, value and multiples. Hand-added rows also carry `source`, `multiple_note`, `implied_ebitda` and their own `src`. `precedents.stats.core` holds the core medians and means. `precedents.not_in_screen` lists the gaps still open.
+- `comps.segments`: segment → tickers, why, and the stats per multiple. Core rows also carry `segment`.
 
 ## Gotchas (from the first pull, YETI, 3 Oct 2026)
 - **Cookie banner:** click Reject All.

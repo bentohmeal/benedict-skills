@@ -13,6 +13,10 @@ peer_comps, precedents (.xlsx). Any missing file is skipped with a note.
 Every money figure is in US$ m (CapIQ's $000 is divided by 1,000). Per-share figures stay in $,
 share counts stay actual, margins in %, multiples in x. Each table carries "src"
 ("S&P Capital IQ, accessed <date> (<file>)"); every figure inside it takes that source.
+
+curation.json also adds precedents by hand from filings (manual_precedents, each with its own src),
+splits peers into segments (peer_segments) and blanks multiples that are not meaningful (peer_nm). The build
+then writes the median/mean stats per segment and for the core precedents.
 """
 import datetime as dt
 import json
@@ -234,7 +238,61 @@ def apply_curation(data, cur):
             d["role"] = "core" if i in core else ("reference" if i in cur.get("precedents_reference", []) else "excluded")
             if i in notes:
                 d["note"] = notes[i]
+        for m in cur.get("manual_precedents", []):
+            data["precedents"]["rows"].append(manual_row(m))
         data["precedents"]["not_in_screen"] = cur.get("precedents_missing", [])
+        data["precedents"]["stats"] = {"core": stats([r for r in data["precedents"]["rows"] if r.get("role") == "core"], DEAL_MULTS)}
+    if "comps" in data:
+        for e in data["comps"]["rows"]:
+            for k in cur.get("peer_nm", {}).get(e.get("ticker"), {}).get("fields", []):
+                e[k] = None  # not meaningful (e.g. near-zero EBITDA); reason kept in nm_reason
+                e["nm_reason"] = cur["peer_nm"][e["ticker"]]["why"]
+        core = [e for e in data["comps"]["rows"] if e.get("role") == "core"]
+        segs = {"All core": core}
+        for name, seg in cur.get("peer_segments", {}).items():
+            tick = seg["tickers"]
+            for e in core:
+                if e.get("ticker") in tick:
+                    e["segment"] = name
+            segs[name] = [e for e in core if e.get("ticker") in tick]
+        data["comps"]["segments"] = {n: {"tickers": [e["ticker"] for e in rows],
+                                         "why": cur.get("peer_segments", {}).get(n, {}).get("why", ""),
+                                         **stats(rows, COMP_MULTS)} for n, rows in segs.items()}
+
+
+COMP_MULTS = ["TEV/ EBITDA", "TEV/ Forward EBITDA", "TEV/ Total Revenue", "TEV/ Forward Total Revenue"]
+DEAL_MULTS = ["Implied Enterprise Value/ EBITDA", "Implied Enterprise Value/ NTM EBITDA",
+              "Implied Enterprise Value/ Total Revenue", "Implied Enterprise Value/ NTM Revenue"]
+
+
+def stats(rows, fields):
+    """n, median, mean, low, high per multiple; blanks and NM are left out."""
+    out = {}
+    for f in fields:
+        v = sorted(r[f] for r in rows if isinstance(r.get(f), (int, float)))
+        if v:
+            n = len(v)
+            med = v[n // 2] if n % 2 else (v[n // 2 - 1] + v[n // 2]) / 2
+            out[f] = {"n": n, "median": round(med, 2), "mean": round(sum(v) / n, 2),
+                      "low": round(v[0], 2), "high": round(v[-1], 2)}
+    return out
+
+
+def manual_row(m):
+    """A deal added by hand from filings (not in the Capital IQ screen). Multiples land in the LTM or NTM
+    column per their stated basis; a 'less than' multiple is used at its cap and flagged."""
+    ltm = m["ebitda_basis_type"] == "LTM"
+    row = {"Target/Issuer Name": m["target"], "MI Transaction ID": m["id"], "Announced Date": m["announced"],
+           "Transaction Type": "M&A", "Transaction Status": "Completed", "Total Transaction Value": m["ev"],
+           "Buyers/Investors Name": m["buyer"], "Transaction Industry (MI)": m.get("industry"),
+           "Implied Enterprise Value/ EBITDA": m["ev_ebitda"] if ltm else None,
+           "Implied Enterprise Value/ NTM EBITDA": None if ltm else m["ev_ebitda"],
+           "Implied Enterprise Value/ Total Revenue": m.get("ev_revenue") if m.get("revenue_basis_type") == "LTM" else None,
+           "Implied Enterprise Value/ NTM Revenue": m.get("ev_revenue") if m.get("revenue_basis_type") == "NTM" else None,
+           "role": "core", "note": m.get("note", ""), "source": "manual (filings)",
+           "multiple_note": f"{m.get('ev_ebitda_qualifier', '')}{m['ev_ebitda']}x {m['ebitda_basis']}".strip(),
+           "implied_ebitda": round(m["ev"] / m["ev_ebitda"], 1), "src": "; ".join(m["sources"])}
+    return row
 
 
 def build(cdir, accessed):
@@ -277,6 +335,13 @@ def _line(st, *names):
         if n in st["lines"]:
             return st["lines"][n]
     raise KeyError(names[0])
+
+
+def _print_stats(title, st):
+    print(f"  {title}:")
+    for f, v in st.items():
+        if isinstance(v, dict) and "median" in v:
+            print(f"    {f:40} n={v['n']}  median {v['median']:>6}x  mean {v['mean']:>6}x  range {v['low']}-{v['high']}x")
 
 
 def check(cdir):
@@ -325,10 +390,14 @@ def check(cdir):
     if "precedents" in d:
         rows = d["precedents"]["rows"]
         core = [r for r in rows if r.get("role") == "core"]
-        print(f"Precedents: {len(rows)} in screen, {len(core)} core")
+        print(f"Precedents: {len(rows)} rows, {len(core)} core ({sum(1 for r in core if r.get('source'))} added by hand)")
         for r in core:
             print(f"  {r['Announced Date'][:7]} {r['Target/Issuer Name'][:40]:40} {r['Total Transaction Value']:>9.0f}"
-                  f"  EV/EBITDA {r.get('Implied Enterprise Value/ EBITDA')}")
+                  f"  EV/EBITDA LTM {r.get('Implied Enterprise Value/ EBITDA')} NTM {r.get('Implied Enterprise Value/ NTM EBITDA')}"
+                  + (f"  [{r['multiple_note']}]" if r.get("multiple_note") else ""))
+        _print_stats("Core precedents", d["precedents"].get("stats", {}).get("core", {}))
+    for name, seg in d.get("comps", {}).get("segments", {}).items():
+        _print_stats(f"Comps - {name} ({', '.join(seg['tickers'])})", seg)
     print("All ties OK" if not fails else f"{len(fails)} FAILED: " + "; ".join(fails))
     return not fails
 
