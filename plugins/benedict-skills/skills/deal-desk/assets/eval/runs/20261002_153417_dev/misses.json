@@ -1,5 +1,158 @@
 [
  {
+  "row": "rp_108_004_b3",
+  "section": "company",
+  "message": "Revised proposal offers $13.25 per share with committed financing",
+  "block": {
+   "what": "Diligence and timing",
+   "data_type": "text",
+   "about": "approval and signing timeline",
+   "content": [
+    "Approved by NMC investment committee",
+    "Prepared to sign by July 12, 2024",
+    "Discuss management rollover if approved by Special Committee"
+   ]
+  },
+  "right": {
+   "id": "side_tabs",
+   "name": "side tabs",
+   "data_type": "list",
+   "use_when": "Investment thesis pillars: bold claim + evidence -> so what -> implication (35+ words per pillar)",
+   "dont_use_when": "Short facts or one-liners (use pill_rows); a process (use chevrons)"
+  },
+  "also_right": [
+   "pill_rows"
+  ],
+  "picked": {
+   "id": "bullets",
+   "name": "bullets",
+   "data_type": "text",
+   "use_when": "Numbered commentary beside an exhibit: bold lead-in + evidence + so what, 2-6 points",
+   "dont_use_when": "The main exhibit of a page (pick a chart, table or diagram); more than 2 bullet blocks on one slide"
+  },
+  "alts": [
+   "pill_rows",
+   "numbered_steps"
+  ],
+  "why": "3 short text lines on approvals and timing beside the proposal; bullets fit commentary, not a sequenced process",
+  "in_top3": true
+ },
+ {
+  "row": "rp_113_013_b2",
+  "section": "process",
+  "message": "13 parties contacted narrowed to few proposals with most recent price indications of $28-31",
+  "block": {
+   "what": "Most recent price indication",
+   "data_type": "comparison",
+   "about": "indicated price per share by party",
+   "unit": "$ per share",
+   "content": [
+    "Party A $28",
+    "Party B $31",
+    "Party C $30"
+   ]
+  },
+  "right": {
+   "id": "table",
+   "name": "table",
+   "data_type": "comparison",
+   "use_when": "Labelled numbers that need exact reading: comps, precedents, sources & uses, deal terms, one-way sensitivities (down / base / up), KPI lists with change vs prior period, requirements with detail",
+   "dont_use_when": "A trend over time (use a chart); ranking many players on one metric (use bar); 3-6 headline numbers with no extra columns (use stat_strip)"
+  },
+  "also_right": [
+   "bk55"
+  ],
+  "picked": {
+   "id": "bar",
+   "name": "bar",
+   "data_type": "comparison",
+   "use_when": "Ranking players by one metric (target navy, the rest grey)",
+   "dont_use_when": "A time series (use column); 2-3 scenario values such as a one-way sensitivity down / base / up (use table)"
+  },
+  "alts": [
+   "column",
+   "table"
+  ],
+  "why": "3 parties, one metric ($ per share), chartable unit; bar ranks the price indications, table loses the visual gap",
+  "in_top3": true
+ },
+ {
+  "row": "rp_011_027_b2",
+  "section": "financials",
+  "message": "Total corporate spend declines from 4.3% to 3.2% of sales through 2028E",
+  "block": {
+   "what": "Commentary",
+   "data_type": "list",
+   "about": "cost components",
+   "content": [
+    "Communications includes PR and hospitality marketing, higher ahead of Olympics",
+    "Corp. Exec. covers CEO, Executive Chair, COO, CFO costs",
+    "HR includes personnel and infrastructure",
+    "Technology covers IT infrastructure and internal systems",
+    "Total corporate spend ranges ~3% to ~4.5% of revenue"
+   ]
+  },
+  "right": {
+   "id": "bk07",
+   "name": "Segment table with side tabs + commentary column",
+   "data_type": "time_series",
+   "use_when": "Segment or business-unit financials with explanation per segment",
+   "dont_use_when": "Single-segment business; more than 4 segments"
+  },
+  "also_right": [
+   "table"
+  ],
+  "picked": {
+   "id": "bk06",
+   "name": "Projections table + numbered commentary",
+   "data_type": "time_series",
+   "use_when": "Management case or business plan pages",
+   "dont_use_when": "Historicals only with no story to tell; more than 8 commentary points"
+  },
+  "alts": [
+   "bullets",
+   "pill_rows"
+  ],
+  "why": "5 commentary lines keyed to cost lines in a projection table; lettered commentary per precedent",
+  "in_top3": false
+ },
+ {
+  "row": "rp_085_007_b1",
+  "section": "market",
+  "message": "Moelis has advised on marquee software transactions across four sub-sectors",
+  "block": {
+   "what": "Applications and infrastructure software deals",
+   "data_type": "list",
+   "about": "selected transactions",
+   "content": [
+    "Applications software: JDA, PeopleSoft, SIS acquisitions",
+    "Infrastructure software: EMC / VMware, Thales / Vormetric, Novell, Telelogic",
+    "Deal values e.g. $635mm, $210mm, $220mm"
+   ]
+  },
+  "right": {
+   "id": "page_landscape",
+   "name": "Landscape page: logo wall by segment beside a chart",
+   "data_type": "comparison",
+   "use_when": "Competitive landscape or buyer universe: logos grouped into 3 segments, a scale bar chart beside it",
+   "dont_use_when": "Fewer than 6 players (use logo_row)"
+  },
+  "also_right": [],
+  "picked": {
+   "id": "logo_row",
+   "name": "logo row",
+   "data_type": "comparison",
+   "use_when": "Peers, buyers, sponsors, customers or tenants as logo tiles (target highlighted)",
+   "dont_use_when": "Players that need numbers beside them (use a bar chart with the target navy)"
+  },
+  "alts": [
+   "page_landscape",
+   "table"
+  ],
+  "why": "credential tombstones grouped by sub-sector, 3 lines; logo tombstone grid per precedent",
+  "in_top3": true
+ },
+ {
   "row": "rp_000_012_b1",
   "section": "valuation",
   "message": "Minority squeeze-out deals were completed at meaningful premiums to undisturbed prices",

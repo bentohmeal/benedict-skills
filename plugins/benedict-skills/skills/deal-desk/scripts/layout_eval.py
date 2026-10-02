@@ -272,7 +272,7 @@ GUIDE = [
      "builder is not marked wrong for picking them. no = only your choice counts as right."),
     ("Check", "judges split = three Claude judges disagreed, so your call is the answer. spot check = the judges "
      "agreed; these are a random sample to test whether the judges can be trusted (if you agree with ~90% of them, "
-     "their other answers stand). judges reject (fragment / duplicate / ...) = the judges think the row is broken; choose reject if you agree, or the right layout if the row is fine. tester disagrees = the blind tester's pick looked better than the judges' answer; the tester's pick is shown as alt 1. Infographic test rows have no page, only the written block."),
+     "their other answers stand). judges flag (fragment / duplicate) = two or more judges think the row is broken; their layout answer is still the Top pick; choose reject if you agree, or the right layout if the row is fine. tester disagrees = the blind tester's pick looked better than the judges' answer; the tester's pick is shown as alt 1. Infographic test rows have no page, only the written block."),
     ("Blank", "Still to do. You can review over several sittings; refreshing the sheet keeps what you have entered."),
     ("When done", "Save and close the file, then tell Claude 'ingest the layout review'."),
 ]
@@ -416,7 +416,7 @@ def review():
                  f"Slide message: {r['message']}")
         page = r["ref"] if r.get("thumb") else "Written test block (no page)"
         check = "tester disagrees" if r.get("suspect") else "spot check" if r["status"] == "silver" else \
-            f"judges reject ({r.get('reject_why', '')})" if r["status"] == "rejected" else "judges split" if r.get("judges") else ""
+            f"judges reject ({r.get('reject_why', '')})" if r["status"] == "rejected" else             f"judges flag ({r['flagged']})" if r.get("flagged") else "judges split" if r.get("judges") else ""
         vals = [r["id"], check, page, block, "", "", "", *dec]
         for j, v in enumerate(vals, 1):
             c = ws.cell(i, j, v)
@@ -553,6 +553,8 @@ def ingest():
         if note:
             r["note"] = note
         r["reviewer"] = "Benedict"
+        if "suspect" in r:  # answered: keep the tester's view for the record, off the review list
+            r["suspect_seen"] = r.pop("suspect")
         r["reviewed"] = today()
         r.pop("flag", None)
         n[dec] += 1

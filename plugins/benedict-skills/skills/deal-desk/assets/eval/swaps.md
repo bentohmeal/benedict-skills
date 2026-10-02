@@ -9,3 +9,7 @@ Each line: the layout the matcher or Claude offered, what he chose instead, and 
 - 2026-10-02 · ig150 -> **map_pins** · APAC data centre markets (geography, 5 items) · written test block (no source page): APAC data centre markets
 - 2026-10-02 · harvey -> **bk35** · ESG readiness (matrix, 4 items) · written test block (no source page): ESG readiness
 - 2026-10-02 · logo_row -> **page_landscape** · Partners (icons, 1 items) · Qatalyst · Qatalyst Pitch Book on Autonomy (Jan-2011) p8
+- 2026-10-02 · pill_rows -> **side_tabs** · Methodologies (text, 6 items) · J.P. Morgan · JPMorgan Presentation to UGI Corporation (01-Apr-2019) p6
+- 2026-10-02 · bk57 -> **side_tabs** · Case 1 projections (text, 5 items) · Deutsche Bank · Deutsche Bank Presentation to AmTrust Financial Services (05-Feb-2018) p7
+- 2026-10-02 · logo_row -> **page_landscape** · Applications and infrastructure software deals (list, 3 items) · Moelis · Moelis Presentation to Oracle (19-Apr-2016) p7
+- 2026-10-02 · logo_row -> **page_landscape** · Big data and security software deals (list, 3 items) · Moelis · Moelis Presentation to Oracle (19-Apr-2016) p7

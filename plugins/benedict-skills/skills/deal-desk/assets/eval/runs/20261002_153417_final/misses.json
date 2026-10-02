@@ -1,5 +1,83 @@
 [
  {
+  "row": "rp_108_004_b1",
+  "section": "company",
+  "message": "Revised proposal offers $13.25 per share with committed financing",
+  "block": {
+   "what": "Price",
+   "data_type": "kpi_set",
+   "about": "offer price and premiums",
+   "content": [
+    "$13.25 per share",
+    "30.3% premium to closing price of $10.17 on Jan 25, 2024",
+    "31.6% premium to 30-day VWAP of $10.07",
+    "29.1% premium to 30-day VWAP of $10.26"
+   ]
+  },
+  "right": {
+   "id": "side_tabs",
+   "name": "side tabs",
+   "data_type": "list",
+   "use_when": "Investment thesis pillars: bold claim + evidence -> so what -> implication (35+ words per pillar)",
+   "dont_use_when": "Short facts or one-liners (use pill_rows); a process (use chevrons)"
+  },
+  "also_right": [
+   "pill_rows"
+  ],
+  "picked": {
+   "id": "hero_number",
+   "name": "hero number",
+   "data_type": "kpi_set",
+   "use_when": "One headline figure (IRR, offer price, EV) with 2-3 supporting points",
+   "dont_use_when": "Several numbers of equal weight (use stat_icons)"
+  },
+  "alts": [
+   "stat_strip",
+   "bk01"
+  ],
+  "why": "One headline offer price ($13.25) with 3 supporting premiums; hero number beats an equal-weight strip",
+  "in_top3": false
+ },
+ {
+  "row": "rp_108_004_b2",
+  "section": "company",
+  "message": "Revised proposal offers $13.25 per share with committed financing",
+  "block": {
+   "what": "Equity and debt financing",
+   "data_type": "text",
+   "about": "financing structure",
+   "content": [
+    "Recapitalization with new third-party debt from Goldman Sachs and JPMorgan",
+    "Equity from rollover of NMC existing 32% stake and new cash equity",
+    "Customer stockholders invited to roll or increase investment",
+    "Not contingent on stockholders rolling"
+   ]
+  },
+  "right": {
+   "id": "side_tabs",
+   "name": "side tabs",
+   "data_type": "list",
+   "use_when": "Investment thesis pillars: bold claim + evidence -> so what -> implication (35+ words per pillar)",
+   "dont_use_when": "Short facts or one-liners (use pill_rows); a process (use chevrons)"
+  },
+  "also_right": [
+   "bk47"
+  ],
+  "picked": {
+   "id": "bullets",
+   "name": "bullets",
+   "data_type": "text",
+   "use_when": "Numbered commentary beside an exhibit: bold lead-in + evidence + so what, 2-6 points",
+   "dont_use_when": "The main exhibit of a page (pick a chart, table or diagram); more than 2 bullet blocks on one slide"
+  },
+  "alts": [
+   "pill_rows",
+   "bk47"
+  ],
+  "why": "4 text points on financing structure beside the price panel; no term-sheet detail for bk47",
+  "in_top3": true
+ },
+ {
   "row": "rp_028_006_b1",
   "section": "valuation",
   "message": "Selling now at $35-36 beats holding or spinning off unless revenue and EPS grow at high required rates",
@@ -79,6 +157,46 @@
   ],
   "why": "6 modelling assumptions of mixed measures, short lines; bullets beside the proposal, units too mixed to chart",
   "in_top3": false
+ },
+ {
+  "row": "rp_104_028_b2",
+  "section": "structure",
+  "message": "Lunar financing package provides $3,720mm funded debt and $4,570mm commitments at 4.79% base cost",
+  "block": {
+   "what": "Summary cost",
+   "data_type": "kpi_set",
+   "about": "blended financing metrics",
+   "content": [
+    "WAM 6.6 years",
+    "WACD base case 4.79%",
+    "Flex 6.61%",
+    "Structure flex 6.95%",
+    "Total financing fees $69.2mm"
+   ]
+  },
+  "right": {
+   "id": "bk47",
+   "name": "Financing term sheet",
+   "data_type": "list",
+   "use_when": "Debt package or financing structure",
+   "dont_use_when": "Single plain loan (one line of text)"
+  },
+  "also_right": [
+   "table"
+  ],
+  "picked": {
+   "id": "stat_strip",
+   "name": "stat strip",
+   "data_type": "kpi_set",
+   "use_when": "A row of 3-6 headline numbers under a chart or risk table",
+   "dont_use_when": "Numbers that need icons to be understood; more than 6 items"
+  },
+  "alts": [
+   "bk47",
+   "table"
+  ],
+  "why": "5 headline financing metrics (WAM, WACD, flex, fees) in a row under the term sheet",
+  "in_top3": true
  },
  {
   "row": "rp_070_017_b1",

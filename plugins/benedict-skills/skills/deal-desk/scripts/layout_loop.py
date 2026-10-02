@@ -180,6 +180,8 @@ covering every row. Be decisive and consistent; other judges answer the same row
 """
 
 
+# 2+ judges flagging fragment/duplicate sends the row to his review; it is never dropped on the judges' word alone
+# (3 Oct 2026: he overturned 7 of 8 judge rejects)
 REJECT_FLAGS = ("fragment", "duplicate")
 
 
@@ -209,11 +211,11 @@ def consensus(audit_n=20, out="judge", reject_audit=0):
         flags = Counter(v["flag"] for v in vs if v["flag"] in REJECT_FLAGS)
         if sum(flags.values()) >= 2:
             r["judges"] = [{k: v.get(k) for k in ("best", "combo", "ok", "why", "flag")} for v in vs]
-            r["status"], r["reject_by"] = "rejected", "judges"
-            r["reject_why"] = flags.most_common(1)[0][0]
-            stats[f"rejected by judges ({r['reject_why']})"] += 1
-            judged_bad.append(r)
-            continue
+            r["status"], r["flagged"] = "pending", flags.most_common(1)[0][0]
+            stats[f"judges flag ({r['flagged']}) -> his review"] += 1
+            # still answer the layout, so a row he keeps has picks to choose from
+        else:
+            r.pop("flagged", None)
         best = Counter(v["best"] for v in vs)
         okset = [{v["best"], *v["ok"]} for v in vs]
         top, cnt = best.most_common(1)[0]
@@ -227,7 +229,7 @@ def consensus(audit_n=20, out="judge", reject_audit=0):
         r["combo"] = [c for c, n in combo.items() if n >= 2]
         if not r["combo"]:
             r.pop("combo")
-        if cnt >= 2 and not objection:
+        if cnt >= 2 and not objection and not r.get("flagged"):
             r["status"] = "silver"
             r["acceptable"] = [i for i in others if reach[i] >= 2]
             r["alternates"] = (r["acceptable"] + [i for i in others if i not in r["acceptable"]])[:2]
@@ -239,7 +241,10 @@ def consensus(audit_n=20, out="judge", reject_audit=0):
             r["acceptable"] = others[:2]
             r["alternates"] = others[:2]
             r["why"] = "judges split: " + " / ".join(f"{v['best']} ({v.get('why', '')[:60]})" for v in vs)
-            stats["judges split -> his review"] += 1
+            if r.get("flagged"):
+                r["why"] = f"judges flag {r['flagged']}; layout votes: " + " / ".join(v["best"] for v in vs)
+            else:
+                stats["judges split -> his review"] += 1
     for r in random.Random(le.today()).sample(silver, min(audit_n, len(silver))):
         r["audit"] = True
     for r in random.Random(le.today() + "x").sample(judged_bad, min(reject_audit, len(judged_bad))):

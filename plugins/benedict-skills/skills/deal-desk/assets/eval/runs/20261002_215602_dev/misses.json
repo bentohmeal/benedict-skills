@@ -1,5 +1,168 @@
 [
  {
+  "row": "rp_108_004_b3",
+  "section": "company",
+  "message": "Revised proposal offers $13.25 per share with committed financing",
+  "block": {
+   "what": "Diligence and timing",
+   "data_type": "text",
+   "about": "approval and signing timeline",
+   "content": [
+    "Approved by NMC investment committee",
+    "Prepared to sign by July 12, 2024",
+    "Discuss management rollover if approved by Special Committee"
+   ]
+  },
+  "right": {
+   "id": "side_tabs",
+   "name": "side tabs",
+   "data_type": "list",
+   "use_when": "Investment thesis pillars: bold claim + evidence -> so what -> implication (35+ words per pillar)",
+   "dont_use_when": "Short facts or one-liners (use pill_rows); a process (use chevrons)"
+  },
+  "also_right": [
+   "pill_rows"
+  ],
+  "picked": {
+   "id": "bullets",
+   "name": "bullets",
+   "data_type": "text",
+   "use_when": "Numbered commentary beside an exhibit: bold lead-in + evidence + so what, 2-6 points",
+   "dont_use_when": "The main exhibit of a page (pick a chart, table or diagram); more than 2 bullet blocks on one slide"
+  },
+  "alts": [
+   "pill_rows",
+   "takeaway"
+  ],
+  "why": "3 short text points on approval and timing are commentary beside the offer exhibit, not a visual on their own",
+  "in_top3": true
+ },
+ {
+  "row": "rp_011_027_b2",
+  "section": "financials",
+  "message": "Total corporate spend declines from 4.3% to 3.2% of sales through 2028E",
+  "block": {
+   "what": "Commentary",
+   "data_type": "list",
+   "about": "cost components",
+   "content": [
+    "Communications includes PR and hospitality marketing, higher ahead of Olympics",
+    "Corp. Exec. covers CEO, Executive Chair, COO, CFO costs",
+    "HR includes personnel and infrastructure",
+    "Technology covers IT infrastructure and internal systems",
+    "Total corporate spend ranges ~3% to ~4.5% of revenue"
+   ]
+  },
+  "right": {
+   "id": "bk07",
+   "name": "Segment table with side tabs + commentary column",
+   "data_type": "time_series",
+   "use_when": "Segment or business-unit financials with explanation per segment",
+   "dont_use_when": "Single-segment business; more than 4 segments"
+  },
+  "also_right": [
+   "table"
+  ],
+  "picked": {
+   "id": "bullets",
+   "name": "bullets",
+   "data_type": "text",
+   "use_when": "Numbered commentary beside an exhibit: bold lead-in + evidence + so what, 2-6 points",
+   "dont_use_when": "The main exhibit of a page (pick a chart, table or diagram); more than 2 bullet blocks on one slide"
+  },
+  "alts": [
+   "bk06",
+   "pill_rows"
+  ],
+  "why": "5 explanatory lines on cost components (40 words) are commentary beside the corporate cost table",
+  "in_top3": false
+ },
+ {
+  "row": "rp_082_009_b3",
+  "section": "financials",
+  "message": "Management forecast shows capex shifting to Renewables with EBITDA and EPS growth to 2035",
+  "block": {
+   "what": "Adj. EPS",
+   "data_type": "time_series",
+   "about": "earnings per share 2024E-2035E",
+   "unit": "$ per share",
+   "content": [
+    "2024E $2.28",
+    "2025E $2.47",
+    "2026E $2.60",
+    "2027E $2.74",
+    "2028E $2.96",
+    "2029E $3.22",
+    "2030E $3.13",
+    "2031E $3.47",
+    "2032E $3.93",
+    "2033E $4.24",
+    "2034E $4.54",
+    "2035E $4.85"
+   ]
+  },
+  "right": {
+   "id": "fin_chart",
+   "name": "fin chart",
+   "data_type": "time_series",
+   "use_when": "One metric's trend with CAGR, actual / estimate split and a % margin strip",
+   "dont_use_when": "Several unrelated metrics (use fin_table); two forecast cases compared (use bk11); 2-4 metrics or segments each needing its own chart (use bk36)"
+  },
+  "also_right": [
+   "column",
+   "stacked"
+  ],
+  "picked": {
+   "id": "bk36",
+   "name": "2x2 chart dashboard",
+   "data_type": "time_series",
+   "use_when": "Historical / projected summary as 2-4 small charts, one per metric or segment (e.g. revenue, EBITDA, segment EBITDA with CAGRs), or market data in 2-4 panels",
+   "dont_use_when": "Only one chart worth showing"
+  },
+  "alts": [
+   "fin_chart",
+   "column"
+  ],
+  "why": "12-year EPS series is one of several metrics (capex, EBITDA, EPS) in the message, so a 2x2 chart dashboard panel; fin_chart if shown alone",
+  "in_top3": true
+ },
+ {
+  "row": "rp_085_007_b1",
+  "section": "market",
+  "message": "Moelis has advised on marquee software transactions across four sub-sectors",
+  "block": {
+   "what": "Applications and infrastructure software deals",
+   "data_type": "list",
+   "about": "selected transactions",
+   "content": [
+    "Applications software: JDA, PeopleSoft, SIS acquisitions",
+    "Infrastructure software: EMC / VMware, Thales / Vormetric, Novell, Telelogic",
+    "Deal values e.g. $635mm, $210mm, $220mm"
+   ]
+  },
+  "right": {
+   "id": "page_landscape",
+   "name": "Landscape page: logo wall by segment beside a chart",
+   "data_type": "comparison",
+   "use_when": "Competitive landscape or buyer universe: logos grouped into 3 segments, a scale bar chart beside it",
+   "dont_use_when": "Fewer than 6 players (use logo_row)"
+  },
+  "also_right": [],
+  "picked": {
+   "id": "logo_row",
+   "name": "logo row",
+   "data_type": "comparison",
+   "use_when": "Peers, buyers, sponsors, customers or tenants as logo tiles (target highlighted)",
+   "dont_use_when": "Players that need numbers beside them (use a bar chart with the target navy)"
+  },
+  "alts": [
+   "page_landscape",
+   "table"
+  ],
+  "why": "Named credential deals by sub-sector with few numbers are tombstone tiles (precedent software deals -> logo_row)",
+  "in_top3": true
+ },
+ {
   "row": "rp_000_012_b1",
   "section": "valuation",
   "message": "Minority squeeze-out deals were completed at meaningful premiums to undisturbed prices",

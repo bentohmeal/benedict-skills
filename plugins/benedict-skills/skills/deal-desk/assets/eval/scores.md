@@ -25,3 +25,7 @@ Hold-out = the fixed 1-in-5 split of golden.jsonl. Keep a prompt or library chan
 | 2026-10-02 | blind subagent | accepted + silver | 37 (5) | 89% | 97% | 89% | re-judged key: after round 1 (final) |
 | 2026-10-02 | blind subagent | accepted + silver · dev | 31 (4) | 97% | 97% | 90% | re-judged key: round 0 (dev) |
 | 2026-10-02 | blind subagent | accepted + silver · dev | 31 (4) | 97% | 97% | 94% | re-judged key: after round 1 (dev) |
+| 2026-10-03 | blind subagent | accepted + silver | 42 (6) | 79% | 95% | 92% |  |
+| 2026-10-03 | blind subagent | accepted + silver | 42 (6) | 83% | 95% | 89% |  |
+| 2026-10-03 | blind subagent | accepted + silver · dev | 38 (9) | 87% | 95% | 89% |  |
+| 2026-10-03 | blind subagent | accepted + silver · dev | 38 (9) | 87% | 95% | 93% |  |
