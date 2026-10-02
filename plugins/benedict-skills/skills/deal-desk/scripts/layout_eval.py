@@ -260,8 +260,11 @@ GUIDE = [
      "page on the left with the three layout pictures. Click a layout name to open it full size."),
     ("top", "The Top pick is the best fit."),
     ("alt 1 / alt 2", "That runner-up fits better than the Top pick. It becomes the answer."),
+    ("top + alt 1 (etc.)", "The best answer combines two of the pictures in one exhibit, e.g. an infographic with a "
+     "table beside it. The first named is the lead layout. Both become the answer."),
     ("other", "None of the three is best. Type or pick the right layout id in 'Other id' (dropdown, or browse the "
-     "Layouts tab, which has a picture link for every layout)."),
+     "Layouts tab, which has a picture link for every layout). For a combination, type both ids joined by +, lead "
+     "first (e.g. ig075+table)."),
     ("reject", "The row itself is broken, so it should not be tested at all: garbled text, the block does not match the "
      "page, or it is not a real exhibit (cover, disclaimer, divider). Rejected rows are dropped. If your thought is "
      "'wrong layout', that is alt 1 / alt 2 / other, not reject."),
@@ -274,6 +277,9 @@ GUIDE = [
     ("When done", "Save and close the file, then tell Claude 'ingest the layout review'."),
 ]
 DECISIONS = ["top", "alt 1", "alt 2", "other", "reject"]
+# combined answers: one exhibit built from two of the pictures, lead first
+COMBOS = {"top + alt 1": (0, 1), "top + alt 2": (0, 2), "alt 1 + alt 2": (1, 2), "alt 1 + top": (1, 0), "alt 2 + top": (2, 0)}
+MENU = DECISIONS[:3] + list(COMBOS) + DECISIONS[3:]
 HEAD = ["Row id", "Check", "Page / slide", "Block", "Top pick", "Runner-up 1", "Runner-up 2", "Decision", "Other id",
         "Others also OK?", "Note"]
 COL = {h: i for i, h in enumerate(HEAD, 1)}
@@ -392,9 +398,10 @@ def review():
         c.font = Font(bold=True)
         c.alignment = Alignment(wrap_text=True, vertical="bottom")
     ids = sorted(lib, key=lambda k: (lib[k].get("kind") != "layout", k.startswith("ig"), k))
-    dv = DataValidation(type="list", formula1='"' + ",".join(DECISIONS) + '"', allow_blank=True)
+    dv = DataValidation(type="list", formula1='"' + ",".join(MENU) + '"', allow_blank=True)
     dv_to = DataValidation(type="list", formula1=f"=Layouts!$A$5:$A${len(ids) + 4}", allow_blank=True,
-                           showErrorMessage=True, error="Pick a layout id from the list (see the Layouts tab).")
+                           showErrorMessage=True, errorStyle="warning",
+                           error="Not in the list. Fine for a combination (id+id, lead first); otherwise pick from the list.")
     dv_ok = DataValidation(type="list", formula1='"yes,no"', allow_blank=True)
     for d in (dv, dv_to, dv_ok):
         ws.add_data_validation(d)
@@ -503,8 +510,9 @@ def ingest():
         r = by_id.get(rid)
         if not r or not dec:
             continue
-        if dec not in DECISIONS:
-            bad.append(f"{rid}: decision {dec!r} is not one of {', '.join(DECISIONS)}")
+        dec = " + ".join(x.strip() for x in dec.split("+"))
+        if dec not in MENU:
+            bad.append(f"{rid}: decision {dec!r} is not one of {', '.join(MENU)}")
             continue
         if r.get("audit") and (r["status"] == "silver" or r.get("reject_by") == "judges"):
             judged_bad = r.get("reject_by") == "judges"
@@ -517,22 +525,28 @@ def ingest():
         else:
             picks = _picks(r)
             if dec == "other":
-                if other not in lib:
-                    bad.append(f"{rid}: other id {other!r} is not a layout id")
+                parts = [x.strip() for x in other.split("+") if x.strip()]
+                if not parts or any(x not in lib for x in parts):
+                    bad.append(f"{rid}: other id {other!r} is not a layout id (or id+id)")
                     continue
-                chosen = other
-            elif DECISIONS.index(dec) >= len(picks):
-                bad.append(f"{rid}: {dec!r} points at an empty picture (only {len(picks)} shown)")
-                continue
             else:
-                chosen = picks[DECISIONS.index(dec)]
+                idx = COMBOS.get(dec) or (DECISIONS.index(dec),)
+                if max(idx) >= len(picks):
+                    bad.append(f"{rid}: {dec!r} points at an empty picture (only {len(picks)} shown)")
+                    continue
+                parts = [picks[k] for k in idx]
+            chosen, combo = parts[0], parts[1:]
             if r["status"] == "silver" and r.get("audit") and not r.get("audit_result"):
-                r["audit_result"] = "agree" if chosen in {r["label"], *r["acceptable"]} else "disagree"
+                r["audit_result"] = "agree" if set(parts) & {r["label"], *r["acceptable"], *r.get("combo", [])} else "disagree"
                 audit[r["audit_result"]] += 1
+            if combo:
+                r["combo"] = combo
+            else:
+                r.pop("combo", None)
             if chosen != r["label"]:
                 swaps.append((r, r["label"]))
                 r["why"] = f"{r['why']} | {dec}: {r['label']} -> {chosen} in review"
-            rest = [p for p in picks if p != chosen] if also else []
+            rest = [p for p in picks if p not in parts] if also else []
             r["label"] = chosen
             r["acceptable"] = list(dict.fromkeys(rest + EQUIV.get(chosen, [])))
             r["status"] = "accepted"
