@@ -5,3 +5,4 @@ Hold-out = the fixed 1-in-5 split of golden.jsonl. Keep a prompt or library chan
 |---|---|---|---|---|---|---|---|
 | 2026-10-02 | layout_match.py | provisional (incl. pending) | 36 (0) | 47% | 69% | n/a | baseline before review; SG DC rows were tuned on in Phase 2 |
 | 2026-10-02 | blind subagent | provisional (incl. pending) | 36 (0) | 50% | 75% | 94% | baseline before review (Opus subagent, 141 provisional examples) |
+| 2026-10-02 | layout_match.py | provisional (incl. pending) | 47 (0) | 53% | 79% | n/a | re-labelled vs full menu (bk + ig), 40 infographic test rows added; still pending review |

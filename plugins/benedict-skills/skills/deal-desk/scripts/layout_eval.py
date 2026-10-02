@@ -5,7 +5,7 @@ r"""Layout-choice eval: golden dataset, review sheet, fixed 80/20 split, scoring
   python layout_eval.py add-plan <topics.json> --source NAME [--approved]
                                                         # picked slide plan -> rows (--approved: he OK'd it = accepted)
   python layout_eval.py review                          # pending rows -> golden_review.xlsx in the toolkit folder
-  python layout_eval.py ingest                          # his accept / swap / reject decisions -> golden.jsonl
+  python layout_eval.py ingest                          # his top / alt / other / reject picks -> golden.jsonl
   python layout_eval.py examples [--all]                # train rows -> assets/eval/examples.md (few-shot for select)
   python layout_eval.py matcher [--all]                 # score layout_match.py on the hold-out -> scores.md
   python layout_eval.py blind [--all]                   # blind task for a subagent -> assets/eval/runs/<stamp>/task.md
@@ -17,7 +17,7 @@ The split is a hash of the row id (1 in 5 -> hold-out), so it never moves when r
 never written into examples.md or a task's examples.
 
 Row: {"id", "source", "ref", "thumb", "section", "message", "block": {what, data_type, about, content, unit?},
-      "label", "acceptable": [ids that also count as right], "why", "status", "reviewer", "added", "flag"?}
+      "label", "acceptable": [ids that also count as right], "alternates"?: [2 runner-ups shown in review], "why", "status", "reviewer", "added", "flag"?}
 """
 import datetime
 import hashlib
@@ -233,25 +233,30 @@ def _log_swaps(swaps):
 # ---------- his review ----------
 
 GUIDE = [
-    ("What this sheet is for", "Each row is one block of content (a chart, table, list...) taken from a real bank page or "
-     "one of your decks. 'Proposed layout' is how Claude thinks it should be drawn. Your answers become the answer key "
-     "the deck builder is tested against, so the score is only as good as these labels."),
-    ("The one question", "For every row: is 'Proposed layout' the right way to show this block? Click 'Page / slide' to "
-     "see the original page, and 'Proposed layout' to see what that layout looks like."),
-    ("accept", "Yes, that layout fits this content. The row joins the answer key as it is."),
-    ("swap", "The row is fine but a different layout fits better. Pick the right one in 'Swap to' (dropdown, or browse "
-     "the Layouts tab). The row stays in the answer key with your layout, and the swap is logged as a lesson."),
+    ("What this sheet is for", "Each row is one block of content (a chart, table, list...) from a real bank page, one of "
+     "your decks, or a written infographic test. Claude has picked the layout it thinks fits best (Top pick) and two "
+     "runner-ups. Your answers become the answer key the deck builder is tested against, so the score is only as good "
+     "as these picks."),
+    ("The one question", "For every row: which of the three pictures is the best way to show this block? Compare the "
+     "page on the left with the three layout pictures. Click a layout name to open it full size."),
+    ("top", "The Top pick is the best fit."),
+    ("alt 1 / alt 2", "That runner-up fits better than the Top pick. It becomes the answer."),
+    ("other", "None of the three is best. Type or pick the right layout id in 'Other id' (dropdown, or browse the "
+     "Layouts tab, which has a picture link for every layout)."),
     ("reject", "The row itself is broken, so it should not be tested at all: garbled text, the block does not match the "
-     "page, or it is not a real exhibit (cover, disclaimer, divider). Rejected rows are dropped."),
-    ("swap vs reject", "If your thought is 'wrong layout', that is a swap, not a reject. Rejecting a good row with a wrong "
-     "label throws away a test case; swapping keeps the case and fixes the answer."),
-    ("Also right", "Layouts that do the same job (e.g. bar and column). They already count as correct, so no need to "
-     "swap between them."),
-    ("Check", "HOLD-OUT = one of the blind test rows the score is based on, so do these first. Other notes are Claude's "
-     "doubts about the row (e.g. the block and the bank's layout may not match)."),
+     "page, or it is not a real exhibit (cover, disclaimer, divider). Rejected rows are dropped. If your thought is "
+     "'wrong layout', that is alt 1 / alt 2 / other, not reject."),
+    ("Others also OK?", "yes (or blank) = the two pictures you did not choose would also be acceptable, so the deck "
+     "builder is not marked wrong for picking them. no = only your choice counts as right."),
+    ("Check", "HOLD-OUT = one of the blind test rows the score is based on. Infographic test rows have no page, only the "
+     "written block."),
     ("Blank", "Still to do. You can review over several sittings; refreshing the sheet keeps what you have entered."),
     ("When done", "Save and close the file, then tell Claude 'ingest the layout review'."),
 ]
+DECISIONS = ["top", "alt 1", "alt 2", "other", "reject"]
+HEAD = ["Row id", "Check", "Page / slide", "Block", "Top pick", "Runner-up 1", "Runner-up 2", "Decision", "Other id",
+        "Others also OK?", "Note"]
+COL = {h: i for i, h in enumerate(HEAD, 1)}
 
 
 def _exemplar_thumb(rec, root):
@@ -269,25 +274,63 @@ def _exemplar_thumb(rec, root):
 
 
 def layout_link(rec, root):
-    """A picture of the layout: its own thumb, else the real bank page it was modelled on, else a slide of ours using it."""
+    """A picture of the layout: a crop of just that component (code_<id>.png, cut from the layout gallery), else its own
+    thumb, else the real bank page it was modelled on."""
+    own = os.path.join(ASSETS, "layout_thumbs", f"code_{rec.get('id', '')}.png")
+    if os.path.exists(own):
+        return os.path.abspath(own)
     if rec.get("thumb") and os.path.exists(os.path.join(ASSETS, rec["thumb"])):
         return os.path.abspath(os.path.join(ASSETS, rec["thumb"]))
-    own = os.path.join(ASSETS, "layout_thumbs", f"code_{rec.get('id', '')}.png")   # bullets, takeaway, map_pins
-    return _exemplar_thumb(rec, root) or (os.path.abspath(own) if os.path.exists(own) else "")
+    return _exemplar_thumb(rec, root)
+
+
+def _small(src, w, h):
+    """A small JPEG copy of a picture for embedding (cached in the toolkit's review_thumbs folder)."""
+    from PIL import Image
+    out_dir = os.path.join(TOOLKIT, "review_thumbs")
+    os.makedirs(out_dir, exist_ok=True)
+    out = os.path.join(out_dir, hashlib.sha1(f"{src}|{w}|{h}".encode()).hexdigest()[:16] + ".jpg")
+    if not os.path.exists(out) or os.path.getmtime(out) < os.path.getmtime(src):
+        im = Image.open(src).convert("RGB")
+        im.thumbnail((w * 2, h * 2))          # 2x for a sharp picture when zoomed
+        im.save(out, quality=82)
+    return out
+
+
+def _place(ws, path, row, col, w, h, top_px=0):
+    from openpyxl.drawing.image import Image as XLImage
+    from openpyxl.drawing.spreadsheet_drawing import AnchorMarker, OneCellAnchor
+    from openpyxl.drawing.xdr import XDRPositiveSize2D
+    from openpyxl.utils.units import pixels_to_EMU
+    from PIL import Image
+    iw, ih = Image.open(path).size
+    s = min(w / iw, h / ih)
+    pic = XLImage(path)
+    pic.anchor = OneCellAnchor(_from=AnchorMarker(col=col - 1, row=row - 1, colOff=pixels_to_EMU(4),
+                                                  rowOff=pixels_to_EMU(top_px)),
+                               ext=XDRPositiveSize2D(pixels_to_EMU(int(iw * s)), pixels_to_EMU(int(ih * s))))
+    ws.add_image(pic)
 
 
 def _prior_decisions():
-    """Decisions already typed in the review sheet, so a refresh never wipes them."""
+    """Decisions already typed in the review sheet, so a refresh never wipes them (current layout of the sheet only)."""
     if not os.path.exists(REVIEW_XLSX):
         return {}
     from openpyxl import load_workbook
     ws = load_workbook(REVIEW_XLSX).worksheets[0]
+    if [ws.cell(4, j).value for j in range(1, len(HEAD) + 1)] != HEAD:
+        return {}                                                  # an older sheet layout: nothing carried over
     out = {}
     for i in range(5, ws.max_row + 1):
-        rid, dec, to = ws.cell(i, 1).value, ws.cell(i, 13).value, ws.cell(i, 14).value
-        if rid and (dec or to):
-            out[rid] = (dec or "", to or "")
+        vals = tuple(ws.cell(i, COL[h]).value or "" for h in ("Decision", "Other id", "Others also OK?", "Note"))
+        if ws.cell(i, 1).value and any(vals):
+            out[ws.cell(i, 1).value] = vals
     return out
+
+
+def _picks(r):
+    alts = r.get("alternates") or r["acceptable"]
+    return [r["label"], *alts[:2]]
 
 
 def review():
@@ -300,63 +343,72 @@ def review():
     m = lm.Matcher()
     lib, root = m.lib, m.root
     prior = _prior_decisions()
-    rows = [r for r in load_rows() if r["status"] == "pending"]
-    rows.sort(key=lambda r: (not holdout(r["id"]), not r.get("flag"), r["id"]))   # what the score rests on first
+    rows = [r for r in load_rows() if r["status"] == "pending"]       # file order keeps a page's blocks together
     band = PatternFill("solid", fgColor="1F3864")
-    link = Font(color="0563C1", underline="single")
+    link = Font(color="0563C1", underline="single", bold=True, size=9)
+    PAGE_W, PAGE_H, LAY_W, LAY_H, ROW_PX = 260, 150, 175, 132, 168
     wb = Workbook()
 
     ws = wb.active
     ws.title = "Review"
-    ws["A1"] = "Layout eval: review proposed labels"
+    ws["A1"] = "Layout eval: pick the best layout for each block"
     ws["A1"].font = Font(bold=True, size=14, color="FFFFFF")
-    ws["A2"] = ("For each row: is 'Proposed layout' the right way to show this block?   accept = yes   ·   swap = no, "
-                "pick the right one in 'Swap to'   ·   reject = the row itself is broken (drop it).   Full guide: Guide tab.")
+    ws["A2"] = ("Compare the page with the three layout pictures.   top = Top pick is best   ·   alt 1 / alt 2 = that "
+                "runner-up is better   ·   other = none of them (fill 'Other id')   ·   reject = the row is broken.   "
+                "Full guide: Guide tab.")
     ws["A2"].font = Font(italic=True, size=9, color="FFFFFF")
-    for c in ("A1", "A2"):
-        ws[c].alignment = Alignment(vertical="center")
     for row in (1, 2):
-        for col in range(1, 15):
+        for col in range(1, len(HEAD) + 1):
             ws.cell(row, col).fill = band
-    head = ["Row id", "Source", "Page / slide (click to view)", "Section", "Slide message", "Block", "Type", "Items",
-            "Content (first lines)", "Proposed layout (click to view)", "Also right", "Check", "Decision", "Swap to"]
-    for j, h in enumerate(head, 1):
+    for j, h in enumerate(HEAD, 1):
         c = ws.cell(4, j, h)
         c.font = Font(bold=True)
         c.alignment = Alignment(wrap_text=True, vertical="bottom")
     ids = sorted(lib, key=lambda k: (lib[k].get("kind") != "layout", k.startswith("ig"), k))
-    dv = DataValidation(type="list", formula1='"accept,swap,reject"', allow_blank=True)
+    dv = DataValidation(type="list", formula1='"' + ",".join(DECISIONS) + '"', allow_blank=True)
     dv_to = DataValidation(type="list", formula1=f"=Layouts!$A$5:$A${len(ids) + 4}", allow_blank=True,
                            showErrorMessage=True, error="Pick a layout id from the list (see the Layouts tab).")
-    ws.add_data_validation(dv)
-    ws.add_data_validation(dv_to)
+    dv_ok = DataValidation(type="list", formula1='"yes,no"', allow_blank=True)
+    for d in (dv, dv_to, dv_ok):
+        ws.add_data_validation(d)
     kept = 0
     for i, r in enumerate(rows, 5):
         b = r["block"]
         content = b.get("content", [])
-        dec, to = prior.get(r["id"], ("", ""))
-        kept += bool(dec or to)
-        vals = [r["id"], r["source"], r["ref"], r["section"], r["message"], b.get("what", ""), b.get("data_type", ""),
-                len(content) if isinstance(content, list) else "", " · ".join(map(str, content[:4]))[:220]
-                if isinstance(content, list) else str(content)[:220], r["label"], ", ".join(r["acceptable"]),
-                ("HOLD-OUT. " if holdout(r["id"]) else "") + r.get("flag", ""), dec, to]
+        content = " · ".join(map(str, content[:6])) if isinstance(content, list) else str(content)
+        dec = prior.get(r["id"], ("", "", "", ""))
+        kept += any(dec)
+        block = (f"{b.get('what', '')}\n[{r['section']} · {b.get('data_type', '')}]\n{content[:260]}\n"
+                 f"Slide message: {r['message']}")
+        page = r["ref"] if r.get("thumb") else "Written test block (no page)"
+        vals = [r["id"], "HOLD-OUT" if holdout(r["id"]) else "", page, block, "", "", "", *dec]
         for j, v in enumerate(vals, 1):
             c = ws.cell(i, j, v)
             c.alignment = Alignment(wrap_text=True, vertical="top")
+        ws.cell(i, 3).font = Font(size=8, color="595959")
+        ws.cell(i, 4).font = Font(size=9)
         if r.get("thumb") and os.path.exists(r["thumb"]):
             ws.cell(i, 3).hyperlink = r["thumb"]
-            ws.cell(i, 3).font = link
-        pic = layout_link(lib.get(r["label"], {}), root)
-        if pic:
-            ws.cell(i, 10).hyperlink = pic
-            ws.cell(i, 10).font = link
-        if r.get("flag") or holdout(r["id"]):
-            ws.cell(i, 12).font = Font(bold=True, color="C00000")
-        dv.add(ws.cell(i, 13))
-        dv_to.add(ws.cell(i, 14))
-    for col, w in zip("ABCDEFGHIJKLMN", (20, 12, 30, 11, 34, 26, 12, 6, 50, 17, 15, 24, 10, 14)):
+            _place(ws, _small(r["thumb"], PAGE_W, PAGE_H), i, 3, PAGE_W, PAGE_H, top_px=16)
+        for j, lid in enumerate(_picks(r), COL["Top pick"]):
+            rec = lib.get(lid, {})
+            c = ws.cell(i, j, f"{lid} · {rec.get('name', '?')}"[:42])
+            c.alignment = Alignment(vertical="top")
+            pic = layout_link(rec, root)
+            if pic:
+                c.hyperlink, c.font = pic, link
+                _place(ws, _small(pic, LAY_W, LAY_H), i, j, LAY_W, LAY_H, top_px=18)
+            else:
+                c.font = Font(size=9, bold=True)
+        if holdout(r["id"]):
+            ws.cell(i, 2).font = Font(bold=True, color="C00000")
+        dv.add(ws.cell(i, COL["Decision"]))
+        dv_to.add(ws.cell(i, COL["Other id"]))
+        dv_ok.add(ws.cell(i, COL["Others also OK?"]))
+        ws.row_dimensions[i].height = ROW_PX * 0.75
+    for col, w in zip("ABCDEFGHIJK", (16, 9, 39, 40, 27, 27, 27, 10, 12, 9, 24)):
         ws.column_dimensions[col].width = w
-    ws.freeze_panes = "A5"
+    ws.freeze_panes = "B5"
     ws.sheet_view.showGridLines = False
 
     g = wb.create_sheet("Guide")
@@ -373,24 +425,26 @@ def review():
     g.sheet_view.showGridLines = False
 
     lt = wb.create_sheet("Layouts")
-    lt["A1"] = "Layout ids for 'Swap to'"
+    lt["A1"] = "Every layout the deck builder can pick"
     lt["A1"].font = Font(bold=True, size=14, color="FFFFFF")
-    lt["A2"] = "Click an id to see it. Coded layouts first, then bank-page layouts (ig...), then pages, maps and icon sets."
+    lt["A2"] = ("Click an id to see it. Order: coded components and pages, bank designs (bk..), PwC infographics (ig..), "
+                "then recipes.")
     lt["A2"].font = Font(italic=True, size=9, color="FFFFFF")
     for row in (1, 2):
-        for col in range(1, 5):
+        for col in range(1, 6):
             lt.cell(row, col).fill = band
-    for j, h in enumerate(["Id", "Kind", "Type of data", "Use when"], 1):
+    for j, h in enumerate(["Id", "Name", "Kind", "Type of data", "Use when"], 1):
         lt.cell(4, j, h).font = Font(bold=True)
     for i, k in enumerate(ids, 5):
         rec = lib[k]
-        for j, v in enumerate([k, rec.get("kind", ""), rec.get("data_type", ""), rec.get("use_when", "")], 1):
+        for j, v in enumerate([k, rec.get("name", ""), rec.get("kind", ""), rec.get("data_type", ""),
+                               rec.get("use_when", "")], 1):
             lt.cell(i, j, v).alignment = Alignment(wrap_text=True, vertical="top")
         pic = layout_link(rec, root)
         if pic:
             lt.cell(i, 1).hyperlink = pic
-            lt.cell(i, 1).font = link
-    for col, w in zip("ABCD", (16, 10, 14, 90)):
+            lt.cell(i, 1).font = Font(color="0563C1", underline="single")
+    for col, w in zip("ABCDE", (12, 32, 10, 14, 80)):
         lt.column_dimensions[col].width = w
     lt.freeze_panes = "A5"
     lt.sheet_view.showGridLines = False
@@ -406,30 +460,49 @@ def ingest():
         sys.exit("golden_review.xlsx is open in Excel. Save and close it first so no decisions are missed.")
     lib = lm.Matcher().lib
     ws = load_workbook(REVIEW_XLSX).worksheets[0]
+    if [ws.cell(4, j).value for j in range(1, len(HEAD) + 1)] != HEAD:
+        sys.exit("golden_review.xlsx is an older layout of the sheet: run review again first.")
     rows = load_rows()
     by_id = {r["id"]: r for r in rows}
     n, swaps, bad = Counter(), [], []
     for i in range(5, ws.max_row + 1):
-        rid, dec, to = ws.cell(i, 1).value, (ws.cell(i, 13).value or "").strip().lower(), ws.cell(i, 14).value
+        rid = ws.cell(i, 1).value
+        dec = str(ws.cell(i, COL["Decision"]).value or "").strip().lower()
+        other = str(ws.cell(i, COL["Other id"]).value or "").strip()
+        also = str(ws.cell(i, COL["Others also OK?"]).value or "").strip().lower() != "no"
+        note = str(ws.cell(i, COL["Note"]).value or "").strip()
         r = by_id.get(rid)
         if not r or not dec:
             continue
-        if dec == "swap":
-            to = (to or "").strip()
-            if to not in lib:
-                bad.append(f"{rid}: swap to {to!r} is not a layout id")
-                continue
-            swaps.append((r, r["label"]))
-            r["why"] = f"{r['why']} | swapped from {r['label']} in review"
-            r["label"], r["acceptable"] = to, EQUIV.get(to, [])
-            dec = "accept"
-        r["status"] = {"accept": "accepted", "reject": "rejected"}.get(dec, r["status"])
+        if dec not in DECISIONS:
+            bad.append(f"{rid}: decision {dec!r} is not one of {', '.join(DECISIONS)}")
+            continue
+        if dec == "reject":
+            r["status"] = "rejected"
+        else:
+            picks = _picks(r)
+            if dec == "other":
+                if other not in lib:
+                    bad.append(f"{rid}: other id {other!r} is not a layout id")
+                    continue
+                chosen = other
+            else:
+                chosen = picks[DECISIONS.index(dec)]
+            if chosen != r["label"]:
+                swaps.append((r, r["label"]))
+                r["why"] = f"{r['why']} | {dec}: {r['label']} -> {chosen} in review"
+            rest = [p for p in picks if p != chosen] if also else []
+            r["label"] = chosen
+            r["acceptable"] = list(dict.fromkeys(rest + EQUIV.get(chosen, [])))
+            r["status"] = "accepted"
+        if note:
+            r["note"] = note
         r["reviewer"] = "Benedict"
         r["reviewed"] = today()
         r.pop("flag", None)
         n[dec] += 1
     save_rows(rows)
-    _log_swaps([(r, lost) for r, lost in swaps])
+    _log_swaps(swaps)
     print(dict(n), "| still pending:", sum(r["status"] == "pending" for r in rows))
     for b in bad:
         print("SKIPPED", b)
@@ -498,7 +571,7 @@ def _log(selector, rows, include_pending, top1, top3, rubric, note=""):
 
 
 def _hit(r, ids):
-    ok = {r["label"], *r["acceptable"]}
+    ok = {r["label"], *r["acceptable"], *EQUIV.get(r["label"], [])}
     return any(i in ok for i in ids)
 
 
