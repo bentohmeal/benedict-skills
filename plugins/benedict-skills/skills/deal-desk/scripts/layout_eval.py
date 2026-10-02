@@ -269,7 +269,7 @@ GUIDE = [
      "builder is not marked wrong for picking them. no = only your choice counts as right."),
     ("Check", "judges split = three Claude judges disagreed, so your call is the answer. spot check = the judges "
      "agreed; these are a random sample to test whether the judges can be trusted (if you agree with ~90% of them, "
-     "their other answers stand). tester disagrees = the blind tester's pick looked better than the judges' answer; the tester's pick is shown as alt 1. Infographic test rows have no page, only the written block."),
+     "their other answers stand). judges reject (fragment / duplicate / ...) = the judges think the row is broken; choose reject if you agree, or the right layout if the row is fine. tester disagrees = the blind tester's pick looked better than the judges' answer; the tester's pick is shown as alt 1. Infographic test rows have no page, only the written block."),
     ("Blank", "Still to do. You can review over several sittings; refreshing the sheet keeps what you have entered."),
     ("When done", "Save and close the file, then tell Claude 'ingest the layout review'."),
 ]
@@ -369,7 +369,8 @@ def review():
     prior = _prior_decisions()
     # judges split (pending) + a random spot check of rows they agreed on (audit); file order keeps a page together
     rows = [r for r in load_rows() if r["status"] == "pending" or r.get("suspect")
-            or (r["status"] == "silver" and r.get("audit"))]
+            or (r["status"] == "silver" and r.get("audit"))
+            or (r["status"] == "rejected" and r.get("reject_by") == "judges" and r.get("audit"))]
     band = PatternFill("solid", fgColor="1F3864")
     link = Font(color="0563C1", underline="single", bold=True, size=9)
     PAGE_W, PAGE_H, LAY_W, LAY_H, ROW_PX = 260, 150, 175, 132, 168
@@ -407,7 +408,8 @@ def review():
         block = (f"{b.get('what', '')}\n[{r['section']} · {b.get('data_type', '')}]\n{content[:260]}\n"
                  f"Slide message: {r['message']}")
         page = r["ref"] if r.get("thumb") else "Written test block (no page)"
-        check = "tester disagrees" if r.get("suspect") else "spot check" if r["status"] == "silver" else "judges split" if r.get("judges") else ""
+        check = "tester disagrees" if r.get("suspect") else "spot check" if r["status"] == "silver" else \
+            f"judges reject ({r.get('reject_why', '')})" if r["status"] == "rejected" else "judges split" if r.get("judges") else ""
         vals = [r["id"], check, page, block, "", "", "", *dec]
         for j, v in enumerate(vals, 1):
             c = ws.cell(i, j, v)
@@ -504,8 +506,14 @@ def ingest():
         if dec not in DECISIONS:
             bad.append(f"{rid}: decision {dec!r} is not one of {', '.join(DECISIONS)}")
             continue
+        if r.get("audit") and (r["status"] == "silver" or r.get("reject_by") == "judges"):
+            judged_bad = r.get("reject_by") == "judges"
+            if dec == "reject" or judged_bad:  # a layout choice is checked below
+                r["audit_result"] = "agree" if (dec == "reject") == judged_bad else "disagree"
+                audit[r["audit_result"]] += 1
         if dec == "reject":
             r["status"] = "rejected"
+            r["reject_by"] = "Benedict"
         else:
             picks = _picks(r)
             if dec == "other":
@@ -518,7 +526,7 @@ def ingest():
                 continue
             else:
                 chosen = picks[DECISIONS.index(dec)]
-            if r["status"] == "silver" and r.get("audit"):
+            if r["status"] == "silver" and r.get("audit") and not r.get("audit_result"):
                 r["audit_result"] = "agree" if chosen in {r["label"], *r["acceptable"]} else "disagree"
                 audit[r["audit_result"]] += 1
             if chosen != r["label"]:
@@ -553,6 +561,8 @@ def _line(r):
     sh = lm.shape(b)
     unit = f", unit {b['unit']}" if b.get("unit") else ""
     alts = f" (also right: {', '.join(r['acceptable'])})" if r["acceptable"] else ""
+    if r.get("combo"):
+        alts = f" + {' + '.join(r['combo'])} (combined)" + alts
     return (f"- [{r['section']}] {b.get('what', '')}: {sh['data_type']}, {sh['items']} items, {sh['words']} words, "
             f"{'numbers' if sh['numbers'] else 'no numbers'}{unit} -> **{r['label']}**{alts}. {r['why'][:140]}")
 
@@ -588,7 +598,7 @@ def _rubric(r, ans, lib):
     why = ans.get("why", "")
     cites = bool(SHAPE_WORDS.search(why))
     sh = lm.shape(r["block"])
-    pk = ans.get("pick", "")
+    pk = (parts(ans.get("pick", "")) or [""])[0]
     dont = lm._sim(sh["query"], lm.toks(re.sub(r"\(use [^)]*\)", "", lib.get(pk, {}).get("dont_use_when", ""))))
     clean = dont < 0.25 and not (pk in lm.NUMERIC and not sh["numbers"])
     return (cites + clean) / 2
@@ -609,9 +619,14 @@ def _log(selector, rows, include_pending, top1, top3, rubric, note="", name="fin
                 f"{len(rows)} ({accepted}) | {top1:.0%} | {top3:.0%} | {rub} | {note} |\n")
 
 
+def parts(pick):
+    """'ig075+table' -> ['ig075', 'table'] (a combo: several layouts carry one exhibit together)."""
+    return [p.strip() for p in str(pick or "").split("+") if p.strip()]
+
+
 def _hit(r, ids):
-    ok = {r["label"], *r["acceptable"], *EQUIV.get(r["label"], [])}
-    return any(i in ok for i in ids)
+    ok = {r["label"], *r["acceptable"], *r.get("combo", []), *EQUIV.get(r["label"], [])}
+    return any(p in ok for i in ids for p in parts(i))
 
 
 def matcher(include_pending=False, note="", name="final"):
@@ -662,6 +677,8 @@ def blind(include_pending=False, name="final"):
         f.write("# Blind layout selection\nYou are the select step of a slide pipeline. For each question, pick the one "
                 "layout id that best carries the block, two alternatives, and a one-line reason that names the content "
                 "shape (data type, item count, numbers) and why the pick beats the alternatives.\n"
+                "A pick may be a combo `id+id` (e.g. an infographic + a table) when two layouts together carry the "
+                "block better than one; use it only then, lead layout first.\n"
                 "Use only this file. Do not open golden.jsonl, scores.md or any other eval file.\n\n"
                 f"Write `{os.path.join(out, 'answers.json')}` as "
                 '{"q01": {"pick": "...", "alts": ["...", "..."], "why": "..."}, ...}.\n\n'
@@ -680,11 +697,16 @@ def score(answers_path, include_pending=False, note=""):
     answers = lm._load(answers_path)
     key = lm._load(os.path.join(os.path.dirname(answers_path), "key.json"))
     by_id = {r["id"]: r for r in load_rows()}
+    keep = {"accepted", "silver"} | ({"pending"} if include_pending else set())
+    gone = [q for q in key if by_id.get(key[q], {}).get("status") not in keep]
+    key = {q: rid for q, rid in key.items() if q not in gone}
+    if gone:
+        print(f"  {len(gone)} questions skipped (row rejected or pending since the run)")
     test = [by_id[key[q]] for q in key]
     run = os.path.dirname(answers_path)
     sp = os.path.join(run, "set.txt")
     name = open(sp).read().strip() if os.path.exists(sp) else "final"
-    t1 = t3 = rub = 0
+    t1 = t3 = rub = combos = 0
     misses = []
 
     def card(i):
@@ -694,21 +716,24 @@ def score(answers_path, include_pending=False, note=""):
     for q, rid in key.items():
         r, a = by_id[rid], answers.get(q, {})
         ids = [a.get("pick", "")] + list(a.get("alts", []))[:2]
+        combos += "+" in ids[0]
         t1 += _hit(r, ids[:1])
         t3 += _hit(r, ids)
         rub += _rubric(r, a, lib)
         if not _hit(r, ids[:1]):
             print(f"  {q} {rid}: label {r['label']}, picked {', '.join(ids)} | {a.get('why', '')[:90]}")
             misses.append({"row": rid, "section": r["section"], "message": r["message"], "block": r["block"],
-                           "right": card(r["label"]), "also_right": r["acceptable"], "picked": card(ids[0]),
+                           "right": card(r["label"]), "also_right": r["acceptable"] + r.get("combo", []),
+                           "picked": card((parts(ids[0]) or [""])[0]),
                            "alts": ids[1:], "why": a.get("why", ""), "in_top3": _hit(r, ids)})
     n = len(key)
     with open(os.path.join(run, "misses.json"), "w", encoding="utf-8") as f:
         json.dump(misses, f, indent=1, ensure_ascii=False)
-    res = {"set": name, "n": n, "top1": t1 / n, "top3": t3 / n, "reasoning": rub / n}
+    res = {"set": name, "n": n, "top1": t1 / n, "top3": t3 / n, "reasoning": rub / n, "combo_picks": combos}
     with open(os.path.join(run, "score.json"), "w") as f:
         json.dump(res, f)
-    print(f"blind selector on {n} {name}: top-1 {t1 / n:.0%}, top-3 {t3 / n:.0%}, reasoning {rub / n:.0%}")
+    print(f"blind selector on {n} {name}: top-1 {t1 / n:.0%}, top-3 {t3 / n:.0%}, reasoning {rub / n:.0%}"
+          f" (combo picks: {combos})")
     _log("blind subagent", test, include_pending, t1 / n, t3 / n, rub / n, note, name)
     return res
 

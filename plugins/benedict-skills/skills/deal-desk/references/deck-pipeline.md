@@ -37,7 +37,7 @@ python scripts/layout_match.py match topics.json [k]
 
 ## 3. Select: pick, give a reason, keep 2 alternatives
 First read `assets/eval/examples.md` (reviewed layout choices, grouped by data type) and follow its precedents unless the block differs.
-Add to each block in `topics.json`: `"pick"`, `"alts"` (2 ids) and `"why"` (one line). Usually the top match; override when the sheet or the message says otherwise (e.g. a framing strip of bullets over a table). Then:
+Add to each block in `topics.json`: `"pick"`, `"alts"` (2 ids) and `"why"` (one line). A pick may be a combo, `"ig075+table"`, when two layouts together carry the block (see `slide-layouts.md`). Usually the top match; override when the sheet or the message says otherwise (e.g. a framing strip of bullets over a table). Then:
 ```
 python scripts/layout_match.py plan topics.json
 ```
@@ -72,10 +72,13 @@ python scripts/layout_match.py plan topics.json
 - **Rule:** run `matcher` (and `blind` for prompt changes) before and after any change to `layout_match.py`, `layout_library.json`, this file or `examples.md`. Keep the change only if top-1 and top-3 don't drop.
 - **Self-improving loop** (`scripts/layout_loop.py`, so he does not check every row):
   1. **Judges set the answers.** `judge-prep` builds one contact sheet per row (the real page + shuffled candidate layout pictures) and 4 batches × 3 judge tasks. Three Opus subagents answer alone. `consensus`: a majority id the third judge also accepts → `silver` (counts like accepted). Otherwise → `pending` for his review. A random 20 silver rows are flagged `audit` as his spot check.
+     - Each judge also sees the other rows from the same page and gives a `flag`: fragment, duplicate, garbled or footnote. **Only fragment and duplicate reject a row** (2+ judges; his rule); the others are noted, not dropped. `--reject-audit N` adds N judge-rejected rows to his spot check.
+     - Judges (and blind testers) may answer a combo, `ig075+table`, when one exhibit really joins two layouts. A combo counts as right if either part matches.
   2. **His review shrinks** to the split rows + the 20 spot checks (the review sheet's Check column says which). `ingest` prints judges-vs-him agreement on the spot checks: under 90% means fix the judge step before trusting a score.
   3. **Rounds (max 3):** testers on `blind --set train-a`, `train-b` and `dev` (one subagent each; the train halves use each other as examples) → `analyst-prep <train run dirs> --round N` → an analyst subagent rewrites `use_when` / `dont_use_when` for ≤ 8 layouts (patterns only, no deal names; suspected wrong answers are listed, not fitted) → `apply proposal.json --round N` (writes `assets/eval/layout_notes.json`, rebuilds the library) → re-test dev. Keep if dev top-1 and top-3 don't drop and one rises; else `revert --round N`. `verdict` records it.
   4. **Final (hold-out)** is scored before round 1 and once after the last kept round. The analyst never sees dev or final rows.
   - `layout_loop.py notes` lists every wording change with the old text. The changes apply to the matcher and to real deck builds (both read the library).
   - Rows the analyst lists in `suspect_labels` get a `suspect` field (the tester's pick + why) and go into his review as "tester disagrees", with the tester's pick shown as alt 1. Never reword a layout to fit them.
   - **First run (2 Oct 2026):** round 1 kept (dev 85→90% top-1, 100% top-3), round 2 reverted (dev 88%; its bk07 rewording caused a new miss), stopped (dev headroom = 4 rows ≈ noise). Hold-out blind 83/96 → 87/98, reasoning 91 → 88; matcher hold-out 45/66 → 43/66 (one row, wording only steers the blind selector).
+  - **Re-judge (2 Oct 2026):** 7 of 20 spot-checked silver rows were broken, so the 182 silver rows were re-judged with the flag above: 39 rejected (37 fragments, 2 duplicates), 142 silver, 1 split. Saved runs re-scored on the cleaned key: hold-out 84/97 → 89/97 (+2 rows of 37), dev 97/97 both before and after round 1. **Round 1's dev gain was from broken rows; treat it as neutral.**
 - **Lessons loop:** the same swap twice in `swaps.md` → add a `dont_use_when` line to the losing layout in `layout_tag.py`, rebuild the library, re-run the eval.

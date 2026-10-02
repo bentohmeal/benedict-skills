@@ -1,84 +1,5 @@
 [
  {
-  "row": "rp_108_004_b1",
-  "section": "company",
-  "message": "Revised proposal offers $13.25 per share with committed financing",
-  "block": {
-   "what": "Price",
-   "data_type": "kpi_set",
-   "about": "offer price and premiums",
-   "content": [
-    "$13.25 per share",
-    "30.3% premium to closing price of $10.17 on Jan 25, 2024",
-    "31.6% premium to 30-day VWAP of $10.07",
-    "29.1% premium to 30-day VWAP of $10.26"
-   ]
-  },
-  "right": {
-   "id": "side_tabs",
-   "name": "side tabs",
-   "data_type": "list",
-   "use_when": "Investment thesis pillars: bold claim + evidence -> so what -> implication (35+ words per pillar)",
-   "dont_use_when": "Short facts or one-liners (use pill_rows); a process (use chevrons)"
-  },
-  "also_right": [
-   "pill_rows"
-  ],
-  "picked": {
-   "id": "hero_number",
-   "name": "hero number",
-   "data_type": "kpi_set",
-   "use_when": "One headline figure (IRR, offer price, EV) with 2-3 supporting points",
-   "dont_use_when": "Several numbers of equal weight (use stat_icons)"
-  },
-  "alts": [
-   "bk01",
-   "stat_strip"
-  ],
-  "why": "One headline offer price ($13.25) with 3 supporting premiums: hero number beats an equal-weight strip; no price range for bk01",
-  "in_top3": false
- },
- {
-  "row": "rp_108_004_b2",
-  "section": "company",
-  "message": "Revised proposal offers $13.25 per share with committed financing",
-  "block": {
-   "what": "Equity and debt financing",
-   "data_type": "text",
-   "about": "financing structure",
-   "content": [
-    "Recapitalization with new third-party debt from Goldman Sachs and JPMorgan",
-    "Equity from rollover of NMC existing 32% stake and new cash equity",
-    "Customer stockholders invited to roll or increase investment",
-    "Not contingent on stockholders rolling"
-   ]
-  },
-  "right": {
-   "id": "side_tabs",
-   "name": "side tabs",
-   "data_type": "list",
-   "use_when": "Investment thesis pillars: bold claim + evidence -> so what -> implication (35+ words per pillar)",
-   "dont_use_when": "Short facts or one-liners (use pill_rows); a process (use chevrons)"
-  },
-  "also_right": [
-   "pill_rows",
-   "bk47"
-  ],
-  "picked": {
-   "id": "bullets",
-   "name": "bullets",
-   "data_type": "text",
-   "use_when": "Numbered commentary beside an exhibit: bold lead-in + evidence + so what, 2-6 points",
-   "dont_use_when": "The main exhibit of a page (pick a chart, table or diagram); more than 2 bullet blocks on one slide"
-  },
-  "alts": [
-   "bk47",
-   "bk58"
-  ],
-  "why": "4 sentence-length financing points (debt, rollover, no contingency): bullets; no tranche terms for a term sheet",
-  "in_top3": true
- },
- {
   "row": "rp_028_006_b1",
   "section": "valuation",
   "message": "Selling now at $35-36 beats holding or spinning off unless revenue and EPS grow at high required rates",
@@ -121,82 +42,82 @@
   "in_top3": true
  },
  {
-  "row": "rp_104_028_b2",
-  "section": "structure",
-  "message": "Lunar financing package provides $3,720mm funded debt and $4,570mm commitments at 4.79% base cost",
+  "row": "rp_028_003_b2",
+  "section": "process",
+  "message": "Saturn offers $36 per share best and final, a 32.4% premium, with financing still to be raised",
   "block": {
-   "what": "Summary cost",
-   "data_type": "kpi_set",
-   "about": "blended financing metrics",
+   "what": "Assumptions",
+   "data_type": "list",
+   "about": "Saturn modelling assumptions",
    "content": [
-    "WAM 6.6 years",
-    "WACD base case 4.79%",
-    "Flex 6.61%",
-    "Structure flex 6.95%",
-    "Total financing fees $69.2mm"
+    "Solar organic revenue growth 3.0%-3.5%",
+    "Iverson organic growth 4.5%-5.0%",
+    "Allen organic growth 2.0%",
+    "HE/PS organic growth 6.0%",
+    "Leverage 6.5x FYE 2004 EBITDA",
+    "$30MM-$40MM additional operating cash flow in 1-2 years"
    ]
   },
   "right": {
-   "id": "bk47",
-   "name": "Financing term sheet",
+   "id": "bk58",
+   "name": "Headed box columns",
    "data_type": "list",
-   "use_when": "Debt package or financing structure",
-   "dont_use_when": "Single plain loan (one line of text)"
+   "use_when": "Company overview detail lists",
+   "dont_use_when": "A single list (use bullets)"
   },
-  "also_right": [
-   "table"
-  ],
+  "also_right": [],
   "picked": {
-   "id": "stat_strip",
-   "name": "stat strip",
-   "data_type": "kpi_set",
-   "use_when": "A row of 3-6 headline numbers under a chart or risk table",
-   "dont_use_when": "Numbers that need icons to be understood; more than 6 items"
+   "id": "bullets",
+   "name": "bullets",
+   "data_type": "text",
+   "use_when": "Numbered commentary beside an exhibit: bold lead-in + evidence + so what, 2-6 points",
+   "dont_use_when": "The main exhibit of a page (pick a chart, table or diagram); more than 2 bullet blocks on one slide"
   },
   "alts": [
    "table",
-   "stat_icons"
+   "pill_rows"
   ],
-  "why": "5 headline financing metrics (WAM, WACD, flex, fees) in a row under a term sheet: stat strip, no icons needed",
-  "in_top3": true
+  "why": "6 short modelling assumptions with mixed measures: bullets beside the proposal; no shared unit for a chart",
+  "in_top3": false
  },
  {
-  "row": "ig_t_seesaw_case",
-  "section": "valuation",
-  "message": "Upside outweighs downside at the current price",
+  "row": "ig_t_map_apac",
+  "section": "market",
+  "message": "Capacity is shifting from Singapore to its neighbours",
   "block": {
-   "what": "Bull vs bear case",
-   "data_type": "comparison",
-   "about": "two cases weighed against each other",
+   "what": "APAC data centre markets",
+   "data_type": "geography",
+   "about": "capacity by country",
    "content": [
-    "Bull: margin expansion, NRR above 110%, US$1.5bn exit",
-    "Bear: churn rises, price war, US$0.9bn exit"
+    "Singapore 821MW",
+    "Japan 1,400MW",
+    "Australia 1,100MW",
+    "Malaysia 500MW",
+    "Indonesia 300MW"
    ]
   },
   "right": {
-   "id": "ig132",
-   "name": "Balance (seesaw) of two panels",
-   "data_type": "comparison",
-   "use_when": "Weighing two sides (benefits vs costs, upside vs risks), 3-4 bullets each",
-   "dont_use_when": "More than 2 sides"
+   "id": "map_pins",
+   "name": "map pins",
+   "data_type": "geography",
+   "use_when": "Sites, markets or a corridor on a map, each pinned with a name and one fact (target pin in gold)",
+   "dont_use_when": "Places with no spatial story (use a table)"
   },
   "also_right": [
-   "pros_cons",
-   "ig133",
-   "bk57"
+   "page_geography"
   ],
   "picked": {
-   "id": "ig102",
-   "name": "Bull and bear two-way arrows",
-   "data_type": "comparison",
-   "use_when": "Upside vs downside case (bull vs bear), each with heading and ~25 words",
-   "dont_use_when": "More than 2 cases"
+   "id": "ig150",
+   "name": "Asia Pacific by country",
+   "data_type": "geography",
+   "use_when": "APAC presence by country (Singapore, SEA, Australia deals)",
+   "dont_use_when": "Data that is not about places; colour by value only with a legend"
   },
   "alts": [
-   "ig132",
-   "pros_cons"
+   "map_pins",
+   "page_geography"
   ],
-  "why": "Bull vs bear, 2 cases with exit values: two-way arrows per precedent",
+  "why": "5 APAC countries with MW capacity: Asia Pacific country map; 5 places is above map_pins comfort",
   "in_top3": true
  },
  {
@@ -222,8 +143,9 @@
    "dont_use_when": "Fewer than 3 points (use pill_rows)"
   },
   "also_right": [
-   "pill_rows",
-   "stat_icons"
+   "stat_icons",
+   "ig188",
+   "pill_rows"
   ],
   "picked": {
    "id": "ig036",

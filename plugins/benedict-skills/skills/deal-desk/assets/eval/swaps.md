@@ -8,3 +8,4 @@ Each line: the layout the matcher or Claude offered, what he chose instead, and 
 - 2026-10-02 · table -> **bk19** · Precedent minority squeeze-out premiums paid (comparison, 3 items) · BofA Securities · BofA Presentation to Taro Pharmaceuticals (17-Jan-2024) p12
 - 2026-10-02 · ig150 -> **map_pins** · APAC data centre markets (geography, 5 items) · written test block (no source page): APAC data centre markets
 - 2026-10-02 · harvey -> **bk35** · ESG readiness (matrix, 4 items) · written test block (no source page): ESG readiness
+- 2026-10-02 · logo_row -> **page_landscape** · Partners (icons, 1 items) · Qatalyst · Qatalyst Pitch Book on Autonomy (Jan-2011) p8

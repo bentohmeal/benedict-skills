@@ -106,10 +106,18 @@ def _candidates(r, m):
     return list(dict.fromkeys(i for i in c if i in m.lib))[:8]
 
 
-def judge_prep(batches=4, judges=3):
+def judge_prep(batches=4, judges=3, out="judge", scope="all"):
+    """scope 'silver' re-judges only rows the judges answered before (not his accepted rows)."""
     m = lm.Matcher()
     lib, root = m.lib, m.root
-    rows = [r for r in le.load_rows() if r["status"] != "rejected"]
+    allrows = le.load_rows()
+    rows = [r for r in allrows if r["status"] != "rejected" and (scope == "all" or r["status"] == scope)]
+    page = {}
+    for r in allrows:
+        if r["status"] != "rejected" and r.get("ref"):
+            page.setdefault(r["ref"], []).append(r)
+    run = os.path.join(le.RUNS, out)
+    os.makedirs(run, exist_ok=True)
     os.makedirs(os.path.join(JUDGE, "sheets"), exist_ok=True)
     cat = _catalogue(lib)
     chunks = [rows[i::batches] for i in range(batches)]
@@ -126,13 +134,16 @@ def judge_prep(batches=4, judges=3):
                 qs.append({"row": r["id"], "sheet": path, "has_page": bool(r.get("thumb")), "section": r["section"],
                            "message": r["message"], "exhibit": b_.get("what", ""), "data_type": b_.get("data_type", ""),
                            "about": b_.get("about", ""), "content": b_.get("content", []),
+                           "same_page": [{"row": o["id"], "exhibit": o["block"].get("what", ""),
+                                          "content": (o["block"].get("content") or [])[:3]}
+                                         for o in page.get(r.get("ref"), []) if o["id"] != r["id"]],
                            "candidates": cands})
-            ans = os.path.join(JUDGE, f"ans_b{b}_j{j}.json")
-            with open(os.path.join(JUDGE, f"task_b{b}_j{j}.md"), "w", encoding="utf-8") as f:
+            ans = os.path.join(run, f"ans_b{b}_j{j}.json")
+            with open(os.path.join(run, f"task_b{b}_j{j}.md"), "w", encoding="utf-8") as f:
                 f.write(JUDGE_TASK.format(ans=ans, n=len(qs)) + "\n## Layout catalogue (id name (kind, data type, items): "
                         "use when | don't)\n" + cat + "\n\n## Rows\n```json\n" + json.dumps(qs, indent=1, ensure_ascii=False)
                         + "\n```\n")
-    print(f"{len(rows)} rows, {batches} batches x {judges} judges -> {JUDGE}\\task_b<b>_j<j>.md")
+    print(f"{len(rows)} rows, {batches} batches x {judges} judges -> {run}\\task_b<b>_j<j>.md")
 
 
 JUDGE_TASK = """# Layout judge
@@ -149,32 +160,59 @@ layout would a top bank analyst choose for this content and message?
 - Look at the shape of what the bank drew: chart type and orientation, table with or without bars / heat colours,
   number of panels, text boxes vs bullets, map, logos. Match that, not just the topic.
 - You may name any id from the catalogue below, not only the candidates on the sheet, if it fits better.
+- **Combos are allowed:** when the bank drew the exhibit with two layouts together (e.g. an infographic with a table
+  beside it, two infographics side by side), answer `best` as `"<lead id>+<second id>"`. Only when both are really
+  there; a single layout stays a single id.
 - `ok`: other ids a demanding banker would also accept for this exhibit (0-3). Leave it empty if only one fits.
 - `why`: one line naming what you saw (e.g. "horizontal bars ranked, 6 items, values at bar end").
-- `doubt`: true if the row looks broken (garbled text, the block does not match the page, not a real exhibit).
+- `flag`: "" for a good row. Otherwise one of:
+  - `fragment`: the block is only part of one exhibit (half of a table, the text that belongs to a chart or funnel
+    beside it, one column of a grid), so its layout can't be judged on its own.
+  - `duplicate`: it repeats the content of a row in `same_page` (same items or the same exhibit). Flag only the row
+    whose id sorts later, so one copy survives.
+  - `garbled`: the text is unreadable or does not match the page.
+  - `footnote`: notes, sources or filler, not an exhibit.
+  Flag strictly: a good self-contained exhibit with plain text is NOT a fragment. Still give `best` for a flagged row.
 
 Write `{ans}` as
-{{"<row id>": {{"best": "<id>", "ok": ["<id>", ...], "why": "...", "doubt": false}}, ...}}
+{{"<row id>": {{"best": "<id or id+id>", "ok": ["<id>", ...], "why": "...", "flag": ""}}, ...}}
 covering every row. Be decisive and consistent; other judges answer the same rows independently.
 """
 
 
-def consensus(audit_n=20):
+REJECT_FLAGS = ("fragment", "duplicate")
+
+
+def consensus(audit_n=20, out="judge", reject_audit=0):
     rows = le.load_rows()
     by_id = {r["id"]: r for r in rows}
     lib = lm.Matcher().lib
+    run = os.path.join(le.RUNS, out)
     votes = {}
-    for fn in sorted(os.listdir(JUDGE)):
+    for fn in sorted(os.listdir(run)):
         if fn.startswith("ans_") and fn.endswith(".json"):
-            for rid, a in _load(os.path.join(JUDGE, fn)).items():
-                if rid in by_id and a.get("best") in lib:
-                    a["ok"] = [i for i in a.get("ok", []) if i in lib and i != a["best"]]
+            for rid, a in _load(os.path.join(run, fn)).items():
+                ids = le.parts(a.get("best"))
+                if rid in by_id and ids and all(i in lib for i in ids):
+                    a["best"], a["combo"] = ids[0], ids[1:]
+                    a["ok"] = [p for i in a.get("ok", []) for p in le.parts(i) if p in lib and p != a["best"]]
+                    a["flag"] = a.get("flag") or ("garbled" if a.get("doubt") else "")
                     votes.setdefault(rid, []).append(a)
-    stats, silver = Counter(), []
+    stats, silver, judged_bad = Counter(), [], []
     for rid, vs in votes.items():
         r = by_id[rid]
         if len(vs) < 3:
             stats["fewer than 3 judges"] += 1
+            continue
+        r.pop("audit", None)
+        # his rule: only fragments and duplicates reject a row; garbled/footnote are noted, not dropped
+        flags = Counter(v["flag"] for v in vs if v["flag"] in REJECT_FLAGS)
+        if sum(flags.values()) >= 2:
+            r["judges"] = [{k: v.get(k) for k in ("best", "combo", "ok", "why", "flag")} for v in vs]
+            r["status"], r["reject_by"] = "rejected", "judges"
+            r["reject_why"] = flags.most_common(1)[0][0]
+            stats[f"rejected by judges ({r['reject_why']})"] += 1
+            judged_bad.append(r)
             continue
         best = Counter(v["best"] for v in vs)
         okset = [{v["best"], *v["ok"]} for v in vs]
@@ -183,9 +221,13 @@ def consensus(audit_n=20):
         reach = Counter(i for s in okset for i in s)
         others = [i for i, n in reach.most_common() if i != top]
         r.setdefault("claude_label", r["label"])
-        r["judges"] = [{k: v.get(k) for k in ("best", "ok", "why", "doubt")} for v in vs]
+        r["judges"] = [{k: v.get(k) for k in ("best", "combo", "ok", "why", "flag")} for v in vs]
         r["label"] = top
-        if cnt >= 2 and not objection and sum(bool(v.get("doubt")) for v in vs) < 2:
+        combo = Counter(c for v in vs if v["best"] == top for c in v["combo"])
+        r["combo"] = [c for c, n in combo.items() if n >= 2]
+        if not r["combo"]:
+            r.pop("combo")
+        if cnt >= 2 and not objection:
             r["status"] = "silver"
             r["acceptable"] = [i for i in others if reach[i] >= 2]
             r["alternates"] = (r["acceptable"] + [i for i in others if i not in r["acceptable"]])[:2]
@@ -198,14 +240,15 @@ def consensus(audit_n=20):
             r["alternates"] = others[:2]
             r["why"] = "judges split: " + " / ".join(f"{v['best']} ({v.get('why', '')[:60]})" for v in vs)
             stats["judges split -> his review"] += 1
-        r.pop("audit", None)
     for r in random.Random(le.today()).sample(silver, min(audit_n, len(silver))):
+        r["audit"] = True
+    for r in random.Random(le.today() + "x").sample(judged_bad, min(reject_audit, len(judged_bad))):
         r["audit"] = True
     le.save_rows(rows)
     agree_me = sum(by_id[i]["label"] == by_id[i].get("claude_label") for i in votes)
     print(dict(stats))
     print(f"judges' answer = my earlier top pick on {agree_me}/{len(votes)} rows; spot checks flagged: "
-          f"{min(audit_n, len(silver))}")
+          f"{min(audit_n, len(silver))} silver + {min(reject_audit, len(judged_bad))} judge rejects")
 
 
 ANALYST_TASK = """# Layout analyst, round {rnd}
@@ -336,9 +379,9 @@ if __name__ == "__main__":
     def opt(k, d):
         return a[a.index(k) + 1] if k in a else d
     if cmd == "judge-prep":
-        judge_prep(int(opt("--batches", 4)), int(opt("--judges", 3)))
+        judge_prep(int(opt("--batches", 4)), int(opt("--judges", 3)), opt("--out", "judge"), opt("--scope", "all"))
     elif cmd == "consensus":
-        consensus(int(opt("--audit", 20)))
+        consensus(int(opt("--audit", 20)), opt("--out", "judge"), int(opt("--reject-audit", 0)))
     elif cmd == "analyst-prep" and "--round" in a:
         analyst_prep([x for x in a[1:a.index("--round")]], int(opt("--round", 1)))
     elif cmd == "apply" and len(a) > 1 and "--round" in a:

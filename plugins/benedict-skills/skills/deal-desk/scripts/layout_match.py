@@ -319,25 +319,28 @@ def plan(path):
             if not pk:
                 errs.append(f"slide {t['slide']} block {i + 1}: no pick")
                 continue
-            r = m.lib.get(pk)
-            if not r:
-                errs.append(f"slide {t['slide']} block {i + 1}: {pk!r} is not in layout_library.json")
+            ids = [x.strip() for x in pk.split("+") if x.strip()]  # "ig075+table" = combined on one exhibit
+            bad = [x for x in ids if x not in m.lib]
+            if bad or not ids:
+                errs.append(f"slide {t['slide']} block {i + 1}: {', '.join(bad) or pk!r} not in layout_library.json")
                 continue
+            r = m.lib[ids[0]]
             sh = shape(b)
             lo, hi = (r.get("items") or [1, 99])[:2]
-            if not lo <= sh["items"] <= hi:
+            if len(ids) == 1 and not lo <= sh["items"] <= hi:
                 warns.append(f"slide {t['slide']} {pk}: {sh['items']} items, layout takes {lo}-{hi}")
             top = [c["id"] for c in m.candidates(b, t["section"], 5)]
-            picks.append(pk + ("" if pk in top else "*"))
+            picks.append(pk + ("" if ids[0] in top else "*"))
             if i == 0:
                 alts = b.get("alts", [])          # alternatives shown for the lead exhibit
             if b.get("why"):
                 whys.append(b["why"])
-            used.add(pk)
-            n_bullets += pk == "bullets"
+            used.update(ids)
+            n_bullets += ids.count("bullets")
         if n_bullets > 2:
             warns.append(f"slide {t['slide']}: {n_bullets} bullet blocks (max 2)")
-        if t["blocks"] and all(m.lib.get(b.get("pick"), {}).get("data_type") == "text" for b in t["blocks"]):
+        if t["blocks"] and all(m.lib.get(x.strip(), {}).get("data_type") == "text"
+                               for b in t["blocks"] for x in (b.get("pick") or "").split("+")):
             warns.append(f"slide {t['slide']}: text only; add an exhibit (Rule 0)")
         lead = t["blocks"][0].get("pick") if t["blocks"] else None
         if leads and lead and lead == leads[-1]:
