@@ -13,3 +13,5 @@ Each line: the layout the matcher or Claude offered, what he chose instead, and 
 - 2026-10-02 · bk57 -> **side_tabs** · Case 1 projections (text, 5 items) · Deutsche Bank · Deutsche Bank Presentation to AmTrust Financial Services (05-Feb-2018) p7
 - 2026-10-02 · logo_row -> **page_landscape** · Applications and infrastructure software deals (list, 3 items) · Moelis · Moelis Presentation to Oracle (19-Apr-2016) p7
 - 2026-10-02 · logo_row -> **page_landscape** · Big data and security software deals (list, 3 items) · Moelis · Moelis Presentation to Oracle (19-Apr-2016) p7
+- 2026-10-02 · table -> **page_deals** · Selected APAC data centre transactions 2024-26 (comparison, 0 items) · Singapore Data Centres sector overview (hand-built deck, sg_dc_slides.py) slide 7
+- 2026-10-02 · pill_rows -> **page_text** · Forecast assumptions (text, 6 items) · Evercore · Evercore Presentation to Diversey (01-Feb-2023) p34

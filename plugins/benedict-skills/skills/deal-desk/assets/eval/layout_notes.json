@@ -11,10 +11,10 @@
   "bk21": {
    "was_use_when": "Precedents where the multiple is the point",
    "was_dont_use_when": "Deals with no disclosed multiple",
-   "use_when": "A table of deals or peers where one multiple, or its change over time (% or x turns), is the point: names in rows, the value drawn as an inline bar per row, median row at the bottom",
-   "dont_use_when": "Deals or peers with no multiple shown, e.g. EV and premium only (use table); more than 12 rows (use table)",
+   "use_when": "A table of deals or peers where one multiple, or its change over time (% or x turns), is the point: names in rows, the value drawn as an inline bar per row, median row at the bottom. Also deal details (date, target, acquirer, EV, premium) with target / acquirer logos and no bar",
+   "dont_use_when": "More than 12 rows (use table)",
    "round": 1,
-   "why": "bk22 over-picked for changes in multiples (2 misses)"
+   "why": "bk22 over-picked for changes in multiples (2 misses); 3 Oct: his review kept a logo deal-details block as bk21 (built with no bar), so the 'EV and premium only → table' clause was dropped"
   },
   "bk32": {
    "was_use_when": "Comparing peers on 4-6 metrics at once",

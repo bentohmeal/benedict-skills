@@ -1,5 +1,5 @@
 # Layout choice examples (train split)
-Built 2026-10-03 by `layout_eval.py examples` from 116 reviewed rows. Dev and final (hold-out) rows are never listed here. Read before the select step of deck-pipeline.md.
+Built 2026-10-03 by `layout_eval.py examples` from 117 reviewed rows. Dev and final (hold-out) rows are never listed here. Read before the select step of deck-pipeline.md.
 
 ## comparison
 - [market] Market direction: comparison, 2 items, 10 words, no numbers -> **ig102** (also right: ig132, pros_cons). judges 2/3 agree: weighing up drivers vs down drivers, 2 each
@@ -17,7 +17,7 @@ Built 2026-10-03 by `layout_eval.py examples` from 116 reviewed rows. Dev and fi
 - [market] Hyperscalers and cloud: comparison, 5 items, 5 words, no numbers -> **logo_row** (also right: page_landscape). judges 3/3 agree: One column of a three-group logo wall
 - [market] Owners and capital: comparison, 5 items, 9 words, no numbers -> **logo_row** (also right: page_landscape). judges 3/3 agree: one column of a 3-segment logo wall (owners and capital)
 - [market] Cost to build and run in Singapore: comparison, 1 items, 0 words, no numbers -> **table**. judges 3/3 agree: item / Singapore value / context table, 4 rows
-- [valuation] Selected APAC data centre transactions 2024-26: comparison, 1 items, 0 words, no numbers -> **table** (also right: page_deals). judges 3/3 agree: full-width precedent table, 8 deals, price and price per MW columns, no bars
+- [valuation] Selected APAC data centre transactions 2024-26: comparison, 1 items, 0 words, no numbers -> **page_deals** (also right: table). judges 3/3 agree: full-width precedent table, 8 deals, price and price per MW columns, no bars | alt 1: table -> page_deals in review
 - [valuation] Price per MW, asset deals (US$m): comparison, 1 items, 0 words, no numbers, unit US$m/MW -> **bar** (also right: bk22). judges 3/3 agree: Horizontal ranked bars for five deals
 
 ## composition
@@ -78,6 +78,7 @@ Built 2026-10-03 by `layout_eval.py examples` from 116 reviewed rows. Dev and fi
 - [financials] Historical and forecast financials: matrix, 6 items, 36 words, numbers -> **bk08** (also right: fin_table). judges 3/3 agree: wide P&L/CF table split historicals | management forecast with CAGR columns
 - [process] Chemicals P2P deals: matrix, 5 items, 37 words, numbers -> **bk33** (also right: bk21, bk24). judges 3/3 agree: Small-multiple grouped columns per deal with logos
 - [process] Process options: matrix, 3 items, 33 words, no numbers -> **bk48** (also right: table, bk35). judges 2/3 agree: 3 option columns x description/for/against rows, recommended column highlighted
+- [valuation] Deal details: matrix, 13 items, 19 words, numbers -> **bk21** (also right: bk23). judges 2/3 agree: precedent table with inline bars and median lines
 - [valuation] Offer sensitivity to Luna stock price: matrix, 10 items, 49 words, numbers -> **bk01** (also right: table). judges 2/3 agree: wide one-way sensitivity table: stock price $15-25 across columns, offer metrics in rows, current column boxed
 - [valuation] Implied enterprise value sensitivity: matrix, 7 items, 51 words, numbers, unit $mm -> **heatmap** (also right: bk44, bk13). judges 2/3 agree: twin two-way grids (EV and implied growth) WACC x terminal multiple, under UFCF table
 - [structure] Selected networks bond comparables: matrix, 6 items, 39 words, numbers -> **bk19** (also right: table). judges 2/3 agree: long bond comps table in 3 groups with mean/median rows

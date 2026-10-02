@@ -22778,9 +22778,9 @@
     "valuation",
     "appendix"
    ],
-   "use_when": "A table of deals or peers where one multiple, or its change over time (% or x turns), is the point: names in rows, the value drawn as an inline bar per row, median row at the bottom",
-   "dont_use_when": "Deals or peers with no multiple shown, e.g. EV and premium only (use table); more than 12 rows (use table)",
-   "look": "Deal table where one column is drawn as a small bar",
+   "use_when": "A table of deals or peers where one multiple, or its change over time (% or x turns), is the point: names in rows, the value drawn as an inline bar per row, median row at the bottom. Also deal details (date, target, acquirer, EV, premium) with target / acquirer logos and no bar",
+   "dont_use_when": "More than 12 rows (use table)",
+   "look": "Deal table where one column is drawn as a small bar (or none), names shown as logos",
    "items": [
     4,
     12

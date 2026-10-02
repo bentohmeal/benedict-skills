@@ -1,44 +1,5 @@
 [
  {
-  "row": "sg_dc_s02_b4",
-  "section": "market",
-  "message": "Cloud and AI demand far outruns what Singapore can add",
-  "block": {
-   "what": "Recent commitments to Singapore",
-   "data_type": "list",
-   "about": "who committed what capital and when: operators, tender awards",
-   "content": [
-    "AWS S$12bn to 2028",
-    "Digital Realty S$4.3bn Apr 2026",
-    "DC-CFA2 200MW Aug 2026",
-    "Equinix SG6 US$260m 20MW",
-    "Keppel 25MW floating DC 2028",
-    "DC-CFA1 80MW Jul 2023"
-   ]
-  },
-  "right": {
-   "id": "table",
-   "name": "table",
-   "data_type": "comparison",
-   "use_when": "Labelled numbers that need exact reading: comps, precedents, sources & uses, deal terms, one-way sensitivities (down / base / up), KPI lists with change vs prior period, requirements with detail",
-   "dont_use_when": "A trend over time (use a chart); ranking many players on one metric (use bar); 3-6 headline numbers with no extra columns (use stat_strip)"
-  },
-  "also_right": [],
-  "picked": {
-   "id": "timeline",
-   "name": "timeline",
-   "data_type": "time_series",
-   "use_when": "History and milestones (company, policy or market events), or a deal timetable; highlight today",
-   "dont_use_when": "Fewer than 4 dates; numeric trends (use a chart)"
-  },
-  "alts": [
-   "table",
-   "bullets"
-  ],
-  "why": "6 dated capital commitments (2023-2028); dates lean to a timeline, which shows the pace of commitments better than a table or bullets",
-  "in_top3": true
- },
- {
   "row": "rp_108_004_b3",
   "section": "company",
   "message": "Revised proposal offers $13.25 per share with committed financing",
@@ -77,44 +38,6 @@
   "in_top3": true
  },
  {
-  "row": "rp_115_004_b1",
-  "section": "market",
-  "message": "Unstructured data growing twice as fast as structured creates a large data management opportunity",
-  "block": {
-   "what": "Data growth",
-   "data_type": "time_series",
-   "about": "exabytes of data 2010-2020",
-   "unit": "EB",
-   "content": [
-    "2010 ~1,200",
-    "Axis to 2020 at 16,000+",
-    "Data needing protection vs actually protected",
-    "2020 need equals entire digital universe of 2018"
-   ]
-  },
-  "right": {
-   "id": "line",
-   "name": "line",
-   "data_type": "time_series",
-   "use_when": "Prices, rates or indices over many periods",
-   "dont_use_when": "Fewer than 6 points (use column)"
-  },
-  "also_right": [],
-  "picked": {
-   "id": "column",
-   "name": "column",
-   "data_type": "time_series",
-   "use_when": "Market size or volumes over time, or a few series side by side",
-   "dont_use_when": "Shares of a whole (use stacked / rings)"
-  },
-  "alts": [
-   "line",
-   "fin_chart"
-  ],
-  "why": "Data volume in EB 2010-2020, few points, growth story; column suits market size over time, line needs 6+ points",
-  "in_top3": true
- },
- {
   "row": "rp_011_027_b2",
   "section": "financials",
   "message": "Total corporate spend declines from 4.3% to 3.2% of sales through 2028E",
@@ -134,11 +57,11 @@
    "id": "bk07",
    "name": "Segment table with side tabs + commentary column",
    "data_type": "time_series",
-   "use_when": "Revenue / EBITDA / cash flow by year for 2-4 segments or business units, one tabbed block per segment plus a commentary column on what drives its swings",
+   "use_when": "Segment or business-unit financials with explanation per segment",
    "dont_use_when": "Single-segment business; more than 4 segments"
   },
   "also_right": [
-   "bullets"
+   "table"
   ],
   "picked": {
    "id": "bk06",
@@ -152,6 +75,42 @@
    "pill_rows"
   ],
   "why": "5 commentary points keyed to a corporate cost projection table; lettered commentary next to projections",
+  "in_top3": false
+ },
+ {
+  "row": "rp_085_007_b1",
+  "section": "market",
+  "message": "Moelis has advised on marquee software transactions across four sub-sectors",
+  "block": {
+   "what": "Applications and infrastructure software deals",
+   "data_type": "list",
+   "about": "selected transactions",
+   "content": [
+    "Applications software: JDA, PeopleSoft, SIS acquisitions",
+    "Infrastructure software: EMC / VMware, Thales / Vormetric, Novell, Telelogic",
+    "Deal values e.g. $635mm, $210mm, $220mm"
+   ]
+  },
+  "right": {
+   "id": "page_landscape",
+   "name": "Landscape page: logo wall by segment beside a chart",
+   "data_type": "comparison",
+   "use_when": "Competitive landscape or buyer universe: logos grouped into 3 segments, a scale bar chart beside it",
+   "dont_use_when": "Fewer than 6 players (use logo_row)"
+  },
+  "also_right": [],
+  "picked": {
+   "id": "logo_row",
+   "name": "logo row",
+   "data_type": "comparison",
+   "use_when": "Peers, buyers, sponsors, customers or tenants as logo tiles (target highlighted)",
+   "dont_use_when": "Players that need numbers beside them (use a bar chart with the target navy)"
+  },
+  "alts": [
+   "page_landscape",
+   "table"
+  ],
+  "why": "Deal tombstones grouped by sub-sector with few values; precedent shows logo tombstone grid",
   "in_top3": true
  },
  {
@@ -170,11 +129,11 @@
    ]
   },
   "right": {
-   "id": "table",
-   "name": "table",
-   "data_type": "comparison",
-   "use_when": "Labelled numbers that need exact reading: comps, precedents, sources & uses, deal terms, one-way sensitivities (down / base / up), KPI lists with change vs prior period, requirements with detail",
-   "dont_use_when": "A trend over time (use a chart); ranking many players on one metric (use bar); 3-6 headline numbers with no extra columns (use stat_strip)"
+   "id": "bk19",
+   "name": "Multiples table with mean/median band",
+   "data_type": "matrix",
+   "use_when": "Trading comps or precedent transactions",
+   "dont_use_when": "Fewer than 3 peers; when one multiple is the point (use bk21/bk22)"
   },
   "also_right": [
    "bk21"
@@ -191,6 +150,6 @@
    "table"
   ],
   "why": "Premiums paid (%) in precedent squeeze-outs vs undisturbed price and 52-week high; dedicated premiums exhibit",
-  "in_top3": true
+  "in_top3": false
  }
 ]

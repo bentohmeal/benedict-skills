@@ -222,8 +222,8 @@
    "id": "bk21",
    "name": "Precedent table with inline bars",
    "data_type": "matrix",
-   "use_when": "A table of deals or peers where one multiple, or its change over time (% or x turns), is the point: names in rows, the value drawn as an inline bar per row, median row at the bottom",
-   "dont_use_when": "Deals or peers with no multiple shown, e.g. EV and premium only (use table); more than 12 rows (use table)"
+   "use_when": "A table of deals or peers where one multiple, or its change over time (% or x turns), is the point: names in rows, the value drawn as an inline bar per row, median row at the bottom. Also deal details (date, target, acquirer, EV, premium) with target / acquirer logos and no bar",
+   "dont_use_when": "More than 12 rows (use table)"
   },
   "also_right": [
    "bk32",
@@ -323,6 +323,42 @@
    "table"
   ],
   "why": "Accretion/(dilution) % by year, P/E and equity share = merger impact grid",
+  "in_top3": true
+ },
+ {
+  "row": "rp_084_007_b2",
+  "section": "company",
+  "message": "Empire's Board moved from gaming collaboration to hiring Moelis and forming a Special Committee in 2019",
+  "block": {
+   "what": "Background on advisor role",
+   "data_type": "text",
+   "about": "Moelis advisory note",
+   "content": [
+    "Moelis was financial advisor to Empire on the bet365 agreement"
+   ]
+  },
+  "right": {
+   "id": "timeline",
+   "name": "timeline",
+   "data_type": "time_series",
+   "use_when": "History and milestones (company, policy or market events), or a deal timetable; highlight today",
+   "dont_use_when": "Fewer than 4 dates; numeric trends (use a chart)"
+  },
+  "also_right": [
+   "bullets"
+  ],
+  "picked": {
+   "id": "takeaway",
+   "name": "takeaway",
+   "data_type": "text",
+   "use_when": "One framing sentence or 'so what' in a dashed outline (Why invest line, page conclusion)",
+   "dont_use_when": "Lists or several points (use bullets / pill_rows)"
+  },
+  "alts": [
+   "bullets",
+   "pill_rows"
+  ],
+  "why": "One sentence note on advisor role; a single framing line, not a list",
   "in_top3": true
  },
  {

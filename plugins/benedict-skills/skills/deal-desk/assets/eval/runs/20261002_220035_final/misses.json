@@ -199,6 +199,42 @@
   "in_top3": true
  },
  {
+  "row": "rp_084_007_b2",
+  "section": "company",
+  "message": "Empire's Board moved from gaming collaboration to hiring Moelis and forming a Special Committee in 2019",
+  "block": {
+   "what": "Background on advisor role",
+   "data_type": "text",
+   "about": "Moelis advisory note",
+   "content": [
+    "Moelis was financial advisor to Empire on the bet365 agreement"
+   ]
+  },
+  "right": {
+   "id": "timeline",
+   "name": "timeline",
+   "data_type": "time_series",
+   "use_when": "History and milestones (company, policy or market events), or a deal timetable; highlight today",
+   "dont_use_when": "Fewer than 4 dates; numeric trends (use a chart)"
+  },
+  "also_right": [
+   "bullets"
+  ],
+  "picked": {
+   "id": "takeaway",
+   "name": "takeaway",
+   "data_type": "text",
+   "use_when": "One framing sentence or 'so what' in a dashed outline (Why invest line, page conclusion)",
+   "dont_use_when": "Lists or several points (use bullets / pill_rows)"
+  },
+  "alts": [
+   "bullets",
+   "page_text"
+  ],
+  "why": "One short framing note (advisor role): takeaway box; a single point is too thin for bullets",
+  "in_top3": true
+ },
+ {
   "row": "ig_t_map_apac",
   "section": "market",
   "message": "Capacity is shifting from Singapore to its neighbours",

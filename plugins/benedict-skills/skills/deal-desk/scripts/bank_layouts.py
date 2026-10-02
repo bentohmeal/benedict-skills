@@ -629,15 +629,36 @@ def bk20(d, s, x, y, w, h, comps, implied, implied_head=None):
     _bold_cells(shp.table, range(1, len(implied)), [len(implied[0]) - 1])
 
 
-def bk21(d, s, x, y, w, h, columns, rows, bar_col, fmt="{:.1f}x", mean=True):
+def bk21(d, s, x, y, w, h, columns, rows, bar_col=None, fmt="{:.1f}x", mean=True, logos=None):
     """Precedent table with inline bars: rows = lists; rows[i][bar_col] is a number drawn as a bar in that
-    column (with mean / median dashed lines)."""
+    column (with mean / median dashed lines). bar_col=None gives a plain deal table (no chart), e.g. deal
+    details beside a separate multiples exhibit. logos = {name: image path}: any cell whose text is a key shows
+    the logo instead (real bank precedent pages show targets and acquirers as logos)."""
     nc = len(columns)
-    cw = [w * 0.1] + [w * 0.6 / (nc - 2)] * (nc - 2) + [w * 0.3]
-    cw[bar_col] = w * 0.3 if bar_col == nc - 1 else cw[bar_col]
-    rh = min(0.3, (h - 0.3) / (len(rows) + 1))
-    body = [[("" if j == bar_col else c) for j, c in enumerate(r)] for r in rows]
-    d.table(s, x, y, w, [list(columns)] + body, col_widths=cw, row_h=rh)
+    if bar_col is None:
+        cw = [w * 0.1] + [w * 0.9 / (nc - 1)] * (nc - 1)
+    else:
+        cw = [w * 0.1] + [w * 0.6 / (nc - 2)] * (nc - 2) + [w * 0.3]
+        cw[bar_col] = w * 0.3 if bar_col == nc - 1 else cw[bar_col]
+    logos = logos or {}
+    rh = min(0.42 if logos else 0.3, (h - 0.3) / (len(rows) + 1))
+    body = [[("" if j == bar_col or (isinstance(c, str) and c in logos) else c) for j, c in enumerate(r)]
+            for r in rows]
+    # numbers right-aligned; names, dates and logo columns left
+    num = {j for j in range(1, nc) if j == bar_col or all(
+        isinstance(r[j], (int, float)) or str(r[j]).strip()[:1] in "$0123456789-–(" or str(r[j]).strip().lower() in ("n.a.", "na", "")
+        for r in rows)}
+    tbl = d.table(s, x, y, w, [list(columns)] + body, col_widths=cw, row_h=rh, num_cols=num).table
+    logo_cols = set()
+    for k, r in enumerate(rows):
+        for j, c in enumerate(r):
+            if isinstance(c, str) and c in logos:
+                logo_cols.add(j)
+                d._fit_picture(s, logos[c], x + sum(cw[:j]) + 0.05, y + rh * (k + 1) + 0.04, cw[j] - 0.1, rh - 0.08)
+    for j in logo_cols:  # logos sit centred in their cells, so their headers do too
+        tbl.cell(0, j).text_frame.paragraphs[0].alignment = PP_ALIGN.CENTER
+    if bar_col is None:
+        return
     bx = x + sum(cw[:bar_col]) + 0.08
     bw = cw[bar_col] - 0.7
     vals = [r[bar_col] for r in rows]
