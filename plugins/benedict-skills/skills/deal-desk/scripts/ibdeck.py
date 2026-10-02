@@ -1087,12 +1087,12 @@ class Deck:
             for r in c.text_frame.paragraphs[0].runs:
                 r.font.color.rgb = rgb(BLACK)
                 r.font.bold = True
-            self._lines(c, bottom=BLACK, right=BLACK if j2 == 0 else None)
+            self._cell_lines(c, bottom=BLACK, right=BLACK if j2 == 0 else None)
         for i2, vr in enumerate(values):
             c0 = tbl.cell(i2 + 1, 0)             # axis column: no fill, black rule on the right
             c0.fill.solid()
             c0.fill.fore_color.rgb = rgb(WHITE)
-            self._lines(c0, right=BLACK)
+            self._cell_lines(c0, right=BLACK)
             for j2, v in enumerate(vr):
                 cell = tbl.cell(i2 + 1, j2 + 1)
                 cell.fill.solid()
@@ -1100,23 +1100,23 @@ class Deck:
                 if base and (i2, j2) == base:
                     for r in cell.text_frame.paragraphs[0].runs:
                         r.font.bold = True
-                    self._lines(cell, top=BLACK, bottom=BLACK, left=BLACK, right=BLACK, width=1.5)
+                    self._cell_lines(cell, top=BLACK, bottom=BLACK, left=BLACK, right=BLACK, width=1.5)
                 elif base:   # neighbours draw the shared edge too, or PowerPoint drops half the box
                     bi, bj = base
                     k = {"left": (i2, j2 - 1), "right": (i2, j2 + 1), "top": (i2 - 1, j2), "bottom": (i2 + 1, j2)}
-                    self._lines(cell, width=1.5, **{e: BLACK for e, pos in k.items() if pos == (bi, bj)})
+                    self._cell_lines(cell, width=1.5, **{e: BLACK for e, pos in k.items() if pos == (bi, bj)})
                 else:
-                    self._lines(cell)
+                    self._cell_lines(cell)
         if base:   # axis cells next to the base cell
             bi, bj = base
             if bj == 0:
-                self._lines(tbl.cell(bi + 1, 0), right=BLACK, width=1.5)
+                self._cell_lines(tbl.cell(bi + 1, 0), right=BLACK, width=1.5)
             if bi == 0:
-                self._lines(tbl.cell(0, bj + 1), bottom=BLACK, width=1.5)
+                self._cell_lines(tbl.cell(0, bj + 1), bottom=BLACK, width=1.5)
         return shp
 
     @staticmethod
-    def _lines(cell, top=None, bottom=None, left=None, right=None, width=0.75):
+    def _cell_lines(cell, top=None, bottom=None, left=None, right=None, width=0.75):
         """Set all four cell borders (None = no line)."""
         tcPr = cell._tc.get_or_add_tcPr()
         for tag in ("a:lnL", "a:lnR", "a:lnT", "a:lnB"):
@@ -1314,6 +1314,17 @@ class Deck:
 
     # ---------- layout library (assets/layout_library.json; built by layout_tag.py) ----------
     _tags = None
+
+    def bank(self, s, bid, box=None, data=None):
+        """Draw bank design `bid` ("bk13", see bank_layouts.py / layout_library.json) in box (default: the slide body)
+        with data = the keyword arguments of that design (copy the shape from bank_samples.SAMPLE[bid])."""
+        import bank_layouts
+        fn = getattr(bank_layouts, bid, None)
+        if fn is None:
+            raise ValueError(f"{bid} is not a bank design (bk01-bk58; see bank_specs.SPECS)")
+        x, y, w, h = box or self.body
+        self._tag(s, f"layout {bid}")
+        return fn(self, s, x, y, w, h, **(data or {}))
 
     def layout(self, s, lid, variant=1, box=None, data=None, drop=(), highlight=None, library=None):
         """Place one variant (sub-diagram) of library layout `lid` ("ig045") in box and fill its text slots.

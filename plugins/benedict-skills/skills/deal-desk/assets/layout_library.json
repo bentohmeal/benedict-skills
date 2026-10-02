@@ -21892,6 +21892,2880 @@
    "thumb": "layout_thumbs/gal-05.png",
    "exemplars": [],
    "real_pages": 0
+  },
+  {
+   "id": "bk01",
+   "source": "bank",
+   "name": "Offer summary table (+ proposal panel)",
+   "group": "Deal terms",
+   "kind": "layout",
+   "data_type": "comparison",
+   "sections": [
+    "exec_summary",
+    "valuation",
+    "recommendation"
+   ],
+   "use_when": "Showing what an offer (or range of prices / exchange ratios) implies",
+   "dont_use_when": "No offer price yet; one price only (use a stat strip)",
+   "look": "Columns per offer price; rows = premium to each reference price, equity value, EV, multiples",
+   "items": [
+    2,
+    6
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk01', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk01']",
+   "thumb": "layout_thumbs/bk-01.png",
+   "exemplars": [
+    {
+     "deck": "BofA Presentation to Taro Pharmaceuticals (17-Jan-2024)",
+     "page": 3,
+     "bank": "BofA Securities",
+     "file": "BofA Securities\\Taro-Pharmaceuticals-Discussion-Materials-2024.01.17.pdf",
+     "title": "Transaction Overview – Overview of Transaction Premiums and Multiples",
+     "note": "Offer summary table: prices, premiums and implied values at each offer",
+     "thumb": "_pages/000_003.png"
+    },
+    {
+     "deck": "Barclays Presentation to Nuvei (2024.04)",
+     "page": 6,
+     "bank": "Barclays",
+     "file": "Barclays\\Barclays-Investment-Banking-Presentation-to-Nuvei-2024.04.pdf",
+     "title": "Transaction Financial Metrics – Analysis at Various Prices (Mgmt. Projections)",
+     "note": "Financial metrics at various prices, grouped bands",
+     "thumb": "_pages/003_006.png"
+    },
+    {
+     "deck": "Evercore Presentation to Diversey (01-Feb-2023)",
+     "page": 8,
+     "bank": "Evercore",
+     "file": "Evercore\\Evercore-Investment-Banking-Presentation-to-Diversey-01-Feb-2023.pdf",
+     "title": "Analysis At Various Prices",
+     "note": "Analysis at various prices",
+     "thumb": "_pages/039_008.png"
+    },
+    {
+     "deck": "Credit Suisse Presentation to SunGard (22-Mar-2005)",
+     "page": 9,
+     "bank": "Credit Suisse",
+     "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-22-Mar-2005.pdf",
+     "title": "Overview of Saturn Proposal (Cont'd)",
+     "note": "Implied premiums and multiples table",
+     "thumb": "_pages/029_009.png"
+    }
+   ],
+   "examples": [
+    "000_003",
+    "003_006",
+    "039_008",
+    "029_009",
+    "001_008",
+    "055_004",
+    "028_003",
+    "029_008",
+    "080_016",
+    "108_004"
+   ],
+   "real_pages": 10
+  },
+  {
+   "id": "bk05",
+   "source": "bank",
+   "name": "Issue to response pairs",
+   "group": "Deal terms",
+   "kind": "layout",
+   "data_type": "comparison",
+   "sections": [
+    "risks",
+    "thesis",
+    "recommendation"
+   ],
+   "use_when": "Answering objections, diligence findings, buyer concerns",
+   "dont_use_when": "Risks with no answer (use a risk list); pros vs cons of one option",
+   "look": "Left box = issue, arrow, right box = how we address it, 3-5 rows",
+   "items": [
+    3,
+    5
+   ],
+   "numbers": false,
+   "words": {},
+   "call": "d.bank(s, 'bk05', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk05']",
+   "thumb": "layout_thumbs/bk-05.png",
+   "exemplars": [
+    {
+     "deck": "J.P. Morgan Presentation to Kerzner (27-Feb-2006)",
+     "page": 15,
+     "bank": "J.P. Morgan",
+     "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-27-Feb-2006.pdf",
+     "title": "The ability to maintain Kerzner's Bahamian corporate structure – should allow a buyer to not pay tax on Kerzne",
+     "note": "Tax structure: issue vs response panels with arrows",
+     "thumb": "_pages/071_015.png"
+    }
+   ],
+   "examples": [
+    "071_015"
+   ],
+   "real_pages": 1
+  },
+  {
+   "id": "bk06",
+   "source": "bank",
+   "name": "Projections table + numbered commentary",
+   "group": "Financials",
+   "kind": "layout",
+   "data_type": "time_series",
+   "sections": [
+    "financials"
+   ],
+   "use_when": "Management case or business plan pages",
+   "dont_use_when": "Historicals only with no story to tell; more than 8 commentary points",
+   "look": "Full-width P&L / cash flow table, numbered commentary box underneath keyed to the rows",
+   "items": [
+    4,
+    10
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk06', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk06']",
+   "thumb": "layout_thumbs/bk-06.png",
+   "exemplars": [
+    {
+     "deck": "BofA Presentation to Taro Pharmaceuticals (17-Jan-2024)",
+     "page": 7,
+     "bank": "BofA Securities",
+     "file": "BofA Securities\\Taro-Pharmaceuticals-Discussion-Materials-2024.01.17.pdf",
+     "title": "Turtle Management Projections Summary",
+     "note": "Projections table over a numbered commentary box",
+     "thumb": "_pages/000_007.png"
+    },
+    {
+     "deck": "BofA Presentation to Taro Pharmaceuticals (17-Jan-2024)",
+     "page": 15,
+     "bank": "BofA Securities",
+     "file": "BofA Securities\\Taro-Pharmaceuticals-Discussion-Materials-2024.01.17.pdf",
+     "title": "Turtle Management Projections Summary",
+     "note": "Projections table with numbered commentary",
+     "thumb": "_pages/000_015.png"
+    },
+    {
+     "deck": "Jazz-Pharmaceuticals-Investment-Banking-Pitch-Book",
+     "page": 5,
+     "bank": "BIWS (training)",
+     "file": "_Training pitch books\\Jazz-Pharmaceuticals-Investment-Banking-Pitch-Book.pdf",
+     "title": "Management Case — Financial Projections – ($ USD in Millions)",
+     "note": "Management case projections table",
+     "thumb": "_pages/117_005.png"
+    }
+   ],
+   "examples": [
+    "000_007",
+    "000_015",
+    "117_005"
+   ],
+   "real_pages": 3
+  },
+  {
+   "id": "bk07",
+   "source": "bank",
+   "name": "Segment table with side tabs + commentary column",
+   "group": "Financials",
+   "kind": "layout",
+   "data_type": "time_series",
+   "sections": [
+    "financials",
+    "company"
+   ],
+   "use_when": "Segment or business-unit financials with explanation per segment",
+   "dont_use_when": "Single-segment business; more than 4 segments",
+   "look": "Table split into segments by vertical navy tabs, a numbered commentary column on the right",
+   "items": [
+    2,
+    4
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk07', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk07']",
+   "thumb": "layout_thumbs/bk-07.png",
+   "exemplars": [
+    {
+     "deck": "Centerview Presentation to Endeavor (08-Mar-2024)",
+     "page": 16,
+     "bank": "Centerview",
+     "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.08.pdf",
+     "title": "Segment Financial Overview: Owned Sports Properties – 2027E",
+     "note": "Segment table with numbered commentary column",
+     "thumb": "_pages/010_016.png"
+    },
+    {
+     "deck": "Centerview Presentation to Endeavor (21-Mar-2024)",
+     "page": 15,
+     "bank": "Centerview",
+     "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.21.pdf",
+     "title": "Segment Financial Overview: Events, Experiences & Rights – 2027E",
+     "note": "Segment table with commentary column",
+     "thumb": "_pages/011_015.png"
+    },
+    {
+     "deck": "Moelis Presentation to Empire Resorts (06-Aug-2019)",
+     "page": 18,
+     "bank": "Moelis",
+     "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-06-Aug-2019.pdf",
+     "title": "Management Base Case – Overview of Management's Base Case Financial Projections",
+     "note": "Base case projections with numbered commentary column",
+     "thumb": "_pages/083_018.png"
+    }
+   ],
+   "examples": [
+    "010_016",
+    "011_015",
+    "083_018"
+   ],
+   "real_pages": 3
+  },
+  {
+   "id": "bk08",
+   "source": "bank",
+   "name": "Historical | projection split table",
+   "group": "Financials",
+   "kind": "layout",
+   "data_type": "time_series",
+   "sections": [
+    "financials",
+    "valuation"
+   ],
+   "use_when": "Any A/E financial summary, UFCF build",
+   "dont_use_when": "No forecast columns; when a chart tells it faster",
+   "look": "Shaded divider between actual and forecast columns, CAGR columns at the end",
+   "items": [
+    4,
+    12
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk08', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk08']",
+   "thumb": "layout_thumbs/bk-08.png",
+   "exemplars": [
+    {
+     "deck": "Centerview Presentation to Endeavor (21-Mar-2024)",
+     "page": 28,
+     "bank": "Centerview",
+     "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.21.pdf",
+     "title": "Pro Forma Everest Revenue Growth Profile – Pro •ection",
+     "note": "Revenue growth profile table, historical vs projection",
+     "thumb": "_pages/011_028.png"
+    },
+    {
+     "deck": "Qatalyst Presentation to R1 RCM (31-Jul-2024)",
+     "page": 13,
+     "bank": "Qatalyst",
+     "file": "Qatalyst\\Qatalyst-Presentation-to-R1-RCM-31-Jul-2024.pdf",
+     "title": "Summary of Rover Unlevered Free Cash Flow Projections",
+     "note": "Unlevered free cash flow projections table",
+     "thumb": "_pages/109_013.png"
+    }
+   ],
+   "examples": [
+    "011_028",
+    "109_013"
+   ],
+   "real_pages": 2
+  },
+  {
+   "id": "bk09",
+   "source": "bank",
+   "name": "Management vs consensus",
+   "group": "Financials",
+   "kind": "layout",
+   "data_type": "comparison",
+   "sections": [
+    "financials",
+    "valuation"
+   ],
+   "use_when": "Testing whether the plan is credible",
+   "dont_use_when": "No broker consensus available",
+   "look": "Side-by-side table or dot rows comparing the plan with broker consensus, with chips for the gap",
+   "items": [
+    3,
+    8
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk09', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk09']",
+   "thumb": "layout_thumbs/bk-09.png",
+   "exemplars": [
+    {
+     "deck": "Barclays Presentation to Nuvei (2024.04)",
+     "page": 11,
+     "bank": "Barclays",
+     "file": "Barclays\\Barclays-Investment-Banking-Presentation-to-Nuvei-2024.04.pdf",
+     "title": "Neon: Management Plan vs Consensus Estimates – Management Plan vs. Wall Street Consensus Estimates",
+     "note": "Management plan vs consensus table",
+     "thumb": "_pages/003_011.png"
+    },
+    {
+     "deck": "Barclays Presentation to Medley Management (28-Jul-2019)",
+     "page": 38,
+     "bank": "Barclays",
+     "file": "Barclays\\Barclays-Presentation-to-Medley-Management-28-Jul-2019.pdf",
+     "title": "MDLY Projections Comparison (Current vs. Prior — Aug 201 8) – (combination with SIC and MCC)",
+     "note": "Projections comparison, current vs prior",
+     "thumb": "_pages/004_038.png"
+    },
+    {
+     "deck": "Centerview Presentation to Endeavor (21-Mar-2024)",
+     "page": 7,
+     "bank": "Centerview",
+     "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.21.pdf",
+     "title": "Reminder: – Everest Management Plan Vs. Consensus",
+     "note": "Plan vs consensus: rows of small line charts with figures",
+     "thumb": "_pages/011_007.png"
+    },
+    {
+     "deck": "Centerview Presentation to Endeavor (21-Mar-2024)",
+     "page": 37,
+     "bank": "Centerview",
+     "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.21.pdf",
+     "title": "Kilimanjaro In Everest Management Plan Vs. Consensus – 2023A",
+     "note": "Plan vs consensus: line strips per metric",
+     "thumb": "_pages/011_037.png"
+    }
+   ],
+   "examples": [
+    "003_011",
+    "004_038",
+    "011_007",
+    "011_037",
+    "113_009",
+    "114_011"
+   ],
+   "real_pages": 6
+  },
+  {
+   "id": "bk10",
+   "source": "bank",
+   "name": "Revision / variance table",
+   "group": "Financials",
+   "kind": "layout",
+   "data_type": "comparison",
+   "sections": [
+    "financials",
+    "process",
+    "recommendation"
+   ],
+   "use_when": "Updated plan, bid revisions, model changes",
+   "dont_use_when": "First presentation of a plan (nothing to compare to)",
+   "look": "Table with the revised lines boxed or highlighted, old vs new vs change",
+   "items": [
+    3,
+    8
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk10', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk10']",
+   "thumb": "layout_thumbs/bk-10.png",
+   "exemplars": [
+    {
+     "deck": "Credit Suisse Presentation to NewStar (7-Oct-2017)",
+     "page": 28,
+     "bank": "Credit Suisse",
+     "file": "Credit Suisse\\Credit-Suisse-Presentation-to-NewStar-7-Oct-2017.pdf",
+     "title": "Preliminary Osprey standalone projections comparison – Osprey management revised FY' 1 7 guidance in Osprey 02",
+     "note": "Projections comparison with revised-guidance markers",
+     "thumb": "_pages/022_028.png"
+    },
+    {
+     "deck": "Credit Suisse Presentation to NewStar (7-Oct-2017)",
+     "page": 30,
+     "bank": "Credit Suisse",
+     "file": "Credit Suisse\\Credit-Suisse-Presentation-to-NewStar-7-Oct-2017.pdf",
+     "title": "Preliminary Osprey standalone projections comparison (cont'd) – Updated forecast (Sept. 2017) versus prior 201",
+     "note": "Projections comparison continued",
+     "thumb": "_pages/022_030.png"
+    }
+   ],
+   "examples": [
+    "022_028",
+    "022_030"
+   ],
+   "real_pages": 2
+  },
+  {
+   "id": "bk11",
+   "source": "bank",
+   "name": "Plan vs street chart grid",
+   "group": "Financials",
+   "kind": "layout",
+   "data_type": "comparison",
+   "sections": [
+    "financials"
+   ],
+   "use_when": "Comparing two forecast cases visually",
+   "dont_use_when": "Only one forecast case",
+   "look": "2x2 charts (revenue, EBITDA, growth, margin) each with two cases and callout boxes",
+   "items": [
+    2,
+    4
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk11', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk11']",
+   "thumb": "layout_thumbs/bk-11.png",
+   "exemplars": [
+    {
+     "deck": "Qatalyst Presentation to R1 RCM (31-Jul-2024)",
+     "page": 7,
+     "bank": "Qatalyst",
+     "file": "Qatalyst\\Qatalyst-Presentation-to-R1-RCM-31-Jul-2024.pdf",
+     "title": "Overview of Rover Management Plan vs. – (SMM)",
+     "note": "Management plan vs street: four line charts with callouts",
+     "thumb": "_pages/109_007.png"
+    },
+    {
+     "deck": "JPMorgan Presentation to UGI Corporation (01-Apr-2019)",
+     "page": 4,
+     "bank": "J.P. Morgan",
+     "file": "J.P. Morgan\\JPMorgan-Presentation-to-UGI-Corporation-01-Apr-2019.pdf",
+     "title": "Comparison of APU management versus broker projections – Broker research",
+     "note": "Management vs broker: rows of small grouped column charts with CAGR tags",
+     "thumb": "_pages/069_004.png"
+    }
+   ],
+   "examples": [
+    "109_007",
+    "069_004"
+   ],
+   "real_pages": 2
+  },
+  {
+   "id": "bk13",
+   "source": "bank",
+   "name": "DCF page",
+   "group": "Valuation",
+   "kind": "page",
+   "data_type": "time_series",
+   "sections": [
+    "valuation"
+   ],
+   "use_when": "Any DCF output page",
+   "dont_use_when": "No cash-flow forecast; summary valuation page (use a football field)",
+   "look": "FCF build table on top, PV / implied price sensitivity grids below, optional key-assumptions panel",
+   "items": [
+    4,
+    8
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk13', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk13']",
+   "thumb": "layout_thumbs/bk-13.png",
+   "exemplars": [
+    {
+     "deck": "BofA Presentation to Taro Pharmaceuticals (17-Jan-2024)",
+     "page": 9,
+     "bank": "BofA Securities",
+     "file": "BofA Securities\\Taro-Pharmaceuticals-Discussion-Materials-2024.01.17.pdf",
+     "title": "Discounted Cash Flow Financial Analysis – Turtle Management Projections",
+     "note": "DCF build with two sensitivity grids underneath",
+     "thumb": "_pages/000_009.png"
+    },
+    {
+     "deck": "BAML Presentation to ArcLight Capital (14-Mar-2019)",
+     "page": 7,
+     "bank": "BofA Securities",
+     "file": "BofA Securities\\BAML-Presentation-to-ArcLight-Capital-14-Mar-2019.pdf",
+     "title": "Illustrative Valuation Analysis – Discounted Cash Flow Analysis — 3/1/2019 Adjusted Case",
+     "note": "DCF with sensitivity tables",
+     "thumb": "_pages/002_007.png"
+    },
+    {
+     "deck": "Evercore Presentation to Diversey (01-Feb-2023)",
+     "page": 47,
+     "bank": "Evercore",
+     "file": "Evercore\\Evercore-Investment-Banking-Presentation-to-Diversey-01-Feb-2023.pdf",
+     "title": "Discounted Cash Flow Analysis – (All financials in Smm unless otherwise",
+     "note": "DCF table with two sensitivity grids",
+     "thumb": "_pages/039_047.png"
+    },
+    {
+     "deck": "Moelis Presentation to Avangrid (17-May-2024)",
+     "page": 23,
+     "bank": "Moelis",
+     "file": "Moelis\\Moelis-Investment-Banking-Presentation-to-Avangrid-17-May-2024.pdf",
+     "title": "Networks — Discounted Cash Flow Analysis",
+     "note": "DCF cash flows over two sensitivity grids",
+     "thumb": "_pages/082_023.png"
+    }
+   ],
+   "examples": [
+    "000_009",
+    "002_007",
+    "039_047",
+    "082_023",
+    "093_023",
+    "117_013",
+    "120_014"
+   ],
+   "real_pages": 7
+  },
+  {
+   "id": "bk14",
+   "source": "bank",
+   "name": "WACC build",
+   "group": "Valuation",
+   "kind": "layout",
+   "data_type": "list",
+   "sections": [
+    "valuation",
+    "appendix"
+   ],
+   "use_when": "Discount rate support page",
+   "dont_use_when": "Main valuation summary; when WACC is just an input line",
+   "look": "Cost of equity and cost of debt build-up table with peer betas",
+   "items": [
+    5,
+    12
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk14', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk14']",
+   "thumb": "layout_thumbs/bk-14.png",
+   "exemplars": [
+    {
+     "deck": "Barclays Presentation to Medley Management (28-Jul-2019)",
+     "page": 40,
+     "bank": "Barclays",
+     "file": "Barclays\\Barclays-Presentation-to-Medley-Management-28-Jul-2019.pdf",
+     "title": "Cost of Equity Calculation: Pro Forma SIC",
+     "note": "Cost of equity table with bullets beside",
+     "thumb": "_pages/004_040.png"
+    },
+    {
+     "deck": "Citi Presentation to Trina Solar Special Committee (01-Aug-2016)",
+     "page": 13,
+     "bank": "Citi",
+     "file": "Citi\\Citi-Presentation-to-Trina-Solar-Special-Committee-01-Aug-2016.pdf",
+     "title": "DCF Valuation – Of Metrics",
+     "note": "WACC build tables",
+     "thumb": "_pages/019_013.png"
+    },
+    {
+     "deck": "Houlihan Presentation to Parker Drilling (06-Sep-2019)",
+     "page": 31,
+     "bank": "Houlihan Lokey",
+     "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-06-Sep-2019.pdf",
+     "title": "Weighted Average Cost of Capital Calculations (cont.) – Existing Capital Structure",
+     "note": "WACC calculation tables side by side",
+     "thumb": "_pages/063_031.png"
+    },
+    {
+     "deck": "Moelis Presentation to Avangrid (17-May-2024)",
+     "page": 40,
+     "bank": "Moelis",
+     "file": "Moelis\\Moelis-Investment-Banking-Presentation-to-Avangrid-17-May-2024.pdf",
+     "title": "Overview of Preliminary WACC Analysis – • TO estimate the weighted average costofcapital (\"WACC) for each busi",
+     "note": "WACC overview bullets over inputs table",
+     "thumb": "_pages/082_040.png"
+    }
+   ],
+   "examples": [
+    "004_040",
+    "019_013",
+    "063_031",
+    "082_040"
+   ],
+   "real_pages": 4
+  },
+  {
+   "id": "bk15",
+   "source": "bank",
+   "name": "Football field + commentary panel",
+   "group": "Valuation",
+   "kind": "layout",
+   "data_type": "range",
+   "sections": [
+    "valuation",
+    "exec_summary",
+    "recommendation"
+   ],
+   "use_when": "Valuation summary that needs the why behind each bar",
+   "dont_use_when": "A single method; more than 8 methods",
+   "look": "Football field with a side panel of assumptions or a commentary column per method",
+   "items": [
+    3,
+    7
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk15', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk15']",
+   "thumb": "layout_thumbs/bk-15.png",
+   "exemplars": [
+    {
+     "deck": "Barclays Presentation to Nuvei (2024.04)",
+     "page": 15,
+     "bank": "Barclays",
+     "file": "Barclays\\Barclays-Investment-Banking-Presentation-to-Nuvei-2024.04.pdf",
+     "title": "Neon Valuation Summary – Price per Share",
+     "note": "Valuation summary football field with assumptions column",
+     "thumb": "_pages/003_015.png"
+    },
+    {
+     "deck": "Barclays Presentation to Medley Management (28-Jul-2019)",
+     "page": 12,
+     "bank": "Barclays",
+     "file": "Barclays\\Barclays-Presentation-to-Medley-Management-28-Jul-2019.pdf",
+     "title": "MDLY Valuation Summary per Class A Share (combination with – MCC and MDLY)",
+     "note": "Valuation per share football field",
+     "thumb": "_pages/004_012.png"
+    },
+    {
+     "deck": "Citi Presentation to Trina Solar Special Committee (01-Aug-2016)",
+     "page": 10,
+     "bank": "Citi",
+     "file": "Citi\\Citi-Presentation-to-Trina-Solar-Special-Committee-01-Aug-2016.pdf",
+     "title": "Trina Solar Valuation Summary – Implied Share Price(l)",
+     "note": "Valuation summary bars with multiples and commentary columns",
+     "thumb": "_pages/019_010.png"
+    },
+    {
+     "deck": "J.P. Morgan Presentation to Kerzner (27-Feb-2006)",
+     "page": 22,
+     "bank": "J.P. Morgan",
+     "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-27-Feb-2006.pdf",
+     "title": "Preliminary valuation summary",
+     "note": "Valuation summary ranges with commentary column",
+     "thumb": "_pages/071_022.png"
+    }
+   ],
+   "examples": [
+    "003_015",
+    "004_012",
+    "019_010",
+    "071_022",
+    "120_013"
+   ],
+   "real_pages": 5
+  },
+  {
+   "id": "bk17",
+   "source": "bank",
+   "name": "Methodology overview",
+   "group": "Valuation",
+   "kind": "layout",
+   "data_type": "list",
+   "sections": [
+    "valuation"
+   ],
+   "use_when": "Explaining which methods were used and why",
+   "dont_use_when": "Showing the numbers themselves (use a football field)",
+   "look": "Navy label boxes down the left, description of each method to the right",
+   "items": [
+    2,
+    6
+   ],
+   "numbers": false,
+   "words": {},
+   "call": "d.bank(s, 'bk17', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk17']",
+   "thumb": "layout_thumbs/bk-17.png",
+   "exemplars": [
+    {
+     "deck": "Centerview Presentation on Project Canine (12-Dec-2012)",
+     "page": 14,
+     "bank": "Centerview",
+     "file": "Centerview\\Centerview-Presentation-on-Project-Canine-12-Dec-2012.pdf",
+     "title": "Overview of Valuation Methodologies Employed",
+     "note": "Valuation methods: label column beside comments and observations",
+     "thumb": "_pages/013_014.png"
+    },
+    {
+     "deck": "JPMorgan Presentation to UGI Corporation (01-Apr-2019)",
+     "page": 6,
+     "bank": "J.P. Morgan",
+     "file": "J.P. Morgan\\JPMorgan-Presentation-to-UGI-Corporation-01-Apr-2019.pdf",
+     "title": "Overview of valuation methodologies",
+     "note": "Valuation methods: coloured label column with bullets",
+     "thumb": "_pages/069_006.png"
+    },
+    {
+     "deck": "Citi Presentation to Chindata Special Committee (11-Aug-2023)",
+     "page": 7,
+     "bank": "Citi",
+     "file": "_Data centres & REITs\\Citi Presentation to Chindata Special Committee (11-Aug-2023).pdf",
+     "title": "Valuation Methodologies – Discounted Cashflow Analysis (\"DCF\")",
+     "note": "Valuation methods: navy label column beside descriptions",
+     "thumb": "_pages/120_007.png"
+    },
+    {
+     "deck": "Netflix-Equity-Debt-Convertible-Investment-Banking-Pitch-Book",
+     "page": 6,
+     "bank": "BIWS (training)",
+     "file": "_Training pitch books\\Netflix-Equity-Debt-Convertible-Investment-Banking-Pitch-Book.pdf",
+     "title": "Valuation Summary",
+     "note": "Valuation summary: numbered navy labels beside grey text bars",
+     "thumb": "_pages/119_006.png"
+    }
+   ],
+   "examples": [
+    "013_014",
+    "069_006",
+    "120_007",
+    "119_006"
+   ],
+   "real_pages": 4
+  },
+  {
+   "id": "bk18",
+   "source": "bank",
+   "name": "EV bridge waterfall",
+   "group": "Valuation",
+   "kind": "layout",
+   "data_type": "bridge",
+   "sections": [
+    "valuation",
+    "structure"
+   ],
+   "use_when": "Showing how value builds up",
+   "dont_use_when": "No adjustments between EV and equity",
+   "look": "Waterfall from PV of cash flows + TV to EV to equity value per share, with sensitivity tables",
+   "items": [
+    3,
+    8
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk18', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk18']",
+   "thumb": "layout_thumbs/bk-18.png",
+   "exemplars": [
+    {
+     "deck": "Jefferies Fairness Opinion for Focus Financial Partners (February 2023)",
+     "page": 17,
+     "bank": "Jefferies",
+     "file": "Jefferies\\Jefferies-Fairness-Opinion-for-Focus-Financial-Partners-February-2023.pdf",
+     "title": "Discounted Cash Flow Analysis – For Reference Only: Components of Discounted Cash Flow Value (Sin millions. ex",
+     "note": "DCF value bridge columns over sensitivity grids",
+     "thumb": "_pages/066_017.png"
+    }
+   ],
+   "examples": [
+    "066_017"
+   ],
+   "real_pages": 1
+  },
+  {
+   "id": "bk19",
+   "source": "bank",
+   "name": "Multiples table with mean/median band",
+   "group": "Comps & deals",
+   "kind": "layout",
+   "data_type": "matrix",
+   "sections": [
+    "valuation",
+    "appendix"
+   ],
+   "use_when": "Trading comps or precedent transactions",
+   "dont_use_when": "Fewer than 3 peers; when one multiple is the point (use bk21/bk22)",
+   "look": "Logo + name rows, multiples columns, shaded mean / median rows, groups by peer set",
+   "items": [
+    3,
+    15
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk19', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk19']",
+   "thumb": "layout_thumbs/bk-19.png",
+   "exemplars": [
+    {
+     "deck": "BofA Presentation to Taro Pharmaceuticals (17-Jan-2024)",
+     "page": 11,
+     "bank": "BofA Securities",
+     "file": "BofA Securities\\Taro-Pharmaceuticals-Discussion-Materials-2024.01.17.pdf",
+     "title": "Selected Publicly Traded Companies Analysis CalendarizedFinancials – Selected Publicly Traded Generics Compani",
+     "note": "Trading comps table with peer logos in the first column",
+     "thumb": "_pages/000_011.png"
+    },
+    {
+     "deck": "BAML Presentation to ArcLight Capital (14-Mar-2019)",
+     "page": 5,
+     "bank": "BofA Securities",
+     "file": "BofA Securities\\BAML-Presentation-to-ArcLight-Capital-14-Mar-2019.pdf",
+     "title": "Illustrative Valuation Analysis – Selected Publicly Traded Comparables",
+     "note": "Trading comps table",
+     "thumb": "_pages/002_005.png"
+    },
+    {
+     "deck": "Evercore Presentation to Diversey (01-Feb-2023)",
+     "page": 49,
+     "bank": "Evercore",
+     "file": "Evercore\\Evercore-Investment-Banking-Presentation-to-Diversey-01-Feb-2023.pdf",
+     "title": "Diamond: Companies Universe – Trad inq",
+     "note": "Companies universe table",
+     "thumb": "_pages/039_049.png"
+    },
+    {
+     "deck": "Perella Weinberg Presentation to rue21 (02-Nov-2012)",
+     "page": 67,
+     "bank": "Perella Weinberg",
+     "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-rue21-02-Nov-2012.pdf",
+     "title": "DRAFI' – COMPARABLE COMPANY ANALYSIS - KEY METRICS",
+     "note": "Comparable companies key metrics, grouped",
+     "thumb": "_pages/099_067.png"
+    }
+   ],
+   "examples": [
+    "000_011",
+    "002_005",
+    "039_049",
+    "099_067",
+    "116_008",
+    "000_012",
+    "105_018"
+   ],
+   "real_pages": 7
+  },
+  {
+   "id": "bk20",
+   "source": "bank",
+   "name": "Comps + implied value range",
+   "group": "Comps & deals",
+   "kind": "layout",
+   "data_type": "matrix",
+   "sections": [
+    "valuation"
+   ],
+   "use_when": "Linking multiples to an implied valuation",
+   "dont_use_when": "No implied value to show",
+   "look": "Comps table on top, implied EV / price range table below",
+   "items": [
+    3,
+    10
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk20', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk20']",
+   "thumb": "layout_thumbs/bk-20.png",
+   "exemplars": [
+    {
+     "deck": "Credit Suisse Presentation to SunGard (14-Dec-2004)",
+     "page": 23,
+     "bank": "Credit Suisse",
+     "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-14-Dec-2004.pdf",
+     "title": "Iverson Comparable Company Analysis",
+     "note": "Comparable companies table",
+     "thumb": "_pages/027_023.png"
+    },
+    {
+     "deck": "Credit Suisse Presentation to SunGard (14-Dec-2004)",
+     "page": 28,
+     "bank": "Credit Suisse",
+     "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-14-Dec-2004.pdf",
+     "title": "Allen Comparable Company Analysis",
+     "note": "Comparable companies table",
+     "thumb": "_pages/027_028.png"
+    }
+   ],
+   "examples": [
+    "027_023",
+    "027_028"
+   ],
+   "real_pages": 2
+  },
+  {
+   "id": "bk21",
+   "source": "bank",
+   "name": "Precedent table with inline bars",
+   "group": "Comps & deals",
+   "kind": "layout",
+   "data_type": "matrix",
+   "sections": [
+    "valuation",
+    "appendix"
+   ],
+   "use_when": "Precedents where the multiple is the point",
+   "dont_use_when": "Deals with no disclosed multiple",
+   "look": "Deal table where one column is drawn as a small bar",
+   "items": [
+    4,
+    12
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk21', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk21']",
+   "thumb": "layout_thumbs/bk-21.png",
+   "exemplars": [
+    {
+     "deck": "Centerview Presentation on Project Canine (12-Dec-2012)",
+     "page": 18,
+     "bank": "Centerview",
+     "file": "Centerview\\Centerview-Presentation-on-Project-Canine-12-Dec-2012.pdf",
+     "title": "Precedent Spectrum Acquisitions",
+     "note": "Precedent acquisitions table with grouped side bands",
+     "thumb": "_pages/013_018.png"
+    },
+    {
+     "deck": "JPMorgan Presentation to Searchlight (March 2023)",
+     "page": 7,
+     "bank": "J.P. Morgan",
+     "file": "J.P. Morgan\\JPMorgan-Investment-Banking-Presentation-to-Searchlight-March-2023.pdf",
+     "title": "Macroeconomic backdrop has compressed both multiples and share prices – Competition from FttH and FWA has take",
+     "note": "Peer multiples: logo rows with horizontal bars, grouped bands",
+     "thumb": "_pages/067_007.png"
+    }
+   ],
+   "examples": [
+    "013_018",
+    "067_007"
+   ],
+   "real_pages": 2
+  },
+  {
+   "id": "bk22",
+   "source": "bank",
+   "name": "Ranked columns with median line",
+   "group": "Comps & deals",
+   "kind": "layout",
+   "data_type": "comparison",
+   "sections": [
+    "valuation",
+    "company",
+    "market"
+   ],
+   "use_when": "Operational or valuation benchmarking on one metric",
+   "dont_use_when": "Many metrics at once (use bk32/bk33)",
+   "look": "One metric per peer as columns, sorted, target highlighted, median line and a callout",
+   "items": [
+    4,
+    12
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk22', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk22']",
+   "thumb": "layout_thumbs/bk-22.png",
+   "exemplars": [
+    {
+     "deck": "Houlihan Presentation to Parker Drilling (06-Sep-2019)",
+     "page": 15,
+     "bank": "Houlihan Lokey",
+     "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-06-Sep-2019.pdf",
+     "title": "Selected Benchmarking Data – LTM Total Revenue",
+     "note": "Benchmarking: two column charts stacked with median lines",
+     "thumb": "_pages/063_015.png"
+    },
+    {
+     "deck": "Morgan Stanley Presentation to Pivotal Software (22-Aug-2019)",
+     "page": 27,
+     "bank": "Morgan Stanley",
+     "file": "Morgan Stanley\\Morgan-Stanley-Presentation-to-Pivotal-Software-22-Aug-2019.pdf",
+     "title": "Morgan Stanley – Precedent Software Transactions — Ooerational Benchmarkina",
+     "note": "Precedent benchmarking: wide stacked column chart",
+     "thumb": "_pages/093_027.png"
+    },
+    {
+     "deck": "Morgan Stanley Presentation to Pivotal Software (22-Aug-2019)",
+     "page": 29,
+     "bank": "Morgan Stanley",
+     "file": "Morgan Stanley\\Morgan-Stanley-Presentation-to-Pivotal-Software-22-Aug-2019.pdf",
+     "title": "Morgan Stanley – Precedent Software Transactions — Valuation Benchmarkina",
+     "note": "Precedent multiples column chart with summary table",
+     "thumb": "_pages/093_029.png"
+    },
+    {
+     "deck": "Qatalyst Presentation to R1 RCM (31-Jul-2024)",
+     "page": 12,
+     "bank": "Qatalyst",
+     "file": "Qatalyst\\Qatalyst-Presentation-to-R1-RCM-31-Jul-2024.pdf",
+     "title": "CY25E Trading Statistics of Selected Companies – ss.o",
+     "note": "Trading statistics: two rows of column charts with side labels",
+     "thumb": "_pages/109_012.png"
+    }
+   ],
+   "examples": [
+    "063_015",
+    "093_027",
+    "093_029",
+    "109_012"
+   ],
+   "real_pages": 4
+  },
+  {
+   "id": "bk23",
+   "source": "bank",
+   "name": "Logo bars + side stats",
+   "group": "Comps & deals",
+   "kind": "layout",
+   "data_type": "comparison",
+   "sections": [
+    "valuation"
+   ],
+   "use_when": "Precedent multiples with who-bought-whom",
+   "dont_use_when": "No acquirer/target names to show",
+   "look": "Horizontal bars with acquirer/target logos, a stats table beside",
+   "items": [
+    4,
+    10
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk23', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk23']",
+   "thumb": "layout_thumbs/bk-23.png",
+   "exemplars": [
+    {
+     "deck": "Jefferies Fairness Opinion for Focus Financial Partners (February 2023)",
+     "page": 15,
+     "bank": "Jefferies",
+     "file": "Jefferies\\Jefferies-Fairness-Opinion-for-Focus-Financial-Partners-February-2023.pdf",
+     "title": "Precedent Transactions Analysis – Enterprise uue L TM EBITDA",
+     "note": "Precedent multiples as horizontal bars with logos and figures",
+     "thumb": "_pages/066_015.png"
+    },
+    {
+     "deck": "J.P. Morgan Presentation to Focus Media (19-Dec-2012)",
+     "page": 17,
+     "bank": "J.P. Morgan",
+     "file": "J.P. Morgan\\JPMorgan-Presentation-to-Focus-Media-19-Dec-2012.pdf",
+     "title": "Premium for precedent completed take-private transactions for – US-Iisted Chinese companies",
+     "note": "Take-private premiums: horizontal bars by logo, three periods",
+     "thumb": "_pages/070_017.png"
+    }
+   ],
+   "examples": [
+    "066_015",
+    "070_017"
+   ],
+   "real_pages": 2
+  },
+  {
+   "id": "bk24",
+   "source": "bank",
+   "name": "Column chart + deal table",
+   "group": "Comps & deals",
+   "kind": "layout",
+   "data_type": "matrix",
+   "sections": [
+    "valuation"
+   ],
+   "use_when": "Precedents where the chart and details are both needed",
+   "dont_use_when": "More than 10 deals (use bk19/bk21)",
+   "look": "Multiple-by-deal column chart on top, matching deal table with logos below",
+   "items": [
+    4,
+    10
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk24', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk24']",
+   "thumb": "layout_thumbs/bk-24.png",
+   "exemplars": [
+    {
+     "deck": "Evercore Presentation to Diversey (01-Feb-2023)",
+     "page": 50,
+     "bank": "Evercore",
+     "file": "Evercore\\Evercore-Investment-Banking-Presentation-to-Diversey-01-Feb-2023.pdf",
+     "title": "Precedent Transactions Analysis",
+     "note": "Precedent multiples columns with logo and metric table",
+     "thumb": "_pages/039_050.png"
+    },
+    {
+     "deck": "JPMorgan Presentation to UGI Corporation (January-2019)",
+     "page": 20,
+     "bank": "J.P. Morgan",
+     "file": "J.P. Morgan\\JPMorgan-Presentation-to-UGI-Corporation-January-2019.pdf",
+     "title": "Appen&x Additional of APU cms&rotims – Premiums paid in precedent affiliate MLP buy-in deals",
+     "note": "Affiliate buy-in premiums: wide column chart over stats table",
+     "thumb": "_pages/068_020.png"
+    }
+   ],
+   "examples": [
+    "039_050",
+    "068_020"
+   ],
+   "real_pages": 2
+  },
+  {
+   "id": "bk25",
+   "source": "bank",
+   "name": "Premiums paid",
+   "group": "Comps & deals",
+   "kind": "layout",
+   "data_type": "range",
+   "sections": [
+    "valuation",
+    "recommendation"
+   ],
+   "use_when": "Premium analysis",
+   "dont_use_when": "Private target (no share price)",
+   "look": "Premium by time period (1-day, 1-week, 4-week) as columns or ranges with mean/median, stats box",
+   "items": [
+    2,
+    5
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk25', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk25']",
+   "thumb": "layout_thumbs/bk-25.png",
+   "exemplars": [
+    {
+     "deck": "Citi Presentation to Aircastle (28-Oct-2019)",
+     "page": 19,
+     "bank": "Citi",
+     "file": "Citi\\Citi-Presentation-to-Aircastle-28-Oct-2019.pdf",
+     "title": "Selected Premiums Paid Analysis – For purpos« and",
+     "note": "Premiums paid by year, single column chart",
+     "thumb": "_pages/017_019.png"
+    },
+    {
+     "deck": "Citi Presentation to Aircastle (05-Nov-2019)",
+     "page": 16,
+     "bank": "Citi",
+     "file": "Citi\\Citi-Presentation-to-Aircastle-05-Nov-2019.pdf",
+     "title": "Selected Precedent Premiums Paid Analysis – F« Musraüve Purposes and Reference Only",
+     "note": "Premiums paid by year, single column chart",
+     "thumb": "_pages/018_016.png"
+    },
+    {
+     "deck": "Barclays Presentation to Medley Management (28-Jul-2019)",
+     "page": 15,
+     "bank": "Barclays",
+     "file": "Barclays\\Barclays-Presentation-to-Medley-Management-28-Jul-2019.pdf",
+     "title": "U.S. Precedent Transactions: Premium Analysis",
+     "note": "Premiums analysis: stacked columns over grouped columns",
+     "thumb": "_pages/004_015.png"
+    },
+    {
+     "deck": "Houlihan Presentation to Parker Drilling (06-Sep-2019)",
+     "page": 36,
+     "bank": "Houlihan Lokey",
+     "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-06-Sep-2019.pdf",
+     "title": "Summary of Selected Implied Premiums Paid Observations – Based on reviewed transactions. median implied premiu",
+     "note": "Implied premiums: grouped column chart with summary pills above",
+     "thumb": "_pages/063_036.png"
+    }
+   ],
+   "examples": [
+    "017_019",
+    "018_016",
+    "004_015",
+    "063_036",
+    "062_015",
+    "083_014",
+    "098_023",
+    "019_016"
+   ],
+   "real_pages": 8
+  },
+  {
+   "id": "bk26",
+   "source": "bank",
+   "name": "Price chart with lettered events",
+   "group": "Share price",
+   "kind": "layout",
+   "data_type": "time_series",
+   "sections": [
+    "company",
+    "valuation",
+    "market"
+   ],
+   "use_when": "Share price history with what moved it",
+   "dont_use_when": "Private target; no events worth flagging",
+   "look": "Share price line with letters A, B, C on it and an event list keyed to the letters",
+   "items": [
+    3,
+    8
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk26', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk26']",
+   "thumb": "layout_thumbs/bk-26.png",
+   "exemplars": [
+    {
+     "deck": "Barclays Presentation to Nuvei (2024.04)",
+     "page": 8,
+     "bank": "Barclays",
+     "file": "Barclays\\Barclays-Investment-Banking-Presentation-to-Nuvei-2024.04.pdf",
+     "title": "Neon Trading Performance Since IPO – Neon Stock Price Performance Since IPO",
+     "note": "Share price since IPO with events table",
+     "thumb": "_pages/003_008.png"
+    },
+    {
+     "deck": "Centerview Presentation to Endeavor (08-Mar-2024)",
+     "page": 8,
+     "bank": "Centerview",
+     "file": "Centerview\\Endeavor-Discussion-Materials-2024.03.08.pdf",
+     "title": "Everest Stock Price Performance Since IPO",
+     "note": "Share price chart with lettered events list",
+     "thumb": "_pages/010_008.png"
+    },
+    {
+     "deck": "Moelis Presentation to Avangrid (17-May-2024)",
+     "page": 53,
+     "bank": "Moelis",
+     "file": "Moelis\\Moelis-Investment-Banking-Presentation-to-Avangrid-17-May-2024.pdf",
+     "title": "Arizona share price performance",
+     "note": "Share price with markers over numbered key developments",
+     "thumb": "_pages/082_053.png"
+    },
+    {
+     "deck": "Moelis Presentation to Oracle (25-Jul-2016)",
+     "page": 7,
+     "bank": "Moelis",
+     "file": "Moelis\\Moelis-Presentation-to-Oracle-25-Jul-2016.pdf",
+     "title": "Summary of Key Napa Process Events – MOELIS&COMPANY",
+     "note": "Process events on a share price line with dated list below",
+     "thumb": "_pages/090_007.png"
+    }
+   ],
+   "examples": [
+    "003_008",
+    "010_008",
+    "082_053",
+    "090_007",
+    "107_006"
+   ],
+   "real_pages": 5
+  },
+  {
+   "id": "bk27",
+   "source": "bank",
+   "name": "Price chart with callout boxes",
+   "group": "Share price",
+   "kind": "layout",
+   "data_type": "time_series",
+   "sections": [
+    "company",
+    "process",
+    "market"
+   ],
+   "use_when": "Trading during a process, reaction to news",
+   "dont_use_when": "Private target; more than 5 callouts",
+   "look": "Share price + volume with dated callout boxes pinned to points",
+   "items": [
+    2,
+    5
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk27', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk27']",
+   "thumb": "layout_thumbs/bk-27.png",
+   "exemplars": [
+    {
+     "deck": "Citi Presentation to Trina Solar Special Committee (01-Aug-2016)",
+     "page": 15,
+     "bank": "Citi",
+     "file": "Citi\\Citi-Presentation-to-Trina-Solar-Special-Committee-01-Aug-2016.pdf",
+     "title": "Trina Solar's Share Last 3 Years Price Performance – Last",
+     "note": "Share price with annotated event boxes",
+     "thumb": "_pages/019_015.png"
+    },
+    {
+     "deck": "Credit Suisse Presentation to NewStar (7-Oct-2017)",
+     "page": 12,
+     "bank": "Credit Suisse",
+     "file": "Credit Suisse\\Credit-Suisse-Presentation-to-NewStar-7-Oct-2017.pdf",
+     "title": "Osprey annotated historical stock price performance – Orrent",
+     "note": "Annotated share price with event callouts",
+     "thumb": "_pages/022_012.png"
+    },
+    {
+     "deck": "Evercore Presentation to McMoRan Exploration (09-Nov-2012)",
+     "page": 13,
+     "bank": "Evercore",
+     "file": "Evercore\\Evercore-Presentation-to-McMoRan-Exploration-09-Nov-2012.pdf",
+     "title": "McMoRan Situation Analysis – Historical Share Trading Performance",
+     "note": "Share price with annotated event boxes",
+     "thumb": "_pages/042_013.png"
+    },
+    {
+     "deck": "Moelis Presentation to Empire Resorts (06-Aug-2019)",
+     "page": 12,
+     "bank": "Moelis",
+     "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-06-Aug-2019.pdf",
+     "title": "Analysis of the Joint Proposal – Annotated Stock Price - NYSE:NYNY",
+     "note": "Annotated share price with event callouts",
+     "thumb": "_pages/083_012.png"
+    }
+   ],
+   "examples": [
+    "019_015",
+    "022_012",
+    "042_013",
+    "083_012",
+    "108_006",
+    "109_003",
+    "113_004",
+    "116_003"
+   ],
+   "real_pages": 8
+  },
+  {
+   "id": "bk28",
+   "source": "bank",
+   "name": "Price chart + stats side table",
+   "group": "Share price",
+   "kind": "layout",
+   "data_type": "time_series",
+   "sections": [
+    "valuation",
+    "recommendation",
+    "company"
+   ],
+   "use_when": "Share price context for an offer",
+   "dont_use_when": "Private target",
+   "look": "Price line (often with offer range band) and a VWAP / high-low / premium table beside",
+   "items": [
+    3,
+    7
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk28', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk28']",
+   "thumb": "layout_thumbs/bk-28.png",
+   "exemplars": [
+    {
+     "deck": "Goldman Sachs Presentation to PowerSchool (05-Mar-2024)",
+     "page": 12,
+     "bank": "Goldman Sachs",
+     "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-PowerSchool-05-Mar-2024.pdf",
+     "title": "Picasso's Stock Price has Been Mostly Range Bound – 01dman",
+     "note": "Share price range with VWAP table beside",
+     "thumb": "_pages/052_012.png"
+    },
+    {
+     "deck": "Perella Weinberg Presentation to Oaktree Capital (07-Mar-2019)",
+     "page": 7,
+     "bank": "Perella Weinberg",
+     "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-Oaktree-Capital-07-Mar-2019.pdf",
+     "title": "Historical Stock Price Performance",
+     "note": "Indexed share price with returns table and highlight box",
+     "thumb": "_pages/098_007.png"
+    },
+    {
+     "deck": "PJT Presentation to Lionsgate (23-Jun-2016)",
+     "page": 9,
+     "bank": "PJT Partners",
+     "file": "PJT Partners\\PJT-Presentation-to-Lionsgate-23-Jun-2016.pdf",
+     "title": "Solar Share Price Performance (For Informational Purposes Only)",
+     "note": "Share price chart with statistics table beside",
+     "thumb": "_pages/104_009.png"
+    },
+    {
+     "deck": "PJT Presentation to Lionsgate (23-Jun-2016)",
+     "page": 16,
+     "bank": "PJT Partners",
+     "file": "PJT Partners\\PJT-Presentation-to-Lionsgate-23-Jun-2016.pdf",
+     "title": "Lunar Share Price Performance (For Informational Purposes Only)",
+     "note": "Share price chart with statistics table beside",
+     "thumb": "_pages/104_016.png"
+    }
+   ],
+   "examples": [
+    "052_012",
+    "098_007",
+    "104_009",
+    "104_016",
+    "108_005",
+    "017_016"
+   ],
+   "real_pages": 6
+  },
+  {
+   "id": "bk29",
+   "source": "bank",
+   "name": "Indexed performance + table",
+   "group": "Share price",
+   "kind": "layout",
+   "data_type": "time_series",
+   "sections": [
+    "company",
+    "market",
+    "valuation"
+   ],
+   "use_when": "Relative share price performance vs peers / index",
+   "dont_use_when": "Absolute price levels matter more than relative moves",
+   "look": "Several lines rebased to 100 with a performance table inset",
+   "items": [
+    2,
+    5
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk29', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk29']",
+   "thumb": "layout_thumbs/bk-29.png",
+   "exemplars": [
+    {
+     "deck": "Goldman Sachs Presentation to PowerSchool (05-Mar-2024)",
+     "page": 11,
+     "bank": "Goldman Sachs",
+     "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-PowerSchool-05-Mar-2024.pdf",
+     "title": "Picasso Share Price Performance Since IPO – 01dman",
+     "note": "Indexed share price since IPO with performance table",
+     "thumb": "_pages/052_011.png"
+    },
+    {
+     "deck": "Credit Suisse Presentation to NewStar (7-Oct-2017)",
+     "page": 13,
+     "bank": "Credit Suisse",
+     "file": "Credit Suisse\\Credit-Suisse-Presentation-to-NewStar-7-Oct-2017.pdf",
+     "title": "Osprey YTD indexed stock price performance – one. Three-",
+     "note": "Indexed share price vs index with returns table",
+     "thumb": "_pages/022_013.png"
+    },
+    {
+     "deck": "Barclays Presentation to ArcLight Capital (Aug-2018)",
+     "page": 3,
+     "bank": "Barclays",
+     "file": "Barclays\\Barclays-Presentation-to-ArcLight-Capital-Aug-2018.pdf",
+     "title": "Trans Am Price Performance",
+     "note": "Share price charts over a performance table",
+     "thumb": "_pages/006_003.png"
+    }
+   ],
+   "examples": [
+    "052_011",
+    "022_013",
+    "006_003"
+   ],
+   "real_pages": 3
+  },
+  {
+   "id": "bk30",
+   "source": "bank",
+   "name": "Volume at price",
+   "group": "Share price",
+   "kind": "layout",
+   "data_type": "composition",
+   "sections": [
+    "valuation",
+    "company"
+   ],
+   "use_when": "Shareholder cost base / where stock traded",
+   "dont_use_when": "Private target; no volume data",
+   "look": "Columns of volume traded at each price band, current range boxed, table below",
+   "items": [
+    5,
+    12
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk30', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk30']",
+   "thumb": "layout_thumbs/bk-30.png",
+   "exemplars": [
+    {
+     "deck": "Qatalyst Pitch Book on Autonomy Supplementary Materials (Jan-2011)",
+     "page": 4,
+     "bank": "Qatalyst",
+     "file": "Qatalyst\\Qatalyst-Pitch-Book-on-Autonomy-Supplementary-Materials-Jan-2011.pdf",
+     "title": "Recent Trading Volume At Various Prices – January 4, to January 24, 2011",
+     "note": "Volume at various prices column chart over statistics table",
+     "thumb": "_pages/116_004.png"
+    }
+   ],
+   "examples": [
+    "116_004"
+   ],
+   "real_pages": 1
+  },
+  {
+   "id": "bk31",
+   "source": "bank",
+   "name": "Public market overview",
+   "group": "Share price",
+   "kind": "page",
+   "data_type": "kpi_set",
+   "sections": [
+    "company",
+    "valuation"
+   ],
+   "use_when": "Public company snapshot",
+   "dont_use_when": "Private target",
+   "look": "Market data panel (price, shares, EV) + top shareholders table + price chart",
+   "items": [
+    4,
+    10
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk31', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk31']",
+   "thumb": "layout_thumbs/bk-31.png",
+   "exemplars": [
+    {
+     "deck": "J.P. Morgan Presentation to Kerzner (08-Mar-2006)",
+     "page": 6,
+     "bank": "J.P. Morgan",
+     "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-08-Mar-2006.pdf",
+     "title": "Public market overview",
+     "note": "Public market overview table over three small column charts",
+     "thumb": "_pages/072_006.png"
+    },
+    {
+     "deck": "J.P. Morgan Presentation to Kerzner (29-Apr-2006)",
+     "page": 6,
+     "bank": "J.P. Morgan",
+     "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-29-Apr-2006.pdf",
+     "title": "Public market overview",
+     "note": "Public market overview table over three small column charts",
+     "thumb": "_pages/075_006.png"
+    },
+    {
+     "deck": "JPMorgan Presentation to Searchlight (March 2023)",
+     "page": 3,
+     "bank": "J.P. Morgan",
+     "file": "J.P. Morgan\\JPMorgan-Investment-Banking-Presentation-to-Searchlight-March-2023.pdf",
+     "title": "CNSL public market overview",
+     "note": "Share price with events beside public market overview table",
+     "thumb": "_pages/067_003.png"
+    },
+    {
+     "deck": "Leerink Partners Presentation to Pardes Biosciences (16-Jul-2023)",
+     "page": 6,
+     "bank": "SVB Securities - Leerink",
+     "file": "SVB Securities - Leerink\\Leerink-Partners-Presentation-to-Pardes-Biosciences-16-Jul-2023.pdf",
+     "title": "PROJECT PACIFIC – Pacific Company Overview",
+     "note": "Company overview: market data and holders tables, share price with notes",
+     "thumb": "_pages/107_006.png"
+    }
+   ],
+   "examples": [
+    "072_006",
+    "075_006",
+    "067_003",
+    "107_006"
+   ],
+   "real_pages": 4
+  },
+  {
+   "id": "bk32",
+   "source": "bank",
+   "name": "Benchmarking bar matrix",
+   "group": "Benchmarking",
+   "kind": "layout",
+   "data_type": "matrix",
+   "sections": [
+    "company",
+    "market",
+    "valuation"
+   ],
+   "use_when": "Comparing peers on 4-6 metrics at once",
+   "dont_use_when": "One metric (use bk22); more than 8 peers",
+   "look": "Metric columns, each a set of small horizontal bars, company logos as rows",
+   "items": [
+    3,
+    6
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk32', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk32']",
+   "thumb": "layout_thumbs/bk-32.png",
+   "exemplars": [
+    {
+     "deck": "Barclays Presentation to Nuvei (2024.04)",
+     "page": 16,
+     "bank": "Barclays",
+     "file": "Barclays\\Barclays-Investment-Banking-Presentation-to-Nuvei-2024.04.pdf",
+     "title": "Benchmarking Operating and Valuation Metrics – CY24E Revenue Growth",
+     "note": "Benchmarking: bar columns per metric for each peer",
+     "thumb": "_pages/003_016.png"
+    }
+   ],
+   "examples": [
+    "003_016"
+   ],
+   "real_pages": 1
+  },
+  {
+   "id": "bk33",
+   "source": "bank",
+   "name": "Peer small multiples",
+   "group": "Benchmarking",
+   "kind": "layout",
+   "data_type": "comparison",
+   "sections": [
+    "company",
+    "market",
+    "valuation"
+   ],
+   "use_when": "Full peer benchmarking page",
+   "dont_use_when": "One metric (use bk22)",
+   "look": "Stacked rows of small column charts, one per metric, same peer order, medians noted",
+   "items": [
+    2,
+    4
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk33', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk33']",
+   "thumb": "layout_thumbs/bk-33.png",
+   "exemplars": [
+    {
+     "deck": "Citi Presentation to Aircastle (28-Oct-2019)",
+     "page": 5,
+     "bank": "Citi",
+     "file": "Citi\\Citi-Presentation-to-Aircastle-28-Oct-2019.pdf",
+     "title": "Benchmarking Select Publicly-Listed Aircraft Lessors – Firm Value and Equity Value",
+     "note": "Peer benchmarking: 2x2 grid of column charts",
+     "thumb": "_pages/017_005.png"
+    },
+    {
+     "deck": "Citi Presentation to Aircastle (28-Oct-2019)",
+     "page": 6,
+     "bank": "Citi",
+     "file": "Citi\\Citi-Presentation-to-Aircastle-28-Oct-2019.pdf",
+     "title": "Benchmarking Select Publicly-Listed Aircraft Lessors (Cont'd) – Portfolio Yield (1)",
+     "note": "Peer benchmarking continued: 2x2 grid of column charts",
+     "thumb": "_pages/017_006.png"
+    },
+    {
+     "deck": "Morgan Stanley Presentation to Pivotal Software (22-Aug-2019)",
+     "page": 19,
+     "bank": "Morgan Stanley",
+     "file": "Morgan Stanley\\Morgan-Stanley-Presentation-to-Pivotal-Software-22-Aug-2019.pdf",
+     "title": "Morgan Stanley – Benchmarkina Yoda — Revenue Metrics",
+     "note": "Benchmarking: two wide grouped column charts with peer groups",
+     "thumb": "_pages/093_019.png"
+    },
+    {
+     "deck": "Morgan Stanley Presentation to Pivotal Software (22-Aug-2019)",
+     "page": 20,
+     "bank": "Morgan Stanley",
+     "file": "Morgan Stanley\\Morgan-Stanley-Presentation-to-Pivotal-Software-22-Aug-2019.pdf",
+     "title": "Morgan Stanley – Benchmarkina Yoda — Gross Profit Metrics",
+     "note": "Benchmarking: two wide grouped column charts with peer groups",
+     "thumb": "_pages/093_020.png"
+    }
+   ],
+   "examples": [
+    "017_005",
+    "017_006",
+    "093_019",
+    "093_020",
+    "115_010",
+    "039_052",
+    "021_014"
+   ],
+   "real_pages": 7
+  },
+  {
+   "id": "bk35",
+   "source": "bank",
+   "name": "Company comparison matrix",
+   "group": "Benchmarking",
+   "kind": "layout",
+   "data_type": "matrix",
+   "sections": [
+    "company",
+    "market",
+    "process"
+   ],
+   "use_when": "Comparing 3-5 entities or precedent deals on attributes",
+   "dont_use_when": "More than 5 entities; purely numeric comparison (use bk19)",
+   "look": "One column per company / deal / entity with logo header, attribute rows, mini pies or ticks",
+   "items": [
+    3,
+    5
+   ],
+   "numbers": false,
+   "words": {},
+   "call": "d.bank(s, 'bk35', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk35']",
+   "thumb": "layout_thumbs/bk-35.png",
+   "exemplars": [
+    {
+     "deck": "Jefferies Fairness Opinion for Focus Financial Partners (February 2023)",
+     "page": 29,
+     "bank": "Jefferies",
+     "file": "Jefferies\\Jefferies-Fairness-Opinion-for-Focus-Financial-Partners-February-2023.pdf",
+     "title": "No Perfect Peer Set Exists for Ferdinand in the Public Markets – Aswt Uuugemenl",
+     "note": "Peer sets compared: label rows, three coloured columns, logos",
+     "thumb": "_pages/066_029.png"
+    },
+    {
+     "deck": "Credit Suisse Presentation to NewStar (7-Oct-2017)",
+     "page": 33,
+     "bank": "Credit Suisse",
+     "file": "Credit Suisse\\Credit-Suisse-Presentation-to-NewStar-7-Oct-2017.pdf",
+     "title": "Relative overview of business model and financial profile – Business development",
+     "note": "Business model comparison matrix with side label",
+     "thumb": "_pages/022_033.png"
+    },
+    {
+     "deck": "Perella Weinberg Presentation to Oaktree Capital (07-Mar-2019)",
+     "page": 15,
+     "bank": "Perella Weinberg",
+     "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-Oaktree-Capital-07-Mar-2019.pdf",
+     "title": "Overview of Selected Berlin Listed Entities(l) – (USS in millions)",
+     "note": "Listed entities compared: four columns with pies",
+     "thumb": "_pages/098_015.png"
+    },
+    {
+     "deck": "BofA Presentation to Green Plains Inc. (27-Apr-2023)",
+     "page": 27,
+     "bank": "BofA Securities",
+     "file": "BofA Securities\\Green-Plains-Discussion-Materials-2023.04.27.pdf",
+     "title": "Initial Proposal Considerations – Summary of Selected Precedent Transactions",
+     "note": "Precedent summary table with tick marks",
+     "thumb": "_pages/001_027.png"
+    }
+   ],
+   "examples": [
+    "066_029",
+    "022_033",
+    "098_015",
+    "001_027"
+   ],
+   "real_pages": 4
+  },
+  {
+   "id": "bk36",
+   "source": "bank",
+   "name": "2x2 chart dashboard",
+   "group": "Dashboards",
+   "kind": "layout",
+   "data_type": "time_series",
+   "sections": [
+    "financials",
+    "company",
+    "market"
+   ],
+   "use_when": "Historical / projected financial summary, market data",
+   "dont_use_when": "Only one chart worth showing",
+   "look": "Four titled charts in a grid (columns, lines or bars)",
+   "items": [
+    3,
+    4
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk36', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk36']",
+   "thumb": "layout_thumbs/bk-36.png",
+   "exemplars": [
+    {
+     "deck": "BofA Presentation to Green Plains Inc. (27-Apr-2023)",
+     "page": 16,
+     "bank": "BofA Securities",
+     "file": "BofA Securities\\Green-Plains-Discussion-Materials-2023.04.27.pdf",
+     "title": "Preliminary Take Private Analysis – Standalone GPP Financial Projections I Management",
+     "note": "Four-chart grid of projections",
+     "thumb": "_pages/001_016.png"
+    },
+    {
+     "deck": "Evercore Presentation to Vanguard Natural Resources (March-2019)",
+     "page": 9,
+     "bank": "Evercore",
+     "file": "Evercore\\Evercore-Presentation-to-Vanguard-Natural-Resources-March-2019.pdf",
+     "title": "Financial Projections – ($ in millions)",
+     "note": "Financial projections: 2x2 grid of line charts",
+     "thumb": "_pages/040_009.png"
+    },
+    {
+     "deck": "Citi Presentation to Aircastle (05-Nov-2019)",
+     "page": 7,
+     "bank": "Citi",
+     "file": "Citi\\Citi-Presentation-to-Aircastle-05-Nov-2019.pdf",
+     "title": "Europa Management Forecast – Total Revenue (1)",
+     "note": "Management forecast: 2x2 grid of line charts",
+     "thumb": "_pages/018_007.png"
+    },
+    {
+     "deck": "Perella Weinberg Presentation to Oaktree Capital (07-Mar-2019)",
+     "page": 16,
+     "bank": "Perella Weinberg",
+     "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-Oaktree-Capital-07-Mar-2019.pdf",
+     "title": "Berlin Financial Summary — Historical – (USS in millions)",
+     "note": "Historical financials: 2x2 grid of column charts",
+     "thumb": "_pages/098_016.png"
+    }
+   ],
+   "examples": [
+    "001_016",
+    "040_009",
+    "018_007",
+    "098_016",
+    "098_019",
+    "091_017",
+    "066_010"
+   ],
+   "real_pages": 7
+  },
+  {
+   "id": "bk37",
+   "source": "bank",
+   "name": "Company at-a-glance",
+   "group": "Dashboards",
+   "kind": "page",
+   "data_type": "kpi_set",
+   "sections": [
+    "company",
+    "exec_summary"
+   ],
+   "use_when": "Overview of a company in one page",
+   "dont_use_when": "Deep dive on one topic",
+   "look": "Description bullets + financial highlights table + price chart + mix pies (or map + portfolio table)",
+   "items": [
+    3,
+    8
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk37', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk37']",
+   "thumb": "layout_thumbs/bk-37.png",
+   "exemplars": [
+    {
+     "deck": "Perella Weinberg Presentation to Oaktree Capital (07-Mar-2019)",
+     "page": 12,
+     "bank": "Perella Weinberg",
+     "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-Oaktree-Capital-07-Mar-2019.pdf",
+     "title": "Overview of Berlin",
+     "note": "Company overview: description, financials table, line, pies",
+     "thumb": "_pages/098_012.png"
+    },
+    {
+     "deck": "Moelis Presentation to Oracle (19-Apr-2016)",
+     "page": 22,
+     "bank": "Moelis",
+     "file": "Moelis\\Moelis-Presentation-to-Oracle-19-Apr-2016.pdf",
+     "title": "Napa At A Glance – M E LIS C MP AN v",
+     "note": "Company at a glance: overview bullets, summary tables, wheel",
+     "thumb": "_pages/085_022.png"
+    },
+    {
+     "deck": "EXCO Resources Opportunity Overview by PJT (Q1-2018)",
+     "page": 3,
+     "bank": "PJT Partners",
+     "file": "PJT Partners\\EXCO-Resources-Opportunity-Overview-by-PJT-Q1-2018.pdf",
+     "title": "Executive Summary – Diverse Portfolio with Substantial, High-Quality Drilling Inventory",
+     "note": "Executive summary: framing bar, bullets, asset map, summary table",
+     "thumb": "_pages/102_003.png"
+    }
+   ],
+   "examples": [
+    "098_012",
+    "085_022",
+    "102_003"
+   ],
+   "real_pages": 3
+  },
+  {
+   "id": "bk38",
+   "source": "bank",
+   "name": "Wide table + KPI mini charts",
+   "group": "Dashboards",
+   "kind": "layout",
+   "data_type": "time_series",
+   "sections": [
+    "financials",
+    "company"
+   ],
+   "use_when": "Financials where 2-3 KPIs need a visual",
+   "dont_use_when": "No KPIs beyond the P&L",
+   "look": "Financial table on the left two-thirds, stacked mini charts on the right",
+   "items": [
+    4,
+    10
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk38', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk38']",
+   "thumb": "layout_thumbs/bk-38.png",
+   "exemplars": [
+    {
+     "deck": "Barclays Presentation to Nuvei (2024.04)",
+     "page": 10,
+     "bank": "Barclays",
+     "file": "Barclays\\Barclays-Investment-Banking-Presentation-to-Nuvei-2024.04.pdf",
+     "title": "Overview of Neon's Management Plan – Historical Financials and Management Projections",
+     "note": "Projections table with three small charts on the right",
+     "thumb": "_pages/003_010.png"
+    }
+   ],
+   "examples": [
+    "003_010"
+   ],
+   "real_pages": 1
+  },
+  {
+   "id": "bk39",
+   "source": "bank",
+   "name": "Debt / liquidity profile",
+   "group": "Dashboards",
+   "kind": "page",
+   "data_type": "composition",
+   "sections": [
+    "structure",
+    "financials"
+   ],
+   "use_when": "Capital structure and refinancing",
+   "dont_use_when": "Debt-free company",
+   "look": "Maturity chart + capital structure table + donuts for fixed/floating or currency",
+   "items": [
+    3,
+    8
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk39', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk39']",
+   "thumb": "layout_thumbs/bk-39.png",
+   "exemplars": [
+    {
+     "deck": "Centerview Presentation on Avaya (13-Jul-2017)",
+     "page": 7,
+     "bank": "Centerview",
+     "file": "Centerview\\Centerview-Presentation-on-Avaya-13-Jul-2017.pdf",
+     "title": "— Prehninory gnd Confi&ntial Dr<t — St*ct to Mmerial Chmge — – Summary Liquidity Analysis",
+     "note": "Liquidity: stacked columns beside commentary, table below",
+     "thumb": "_pages/012_007.png"
+    },
+    {
+     "deck": "Evercore Presentation to Vanguard Natural Resources (March-2019)",
+     "page": 4,
+     "bank": "Evercore",
+     "file": "Evercore\\Evercore-Presentation-to-Vanguard-Natural-Resources-March-2019.pdf",
+     "title": "Near-Term Timeline – ($ in millions)",
+     "note": "Liquidity forecast line with annotated events",
+     "thumb": "_pages/040_004.png"
+    },
+    {
+     "deck": "PJT Presentation to EXCO (January-2018)",
+     "page": 19,
+     "bank": "PJT Partners",
+     "file": "PJT Partners\\PJT-Presentation-to-EXCO-January-2018.pdf",
+     "title": "Existing Capital Structure",
+     "note": "Capital structure table over debt maturity columns",
+     "thumb": "_pages/101_019.png"
+    },
+    {
+     "deck": "Keppel DC REIT Investor Presentation (Aug-2025)",
+     "page": 14,
+     "bank": "Keppel DC REIT (issuer)",
+     "file": "_Data centres & REITs\\Keppel DC REIT Investor Presentation (Aug-2025).pdf",
+     "title": "Favourable Debt Profile – as at 30 Jun 2025",
+     "note": "Debt profile: maturity columns beside fixed/floating and currency rings",
+     "thumb": "_pages/121_014.png"
+    }
+   ],
+   "examples": [
+    "012_007",
+    "040_004",
+    "101_019",
+    "121_014"
+   ],
+   "real_pages": 4
+  },
+  {
+   "id": "bk40",
+   "source": "bank",
+   "name": "Mix donuts before / after",
+   "group": "Dashboards",
+   "kind": "layout",
+   "data_type": "composition",
+   "sections": [
+    "structure",
+    "company"
+   ],
+   "use_when": "Pro forma mix of revenue, geography, debt",
+   "dont_use_when": "Only one entity (use a single donut)",
+   "look": "Grid of donuts showing mix pre and post deal",
+   "items": [
+    2,
+    4
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk40', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk40']",
+   "thumb": "layout_thumbs/bk-40.png",
+   "exemplars": [
+    {
+     "deck": "Barclays Presentation to Medley Management (28-Jul-2019)",
+     "page": 22,
+     "bank": "Barclays",
+     "file": "Barclays\\Barclays-Presentation-to-Medley-Management-28-Jul-2019.pdf",
+     "title": "Asset Mix and Industry Diversification (combination with MCC – and MDLY)",
+     "note": "Asset-mix pies, four exhibits in a grid",
+     "thumb": "_pages/004_022.png"
+    },
+    {
+     "deck": "JPMorgan Presentation to UGI Corporation (January-2019)",
+     "page": 11,
+     "bank": "J.P. Morgan",
+     "file": "J.P. Morgan\\JPMorgan-Presentation-to-UGI-Corporation-January-2019.pdf",
+     "title": "C ON F IO ENTIA L – Illustrative buy-in of APU by IJGI transaction assumptions and sources and uses",
+     "note": "Buy-in assumptions, ownership rings, sources and uses",
+     "thumb": "_pages/068_011.png"
+    }
+   ],
+   "examples": [
+    "004_022",
+    "068_011"
+   ],
+   "real_pages": 2
+  },
+  {
+   "id": "bk41",
+   "source": "bank",
+   "name": "Market dynamics panels",
+   "group": "Dashboards",
+   "kind": "page",
+   "data_type": "comparison",
+   "sections": [
+    "market",
+    "thesis"
+   ],
+   "use_when": "Market argument with segments",
+   "dont_use_when": "Company-specific argument",
+   "look": "Three narrative panels across the top, supporting charts and a venn below",
+   "items": [
+    3,
+    3
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk41', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk41']",
+   "thumb": "layout_thumbs/bk-41.png",
+   "exemplars": [
+    {
+     "deck": "Qatalyst Pitch Book on Autonomy (Jan-2011)",
+     "page": 4,
+     "bank": "Qatalyst",
+     "file": "Qatalyst\\Qatalyst-Pitch-Book-on-Autonomy-Jan-2011.pdf",
+     "title": "Data Management Market Dynamics – Autonomy",
+     "note": "Market dynamics: three panels with Venn, line and column charts",
+     "thumb": "_pages/115_004.png"
+    },
+    {
+     "deck": "Moelis Presentation to Oracle (19-Apr-2016)",
+     "page": 23,
+     "bank": "Moelis",
+     "file": "Moelis\\Moelis-Presentation-to-Oracle-19-Apr-2016.pdf",
+     "title": "Summary of Current Cloud ERP Market Dynamics – MOE LIS & c OMPANY",
+     "note": "Market dynamics: stacked columns beside market-size triangle",
+     "thumb": "_pages/085_023.png"
+    }
+   ],
+   "examples": [
+    "115_004",
+    "085_023"
+   ],
+   "real_pages": 2
+  },
+  {
+   "id": "bk42",
+   "source": "bank",
+   "name": "Sources & uses (+ pro forma cap table)",
+   "group": "Structure",
+   "kind": "layout",
+   "data_type": "bridge",
+   "sections": [
+    "structure",
+    "returns"
+   ],
+   "use_when": "Funding a deal",
+   "dont_use_when": "No new money raised",
+   "look": "Sources table and uses table, optional pro forma capitalisation or outlay bar",
+   "items": [
+    3,
+    10
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk42', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk42']",
+   "thumb": "layout_thumbs/bk-42.png",
+   "exemplars": [
+    {
+     "deck": "Credit Suisse Presentation to NewStar (13-Apr-2017)",
+     "page": 9,
+     "bank": "Credit Suisse",
+     "file": "Credit Suisse\\Credit-Suisse-Presentation-to-NewStar-13-Apr-2017.pdf",
+     "title": "Preliminary sources & uses – Asset sale into fund",
+     "note": "Sources and uses tables side by side",
+     "thumb": "_pages/021_009.png"
+    },
+    {
+     "deck": "Evercore Presentation to Vanguard Natural Resources (March-2019)",
+     "page": 7,
+     "bank": "Evercore",
+     "file": "Evercore\\Evercore-Presentation-to-Vanguard-Natural-Resources-March-2019.pdf",
+     "title": "Illustrative Sources & Uses and Pro Forma Capitalization – ($ in millions)",
+     "note": "Sources and uses over pro forma capitalisation table",
+     "thumb": "_pages/040_007.png"
+    },
+    {
+     "deck": "Goldman Sachs Presentation to Dell (21-Aug-2019)",
+     "page": 10,
+     "bank": "Goldman Sachs",
+     "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-Dell-21-Aug-2019.pdf",
+     "title": "'o man – Pro Forma Vail Capitalization",
+     "note": "Pro forma capitalisation with adjustments columns",
+     "thumb": "_pages/056_010.png"
+    },
+    {
+     "deck": "Citi Presentation to Chindata Special Committee (11-Aug-2023)",
+     "page": 10,
+     "bank": "Citi",
+     "file": "_Data centres & REITs\\Citi Presentation to Chindata Special Committee (11-Aug-2023).pdf",
+     "title": "Transaction Sources and Uses – Sources & Uses",
+     "note": "Sources and uses table, full width",
+     "thumb": "_pages/120_010.png"
+    }
+   ],
+   "examples": [
+    "021_009",
+    "040_007",
+    "056_010",
+    "120_010",
+    "122_010",
+    "060_004"
+   ],
+   "real_pages": 6
+  },
+  {
+   "id": "bk43",
+   "source": "bank",
+   "name": "LBO summary page",
+   "group": "Structure",
+   "kind": "page",
+   "data_type": "kpi_set",
+   "sections": [
+    "returns",
+    "structure"
+   ],
+   "use_when": "LBO output on one page",
+   "dont_use_when": "Strategic merger with no sponsor return",
+   "look": "Four panels: transaction summary, S&U, purchase price, returns sensitivity",
+   "items": [
+    4,
+    4
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk43', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk43']",
+   "thumb": "layout_thumbs/bk-43.png",
+   "exemplars": [
+    {
+     "deck": "Credit Suisse Presentation to SunGard (14-Dec-2004)",
+     "page": 10,
+     "bank": "Credit Suisse",
+     "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-14-Dec-2004.pdf",
+     "title": "Preliminary LBO Analysis",
+     "note": "LBO analysis: sources and uses, returns, credit stats",
+     "thumb": "_pages/027_010.png"
+    },
+    {
+     "deck": "Credit Suisse Presentation to SunGard (01-Feb-2005)",
+     "page": 14,
+     "bank": "Credit Suisse",
+     "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-01-Feb-2005.pdf",
+     "title": "Solar LBO Analysis",
+     "note": "LBO analysis tables",
+     "thumb": "_pages/028_014.png"
+    },
+    {
+     "deck": "Credit Suisse Presentation to SunGard (22-Mar-2005)",
+     "page": 35,
+     "bank": "Credit Suisse",
+     "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-22-Mar-2005.pdf",
+     "title": "Illustrative LBO Analysis",
+     "note": "LBO analysis tables",
+     "thumb": "_pages/029_035.png"
+    },
+    {
+     "deck": "Goldman Sachs Presentation to Dell (10-Oct-2012)",
+     "page": 11,
+     "bank": "Goldman Sachs",
+     "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-Dell-10-Oct-2012.pdf",
+     "title": "ioldman – O Illustrative Leveraged Buyout Analysis",
+     "note": "LBO: sources and uses, returns grids",
+     "thumb": "_pages/057_011.png"
+    }
+   ],
+   "examples": [
+    "027_010",
+    "028_014",
+    "029_035",
+    "057_011",
+    "071_024",
+    "099_032",
+    "100_027",
+    "100_028"
+   ],
+   "real_pages": 8
+  },
+  {
+   "id": "bk44",
+   "source": "bank",
+   "name": "Twin sensitivity tables",
+   "group": "Structure",
+   "kind": "layout",
+   "data_type": "matrix",
+   "sections": [
+    "returns",
+    "valuation"
+   ],
+   "use_when": "IRR or price sensitivity on two different pairs of drivers",
+   "dont_use_when": "Only one pair of drivers matters",
+   "look": "Two labelled sensitivity grids side by side with driver headers",
+   "items": [
+    2,
+    2
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk44', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk44']",
+   "thumb": "layout_thumbs/bk-44.png",
+   "exemplars": [
+    {
+     "deck": "Credit Suisse Presentation to SunGard (14-Dec-2004)",
+     "page": 11,
+     "bank": "Credit Suisse",
+     "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-14-Dec-2004.pdf",
+     "title": "Preliminary LBO Sensitivity",
+     "note": "LBO sensitivity grids, price and leverage",
+     "thumb": "_pages/027_011.png"
+    },
+    {
+     "deck": "Credit Suisse Presentation to SunGard (22-Mar-2005)",
+     "page": 36,
+     "bank": "Credit Suisse",
+     "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-22-Mar-2005.pdf",
+     "title": "Illustrative LBO Sensitivity Analysis",
+     "note": "LBO sensitivity grids",
+     "thumb": "_pages/029_036.png"
+    },
+    {
+     "deck": "Evercore Presentation to M&F Worldwide (10-Aug-2011)",
+     "page": 22,
+     "bank": "Evercore",
+     "file": "Evercore\\Evercore-Presentation-to-MF-Worldwide-10-Aug-2011.pdf",
+     "title": "Process Considerations – Financial Sponsor Illustrative Ability to Pay",
+     "note": "Ability to pay: four sensitivity grids",
+     "thumb": "_pages/048_022.png"
+    },
+    {
+     "deck": "JPMorgan Presentation to UGI Corporation (January-2019)",
+     "page": 21,
+     "bank": "J.P. Morgan",
+     "file": "J.P. Morgan\\JPMorgan-Presentation-to-UGI-Corporation-January-2019.pdf",
+     "title": "Appen\".x Additional of APU cmsderotims – Illustrative impact to UGI share price based on various pro forma EPS",
+     "note": "Accretion grids under scenario labels, two cases side by side",
+     "thumb": "_pages/068_021.png"
+    }
+   ],
+   "examples": [
+    "027_011",
+    "029_036",
+    "048_022",
+    "068_021",
+    "112_020"
+   ],
+   "real_pages": 5
+  },
+  {
+   "id": "bk45",
+   "source": "bank",
+   "name": "Accretion / dilution",
+   "group": "Structure",
+   "kind": "layout",
+   "data_type": "comparison",
+   "sections": [
+    "structure",
+    "returns"
+   ],
+   "use_when": "Merger impact on EPS / DPU",
+   "dont_use_when": "All-cash deal by a private buyer",
+   "look": "Assumption bullets + A/D table across years, arrow callout on the key number",
+   "items": [
+    2,
+    5
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk45', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk45']",
+   "thumb": "layout_thumbs/bk-45.png",
+   "exemplars": [
+    {
+     "deck": "Houlihan Presentation to Parker Drilling (30-Aug-2019)",
+     "page": 7,
+     "bank": "Houlihan Lokey",
+     "file": "Houlihan Lokey\\Houlihan-Presentation-to-Parker-Drilling-30-Aug-2019.pdf",
+     "title": "Selected Illustrative Accretion I Dilution Calculations – Adjusted EBITDA",
+     "note": "Accretion/dilution table with lead bullets and callout",
+     "thumb": "_pages/062_007.png"
+    },
+    {
+     "deck": "Credit Suisse Presentation to McMoRan Exploration (03-Dec-2012)",
+     "page": 21,
+     "bank": "Credit Suisse",
+     "file": "Credit Suisse\\Credit-Suisse-Presentation-to-McMoRan-Exploration-03-Dec-2012.pdf",
+     "title": "Illustrative pro forma financial impact – Merger consideration 100% cash for Maine, 50/50 stocWcash for",
+     "note": "Pro forma impact: assumptions bullets beside results table",
+     "thumb": "_pages/026_021.png"
+    },
+    {
+     "deck": "Centerview Presentation on Project Canine (12-Dec-2012)",
+     "page": 11,
+     "bank": "Centerview",
+     "file": "Centerview\\Centerview-Presentation-on-Project-Canine-12-Dec-2012.pdf",
+     "title": "Dilution Associated with Conversion of Interim Financing",
+     "note": "Dilution table by scenario",
+     "thumb": "_pages/013_011.png"
+    }
+   ],
+   "examples": [
+    "062_007",
+    "026_021",
+    "013_011"
+   ],
+   "real_pages": 3
+  },
+  {
+   "id": "bk46",
+   "source": "bank",
+   "name": "Credit stats with highlighted ratios",
+   "group": "Structure",
+   "kind": "layout",
+   "data_type": "time_series",
+   "sections": [
+    "structure",
+    "financials"
+   ],
+   "use_when": "Financing impact on leverage / rating",
+   "dont_use_when": "No new debt",
+   "look": "Pro forma credit table with the key leverage rows boxed in red, bullets below",
+   "items": [
+    4,
+    8
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk46', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk46']",
+   "thumb": "layout_thumbs/bk-46.png",
+   "exemplars": [
+    {
+     "deck": "Netflix-Equity-Debt-Convertible-Investment-Banking-Pitch-Book",
+     "page": 9,
+     "bank": "BIWS (training)",
+     "file": "_Training pitch books\\Netflix-Equity-Debt-Convertible-Investment-Banking-Pitch-Book.pdf",
+     "title": "Pro-Forma Credit Statistics and Ratios – ($ USD in Millions Except for $ per Share Figures)",
+     "note": "Pro forma credit stats table between bullets",
+     "thumb": "_pages/119_009.png"
+    },
+    {
+     "deck": "Netflix-Equity-Debt-Convertible-Investment-Banking-Pitch-Book",
+     "page": 13,
+     "bank": "BIWS (training)",
+     "file": "_Training pitch books\\Netflix-Equity-Debt-Convertible-Investment-Banking-Pitch-Book.pdf",
+     "title": "Pro-Forma Credit Statistics and Ratios – ($ USD in Millions Except for $ per Share Figures)",
+     "note": "Pro forma credit stats table between bullets",
+     "thumb": "_pages/119_013.png"
+    },
+    {
+     "deck": "Netflix-Equity-Debt-Convertible-Investment-Banking-Pitch-Book",
+     "page": 8,
+     "bank": "BIWS (training)",
+     "file": "_Training pitch books\\Netflix-Equity-Debt-Convertible-Investment-Banking-Pitch-Book.pdf",
+     "title": "Comparable Debt Issuances",
+     "note": "Comparable debt: bullets over two tables",
+     "thumb": "_pages/119_008.png"
+    }
+   ],
+   "examples": [
+    "119_009",
+    "119_013",
+    "119_008"
+   ],
+   "real_pages": 3
+  },
+  {
+   "id": "bk47",
+   "source": "bank",
+   "name": "Financing term sheet",
+   "group": "Structure",
+   "kind": "layout",
+   "data_type": "list",
+   "sections": [
+    "structure"
+   ],
+   "use_when": "Debt package or financing structure",
+   "dont_use_when": "Single plain loan (one line of text)",
+   "look": "Vertical tabs per tranche, term rows (amount, pricing, tenor, call)",
+   "items": [
+    1,
+    4
+   ],
+   "numbers": false,
+   "words": {},
+   "call": "d.bank(s, 'bk47', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk47']",
+   "thumb": "layout_thumbs/bk-47.png",
+   "exemplars": [
+    {
+     "deck": "PJT Presentation to Lionsgate (23-Jun-2016)",
+     "page": 28,
+     "bank": "PJT Partners",
+     "file": "PJT Partners\\PJT-Presentation-to-Lionsgate-23-Jun-2016.pdf",
+     "title": "Lunar Financing Package Overview: $3,720mm of Funded Debt – with $4,570rnm of Total Commitments",
+     "note": "Financing package terms with coloured side tabs per tranche",
+     "thumb": "_pages/104_028.png"
+    },
+    {
+     "deck": "LionTree Presentation to Starz (14-Jun-2016)",
+     "page": 17,
+     "bank": "LionTree",
+     "file": "LionTree\\LionTree-Presentation-to-Starz-14-Jun-2016.pdf",
+     "title": "Preliminary Transaction Financing Structure – Luna will require —S4bn of new capital commitment to finance the",
+     "note": "Financing structure: debt tables with sources and uses",
+     "thumb": "_pages/080_017.png"
+    },
+    {
+     "deck": "LionTree Presentation to Starz (22-Jun-2016)",
+     "page": 7,
+     "bank": "LionTree",
+     "file": "LionTree\\LionTree-Presentation-to-Starz-22-Jun-2016.pdf",
+     "title": "Sources & Uses – Overview of Cunx•nt Capital Structure",
+     "note": "Sources and uses with debt tables",
+     "thumb": "_pages/081_007.png"
+    }
+   ],
+   "examples": [
+    "104_028",
+    "080_017",
+    "081_007"
+   ],
+   "real_pages": 3
+  },
+  {
+   "id": "bk48",
+   "source": "bank",
+   "name": "Structure options matrix",
+   "group": "Structure",
+   "kind": "layout",
+   "data_type": "comparison",
+   "sections": [
+    "structure"
+   ],
+   "use_when": "Collars, earn-outs, consideration options",
+   "dont_use_when": "Only one structure on the table",
+   "look": "Matrix of structures with mini illustration charts per option",
+   "items": [
+    2,
+    4
+   ],
+   "numbers": false,
+   "words": {},
+   "call": "d.bank(s, 'bk48', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk48']",
+   "thumb": "layout_thumbs/bk-48.png",
+   "exemplars": [
+    {
+     "deck": "Goldman Sachs Presentation to Dell (13-Aug-2019)",
+     "page": 5,
+     "bank": "Goldman Sachs",
+     "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-Dell-13-Aug-2019.pdf",
+     "title": "'01 man – Overview of Potential Collar Structures",
+     "note": "Collar structures compared: four columns with small payoff charts",
+     "thumb": "_pages/055_005.png"
+    }
+   ],
+   "examples": [
+    "055_005"
+   ],
+   "real_pages": 1
+  },
+  {
+   "id": "bk49",
+   "source": "bank",
+   "name": "Buyer funnel with stage counts",
+   "group": "Process",
+   "kind": "layout",
+   "data_type": "process",
+   "sections": [
+    "process"
+   ],
+   "use_when": "Sale process summary",
+   "dont_use_when": "Process not yet launched",
+   "look": "Funnel of parties contacted -> NDA -> bids -> final, with a counts table beside",
+   "items": [
+    3,
+    6
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk49', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk49']",
+   "thumb": "layout_thumbs/bk-49.png",
+   "exemplars": [
+    {
+     "deck": "Moelis Presentation to RealD (15-Oct-2015)",
+     "page": 6,
+     "bank": "Moelis",
+     "file": "Moelis\\Moelis-Presentation-to-RealD-15-Oct-2015.pdf",
+     "title": "Strategic Alternatives Process Summary – & COMPANY",
+     "note": "Process funnel: buyers contacted to final bid, with counts table",
+     "thumb": "_pages/091_006.png"
+    },
+    {
+     "deck": "Moelis Presentation to RealD (06-Nov-2015)",
+     "page": 9,
+     "bank": "Moelis",
+     "file": "Moelis\\Moelis-Presentation-to-RealD-06-Nov-2015.pdf",
+     "title": "Strategic Alternatives Process Summary – MOELIS Q C OM p ANY",
+     "note": "Process funnel with counts table",
+     "thumb": "_pages/092_009.png"
+    },
+    {
+     "deck": "SVB Securities Presentation to Pardes Biosciences (12-Jun-2023)",
+     "page": 2,
+     "bank": "SVB Securities - Leerink",
+     "file": "SVB Securities - Leerink\\SVB-Securities-Presentation-to-Pardes-Biosciences-12-Jun-2023.pdf",
+     "title": "PROJECT PACIFIC – SUMMARY OF STRATEGIC ALTERNATIVES PROCESS AS OF JUNE 13, 2023",
+     "note": "Process summary bullets beside a three-stage funnel",
+     "thumb": "_pages/106_002.png"
+    }
+   ],
+   "examples": [
+    "091_006",
+    "092_009",
+    "106_002"
+   ],
+   "real_pages": 3
+  },
+  {
+   "id": "bk50",
+   "source": "bank",
+   "name": "Calendar timeline",
+   "group": "Process",
+   "kind": "layout",
+   "data_type": "process",
+   "sections": [
+    "process"
+   ],
+   "use_when": "Process timetable with specific dates",
+   "dont_use_when": "Timeline longer than 3 months (use bk51)",
+   "look": "Month grids with coloured dates and a legend",
+   "items": [
+    1,
+    3
+   ],
+   "numbers": false,
+   "words": {},
+   "call": "d.bank(s, 'bk50', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk50']",
+   "thumb": "layout_thumbs/bk-50.png",
+   "exemplars": [
+    {
+     "deck": "BofA Presentation to Green Plains Inc. (27-Apr-2023)",
+     "page": 23,
+     "bank": "BofA Securities",
+     "file": "BofA Securities\\Green-Plains-Discussion-Materials-2023.04.27.pdf",
+     "title": "Process Overview – Illustrative GPRE and GPP Calendar of Events (if Take Private is Management and Board Appro",
+     "note": "Calendar grids beside a dates-and-events table",
+     "thumb": "_pages/001_023.png"
+    },
+    {
+     "deck": "EXCO Resources Opportunity Overview by PJT (Q1-2018)",
+     "page": 8,
+     "bank": "PJT Partners",
+     "file": "PJT Partners\\EXCO-Resources-Opportunity-Overview-by-PJT-Q1-2018.pdf",
+     "title": "Process Timing and Contact Information",
+     "note": "Process timing: calendar grids with key contacts below",
+     "thumb": "_pages/102_008.png"
+    },
+    {
+     "deck": "Qatalyst Presentation to Ancestry (Jul-2012)",
+     "page": 12,
+     "bank": "Qatalyst",
+     "file": "Qatalyst\\Qatalyst-Presentation-to-Ancestry-com-Jul-2012.pdf",
+     "title": "Permira Diligence Calendar",
+     "note": "Diligence calendar: weekly grid with coloured events",
+     "thumb": "_pages/111_012.png"
+    },
+    {
+     "deck": "Qatalyst Presentation to Ancestry (Jul-2012)",
+     "page": 16,
+     "bank": "Qatalyst",
+     "file": "Qatalyst\\Qatalyst-Presentation-to-Ancestry-com-Jul-2012.pdf",
+     "title": "Diligence Calendar",
+     "note": "Diligence calendar: weekly grid with coloured events",
+     "thumb": "_pages/111_016.png"
+    }
+   ],
+   "examples": [
+    "001_023",
+    "102_008",
+    "111_012",
+    "111_016"
+   ],
+   "real_pages": 4
+  },
+  {
+   "id": "bk51",
+   "source": "bank",
+   "name": "Gantt timeline",
+   "group": "Process",
+   "kind": "layout",
+   "data_type": "process",
+   "sections": [
+    "process",
+    "structure"
+   ],
+   "use_when": "Process or integration plan",
+   "dont_use_when": "Only 3-4 steps (use bk52)",
+   "look": "Workstreams as rows, weeks as columns, bars and milestones",
+   "items": [
+    4,
+    12
+   ],
+   "numbers": false,
+   "words": {},
+   "call": "d.bank(s, 'bk51', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk51']",
+   "thumb": "layout_thumbs/bk-51.png",
+   "exemplars": [
+    {
+     "deck": "Deutsche Bank Presentation to Dole Foods (15-Jul-2013)",
+     "page": 3,
+     "bank": "Deutsche Bank",
+     "file": "Deutsche Bank\\Deutsche-Bank-Presentation-to-Dole-Foods-15-Jul-2013.pdf",
+     "title": "Illustrative timeline – Tender offer process — assumes no cooperation from Dawn",
+     "note": "Gantt-style process timeline",
+     "thumb": "_pages/036_003.png"
+    },
+    {
+     "deck": "Goldman Sachs Presentation to PowerSchool (05-Mar-2024)",
+     "page": 28,
+     "bank": "Goldman Sachs",
+     "file": "Goldman Sachs\\Goldman-Sachs-Presentation-to-PowerSchool-05-Mar-2024.pdf",
+     "title": "or more investment banking materials, visit https://www.l Oxebitda.com/ – Framing Potential Process Timelines",
+     "note": "Gantt process timeline with milestones",
+     "thumb": "_pages/052_028.png"
+    },
+    {
+     "deck": "Moelis Presentation to Empire Resorts (06-Aug-2019)",
+     "page": 29,
+     "bank": "Moelis",
+     "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-06-Aug-2019.pdf",
+     "title": "M&A Process Timeline",
+     "note": "Process timeline: Gantt with grouped label column",
+     "thumb": "_pages/083_029.png"
+    },
+    {
+     "deck": "Moelis Presentation to Empire Resorts (06-Aug-2019)",
+     "page": 30,
+     "bank": "Moelis",
+     "file": "Moelis\\Moelis-Presentation-to-Empire-Resorts-06-Aug-2019.pdf",
+     "title": "Restructuring Process Timeline — No Waiver",
+     "note": "Restructuring timeline: Gantt with grouped label column",
+     "thumb": "_pages/083_030.png"
+    }
+   ],
+   "examples": [
+    "036_003",
+    "052_028",
+    "083_029",
+    "083_030"
+   ],
+   "real_pages": 4
+  },
+  {
+   "id": "bk52",
+   "source": "bank",
+   "name": "Phase arrows with columns",
+   "group": "Process",
+   "kind": "layout",
+   "data_type": "process",
+   "sections": [
+    "process",
+    "recommendation"
+   ],
+   "use_when": "Process phases with what happens in each",
+   "dont_use_when": "Exact dates matter (use bk50/bk51)",
+   "look": "Phase arrows across the top, text columns under each, recommendation callout",
+   "items": [
+    3,
+    5
+   ],
+   "numbers": false,
+   "words": {},
+   "call": "d.bank(s, 'bk52', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk52']",
+   "thumb": "layout_thumbs/bk-52.png",
+   "exemplars": [
+    {
+     "deck": "BofA Presentation to Green Plains Inc. (27-Apr-2023)",
+     "page": 21,
+     "bank": "BofA Securities",
+     "file": "BofA Securities\\Green-Plains-Discussion-Materials-2023.04.27.pdf",
+     "title": "Process Overview – Illustrative GPP Buy-in Process Overview (Public or Private Approach)",
+     "note": "Process phases as navy blocks down the left, bullets beside",
+     "thumb": "_pages/001_021.png"
+    },
+    {
+     "deck": "J.P. Morgan Presentation to Kerzner (27-Feb-2006)",
+     "page": 8,
+     "bank": "J.P. Morgan",
+     "file": "J.P. Morgan\\JPMorgan-Presentation-to-Kerzner-27-Feb-2006.pdf",
+     "title": "Process considerations",
+     "note": "Process considerations: arrow steps with text, recommendation box",
+     "thumb": "_pages/071_008.png"
+    }
+   ],
+   "examples": [
+    "001_021",
+    "071_008"
+   ],
+   "real_pages": 2
+  },
+  {
+   "id": "bk55",
+   "source": "bank",
+   "name": "Buyer profiles table",
+   "group": "Process",
+   "kind": "layout",
+   "data_type": "matrix",
+   "sections": [
+    "process",
+    "recommendation"
+   ],
+   "use_when": "Potential buyers list",
+   "dont_use_when": "Long buyer list with no detail (use a table)",
+   "look": "Logo, key financials, rationale, considerations, likelihood ball per buyer",
+   "items": [
+    2,
+    6
+   ],
+   "numbers": true,
+   "words": {},
+   "call": "d.bank(s, 'bk55', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk55']",
+   "thumb": "layout_thumbs/bk-55.png",
+   "exemplars": [
+    {
+     "deck": "Perella Weinberg Presentation to rue21 (02-Nov-2012)",
+     "page": 30,
+     "bank": "Perella Weinberg",
+     "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-rue21-02-Nov-2012.pdf",
+     "title": "DRAFI' – POTENTIAL STRATEGIC BUYERS - US",
+     "note": "Strategic buyers: logo rows with figures, commentary, Harvey balls",
+     "thumb": "_pages/099_030.png"
+    },
+    {
+     "deck": "Perella Weinberg Presentation to rue21 (02-Nov-2012)",
+     "page": 31,
+     "bank": "Perella Weinberg",
+     "file": "Perella Weinberg\\Perella-Weinberg-Presentation-to-rue21-02-Nov-2012.pdf",
+     "title": "DRAFI' – POTENTIAL STRATEGIC BUYERS - INTERNATIONAL",
+     "note": "Strategic buyers international: logo rows with Harvey balls",
+     "thumb": "_pages/099_031.png"
+    },
+    {
+     "deck": "Moelis Presentation to RealD (15-Oct-2015)",
+     "page": 11,
+     "bank": "Moelis",
+     "file": "Moelis\\Moelis-Presentation-to-RealD-15-Oct-2015.pdf",
+     "title": "Summary Of Recent Buyer Activity – & COMPANY",
+     "note": "Recent buyer activity: party, date, commentary",
+     "thumb": "_pages/091_011.png"
+    },
+    {
+     "deck": "Moelis Presentation to RealD (15-Oct-2015)",
+     "page": 12,
+     "bank": "Moelis",
+     "file": "Moelis\\Moelis-Presentation-to-RealD-15-Oct-2015.pdf",
+     "title": "Discussion of Other Process Participants",
+     "note": "Other process participants: party, discussion, status",
+     "thumb": "_pages/091_012.png"
+    }
+   ],
+   "examples": [
+    "099_030",
+    "099_031",
+    "091_011",
+    "091_012"
+   ],
+   "real_pages": 4
+  },
+  {
+   "id": "bk57",
+   "source": "bank",
+   "name": "Two-case comparison",
+   "group": "Process",
+   "kind": "layout",
+   "data_type": "comparison",
+   "sections": [
+    "company",
+    "thesis",
+    "appendix"
+   ],
+   "use_when": "Case studies, two scenarios",
+   "dont_use_when": "More than two cases",
+   "look": "Two cards or two text columns comparing case studies / scenarios",
+   "items": [
+    2,
+    2
+   ],
+   "numbers": false,
+   "words": {},
+   "call": "d.bank(s, 'bk57', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk57']",
+   "thumb": "layout_thumbs/bk-57.png",
+   "exemplars": [
+    {
+     "deck": "Credit Suisse Presentation to SunGard (14-Dec-2004)",
+     "page": 16,
+     "bank": "Credit Suisse",
+     "file": "Credit Suisse\\Credit-Suisse-Presentation-to-Sungard-14-Dec-2004.pdf",
+     "title": "Precedent Saturn Case Studies",
+     "note": "Precedent case studies side by side with logos",
+     "thumb": "_pages/027_016.png"
+    },
+    {
+     "deck": "Deutsche Bank Presentation to AmTrust Financial Services (05-Feb-2018)",
+     "page": 7,
+     "bank": "Deutsche Bank",
+     "file": "Deutsche Bank\\Deutsche-Bank-Presentation-to-AmTrust-Financial-Services-05-Feb-2018.pdf",
+     "title": "Preliminary management projection summary",
+     "note": "Plan summary: navy row labels, two-period comparison text",
+     "thumb": "_pages/032_007.png"
+    },
+    {
+     "deck": "Moelis Presentation to Oracle (25-Jul-2016)",
+     "page": 20,
+     "bank": "Moelis",
+     "file": "Moelis\\Moelis-Presentation-to-Oracle-25-Jul-2016.pdf",
+     "title": "Napa Projections — Summary Comparison – MOELIS&COMPANY",
+     "note": "Projections comparison table by scenario",
+     "thumb": "_pages/090_020.png"
+    }
+   ],
+   "examples": [
+    "027_016",
+    "032_007",
+    "090_020"
+   ],
+   "real_pages": 3
+  },
+  {
+   "id": "bk58",
+   "source": "bank",
+   "name": "Headed box columns",
+   "group": "Process",
+   "kind": "layout",
+   "data_type": "list",
+   "sections": [
+    "company",
+    "appendix"
+   ],
+   "use_when": "Company overview detail lists",
+   "dont_use_when": "A single list (use bullets)",
+   "look": "Two columns of headed boxes (e.g. initiatives, management & board)",
+   "items": [
+    2,
+    6
+   ],
+   "numbers": false,
+   "words": {},
+   "call": "d.bank(s, 'bk58', box=(x, y, w, h), data={...})  # data shape: bank_samples.SAMPLE['bk58']",
+   "thumb": "layout_thumbs/bk-58.png",
+   "exemplars": [
+    {
+     "deck": "Moelis Presentation to RealD (06-Nov-2015)",
+     "page": 38,
+     "bank": "Moelis",
+     "file": "Moelis\\Moelis-Presentation-to-RealD-06-Nov-2015.pdf",
+     "title": "Overview of Rhombus (cont'd) – MOELIS",
+     "note": "Company overview: product panels beside management table",
+     "thumb": "_pages/092_038.png"
+    }
+   ],
+   "examples": [
+    "092_038"
+   ],
+   "real_pages": 1
   }
  ]
 }

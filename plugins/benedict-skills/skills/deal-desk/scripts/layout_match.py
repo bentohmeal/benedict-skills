@@ -123,9 +123,15 @@ class Matcher:
         self.lib = {r["id"]: r for r in lib["layouts"]}
         pg = _load(PAGES_JSON) if os.path.exists(PAGES_JSON) else {"pages": [], "root": ""}
         self.root, self.pages = pg.get("root", ""), pg["pages"]
+        # a bank design (bk##) counts the real pages it was drawn from as its own
+        drawn = defaultdict(list)
+        for r in self.lib.values():
+            for pid in r.get("examples", []):
+                drawn[pid].append(r["id"])
+        self.uses = {p["id"]: drawn[p["id"]] + list(p["layouts"]) for p in self.pages}
         self.by_sec = defaultdict(Counter)      # section -> layout -> real pages
         for p in self.pages:
-            for lid in p["layouts"]:
+            for lid in self.uses[p["id"]]:
                 self.by_sec[p["section"]][lid] += 1
         self.top_all = max((r.get("real_pages", 0) for r in self.lib.values()), default=1) or 1
 
@@ -146,7 +152,7 @@ class Matcher:
         else:
             s -= min(2, 0.5 * (lo - n if n < lo else n - hi))
             why.append(f"{n} items vs {lo}-{hi}")
-        if not sh["numbers"] and r["id"] in NUMERIC:
+        if not sh["numbers"] and (r["id"] in NUMERIC or (r.get("source") == "bank" and r.get("numbers"))):
             s -= 2.5
             why.append("needs numbers")
         elif not sh["numbers"] and r.get("numbers"):
@@ -190,10 +196,10 @@ class Matcher:
 
     def exemplar(self, lid, section):
         """The real bank page closest to this use: same section first, layout as lead, fullest."""
-        hits = [p for p in self.pages if lid in p["layouts"]]
+        hits = [p for p in self.pages if lid in self.uses[p["id"]]]
         if not hits:
             return None
-        hits.sort(key=lambda p: (p["section"] != section, p["layouts"].index(lid) > 0, -p["fill"]))
+        hits.sort(key=lambda p: (p["section"] != section, self.uses[p["id"]].index(lid) > 0, -p["fill"]))
         p = hits[0]
         return {"bank": p["bank"], "deck": p["deck"], "page": p["page"], "note": p["note"],
                 "thumb": os.path.join(self.root, p["thumb"]) if self.root else p["thumb"]}
@@ -214,7 +220,7 @@ class Matcher:
     def candidates(self, block, section, k=5):
         sh = shape(block)
         pool = [r for r in self.lib.values()
-                if r.get("kind") == "layout"
+                if r.get("kind") == "layout" or r.get("source") == "bank"      # bank pages carry a whole slide
                 or (r.get("kind") == "map" and sh["data_type"] == "geography")
                 or (r.get("kind") == "icon_set" and sh["data_type"] == "icons")]
         ranked = sorted(((*self.score(r, sh, section), r) for r in pool), key=lambda t: -t[0])

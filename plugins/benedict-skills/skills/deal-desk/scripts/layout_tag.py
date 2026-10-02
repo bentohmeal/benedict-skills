@@ -488,11 +488,25 @@ def build():
                          "items": g.get("items"), "numbers": g.get("numbers", True), "words": g.get("words", {}),
                          "call": g["call"], "components": g.get("components", []), "thumb": g["thumb"],
                          "exemplars": g.get("exemplars", [])})
-    # real bank pages (deck_library/pages.py build): best 4 per layout, pages where it is the lead layout first
+    # bank designs rebuilt from the real pages (bank_layouts.py; what each is for in bank_specs.py)
+    from bank_specs import SPECS
+    for bid, g in sorted(SPECS.items()):
+        recs.append({"id": bid, "source": "bank", "name": g["name"], "group": g["group"], "kind": g["kind"],
+                     "data_type": g["data_type"], "sections": g["sections"], "use_when": g["use_when"],
+                     "dont_use_when": g["dont_use_when"], "look": g["look"], "items": g["items"],
+                     "numbers": g["numbers"], "words": {},
+                     "call": f"d.bank(s, '{bid}', box=(x, y, w, h), data={{...}})  # data shape: bank_samples.SAMPLE['{bid}']",
+                     "thumb": f"layout_thumbs/bk-{bid[2:]}.png", "exemplars": [], "examples": g["examples"]})
+    # real bank pages (deck_library/pages.py build): best 4 per layout, pages where it is the lead layout first;
+    # bank designs use the pages they were drawn from
     pages = _load(PAGES_JSON, {}).get("pages", [])
     for r in recs:
-        hits = [p for p in pages if r["id"] in p["layouts"]]
-        hits.sort(key=lambda p: (p["layouts"].index(r["id"]) > 0, -p["fill"]))
+        if r["source"] == "bank":
+            hits = [p for p in pages if p["id"] in r["examples"]]
+            hits.sort(key=lambda p: r["examples"].index(p["id"]))
+        else:
+            hits = [p for p in pages if r["id"] in p["layouts"]]
+            hits.sort(key=lambda p: (p["layouts"].index(r["id"]) > 0, -p["fill"]))
         r["real_pages"] = len(hits)
         r["exemplars"] = r["exemplars"] + [
             {"deck": p["deck"], "page": p["page"], "bank": p["bank"], "file": p["file"], "title": p["title"],
