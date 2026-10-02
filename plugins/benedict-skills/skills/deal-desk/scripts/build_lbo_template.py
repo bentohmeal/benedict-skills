@@ -846,6 +846,9 @@ def variants(c):
 
 def add_tables(path, T):
     """Create the three real Excel data tables (openpyxl cannot)."""
+    if sys.platform != "win32":
+        print("MAC BUILD: data tables need Excel, skipped. Finish on the PC: run this same command there.")
+        return
     for rng, row_in, col_in in T["tables"]:
         run([os.path.join(HERE, "office.py"), "datatable", path, rng, row_in, col_in], check=True)
 
@@ -907,7 +910,7 @@ if __name__ == "__main__":
     opt = lambda k, d: args[args.index(k) + 1] if k in args else d  # noqa: E731
     cfg = json.load(open(opt("--fill", None), encoding="utf-8")) if "--fill" in args else None
     n_years, units = int(opt("--years", 5)), opt("--units", "$m")
-    verify_on = "--no-verify" not in args
+    verify_on = "--no-verify" not in args and sys.platform == "win32"
     if cfg and verify_on:
         good = verify(cfg, out, n_years, units)
     else:

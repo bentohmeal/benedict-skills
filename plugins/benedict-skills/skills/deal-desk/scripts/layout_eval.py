@@ -44,8 +44,9 @@ EXAMPLES = os.path.join(EVAL, "examples.md")
 SWAPS = os.path.join(EVAL, "swaps.md")
 RUNS = os.path.join(EVAL, "runs")
 PIPELINE = os.path.join(HERE, "..", "references", "deck-pipeline.md")
-TOOLKIT = os.environ.get("DEAL_DESK_TOOLKIT",
-                         r"C:\Users\user\Documents\Google Drive\Claude Things\output\_Deal Desk Toolkit")
+sys.path.insert(0, HERE)
+import paths  # noqa: E402
+TOOLKIT = os.environ.get("DEAL_DESK_TOOLKIT", str(paths.TOOLKIT))
 REVIEW_XLSX = os.path.join(TOOLKIT, "golden_review.xlsx")
 
 # layouts that do the same job (a bank's bar is as right as our column): counted as right by default
@@ -158,7 +159,9 @@ def seed_pages(out, n=0):
             page.get_pixmap(matrix=pymupdf.Matrix(2400 / page.rect.width, 2400 / page.rect.width)).save(
                 os.path.join(scans, p["id"] + ".png"))
         doc.close()
-    if os.listdir(scans):
+    if os.listdir(scans) and sys.platform != "win32":
+        print("  (scanned pages need Windows OCR (ocr.ps1): skipped on this machine, re-run on the PC)")
+    elif os.listdir(scans):
         ocr_out = os.path.join(scans, "ocr.tsv")
         subprocess.run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File",
                         os.path.join(HERE, "deck_library", "ocr.ps1"), scans, ocr_out], check=True)

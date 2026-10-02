@@ -12,7 +12,7 @@ description: "Refresh Benedict's expense tracker by pulling DBS PayLah! and iBan
 
 `$WT` is the Weekly Tracker folder. Resolve it at the start of every local command (shell state does not persist); works whether `Claude Things` or `Weekly Tracker` itself is connected in the Claude desktop app:
 ```bash
-WT=""; for d in "$HOME/mnt/Claude Things/Weekly Tracker" "$HOME/mnt/Weekly Tracker" "/c/Users/user/Documents/Google Drive/Claude Things/Weekly Tracker"; do [ -d "$d" ] && WT="$d" && break; done
+WT=""; for d in "$HOME/mnt/Claude Things/Weekly Tracker" "$HOME/mnt/Weekly Tracker" "/c/Users/user/Documents/Google Drive/Claude Things/Weekly Tracker" "$HOME"/Library/CloudStorage/GoogleDrive-*/"My Drive/Claude Things/Weekly Tracker" "$HOME/Google Drive/Claude Things/Weekly Tracker"; do [ -d "$d" ] && WT="$d" && break; done
 ```
 
 ## Step 1 — Read the existing tracker

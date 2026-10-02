@@ -1,4 +1,10 @@
-"""Drive the real Excel / PowerPoint on this PC (replaces the LibreOffice recalc.py the installed skills mention).
+"""Drive the real Excel / PowerPoint on the Windows PC; on the Mac fall back to LibreOffice (see "Mac" below).
+
+Windows: full Excel / PowerPoint through COM (exact output, real What-If Data Tables).
+Mac / Linux: no COM, so `recalc`, `values`, `render`, `pdf`, `preview`, `density` run through LibreOffice headless
+  (`brew install --cask libreoffice`). Slides and sheets look close to Office, not identical, and recalc is a CHECK
+  only: it never overwrites the model, so cached values are saved by the PC's recalc. `datatable` needs real Excel,
+  so it is PC-only: build and style on either machine, then run `datatable` + `recalc` on the PC (the file is in Drive).
 
 Usage (use the full Python path, see SKILL.md):
   python office.py recalc  model.xlsx            -> full recalc in Excel, save, JSON report of errors / circular refs
@@ -13,10 +19,15 @@ Usage (use the full Python path, see SKILL.md):
 """
 import json
 import os
+import shutil
+import subprocess
 import sys
+import tempfile
 
-import pythoncom
-import win32com.client as win32
+WIN = sys.platform == "win32"
+if WIN:
+    import pythoncom
+    import win32com.client as win32
 
 ERRORS = ("#REF!", "#DIV/0!", "#VALUE!", "#NAME?", "#N/A", "#NUM!", "#NULL!", "#SPILL!", "#CALC!")
 
@@ -89,6 +100,47 @@ def _quit(app):
         subprocess.run(["taskkill", "/PID", str(pid), "/F"], capture_output=True)
 
 
+# ------------------------------------------------------------------ Mac / Linux: LibreOffice instead of COM
+def _soffice():
+    for c in (shutil.which("soffice"), shutil.which("libreoffice"),
+              "/Applications/LibreOffice.app/Contents/MacOS/soffice"):
+        if c and os.path.exists(c):
+            return c
+    sys.exit("LibreOffice not found. Install it once: brew install --cask libreoffice (see MAC-SETUP.md). "
+             "Or run this step on the Windows PC.")
+
+
+def _lo_convert(src, fmt, out_dir):
+    """Convert with LibreOffice headless into out_dir; returns the new file's path."""
+    os.makedirs(out_dir, exist_ok=True)
+    prof = tempfile.mkdtemp(prefix="lo_profile_")        # private profile: avoids lock-ups if LibreOffice is open
+    r = subprocess.run([_soffice(), f"-env:UserInstallation=file://{prof}", "--headless", "--convert-to", fmt,
+                        "--outdir", out_dir, _abs(src)], capture_output=True, text=True, timeout=300)
+    shutil.rmtree(prof, ignore_errors=True)
+    out = os.path.join(out_dir, os.path.splitext(os.path.basename(src))[0] + "." + fmt.split(":")[0])
+    if not os.path.exists(out):
+        sys.exit(f"LibreOffice conversion failed: {r.stderr or r.stdout}")
+    return out
+
+
+def _lo_pngs(pdf_path, out_dir, stem, width=None, dpi=None):
+    import pymupdf
+    doc, files = pymupdf.open(pdf_path), []
+    for i, page in enumerate(doc, 1):
+        f = os.path.join(out_dir, f"{stem}-{i:02d}.png")
+        m = pymupdf.Matrix(width / page.rect.width, width / page.rect.width) if width else pymupdf.Matrix(dpi / 72, dpi / 72)
+        page.get_pixmap(matrix=m).save(f)
+        files.append(f)
+    doc.close()
+    return files
+
+
+def _lo_recalculated(path):
+    """A LibreOffice-recalculated COPY of a workbook (the original is never touched) -> path of the copy."""
+    tmp = tempfile.mkdtemp(prefix="recalc_")
+    return _lo_convert(path, "xlsx:Calc MS Excel 2007 XML", tmp)
+
+
 def _split(ref):
     sheet, addr = ref.rsplit("!", 1)
     return sheet.strip("'"), addr
@@ -99,9 +151,17 @@ def recalc(path):
     from openpyxl import load_workbook
 
     path = _abs(path)
-    xl = _excel()
     circular = []
+    if not WIN:
+        print("(Mac: recalculated in LibreOffice as a check; the model file is left unchanged. "
+              "Run recalc on the PC to save values.)", file=sys.stderr)
+        vals_path = _lo_recalculated(path)
+    else:
+        vals_path = path
+        xl = _excel()
     try:
+        if not WIN:
+            raise StopIteration
         wb = xl.Workbooks.Open(path, UpdateLinks=0)
         xl.CalculateFull()
         for ws in wb.Worksheets:
@@ -113,10 +173,13 @@ def recalc(path):
                 pass
         wb.Save()
         wb.Close(False)
+    except StopIteration:
+        pass
     finally:
-        _quit(xl)
+        if WIN:
+            _quit(xl)
 
-    vals = load_workbook(path, data_only=True)
+    vals = load_workbook(vals_path, data_only=True)
     forms = load_workbook(path, data_only=False)
     errors, n_formulas = {}, 0
     for ws in forms.worksheets:
@@ -141,6 +204,17 @@ def recalc(path):
 
 
 def values(path, refs):
+    if not WIN:
+        from openpyxl import load_workbook
+        wbv = load_workbook(_lo_recalculated(path), data_only=True)
+        out = {}
+        for ref in refs:
+            sheet, addr = _split(ref)
+            cells = wbv[sheet][addr]
+            out[ref] = (cells.value if not isinstance(cells, tuple)
+                        else [[c.value for c in row] if isinstance(row, tuple) else row.value for row in cells])
+        print(json.dumps(out, indent=2, default=str))
+        return out
     xl = _excel()
     out = {}
     try:
@@ -161,6 +235,9 @@ def datatable(path, table_ref, row_input_ref, col_input_ref):
     """Range.Table(RowInput, ColumnInput): top row of the range = row-input values,
     left column = column-input values, top-left cell = the output formula.
     Input cells must be on the same sheet as the table (Excel rule)."""
+    if not WIN:
+        sys.exit("PC-ONLY STEP: What-If Data Tables need real Excel (COM). Everything else is built; open this "
+                 "workbook on the Windows PC (it is in Drive) and run: office.py datatable ... then office.py recalc.")
     xl = _excel()
     try:
         wb = xl.Workbooks.Open(_abs(path), UpdateLinks=0)
@@ -180,6 +257,11 @@ def datatable(path, table_ref, row_input_ref, col_input_ref):
 def render(pptx, out_dir, width=1600, height=900):
     out_dir = _abs(out_dir)
     os.makedirs(out_dir, exist_ok=True)
+    if not WIN:
+        tmp = tempfile.mkdtemp(prefix="render_")
+        files = _lo_pngs(_lo_convert(pptx, "pdf", tmp), out_dir, "slide", width=width)
+        print("\n".join(files))
+        return files
     pp = _powerpoint()
     files = []
     try:
@@ -197,6 +279,11 @@ def render(pptx, out_dir, width=1600, height=900):
 
 def pdf(src, out):
     src, out = _abs(src), _abs(out)
+    if not WIN:
+        tmp = tempfile.mkdtemp(prefix="pdf_")
+        shutil.move(_lo_convert(src, "pdf", tmp), out)
+        print(out)
+        return
     if src.lower().endswith((".pptx", ".ppt")):
         pp = _powerpoint()
         try:
@@ -271,6 +358,13 @@ def preview(path, out_dir, sheets=None, dpi=110):
 
     out_dir = _abs(out_dir)
     os.makedirs(out_dir, exist_ok=True)
+    if not WIN:
+        if sheets:
+            print("(Mac: per-sheet / range previews are PC-only; showing every page of the workbook)", file=sys.stderr)
+        tmp = tempfile.mkdtemp(prefix="preview_")
+        files = _lo_pngs(_lo_convert(path, "pdf", tmp), out_dir, os.path.splitext(os.path.basename(path))[0], dpi=dpi)
+        print("\n".join(files))
+        return files
     xl = _excel()
     pdfs = []
     try:

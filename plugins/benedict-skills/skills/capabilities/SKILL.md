@@ -7,11 +7,13 @@ effort: low
 
 # Capabilities: what Claude can do for Benedict
 
-Source of truth: `C:\Users\user\Documents\Google Drive\Claude Things\CAPABILITIES.md`. Read it fully every time. Never answer from memory.
+> **Drive root `<Drive>`:** PC `C:\Users\user\Documents\Google Drive` · Mac `~/Library/CloudStorage/GoogleDrive-benedict2588@gmail.com/My Drive` (run `ls ~/Library/CloudStorage` to confirm the folder name). Paths below are relative to `<Drive>`; use `/` on the Mac. This skill lives in `<Drive>/Claude Things/.claude/skills/` (shared by PC and Mac through Drive), so edit it there.
+
+Source of truth: `<Drive>\Claude Things\CAPABILITIES.md`. Read it fully every time. Never answer from memory.
 
 ## Step 1: Quick accuracy check (silent unless something is off)
 1. List the live routines with `RemoteTrigger` (action `list`). Compare the enabled ones (name, schedule) with section 2 of CAPABILITIES.md.
-2. List the skill folders in `C:\Users\user\.claude\skills\` (ignore `capabilities`, `.trash`) **and the skill folders inside `synced\<id>\`**. Compare them with section 3 of the file. Also compare with the skills listed in the current session's skill list, and the connected apps in the session's tool list. Anything installed or connected that the file doesn't mention gets added.
+2. List the skill folders in `<Drive>\Claude Things\.claude\skills\` (and, if present, `~/.claude/skills/`) (ignore `capabilities`, `.trash`) **and the skill folders inside `synced\<id>\`**. Compare them with section 3 of the file. Also compare with the skills listed in the current session's skill list, and the connected apps in the session's tool list. Anything installed or connected that the file doesn't mention gets added.
 3. If anything differs (a routine missing from the file, a listed routine that no longer exists or is switched off, a skill not listed), **fix CAPABILITIES.md** and update its `_Last updated_` date. Then mention it in one line at the end ("Updated the list: added X, removed Y").
 4. If a tool isn't available, skip that check silently.
 

@@ -1,6 +1,6 @@
-{
+﻿{
   "name": "benedict-skills",
   "description": "Benedict's personal skills: deal-desk, recruiting-prep, school-work, capabilities, fitness-coach, expense-tracker, update-study-guides.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": { "name": "Benedict Toh" }
 }

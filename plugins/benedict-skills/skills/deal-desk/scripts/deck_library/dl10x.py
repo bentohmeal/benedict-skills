@@ -1,7 +1,10 @@
 """Download every 10xebitda deck into Real IB-PE Decks/<Bank>/, plus SEC htm decks stitched to PDF, BIWS, Citi-Chindata, Keppel."""
 import json, os, re, time, urllib.request, shutil, glob
 import pymupdf
-ROOT = r"C:\Users\user\Documents\Google Drive\01. IB PE\Investment Banking Library\Real IB-PE Decks"
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), ".."))
+import paths  # noqa: E402
+ROOT = str(paths.REAL_DECKS)
 BANK = {'BofA-Securities-Logo.jpg': 'BofA Securities', 'Jefferies-Logo.jpg': 'Jefferies', 'SVB-Securities-Logo.jpg': 'SVB Securities - Leerink',
         'evercore-logo.png': 'Evercore', 'goldman-sachs-logo.png': 'Goldman Sachs', 'lgoo-perella-weinberg.png': 'Perella Weinberg',
         'logo-barclays.png': 'Barclays', 'logo-centerview-partners.png': 'Centerview', 'logo-citi.png': 'Citi', 'logo-credit-suisse.png': 'Credit Suisse',

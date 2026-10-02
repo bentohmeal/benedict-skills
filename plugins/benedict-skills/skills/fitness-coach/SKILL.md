@@ -32,7 +32,7 @@ Pick the flow from the message. Only show the menu when it is genuinely unclear.
 
 `$WT` = Weekly Tracker folder. Resolve it at the start of **every** local command (shell state does not persist):
 ```bash
-WT=""; for d in "$HOME/mnt/Claude Things/Weekly Tracker" "$HOME/mnt/Weekly Tracker" "/c/Users/user/Documents/Google Drive/Claude Things/Weekly Tracker"; do [ -d "$d" ] && WT="$d" && break; done
+WT=""; for d in "$HOME/mnt/Claude Things/Weekly Tracker" "$HOME/mnt/Weekly Tracker" "/c/Users/user/Documents/Google Drive/Claude Things/Weekly Tracker" "$HOME"/Library/CloudStorage/GoogleDrive-*/"My Drive/Claude Things/Weekly Tracker" "$HOME/Google Drive/Claude Things/Weekly Tracker"; do [ -d "$d" ] && WT="$d" && break; done
 [ -n "$WT" ] && echo "DEVICE_OK: $WT" || echo "DEVICE_UNAVAILABLE"
 # duplicate check — Drive sync leaves conflict copies like "food-library (1).md"
 [ -n "$WT" ] && find "$WT/Fitness" "$WT/Nutrition" "$WT/Workouts" -name "* ([0-9]*).md" 2>/dev/null

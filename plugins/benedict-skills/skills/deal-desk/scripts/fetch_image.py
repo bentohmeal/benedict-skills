@@ -73,8 +73,10 @@ def get(title, name, width=800):
     """Download `title` (a 'File:...' name) as PNG/JPG to assets/images/<name>.<ext>; returns the path."""
     os.makedirs(IMG_DIR, exist_ok=True)
     man = _manifest()
-    if name in man and os.path.exists(man[name]["path"]):
-        return man[name]["path"]
+    if name in man:
+        cached = os.path.join(IMG_DIR, os.path.basename(man[name]["path"].replace("\\", "/")))
+        if os.path.exists(cached):
+            return cached
     site, ii = _info(title, width)
     url = ii.get("thumburl") or ii["url"]
     ext = os.path.splitext(urllib.parse.urlparse(url).path)[1].lower() or ".png"
@@ -84,7 +86,7 @@ def get(title, name, width=800):
         open(path, "wb").write(r.read())
     meta = ii.get("extmetadata", {})
     clean = lambda k: re.sub(r"<[^>]+>", "", meta.get(k, {}).get("value", "")).strip()
-    man[name] = {"path": path, "title": title, "site": "Wikimedia Commons" if site == "commons" else "Wikipedia",
+    man[name] = {"path": os.path.basename(path), "title": title, "site": "Wikimedia Commons" if site == "commons" else "Wikipedia",
                  "page": ii.get("descriptionurl", ""), "licence": clean("LicenseShortName") or "see page",
                  "author": clean("Artist")[:80]}
     json.dump(man, open(MANIFEST, "w", encoding="utf-8"), indent=1)

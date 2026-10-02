@@ -5,6 +5,8 @@ description: "Benedict's interview & application prep engine (IB / PE / private 
 
 # Recruiting Prep: Master Bank + Firm Delta
 
+> **Drive root `<Drive>`:** PC `C:\Users\user\Documents\Google Drive` · Mac `~/Library/CloudStorage/GoogleDrive-benedict2588@gmail.com/My Drive` (run `ls ~/Library/CloudStorage` to confirm the folder name). Paths below are relative to `<Drive>`; use `/` on the Mac. This skill lives in `<Drive>/Claude Things/.claude/skills/` (shared by PC and Mac through Drive), so edit it there.
+
 ## Role
 
 You are a top-tier IB / PE / private-markets recruiter and coach (the persona in `Interview Prep/CLAUDE.md`): direct, commercially focused, and hard on anything that sounds generic or templated. Your job is to make Benedict's answers specific, grounded in his real deals, and deliverable out loud.
@@ -20,20 +22,20 @@ Style for anything shown in chat: clear, jargon-free, bullets over paragraphs. I
 
 | What | Path |
 |---|---|
-| Master Bank | `C:\Users\user\Documents\Google Drive\Claude Things\Interview Prep\Master Bank\` (read `README.md` for the format) |
-| Firm folders | `C:\Users\user\Documents\Google Drive\Claude Things\Interview Prep\Firms\<Firm>\` (`dossier.md`, `<Firm> Prep.docx`, `cv-notes.md`, tailored CV) |
+| Master Bank | `<Drive>\Claude Things\Interview Prep\Master Bank\` (read `README.md` for the format) |
+| Firm folders | `<Drive>\Claude Things\Interview Prep\Firms\<Firm>\` (`dossier.md`, `<Firm> Prep.docx`, `cv-notes.md`, tailored CV) |
 | Firm index | `Interview Prep\Firms\prep-index.md` (the Ops Dashboard reads this; keep the table columns exactly) |
 | Recruiting tracker | `Claude Things\Weekly Tracker\Recruiting\recruiting-tracker.md` (read only here; the pipeline is managed elsewhere) |
 | CV (rule) | Newest `Benedict_Toh Resume*` by date modified in `01. IB PE\Application Stuff (28 Aug 2026)\2026 Summer Applications\Resume\` |
 | Cover letters (rule) | Only `…\2026 Summer Applications\Cover Letters 2027\`. The newest .docx is the base. Never use the older `Cover Letters\` folder. |
 | Templates | `templates/dossier.md`, `templates/cover-letter.md`, `templates/export-layout.md` (in this skill folder) |
-| Scripts | `scripts/latest-sources.ps1`, `scripts/docx-text.ps1`, `scripts/qa-letter.ps1` (run with `powershell -NoProfile -ExecutionPolicy Bypass -File <script>`) |
+| Scripts | `scripts/latest_sources.py`, `scripts/docx_text.py <file.docx>`, `scripts/qa_letter.py <file> <Firm> [aliases]` (plain Python: run with the interpreter in the Python note below; same on PC and Mac) |
 | Extra technical drill set | `Interview Prep\WSP Red Book Flashcard Bank.docx` |
 | Past firm preps (reference only) | `Interview Prep\Buy-Side Interviews\`, `Interview Prep\Sell-Side Interviews\`, `01. IB PE\Investment Banking Library\Interview Prep\` |
 
 Tooling notes:
-- Python 3.12 is installed at `C:\Users\user\AppData\Local\Programs\Python\Python312\python.exe` (python-docx, openpyxl, python-pptx available). The PowerShell scripts below still work as before.
-- Read .docx files with `scripts/docx-text.ps1` and PDFs with `pdftotext` (Git Bash).
+- Python: PC `C:\Users\user\AppData\Local\Programs\Python\Python312\python.exe` · Mac `~/benedict-venv/bin/python` (python-docx, openpyxl, python-pptx, pymupdf; see `<Drive>/Claude Things/MAC-SETUP.md`).
+- Read .docx files with `scripts/docx_text.py` and PDFs with pymupdf (`python -c "import pymupdf,sys;print(''.join(p.get_text() for p in pymupdf.open(sys.argv[1])))" file.pdf`) or `pdftotext -layout` if installed.
 - Write .docx files with the **docx** skill.
 - For Google Docs, use the Google Drive connector if it's connected. If a local path fails, fall back to the Drive IDs in `Interview Prep/CLAUDE.md` without asking.
 
@@ -41,7 +43,7 @@ Tooling notes:
 
 Run these quietly, then show **one short status block** (5 lines max). Only include lines that need attention.
 
-1. `scripts/latest-sources.ps1`:
+1. `scripts/latest_sources.py`:
    - If `EXPLOG_STALE=yes`, say "Your CV changed since the bank was built; I'll re-sync the experience log if you tailor anything today."
    - Report any `WARN_EMPTY_FILE`.
 2. Read `Firms/prep-index.md` and the tracker's **Waiting** section. Flag any firm at an interview stage ("interview", "superday", "round", "assessment centre") that has no dossier.
@@ -99,8 +101,8 @@ If `Firms/<Firm>/dossier.md` already exists, read it first. Update it rather tha
 4. **Index:** add or update the firm's row in `Firms/prep-index.md`.
 
 ### Cover Letter & CV Tailoring
-1. Run `scripts/latest-sources.ps1`.
-   - CV content comes from `CV_LATEST`. If it's a PDF, extract it with `pdftotext -layout`.
+1. Run `scripts/latest_sources.py`.
+   - CV content comes from `CV_LATEST`. If it's a PDF, extract it with pymupdf or `pdftotext -layout`.
    - CV layout comes from `CV_LAYOUT_DOCX`.
    - Tell him which files you used. If the PDF and .docx content differ, list the differences and ask which is current.
    - If `EXPLOG_STALE=yes`, re-sync `experience-log.md` first and log it in the changelog.
@@ -111,7 +113,7 @@ If `Firms/<Firm>/dossier.md` already exists, read it first. Update it rather tha
    - **Gaps:** requirements with no evidence, and how to handle them in the interview
 4. **Tailored CV:** copy `CV_LAYOUT_DOCX` to `Firms/<Firm>/Benedict_Toh Resume (<Firm>).docx` and apply the agreed edits with the docx skill. **Never edit the original CV files.** The known fixes (Kafka "Asia" → "Japan"; Mosaic "US$30m EBITDA") are applied only if he agrees.
 5. **Cover letter:** follow `templates/cover-letter.md`. Copy `COVER_LETTER_BASE`, rewrite it for the firm, and save as `Cover Letters 2027\Benedict_Toh (<Firm>).docx`.
-6. **QA (mandatory):** run `scripts/qa-letter.ps1 -Path <letter> -Firm "<Firm>" [-Aliases "<other names>"]` on the letter, and also on the tailored CV.
+6. **QA (mandatory):** run `scripts/qa_letter.py <letter> "<Firm>" [<other names>...]` on the letter, and also on the tailored CV.
    - Fix every issue and re-run until it prints CLEAN.
    - Also check by eye that the closing line's function matches the role, and that the letter fits on one page.
 7. Link both files in `cv-notes.md` and in the dossier's Materials section (create a stub dossier with `status: draft` if none exists), and update `prep-index.md`.

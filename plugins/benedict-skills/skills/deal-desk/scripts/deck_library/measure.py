@@ -30,7 +30,10 @@ def summ(name, rows):
     rows = [r for r in rows if r[2] > 0.05]  # skip blank / divider pages
     w = [r[0] for r in rows if r[0] is not None]
     print(f"{name:34s} n={len(rows):3d}  words med={st.median(w) if w else '-':>5}  img/pg={round(st.mean(r[1] for r in rows),1) if w else '-':>4}  fill med={st.median(r[2] for r in rows):.2f}  max-gap med={st.median(r[3] for r in rows):.2f}")
-lib = r"C:/Users/user/Documents/Google Drive/01. IB PE/Investment Banking Library/Slide Inspiration/"
+import sys as _s, os as _o
+_s.path.insert(0, _o.path.join(_o.path.dirname(_o.path.abspath(__file__)), ".."))
+import paths
+lib = str(paths.SLIDE_INSPIRATION) + "/"
 #summ("Citi board deck (Chindata, SEC)", imgs("citi/*.jpg"))
 #summ("Keppel DC REIT acquisition deck", pdf("kdc_acq.pdf"))
 #summ("Keppel DC REIT investor pres Aug25", pdf("kdc_aug25.pdf"))

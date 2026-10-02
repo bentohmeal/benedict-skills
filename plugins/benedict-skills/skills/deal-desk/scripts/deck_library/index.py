@@ -1,5 +1,8 @@
 import json, re, os, collections
-ROOT = r"C:\Users\user\Documents\Google Drive\01. IB PE\Investment Banking Library\Real IB-PE Decks"
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), ".."))
+import paths  # noqa: E402
+ROOT = str(paths.REAL_DECKS)
 P = json.load(open("pages.json"))
 decks, pages = P["decks"], P["pages"]
 for d in decks:

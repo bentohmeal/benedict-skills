@@ -1,6 +1,6 @@
 """Classic IB house style (navy ramp + greys + one gold highlight) for python-pptx decks. Native, editable charts.
 
-    import sys; sys.path.insert(0, r"C:\\Users\\user\\.claude\\skills\\deal-desk\\scripts")
+    import sys; sys.path.insert(0, "<Claude Things>/.claude/skills/deal-desk/scripts")
     from ibdeck import Deck
     d = Deck(sections=["Company Overview", "Industry Overview", "Valuation"])   # contents bar on every slide
     s = d.slide("Company Overview", "Australia's #3 gym chain by outlets")        # header 20 navy + subheader 16 grey
@@ -52,8 +52,10 @@ Y_SRC, Y_BAR, BAR_H = 6.6, 7.06, 0.3      # sources / notes, contents table (flu
 HERE = os.path.dirname(os.path.abspath(__file__))
 ICON_DIR = os.path.join(HERE, "..", "assets", "icons")
 ICON_CACHE = os.path.join(ICON_DIR, "_png")
-TOOLKIT = os.environ.get("DEAL_DESK_TOOLKIT",
-                         r"C:\Users\user\Documents\Google Drive\Claude Things\output\_Deal Desk Toolkit")
+import sys as _sys
+_sys.path.insert(0, HERE)
+import paths  # noqa: E402
+TOOLKIT = os.environ.get("DEAL_DESK_TOOLKIT", str(paths.TOOLKIT))
 LIBRARY = os.path.join(TOOLKIT, "Infographic Library.pptx")   # infographic()
 
 # components that count as "visual" layouts for the AI-tells lint (a deck needs some of these)

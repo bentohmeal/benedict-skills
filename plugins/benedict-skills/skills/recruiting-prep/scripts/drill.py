@@ -24,9 +24,9 @@ import sys
 from collections import OrderedDict, defaultdict
 from pathlib import Path
 
-BANK = Path(os.environ.get(
-    "TECH_BANK",
-    r"C:\Users\user\Documents\Google Drive\Claude Things\Interview Prep\Technical Bank"))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths  # noqa: E402
+BANK = Path(os.environ.get("TECH_BANK", str(paths.TECH_BANK)))
 
 TOPICS = OrderedDict([
     ("ACC", "Accounting"),

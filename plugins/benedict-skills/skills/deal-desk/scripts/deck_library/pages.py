@@ -21,7 +21,10 @@ import sys
 
 import pymupdf
 
-ROOT = r"C:\Users\user\Documents\Google Drive\01. IB PE\Investment Banking Library\Real IB-PE Decks"
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), ".."))
+import paths  # noqa: E402
+ROOT = str(paths.REAL_DECKS)
 PAGES = os.path.join(ROOT, "_pages")
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "..", "assets", "real_deck_pages.json")

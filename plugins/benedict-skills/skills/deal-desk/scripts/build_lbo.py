@@ -606,5 +606,10 @@ if __name__ == "__main__":
     out_path = os.path.abspath(sys.argv[2])
     Rows, Tables, Tot, Dd = build(cfg, out_path)
     print(f"built {out_path}")
+    if sys.platform != "win32" and "--no-verify" not in sys.argv:
+        print("MAC BUILD: workbook written. The data tables, Excel recalc and independent check need Excel, so they are "
+              "skipped here (sensitivity tables stay empty, cached values missing). Finish on the PC: run this same command "
+              "there; it rebuilds identically from the case file, then verifies.")
+        sys.argv.append("--no-verify")
     if "--no-verify" not in sys.argv:
         sys.exit(0 if verify(cfg, out_path, Rows, Tables, Tot, Dd) else 1)

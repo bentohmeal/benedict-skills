@@ -29,9 +29,9 @@ sys.path.insert(0, HERE)
 import ibdeck  # noqa: E402
 from ibdeck import NAVY_RAMP, BLACK, WHITE, DGREY, GREY, LGREY, PALEGREY, L, R_, W  # noqa: E402
 
-SRC = (r"C:\Users\user\Documents\Google Drive\01. IB PE\Investment Banking Library\Slide Inspiration"
-       r"\PwC Infographic Templates (2014).pptx")
-OUT = r"C:\Users\user\Documents\Google Drive\Claude Things\output\_Deal Desk Toolkit\Infographic Library.pptx"
+import paths  # noqa: E402
+SRC = str(paths.SLIDE_INSPIRATION / "PwC Infographic Templates (2014).pptx")
+OUT = str(paths.TOOLKIT / "Infographic Library.pptx")
 INDEX = os.path.join(HERE, "..", "assets", "infographic_index.json")
 
 BODY = (L, 1.35, W - L - R_, 5.15)          # x, y, w, h in inches: under the title rule, above the sources line

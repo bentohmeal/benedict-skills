@@ -15,7 +15,9 @@ from pptx.enum.shapes import MSO_SHAPE  # noqa: E402
 from pptx.enum.text import PP_ALIGN  # noqa: E402
 
 IMG = os.path.join(HERE, "..", "images")
-OUT = r"C:\Users\user\Documents\Google Drive\Claude Things\output\Singapore Data Centres\Singapore Data Centres Sector Overview.pptx"
+sys.path.insert(0, os.path.join(HERE, "..", "..", "scripts"))
+import paths  # noqa: E402
+OUT = str(paths.WORKSPACE / "output" / "Singapore Data Centres" / "Singapore Data Centres Sector Overview.pptx")
 
 # ---------------------------------------------------------------- data (every number, with its source)
 CBRE = "CBRE, 2026 APAC Data Centre Trends & Outlook (Apr 2026 data)"

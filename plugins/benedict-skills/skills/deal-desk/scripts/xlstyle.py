@@ -5,7 +5,7 @@ Colour code (font), always:  blue 0000FF = hardcode · green 008000 = link to an
 Layout (every sheet):        navy header band (rows 1..) with case, sheet, timeline rows · A = "x" section markers ·
                              B labels · C units · D/E constants ("Input") · F onwards = periods · comments "<< ..." right.
 Import with:
-    import sys; sys.path.insert(0, r"C:\\Users\\user\\.claude\\skills\\deal-desk\\scripts"); from xlstyle import *
+    import sys; sys.path.insert(0, "<Claude Things>/.claude/skills/deal-desk/scripts"); from xlstyle import *
 """
 import re
 
