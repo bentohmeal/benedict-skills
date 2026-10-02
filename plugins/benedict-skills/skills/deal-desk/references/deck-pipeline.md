@@ -36,6 +36,7 @@ python scripts/layout_match.py match topics.json [k]
 - A whole-page recipe (e.g. `page_overview`) is offered per slide when it fits the section and message.
 
 ## 3. Select: pick, give a reason, keep 2 alternatives
+First read `assets/eval/examples.md` (reviewed layout choices, grouped by data type) and follow its precedents unless the block differs.
 Add to each block in `topics.json`: `"pick"`, `"alts"` (2 ids) and `"why"` (one line). Usually the top match; override when the sheet or the message says otherwise (e.g. a framing strip of bullets over a table). Then:
 ```
 python scripts/layout_match.py plan topics.json
@@ -43,6 +44,9 @@ python scripts/layout_match.py plan topics.json
 - Prints the plan table (slide · section · message · layouts, lead first · alternatives · why). A pick outside the top 5 is marked `*`; justify it.
 - Errors (exit 1): missing pick, unknown id. Warnings: items out of the layout's range, 3+ bullet blocks, a slide with no visual, the same lead layout on two slides in a row, no visual layout in the deck. Fix all of them.
 - **Show him the table and get his OK.** He can swap any block to one of its alternatives.
+- **Once he OKs it, log the plan:** on any block he swapped, set `"swapped_from": "<old pick>"`, then
+  `python scripts/layout_eval.py add-plan topics.json --source "<deck name>" --approved`.
+  Each block becomes an accepted row in the golden set; swaps go to `assets/eval/swaps.md` (lessons loop).
 
 ## 4. Build and QA
 - Build with `ibdeck.py`: fill library layouts with `d.layout(s, "<id>", variant, box, data={...})`; code the rest with the matching `Deck` component.
@@ -54,3 +58,15 @@ python scripts/layout_match.py plan topics.json
 ## Check it worked (SG DC rebuild, 2 Oct 2026)
 - Matcher vs the hand-built deck: top-1 32/36 blocks, top-3 33/36. Misses: stat_strip vs stat_icons, bar vs column (same chart turned sideways), and one framing strip overridden at select.
 - Rebuilt deck: density median 0.82 (original 0.81), all slides ≥ 0.70, lint clean.
+
+## Eval: is the layout choice getting better?
+`scripts/layout_eval.py` keeps a golden set (`assets/eval/golden.jsonl`) of blocks with the right layout, and scores the matcher and a blind selector against it.
+- **Sources:** real bank pages (the bank's layout is the label; page text OCR'd and chunked blind), past worked cases (SG DC hand-built deck), and every approved plan (above).
+- **His review:** `layout_eval.py review` writes `output\_Deal Desk Toolkit\golden_review.xlsx`. He marks each row accept / swap (+ layout id) / reject; `layout_eval.py ingest` reads it back. Only accepted rows count; `--all` gives a provisional score that includes pending rows.
+- **Split:** a hash of the row id puts 1 in 5 rows in a fixed hold-out. `layout_eval.py examples` writes the other 80% to `assets/eval/examples.md` (the few-shot list for step 3). Hold-out rows never appear in prompts.
+- **Score:**
+  - `layout_eval.py matcher`: top-1 / top-3 of `layout_match.py` on the hold-out. Seconds, no tokens.
+  - `layout_eval.py blind` → `assets/eval/runs/<stamp>/task.md` (pipeline rules + catalogue + train examples + hold-out blocks, no labels). Give it to a subagent that sees only that file; it writes `answers.json`. Then `layout_eval.py score <answers.json>`: top-1, top-3 (pick or alternatives) and a reasoning check (names the content shape; the pick doesn't break its own "don't use when").
+  - Both append to `assets/eval/scores.md`.
+- **Rule:** run `matcher` (and `blind` for prompt changes) before and after any change to `layout_match.py`, `layout_library.json`, this file or `examples.md`. Keep the change only if top-1 and top-3 don't drop.
+- **Lessons loop:** the same swap twice in `swaps.md` → add a `dont_use_when` line to the losing layout in `layout_tag.py`, rebuild the library, re-run the eval.
