@@ -50,7 +50,7 @@ python scripts/layout_match.py plan topics.json
 
 ## 4. Build and QA
 - Build with `ibdeck.py`: fill library layouts with `d.layout(s, "<id>", variant, box, data={...})`; code the rest with the matching `Deck` component.
-- Read every number from the model or a cited source.
+- Read every number from the model or a cited source. For a listed company, load `deal_data.json` from the Capital IQ pull (`capiq-pull.md`) instead of typing figures, and footnote its `src`.
 - `save()`: no `LAYOUT WARNING`, `AI TELL`, `SPARSE` or `THIN ARGUMENT`.
 - `office.py render deck.pptx <dir>` → look at every PNG. `office.py density <dir>` → every slide ≥ 0.70.
 - Then `qa-checklist.md` → Deck.
