@@ -1,0 +1,457 @@
+{
+ "sg_dc_s01_b3": {
+  "best": "photo",
+  "ok": [
+   "bullets",
+   "pill_rows"
+  ],
+  "why": "photo with bold lead-in bullets beneath",
+  "doubt": false
+ },
+ "sg_dc_s02_b3": {
+  "best": "bar",
+  "ok": [
+   "column"
+  ],
+  "why": "grouped horizontal bars, live vs upcoming, 8 markets",
+  "doubt": false
+ },
+ "sg_dc_s03_b3": {
+  "best": "bar",
+  "ok": [
+   "column"
+  ],
+  "why": "4 horizontal bars, live stock highlighted",
+  "doubt": false
+ },
+ "sg_dc_s04_b3": {
+  "best": "bullets",
+  "ok": [
+   "pill_rows"
+  ],
+  "why": "5 bold lead-in bullets under a header",
+  "doubt": false
+ },
+ "sg_dc_s05_b4": {
+  "best": "bar",
+  "ok": [
+   "bk22"
+  ],
+  "why": "ranked horizontal bars, 6 facilities, values at bar end",
+  "doubt": false
+ },
+ "sg_dc_s06_b3": {
+  "best": "stat_strip",
+  "ok": [
+   "stat_icons"
+  ],
+  "why": "3 headline numbers in a divided strip",
+  "doubt": false
+ },
+ "sg_dc_s07_b3": {
+  "best": "bullets",
+  "ok": [
+   "pill_rows"
+  ],
+  "why": "4 bold lead-in takeaway bullets",
+  "doubt": false
+ },
+ "sg_dc_s08_b4": {
+  "best": "table",
+  "ok": [
+   "stat_strip"
+  ],
+  "why": "one-row deal terms table",
+  "doubt": false
+ },
+ "sg_dc_s10_b1": {
+  "best": "risk_matrix",
+  "ok": [
+   "bk05"
+  ],
+  "why": "risk + Harvey level, arrow to mitigant with what remains",
+  "doubt": false
+ },
+ "rp_004_015_b1": {
+  "best": "stacked",
+  "ok": [],
+  "why": "100% stacked columns by consideration with deal counts on top",
+  "doubt": false
+ },
+ "rp_001_021_b2": {
+  "best": "bullets",
+  "ok": [
+   "chevrons",
+   "bk52"
+  ],
+  "why": "sub-bullets inside vertical phase arrows",
+  "doubt": false
+ },
+ "rp_083_008_b2": {
+  "best": "bullets",
+  "ok": [
+   "bk57"
+  ],
+  "why": "panel of bullets in a two-case page",
+  "doubt": false
+ },
+ "rp_069_006_b1": {
+  "best": "side_tabs",
+  "ok": [
+   "pill_rows",
+   "bk17"
+  ],
+  "why": "coloured side labels with bullet text per method",
+  "doubt": false
+ },
+ "rp_067_007_b1": {
+  "best": "bk21",
+  "ok": [
+   "table",
+   "bk32"
+  ],
+  "why": "table with inline bars by company, median rows",
+  "doubt": false
+ },
+ "rp_027_011_b1": {
+  "best": "bk44",
+  "ok": [
+   "heatmap",
+   "table"
+  ],
+  "why": "two stacked IRR sensitivity grids",
+  "doubt": false
+ },
+ "rp_001_009_b1": {
+  "best": "side_tabs",
+  "ok": [
+   "pill_rows",
+   "table"
+  ],
+  "why": "navy label boxes with description bullets",
+  "doubt": false
+ },
+ "rp_082_058_b2": {
+  "best": "fin_table",
+  "ok": [
+   "table"
+  ],
+  "why": "line items in projected FFO/debt financial table",
+  "doubt": false
+ },
+ "rp_108_005_b2": {
+  "best": "bk01",
+  "ok": [
+   "table"
+  ],
+  "why": "statistics at various prices, columns per price",
+  "doubt": false
+ },
+ "rp_106_002_b1": {
+  "best": "bk49",
+  "ok": [
+   "ig107"
+  ],
+  "why": "funnel of stage counts (companies / financial buyers)",
+  "doubt": false
+ },
+ "rp_052_023_b2": {
+  "best": "bk35",
+  "ok": [
+   "harvey",
+   "table",
+   "bk48"
+  ],
+  "why": "3 options as columns, attribute rows with check marks",
+  "doubt": false
+ },
+ "rp_044_037_b2": {
+  "best": "bk13",
+  "ok": [
+   "fin_table",
+   "table"
+  ],
+  "why": "DCF summary results table",
+  "doubt": false
+ },
+ "rp_012_007_b2": {
+  "best": "table",
+  "ok": [
+   "heatmap"
+  ],
+  "why": "plain two-way sensitivity grid with base box",
+  "doubt": false
+ },
+ "rp_071_015_b2": {
+  "best": "bk05",
+  "ok": [
+   "table"
+  ],
+  "why": "issue boxes with arrows to response boxes",
+  "doubt": false
+ },
+ "rp_028_003_b2": {
+  "best": "bk58",
+  "ok": [
+   "bullets"
+  ],
+  "why": "headed box with bold headings and bullets",
+  "doubt": false
+ },
+ "rp_115_004_b2": {
+  "best": "bk41",
+  "ok": [
+   "bk57"
+  ],
+  "why": "two text panels linked by an arrow",
+  "doubt": false
+ },
+ "rp_070_017_b1": {
+  "best": "bk21",
+  "ok": [
+   "bk23"
+  ],
+  "why": "logo table with inline bars, 3 premium columns, median lines",
+  "doubt": false
+ },
+ "rp_001_023_b1": {
+  "best": "bk50",
+  "ok": [
+   "table",
+   "timeline"
+  ],
+  "why": "month calendars beside a dated event table",
+  "doubt": false
+ },
+ "rp_003_015_b1": {
+  "best": "bk15",
+  "ok": [
+   "football_field"
+  ],
+  "why": "football field with assumptions panel",
+  "doubt": false
+ },
+ "rp_011_027_b2": {
+  "best": "bk07",
+  "ok": [
+   "bullets"
+  ],
+  "why": "side tabs, table and commentary column",
+  "doubt": false
+ },
+ "rp_032_008_b2": {
+  "best": "bk11",
+  "ok": [
+   "column",
+   "bk36"
+  ],
+  "why": "grouped columns Case 1 vs Case 2 in a chart grid",
+  "doubt": false
+ },
+ "rp_003_008_b2": {
+  "best": "table",
+  "ok": [
+   "bk28",
+   "stat_strip"
+  ],
+  "why": "small stats strip under the price chart",
+  "doubt": false
+ },
+ "rp_082_009_b2": {
+  "best": "stacked",
+  "ok": [
+   "bk36",
+   "column"
+  ],
+  "why": "stacked columns by segment with consolidated line and CAGR",
+  "doubt": false
+ },
+ "rp_039_044_b1": {
+  "best": "bk08",
+  "ok": [
+   "fin_table"
+  ],
+  "why": "historicals vs forecast split table",
+  "doubt": false
+ },
+ "rp_121_013_b3": {
+  "best": "table",
+  "ok": [
+   "stat_strip"
+  ],
+  "why": "small sensitivity row: decrease, base, increase",
+  "doubt": false
+ },
+ "rp_085_007_b2": {
+  "best": "logo_row",
+  "ok": [
+   "page_landscape"
+  ],
+  "why": "tombstone logo grid in sector quadrants",
+  "doubt": false
+ },
+ "rp_114_003_b2": {
+  "best": "table",
+  "ok": [],
+  "why": "empty Other Parties bar under a check-mark table",
+  "doubt": true
+ },
+ "rp_032_011_b2": {
+  "best": "side_tabs",
+  "ok": [
+   "table",
+   "bk17"
+  ],
+  "why": "coloured lettered method tabs with dash bullets",
+  "doubt": false
+ },
+ "rp_003_016_b2": {
+  "best": "bk32",
+  "ok": [
+   "bk33"
+  ],
+  "why": "peers by 4 metrics as bar columns with medians",
+  "doubt": false
+ },
+ "rp_068_021_b2": {
+  "best": "bk44",
+  "ok": [
+   "table",
+   "heatmap"
+  ],
+  "why": "twin grids P/E multiple vs % equity financing, accretion",
+  "doubt": false
+ },
+ "rp_084_007_b2": {
+  "best": "bullets",
+  "ok": [
+   "timeline"
+  ],
+  "why": "dated bullets of key dates; exhibit is one advisor note",
+  "doubt": false
+ },
+ "rp_010_015_b1": {
+  "best": "side_tabs",
+  "ok": [
+   "bk58",
+   "table"
+  ],
+  "why": "segment boxes, rounded entity labels left with bullets right",
+  "doubt": false
+ },
+ "rp_066_010_b2": {
+  "best": "fin_chart",
+  "ok": [
+   "stacked",
+   "column",
+   "bk36"
+  ],
+  "why": "base vs acquired stacked columns with CAGR arrow, one of a 2x2 grid",
+  "doubt": false
+ },
+ "rp_052_003_b1": {
+  "best": "page_text",
+  "ok": [
+   "bullets"
+  ],
+  "why": "framing box then two-level bullet text page",
+  "doubt": false
+ },
+ "rp_082_023_b1": {
+  "best": "fin_table",
+  "ok": [
+   "bk13",
+   "bk08"
+  ],
+  "why": "EBITDA to UFCF projection table, years across",
+  "doubt": false
+ },
+ "ig_t_cycle_saas": {
+  "best": "ig002",
+  "ok": [
+   "ig001",
+   "ig014"
+  ],
+  "why": "4-stage loop of arrows fits land-expand-renew flywheel",
+  "doubt": false
+ },
+ "ig_t_pyramid_gov": {
+  "best": "ig072",
+  "ok": [
+   "ig071"
+  ],
+  "why": "governance pyramid with level notes",
+  "doubt": false
+ },
+ "ig_t_gauge_occ": {
+  "best": "ig058",
+  "ok": [
+   "ig057",
+   "hero_number"
+  ],
+  "why": "single gauge showing 92% vs 95% target",
+  "doubt": false
+ },
+ "ig_t_map_europe": {
+  "best": "ig148",
+  "ok": [
+   "page_geography",
+   "map_pins"
+  ],
+  "why": "Europe map by country to shade 6 site countries",
+  "doubt": false
+ },
+ "ig_t_seesaw_case": {
+  "best": "ig132",
+  "ok": [
+   "pros_cons",
+   "ig133"
+  ],
+  "why": "seesaw of two panels for bull vs bear",
+  "doubt": false
+ },
+ "ig_t_riskmap_move": {
+  "best": "ig196",
+  "ok": [
+   "risk_matrix"
+  ],
+  "why": "likelihood-impact risk map with movement arrows",
+  "doubt": false
+ },
+ "ig_t_jigsaw_fit": {
+  "best": "ig084",
+  "ok": [
+   "ig082",
+   "ig081"
+  ],
+  "why": "loose piece locking into a jigsaw shows target filling gaps",
+  "doubt": false
+ },
+ "ig_t_history": {
+  "best": "ig123",
+  "ok": [
+   "timeline",
+   "ig125"
+  ],
+  "why": "company history timeline of dated milestones",
+  "doubt": false
+ },
+ "ig_t_quotes": {
+  "best": "ig157",
+  "ok": [
+   "bullets",
+   "takeaway"
+  ],
+  "why": "quote bubbles for customer quotes",
+  "doubt": false
+ },
+ "ig_t_workstreams": {
+  "best": "ig120",
+  "ok": [
+   "bk52",
+   "chevrons"
+  ],
+  "why": "three workstreams x three steps",
+  "doubt": false
+ }
+}

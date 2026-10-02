@@ -1,0 +1,442 @@
+{
+ "sg_dc_s01_b3": {
+  "best": "photo",
+  "ok": [
+   "bullets",
+   "pill_rows"
+  ],
+  "why": "photo with bold lead-in bullets beneath",
+  "doubt": false
+ },
+ "sg_dc_s02_b3": {
+  "best": "bar",
+  "ok": [],
+  "why": "horizontal grouped bars live vs upcoming, 8 markets, values at bar end",
+  "doubt": false
+ },
+ "sg_dc_s03_b3": {
+  "best": "bar",
+  "ok": [],
+  "why": "horizontal bars, 4 items, live stock in gold, values at bar end",
+  "doubt": false
+ },
+ "sg_dc_s04_b3": {
+  "best": "bullets",
+  "ok": [
+   "pill_rows"
+  ],
+  "why": "5 bold lead-in bullets under a header bar",
+  "doubt": false
+ },
+ "sg_dc_s05_b4": {
+  "best": "bar",
+  "ok": [
+   "bk22"
+  ],
+  "why": "horizontal bars ranked, 6 facilities, values at bar end",
+  "doubt": false
+ },
+ "sg_dc_s06_b3": {
+  "best": "stat_strip",
+  "ok": [
+   "stat_icons"
+  ],
+  "why": "3 headline numbers in a row divided by rules, no icons",
+  "doubt": false
+ },
+ "sg_dc_s07_b3": {
+  "best": "bullets",
+  "ok": [
+   "pill_rows"
+  ],
+  "why": "4 bold lead-in bullets under Takeaways header",
+  "doubt": false
+ },
+ "sg_dc_s08_b4": {
+  "best": "table",
+  "ok": [
+   "stat_strip"
+  ],
+  "why": "one-row deal terms table: price, area, tenants, WALE, DPU",
+  "doubt": false
+ },
+ "sg_dc_s10_b1": {
+  "best": "risk_matrix",
+  "ok": [
+   "bk05"
+  ],
+  "why": "risk table with Harvey severity, arrow to mitigant plus what remains",
+  "doubt": false
+ },
+ "rp_004_015_b1": {
+  "best": "stacked",
+  "ok": [],
+  "why": "100% stacked columns by year, deal counts on top",
+  "doubt": false
+ },
+ "rp_001_021_b2": {
+  "best": "bullets",
+  "ok": [
+   "chevrons",
+   "bk52"
+  ],
+  "why": "sub-bullets inside a vertical phase list with chevron labels",
+  "doubt": true
+ },
+ "rp_083_008_b2": {
+  "best": "bullets",
+  "ok": [
+   "bk57"
+  ],
+  "why": "numbered headed panel of bullets, one of two scenario columns",
+  "doubt": false
+ },
+ "rp_069_006_b1": {
+  "best": "side_tabs",
+  "ok": [
+   "pill_rows",
+   "bk17"
+  ],
+  "why": "label tab per method with 2-5 bullets beside",
+  "doubt": false
+ },
+ "rp_067_007_b1": {
+  "best": "bk21",
+  "ok": [
+   "table",
+   "bk23"
+  ],
+  "why": "logo table with inline bars per date column and median rows",
+  "doubt": false
+ },
+ "rp_027_011_b1": {
+  "best": "bk44",
+  "ok": [
+   "heatmap",
+   "table"
+  ],
+  "why": "two stacked IRR sensitivity grids, base case boxed",
+  "doubt": false
+ },
+ "rp_001_009_b1": {
+  "best": "side_tabs",
+  "ok": [
+   "pill_rows",
+   "table"
+  ],
+  "why": "dark consideration tabs with bullet descriptions",
+  "doubt": false
+ },
+ "rp_082_058_b2": {
+  "best": "fin_table",
+  "ok": [
+   "table"
+  ],
+  "why": "line items in a projected financial table with year columns",
+  "doubt": false
+ },
+ "rp_108_005_b2": {
+  "best": "bk01",
+  "ok": [
+   "table"
+  ],
+  "why": "statistics table with columns per illustrative price, premiums and multiples",
+  "doubt": false
+ },
+ "rp_106_002_b1": {
+  "best": "bk49",
+  "ok": [
+   "ig107"
+  ],
+  "why": "funnel with stage counts per tier",
+  "doubt": false
+ },
+ "rp_052_023_b2": {
+  "best": "bk35",
+  "ok": [
+   "bk48",
+   "table"
+  ],
+  "why": "3 option columns, attribute rows, ticks, recommended column highlighted",
+  "doubt": false
+ },
+ "rp_044_037_b2": {
+  "best": "bk13",
+  "ok": [
+   "fin_table",
+   "table"
+  ],
+  "why": "UFCF build to EV and equity value with WACC sensitivities",
+  "doubt": false
+ },
+ "rp_012_007_b2": {
+  "best": "heatmap",
+  "ok": [
+   "table"
+  ],
+  "why": "two-way grid of liquidity by revenue and %, base boxed, no colours",
+  "doubt": false
+ },
+ "rp_071_015_b2": {
+  "best": "bk05",
+  "ok": [],
+  "why": "issue boxes with arrows to potential response boxes",
+  "doubt": false
+ },
+ "rp_028_003_b2": {
+  "best": "bk58",
+  "ok": [
+   "bullets"
+  ],
+  "why": "two headed boxes with blue lead-ins and bullets",
+  "doubt": false
+ },
+ "rp_115_004_b2": {
+  "best": "bk41",
+  "ok": [
+   "bk57",
+   "bk58"
+  ],
+  "why": "two headed bullet panels with arrow, segment boxes and charts below",
+  "doubt": false
+ },
+ "rp_070_017_b1": {
+  "best": "bk21",
+  "ok": [
+   "bk23",
+   "table"
+  ],
+  "why": "logo table with inline bars in 3 premium columns, median lines",
+  "doubt": false
+ },
+ "rp_001_023_b1": {
+  "best": "bk50",
+  "ok": [
+   "table"
+  ],
+  "why": "month calendars beside a dated event table",
+  "doubt": false
+ },
+ "rp_003_015_b1": {
+  "best": "bk15",
+  "ok": [
+   "football_field"
+  ],
+  "why": "football field by method with assumptions panel beside",
+  "doubt": false
+ },
+ "rp_011_027_b2": {
+  "best": "bk07",
+  "ok": [
+   "bullets"
+  ],
+  "why": "commentary column beside segment table with side tabs",
+  "doubt": false
+ },
+ "rp_032_008_b2": {
+  "best": "bk11",
+  "ok": [
+   "bk36",
+   "column"
+  ],
+  "why": "2x2 grid of paired columns case 1 vs case 2",
+  "doubt": false
+ },
+ "rp_003_008_b2": {
+  "best": "bk28",
+  "ok": [
+   "table",
+   "stat_strip"
+  ],
+  "why": "price chart with events and a stats row of averages and premiums",
+  "doubt": false
+ },
+ "rp_082_009_b2": {
+  "best": "bk36",
+  "ok": [
+   "stacked"
+  ],
+  "why": "2x2 panel of stacked columns with line overlay and CAGR",
+  "doubt": false
+ },
+ "rp_039_044_b1": {
+  "best": "bk08",
+  "ok": [
+   "fin_table"
+  ],
+  "why": "wide historical | forecast split table with CAGR columns",
+  "doubt": false
+ },
+ "rp_121_013_b3": {
+  "best": "table",
+  "ok": [],
+  "why": "small sensitivity table decrease / base / increase",
+  "doubt": false
+ },
+ "rp_085_007_b2": {
+  "best": "logo_row",
+  "ok": [
+   "page_landscape"
+  ],
+  "why": "tombstone logo grid in 4 sector panels",
+  "doubt": false
+ },
+ "rp_114_003_b2": {
+  "best": "takeaway",
+  "ok": [
+   "table"
+  ],
+  "why": "header bar over an empty box below the process table",
+  "doubt": true
+ },
+ "rp_032_011_b2": {
+  "best": "bullets",
+  "ok": [
+   "takeaway"
+  ],
+  "why": "footnote listing peers, not a real exhibit",
+  "doubt": true
+ },
+ "rp_003_016_b2": {
+  "best": "bk32",
+  "ok": [
+   "table"
+  ],
+  "why": "logo rows with bars across 4 metric columns, medians",
+  "doubt": false
+ },
+ "rp_068_021_b2": {
+  "best": "bk44",
+  "ok": [
+   "heatmap",
+   "table"
+  ],
+  "why": "sensitivity grids by P/E multiple and equity %, two years",
+  "doubt": false
+ },
+ "rp_084_007_b2": {
+  "best": "bullets",
+  "ok": [
+   "timeline"
+  ],
+  "why": "dated bullet list; block is one parenthetical note",
+  "doubt": true
+ },
+ "rp_010_015_b1": {
+  "best": "bk58",
+  "ok": [
+   "pill_rows",
+   "table"
+  ],
+  "why": "4 headed boxes with entity labels and bullets",
+  "doubt": false
+ },
+ "rp_066_010_b2": {
+  "best": "fin_chart",
+  "ok": [
+   "stacked",
+   "bk36"
+  ],
+  "why": "stacked columns base + acquired with CAGR arrow and margin strip",
+  "doubt": false
+ },
+ "rp_052_003_b1": {
+  "best": "page_text",
+  "ok": [
+   "bullets"
+  ],
+  "why": "framing box over two-level bullets",
+  "doubt": false
+ },
+ "rp_082_023_b1": {
+  "best": "bk13",
+  "ok": [
+   "fin_table"
+  ],
+  "why": "UFCF table with WACC x terminal multiple sensitivities",
+  "doubt": false
+ },
+ "ig_t_cycle_saas": {
+  "best": "ig002",
+  "ok": [
+   "ig017",
+   "ig001"
+  ],
+  "why": "4-stage repeating loop, short labels",
+  "doubt": false
+ },
+ "ig_t_pyramid_gov": {
+  "best": "ig072",
+  "ok": [
+   "ig071"
+  ],
+  "why": "5-tier top-down hierarchy",
+  "doubt": false
+ },
+ "ig_t_gauge_occ": {
+  "best": "ig058",
+  "ok": [
+   "ig057",
+   "hero_number"
+  ],
+  "why": "one % against a target on 0-100 scale",
+  "doubt": false
+ },
+ "ig_t_map_europe": {
+  "best": "ig148",
+  "ok": [
+   "map_pins",
+   "ig145"
+  ],
+  "why": "site counts by European country",
+  "doubt": false
+ },
+ "ig_t_seesaw_case": {
+  "best": "ig132",
+  "ok": [
+   "ig102",
+   "bk57",
+   "pros_cons"
+  ],
+  "why": "two cases weighed, upside outweighs",
+  "doubt": false
+ },
+ "ig_t_riskmap_move": {
+  "best": "ig196",
+  "ok": [],
+  "why": "risks on likelihood/impact with movement arrows",
+  "doubt": false
+ },
+ "ig_t_jigsaw_fit": {
+  "best": "ig081",
+  "ok": [
+   "ig082",
+   "ig084"
+  ],
+  "why": "pieces completing a platform, 4 gaps highlighted",
+  "doubt": false
+ },
+ "ig_t_history": {
+  "best": "timeline",
+  "ok": [
+   "ig123"
+  ],
+  "why": "5 dated milestones",
+  "doubt": false
+ },
+ "ig_t_quotes": {
+  "best": "ig157",
+  "ok": [],
+  "why": "5 short customer quotes",
+  "doubt": false
+ },
+ "ig_t_workstreams": {
+  "best": "ig120",
+  "ok": [
+   "bk51",
+   "table"
+  ],
+  "why": "3 workstreams x 3 steps",
+  "doubt": false
+ }
+}

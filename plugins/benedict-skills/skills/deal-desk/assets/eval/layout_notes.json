@@ -1,0 +1,145 @@
+{
+ "notes": {
+  "bk22": {
+   "was_use_when": "Operational or valuation benchmarking on one metric",
+   "was_dont_use_when": "Many metrics at once (use bk32/bk33)",
+   "use_when": "One current operating or valuation metric per peer (a single value each) shown as ranked columns with a median line",
+   "dont_use_when": "Change in a multiple across peers, in % or x turns (use bk21); the same multiple for 2+ years or bases side by side (use bk32); many metrics at once (use bk32/bk33)",
+   "round": 1,
+   "why": "bk22 over-picked for peer multiple data (3 misses)"
+  },
+  "bk21": {
+   "was_use_when": "Precedents where the multiple is the point",
+   "was_dont_use_when": "Deals with no disclosed multiple",
+   "use_when": "A table of deals or peers where one multiple, or its change over time (% or x turns), is the point: names in rows, the value drawn as an inline bar per row, median row at the bottom",
+   "dont_use_when": "Deals or peers with no multiple shown, e.g. EV and premium only (use table); more than 12 rows (use table)",
+   "round": 1,
+   "why": "bk22 over-picked for changes in multiples (2 misses)"
+  },
+  "bk32": {
+   "was_use_when": "Comparing peers on 4-6 metrics at once",
+   "was_dont_use_when": "One metric (use bk22); more than 8 peers",
+   "use_when": "Comparing peers on 2-6 metrics at once, or on one multiple across several years / bases (e.g. two forecast years, NTM vs LTM), as a row of bar columns per metric",
+   "round": 1,
+   "why": "bk22 over-picked for the same multiple on several years/bases (1 miss, part of the bk22 pattern)"
+  },
+  "fin_chart": {
+   "was_use_when": "One metric's trend with CAGR, actual / estimate split and a % margin strip",
+   "was_dont_use_when": "Several unrelated metrics (use fin_table)",
+   "dont_use_when": "Several unrelated metrics (use fin_table); two forecast cases compared (use bk11); 2-4 metrics or segments each needing its own chart (use bk36)",
+   "round": 1,
+   "why": "fin_chart over-picked for multi-case / multi-metric blocks (2 misses)"
+  },
+  "bk36": {
+   "was_use_when": "Historical / projected financial summary, market data",
+   "was_dont_use_when": "Only one chart worth showing",
+   "use_when": "Historical / projected summary as 2-4 small charts, one per metric or segment (e.g. revenue, EBITDA, segment EBITDA with CAGRs), or market data in 2-4 panels",
+   "round": 1,
+   "why": "fin_chart over-picked for multi-metric blocks"
+  },
+  "bk11": {
+   "was_use_when": "Comparing two forecast cases visually",
+   "was_dont_use_when": "Only one forecast case",
+   "use_when": "Two forecast cases (base vs alternative, plan vs street) compared visually: small charts per metric with both cases side by side, e.g. per-share earnings and book value under each case",
+   "round": 1,
+   "why": "fin_chart over-picked for two-case blocks"
+  },
+  "table": {
+   "was_use_when": "Comparison tables, sources & uses, comps, precedent transactions, deal terms, requirements with detail",
+   "was_dont_use_when": "A trend or one number per item (use a chart)",
+   "use_when": "Labelled numbers that need exact reading: comps, precedents, sources & uses, deal terms, one-way sensitivities (down / base / up), KPI lists with change vs prior period, requirements with detail",
+   "dont_use_when": "A trend over time (use a chart); ranking many players on one metric (use bar); 3-6 headline numbers with no extra columns (use stat_strip)",
+   "round": 1,
+   "why": "table under-picked for short labelled numeric sets (3 misses)"
+  },
+  "bar": {
+   "was_use_when": "Ranking players by one metric (target navy, the rest grey)",
+   "was_dont_use_when": "A time series (use column)",
+   "dont_use_when": "A time series (use column); 2-3 scenario values such as a one-way sensitivity down / base / up (use table)",
+   "round": 1,
+   "why": "table under-picked for one-way sensitivities (2 misses)"
+  }
+ },
+ "history": [
+  {
+   "round": 1,
+   "ids": [
+    "bk22",
+    "bk21",
+    "bk32",
+    "fin_chart",
+    "bk36",
+    "bk11",
+    "table",
+    "bar"
+   ],
+   "result": "kept",
+   "suspect_labels": [
+    {
+     "row": "rp_039_052_b1",
+     "why": "Block is a precedent take-private deal table where the EV/EBITDA multiple is the point; bk21 (picked) fits exactly, bk33 'peer small multiples' does not fit deal data"
+    },
+    {
+     "row": "rp_066_015_b2",
+     "why": "13 deals with EV and premium but no multiple: bk21's own rule excludes deals with no multiple and caps at 12; table (picked) fits better"
+    },
+    {
+     "row": "rp_114_003_b1",
+     "why": "Sale process stages plus price indications is a sale process summary; bk49 (picked) fits; table-only key looks too narrow"
+    },
+    {
+     "row": "rp_028_006_b2",
+     "why": "Content is 4 text points with caveats, data_type text; bullets/takeaway fit, table as the only right answer is doubtful"
+    },
+    {
+     "row": "rp_082_058_b1",
+     "why": "EBITDA, debt and FFO/debt ratio by year is a credit stats table with a highlighted ratio; bk46 (picked) fits at least as well as fin_table and should be in also_right"
+    },
+    {
+     "row": "ig_t_team",
+     "why": "ig175 is for 8 customer personas with silhouettes; 5 executives with role facts fit bk58/table/pill_rows; ig175 as primary looks wrong"
+    },
+    {
+     "row": "rp_044_037_b2",
+     "why": "4 DCF summary numbers with no cash-flow forecast; bk13's own rule excludes no-forecast blocks; stat_strip (picked) is reasonable"
+    }
+   ],
+   "dev_top1": "90%",
+   "dev_top3": "100%"
+  },
+  {
+   "round": 2,
+   "ids": [
+    "bk50",
+    "bk49",
+    "stat_icons",
+    "bk08",
+    "bk07",
+    "bk41",
+    "stat_rings",
+    "bk44"
+   ],
+   "result": "reverted",
+   "suspect_labels": [
+    {
+     "row": "rp_039_052_b1",
+     "why": "5 precedent deals with TEV/EBITDA per row and a multiple range as the message - exactly bk21's use_when; bk33 (peer benchmarking page) does not fit precedent deals"
+    },
+    {
+     "row": "rp_066_015_b2",
+     "why": "Block content has EV and premium only, no multiple per row; bk21's round-1 dont_use_when explicitly sends this to table, so the picker followed the rule"
+    },
+    {
+     "row": "rp_082_058_b1",
+     "why": "EBITDA, debt and FFO/debt ratio by year with a leverage message is a credit stats table; bk46 is at least as right as fin_table and should be in also_right"
+    },
+    {
+     "row": "rp_028_006_b2",
+     "why": "Four explanatory sentences with no row/column structure; bullets (or takeaway) fits better than table"
+    }
+   ],
+   "dev_top1": "88%",
+   "dev_top3": "100%"
+  }
+ ]
+}

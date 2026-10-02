@@ -36,6 +36,7 @@ SCAN = os.path.join(ASSETS, "layout_scan.json")
 TAGS = os.path.join(ASSETS, "layout_tags.json")
 LIB_JSON = os.path.join(ASSETS, "layout_library.json")
 THUMBS = os.path.join(ASSETS, "layout_thumbs")
+NOTES = os.path.join(ASSETS, "eval", "layout_notes.json")  # wording fixes from the tuning loop (layout_loop.py)
 PAGES_JSON = os.path.join(ASSETS, "real_deck_pages.json")   # exemplar thumbs are relative to its "root"
 EMU = 914400
 GAP = 0.12   # inches: shapes closer than this belong to the same sub-diagram
@@ -511,7 +512,14 @@ def build():
         r["exemplars"] = r["exemplars"] + [
             {"deck": p["deck"], "page": p["page"], "bank": p["bank"], "file": p["file"], "title": p["title"],
              "note": p["note"], "thumb": p["thumb"]} for p in hits[:4]]
-    lib = {"version": 1, "note": "Built by scripts/layout_tag.py build; edit layout_tags.json / COMPONENTS, not this file",
+    # tuning-loop wording fixes override use_when / dont_use_when (kept only when the dev score did not drop)
+    notes = _load(NOTES, {}).get("notes", {})
+    for r in recs:
+        for k in ("use_when", "dont_use_when"):
+            if notes.get(r["id"], {}).get(k):
+                r[k] = notes[r["id"]][k]
+    lib = {"version": 1, "note": "Built by scripts/layout_tag.py build; edit layout_tags.json / COMPONENTS / "
+           "eval/layout_notes.json, not this file",
            "sections": SECTIONS, "data_types": DATA_TYPES, "layouts": recs}
     _dump(LIB_JSON, lib)
     print(f"{len(recs)} records -> {os.path.abspath(LIB_JSON)}")

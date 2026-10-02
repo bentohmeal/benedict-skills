@@ -1,0 +1,55 @@
+{
+  "patterns": [
+    "bk22 over-picked for peer multiple data that is not a plain one-metric ranking: changes in multiples (% or x turns) -> bk21 (2), same multiple on several years/bases -> bk32 (1); 3 misses",
+    "fin_chart over-picked when the block has two forecast cases (-> bk11, 1) or several metrics/segments each needing a chart (-> bk36, 1); 2 misses",
+    "table under-picked for short labelled numeric sets: one-way sensitivities (down/base/up) went to bar (2) and a KPI list with period changes went to stat_icons (1); table's own dont_use_when ('one number per item') pushes testers away; 3 misses",
+    "Single-row misses judged better as label issues than wording issues (see suspect_labels): bk33, bk21 for EV/premium-only deals, table vs bk49, table vs bullets, fin_table vs bk46, ig175 for executives, bk13 for a 4-number DCF summary; 7 rows",
+    "Left unchanged (single rows, no clear pattern): bk26 for a dated event list, photo vs page_overview, bk41 vs stacked, bk44 vs heatmap; 4 rows"
+  ],
+  "notes": {
+    "bk22": {
+      "use_when": "One current operating or valuation metric per peer (a single value each) shown as ranked columns with a median line",
+      "dont_use_when": "Change in a multiple across peers, in % or x turns (use bk21); the same multiple for 2+ years or bases side by side (use bk32); many metrics at once (use bk32/bk33)",
+      "why": "bk22 over-picked for peer multiple data (3 misses)"
+    },
+    "bk21": {
+      "use_when": "A table of deals or peers where one multiple, or its change over time (% or x turns), is the point: names in rows, the value drawn as an inline bar per row, median row at the bottom",
+      "dont_use_when": "Deals or peers with no multiple shown, e.g. EV and premium only (use table); more than 12 rows (use table)",
+      "why": "bk22 over-picked for changes in multiples (2 misses)"
+    },
+    "bk32": {
+      "use_when": "Comparing peers on 2-6 metrics at once, or on one multiple across several years / bases (e.g. two forecast years, NTM vs LTM), as a row of bar columns per metric",
+      "why": "bk22 over-picked for the same multiple on several years/bases (1 miss, part of the bk22 pattern)"
+    },
+    "fin_chart": {
+      "dont_use_when": "Several unrelated metrics (use fin_table); two forecast cases compared (use bk11); 2-4 metrics or segments each needing its own chart (use bk36)",
+      "why": "fin_chart over-picked for multi-case / multi-metric blocks (2 misses)"
+    },
+    "bk36": {
+      "use_when": "Historical / projected summary as 2-4 small charts, one per metric or segment (e.g. revenue, EBITDA, segment EBITDA with CAGRs), or market data in 2-4 panels",
+      "why": "fin_chart over-picked for multi-metric blocks"
+    },
+    "bk11": {
+      "use_when": "Two forecast cases (base vs alternative, plan vs street) compared visually: small charts per metric with both cases side by side, e.g. per-share earnings and book value under each case",
+      "why": "fin_chart over-picked for two-case blocks"
+    },
+    "table": {
+      "use_when": "Labelled numbers that need exact reading: comps, precedents, sources & uses, deal terms, one-way sensitivities (down / base / up), KPI lists with change vs prior period, requirements with detail",
+      "dont_use_when": "A trend over time (use a chart); ranking many players on one metric (use bar); 3-6 headline numbers with no extra columns (use stat_strip)",
+      "why": "table under-picked for short labelled numeric sets (3 misses)"
+    },
+    "bar": {
+      "dont_use_when": "A time series (use column); 2-3 scenario values such as a one-way sensitivity down / base / up (use table)",
+      "why": "table under-picked for one-way sensitivities (2 misses)"
+    }
+  },
+  "suspect_labels": [
+    {"row": "rp_039_052_b1", "why": "Block is a precedent take-private deal table where the EV/EBITDA multiple is the point; bk21 (picked) fits exactly, bk33 'peer small multiples' does not fit deal data"},
+    {"row": "rp_066_015_b2", "why": "13 deals with EV and premium but no multiple: bk21's own rule excludes deals with no multiple and caps at 12; table (picked) fits better"},
+    {"row": "rp_114_003_b1", "why": "Sale process stages plus price indications is a sale process summary; bk49 (picked) fits; table-only key looks too narrow"},
+    {"row": "rp_028_006_b2", "why": "Content is 4 text points with caveats, data_type text; bullets/takeaway fit, table as the only right answer is doubtful"},
+    {"row": "rp_082_058_b1", "why": "EBITDA, debt and FFO/debt ratio by year is a credit stats table with a highlighted ratio; bk46 (picked) fits at least as well as fin_table and should be in also_right"},
+    {"row": "ig_t_team", "why": "ig175 is for 8 customer personas with silhouettes; 5 executives with role facts fit bk58/table/pill_rows; ig175 as primary looks wrong"},
+    {"row": "rp_044_037_b2", "why": "4 DCF summary numbers with no cash-flow forecast; bk13's own rule excludes no-forecast blocks; stat_strip (picked) is reasonable"}
+  ]
+}

@@ -1,0 +1,287 @@
+[
+ {
+  "row": "rp_067_007_b2",
+  "section": "market",
+  "message": "Macro backdrop and FttH/FWA competition compressed cable multiples",
+  "block": {
+   "what": "Multiple change since pre-COVID",
+   "data_type": "comparison",
+   "about": "percent change in multiples",
+   "content": [
+    "Charter (87.7%)",
+    "Cable One (38.5%)",
+    "Comcast (63.4%)",
+    "Lumen (79.7%)",
+    "Median (37.0%)"
+   ],
+   "unit": "%"
+  },
+  "right": {
+   "id": "bk21",
+   "name": "Precedent table with inline bars",
+   "data_type": "matrix",
+   "use_when": "Precedents where the multiple is the point",
+   "dont_use_when": "Deals with no disclosed multiple"
+  },
+  "also_right": [
+   "table"
+  ],
+  "picked": {
+   "id": "bk22",
+   "name": "Ranked columns with median line",
+   "data_type": "comparison",
+   "use_when": "Operational or valuation benchmarking on one metric",
+   "dont_use_when": "Many metrics at once (use bk32/bk33)"
+  },
+  "alts": [
+   "bar",
+   "table"
+  ],
+  "why": "5 % changes by peer incl. a median: ranked columns with median line fit one metric plus median",
+  "in_top3": true
+ },
+ {
+  "row": "rp_067_007_b3",
+  "section": "market",
+  "message": "Macro backdrop and FttH/FWA competition compressed cable multiples",
+  "block": {
+   "what": "Turns of multiple change",
+   "data_type": "comparison",
+   "about": "change in turns of EBITDA",
+   "content": [
+    "(4.2x)",
+    "(12.1x)",
+    "(2.3x)",
+    "3.3x",
+    "0.5x",
+    "Median (1.0x)"
+   ],
+   "unit": "x"
+  },
+  "right": {
+   "id": "bk21",
+   "name": "Precedent table with inline bars",
+   "data_type": "matrix",
+   "use_when": "Precedents where the multiple is the point",
+   "dont_use_when": "Deals with no disclosed multiple"
+  },
+  "also_right": [
+   "table",
+   "bk19"
+  ],
+  "picked": {
+   "id": "bk22",
+   "name": "Ranked columns with median line",
+   "data_type": "comparison",
+   "use_when": "Operational or valuation benchmarking on one metric",
+   "dont_use_when": "Many metrics at once (use bk32/bk33)"
+  },
+  "alts": [
+   "bar",
+   "table"
+  ],
+  "why": "6 changes in turns (x) incl. median: ranked columns with median line, matching the sibling exhibit",
+  "in_top3": true
+ },
+ {
+  "row": "rp_044_037_b2",
+  "section": "valuation",
+  "message": "DCF equity value depends on WACC and terminal assumptions",
+  "block": {
+   "what": "Summary results",
+   "data_type": "kpi_set",
+   "about": "DCF summary",
+   "content": [
+    "WACC 10.0%",
+    "Implied equity value",
+    "Implied enterprise value",
+    "Free cash flow"
+   ]
+  },
+  "right": {
+   "id": "bk13",
+   "name": "DCF page",
+   "data_type": "time_series",
+   "use_when": "Any DCF output page",
+   "dont_use_when": "No cash-flow forecast; summary valuation page (use a football field)"
+  },
+  "also_right": [
+   "table",
+   "fin_table"
+  ],
+  "picked": {
+   "id": "stat_strip",
+   "name": "stat strip",
+   "data_type": "kpi_set",
+   "use_when": "A row of 3-6 headline numbers under a chart or risk table",
+   "dont_use_when": "Numbers that need icons to be understood; more than 6 items"
+  },
+  "alts": [
+   "bk13",
+   "table"
+  ],
+  "why": "4 DCF summary outputs (WACC, EV, equity value, FCF): a row of headline numbers; a full bk13 page needs the cash flow forecast",
+  "in_top3": true
+ },
+ {
+  "row": "rp_032_008_b2",
+  "section": "financials",
+  "message": "Case 1 and Case 2 differ in premium growth, underwriting profit and EPS",
+  "block": {
+   "what": "TBVPS and operating EPS",
+   "data_type": "time_series",
+   "about": "per-share returns 2014-2022E",
+   "content": [
+    "Operating EPS CAGR 2016-22: 10.6%",
+    "TBVPS growth 2015A-2022E",
+    "Operating EPS $470"
+   ]
+  },
+  "right": {
+   "id": "bk11",
+   "name": "Plan vs street chart grid",
+   "data_type": "comparison",
+   "use_when": "Comparing two forecast cases visually",
+   "dont_use_when": "Only one forecast case"
+  },
+  "also_right": [
+   "bk36",
+   "column"
+  ],
+  "picked": {
+   "id": "fin_chart",
+   "name": "fin chart",
+   "data_type": "time_series",
+   "use_when": "One metric's trend with CAGR, actual / estimate split and a % margin strip",
+   "dont_use_when": "Several unrelated metrics (use fin_table)"
+  },
+  "alts": [
+   "column",
+   "bk36"
+  ],
+  "why": "per-share metrics over years with a CAGR call-out: one-metric trend with CAGR strip",
+  "in_top3": true
+ },
+ {
+  "row": "rp_082_053_b2",
+  "section": "valuation",
+  "message": "Indicative offer of $34.25 sits about 7% above the unaffected price after volatile trading history",
+  "block": {
+   "what": "Key developments",
+   "data_type": "list",
+   "about": "dated events",
+   "content": [
+    "Dec 17 2015 began trading on NYSE at $38.75",
+    "Feb 25 2020 revised guidance downward",
+    "Oct 21 2020 PNMR merger at $50.30 per share",
+    "May 12 2021 QIA and Indiana bought stock at $51.40",
+    "Dec 31 2023 terminated PNMR merger",
+    "Mar 7 2024 Indicative Offer of $34.25 in cash"
+   ]
+  },
+  "right": {
+   "id": "bk26",
+   "name": "Price chart with lettered events",
+   "data_type": "time_series",
+   "use_when": "Share price history with what moved it",
+   "dont_use_when": "Private target; no events worth flagging"
+  },
+  "also_right": [
+   "numbered_steps",
+   "timeline"
+  ],
+  "picked": {
+   "id": "table",
+   "name": "table",
+   "data_type": "comparison",
+   "use_when": "Comparison tables, sources & uses, comps, precedent transactions, deal terms, requirements with detail",
+   "dont_use_when": "A trend or one number per item (use a chart)"
+  },
+  "alts": [
+   "timeline",
+   "bullets"
+  ],
+  "why": "6 dated events (49 words) keyed to the price chart: dated event table beside the chart; a timeline would duplicate the chart axis",
+  "in_top3": true
+ },
+ {
+  "row": "rp_082_009_b2",
+  "section": "financials",
+  "message": "Management forecast shows capex shifting to Renewables with EBITDA and EPS growth to 2035",
+  "block": {
+   "what": "Adj. net income and EBITDA",
+   "data_type": "time_series",
+   "about": "consolidated EBITDA 2024E-2035E",
+   "content": [
+    "EBITDA $5.1 2024E, $5.2, $4.9",
+    "Networks EBITDA CAGR 6.8% through 2035E",
+    "Renewables EBITDA ~$10 bn through 2035 with $24 bn+ capex"
+   ]
+  },
+  "right": {
+   "id": "bk36",
+   "name": "2x2 chart dashboard",
+   "data_type": "time_series",
+   "use_when": "Historical / projected financial summary, market data",
+   "dont_use_when": "Only one chart worth showing"
+  },
+  "also_right": [
+   "stacked",
+   "column"
+  ],
+  "picked": {
+   "id": "fin_chart",
+   "name": "fin chart",
+   "data_type": "time_series",
+   "use_when": "One metric's trend with CAGR, actual / estimate split and a % margin strip",
+   "dont_use_when": "Several unrelated metrics (use fin_table)"
+  },
+  "alts": [
+   "column",
+   "stacked"
+  ],
+  "why": "EBITDA trend 2024E-2035E with CAGR: one-metric trend with CAGR strip",
+  "in_top3": true
+ },
+ {
+  "row": "ig_t_team",
+  "section": "company",
+  "message": "A proven team that stays post-deal",
+  "block": {
+   "what": "Management team",
+   "data_type": "list",
+   "about": "people with roles",
+   "content": [
+    "CEO, 20 yrs",
+    "CFO, ex-Big 4",
+    "COO, ex-Amazon",
+    "CTO, founder",
+    "CRO, ex-Salesforce"
+   ]
+  },
+  "right": {
+   "id": "ig175",
+   "name": "People portraits with captions",
+   "data_type": "list",
+   "use_when": "8 stakeholder or customer types, each with a caption above and below the silhouette (customer personas)",
+   "dont_use_when": "Fewer than 4 personas"
+  },
+  "also_right": [
+   "bk58",
+   "table"
+  ],
+  "picked": {
+   "id": "pill_rows",
+   "name": "pill rows",
+   "data_type": "list",
+   "use_when": "Business overview or summary: a short label pill beside 1-2 lines of text per row",
+   "dont_use_when": "Rows needing long argued paragraphs (use side_tabs)"
+  },
+  "alts": [
+   "table",
+   "bk58"
+  ],
+  "why": "5 executives each with a role and one short fact: role pill beside one line",
+  "in_top3": true
+ }
+]

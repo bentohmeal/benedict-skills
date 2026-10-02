@@ -1,0 +1,327 @@
+[
+ {
+  "row": "rp_108_004_b1",
+  "section": "company",
+  "message": "Revised proposal offers $13.25 per share with committed financing",
+  "block": {
+   "what": "Price",
+   "data_type": "kpi_set",
+   "about": "offer price and premiums",
+   "content": [
+    "$13.25 per share",
+    "30.3% premium to closing price of $10.17 on Jan 25, 2024",
+    "31.6% premium to 30-day VWAP of $10.07",
+    "29.1% premium to 30-day VWAP of $10.26"
+   ]
+  },
+  "right": {
+   "id": "side_tabs",
+   "name": "side tabs",
+   "data_type": "list",
+   "use_when": "Investment thesis pillars: bold claim + evidence -> so what -> implication (35+ words per pillar)",
+   "dont_use_when": "Short facts or one-liners (use pill_rows); a process (use chevrons)"
+  },
+  "also_right": [
+   "pill_rows"
+  ],
+  "picked": {
+   "id": "hero_number",
+   "name": "hero number",
+   "data_type": "kpi_set",
+   "use_when": "One headline figure (IRR, offer price, EV) with 2-3 supporting points",
+   "dont_use_when": "Several numbers of equal weight (use stat_icons)"
+  },
+  "alts": [
+   "stat_strip",
+   "bk01"
+  ],
+  "why": "One headline offer price ($13.25) with 3 supporting premiums; hero number beats an equal-weight strip",
+  "in_top3": false
+ },
+ {
+  "row": "rp_108_004_b2",
+  "section": "company",
+  "message": "Revised proposal offers $13.25 per share with committed financing",
+  "block": {
+   "what": "Equity and debt financing",
+   "data_type": "text",
+   "about": "financing structure",
+   "content": [
+    "Recapitalization with new third-party debt from Goldman Sachs and JPMorgan",
+    "Equity from rollover of NMC existing 32% stake and new cash equity",
+    "Customer stockholders invited to roll or increase investment",
+    "Not contingent on stockholders rolling"
+   ]
+  },
+  "right": {
+   "id": "side_tabs",
+   "name": "side tabs",
+   "data_type": "list",
+   "use_when": "Investment thesis pillars: bold claim + evidence -> so what -> implication (35+ words per pillar)",
+   "dont_use_when": "Short facts or one-liners (use pill_rows); a process (use chevrons)"
+  },
+  "also_right": [
+   "pill_rows",
+   "bk47"
+  ],
+  "picked": {
+   "id": "bullets",
+   "name": "bullets",
+   "data_type": "text",
+   "use_when": "Numbered commentary beside an exhibit: bold lead-in + evidence + so what, 2-6 points",
+   "dont_use_when": "The main exhibit of a page (pick a chart, table or diagram); more than 2 bullet blocks on one slide"
+  },
+  "alts": [
+   "pill_rows",
+   "bk47"
+  ],
+  "why": "4 text points on financing structure beside the price panel; no term-sheet detail for bk47",
+  "in_top3": true
+ },
+ {
+  "row": "rp_028_006_b1",
+  "section": "valuation",
+  "message": "Selling now at $35-36 beats holding or spinning off unless revenue and EPS grow at high required rates",
+  "block": {
+   "what": "Alternatives compared",
+   "data_type": "comparison",
+   "about": "sell vs hold vs spin-off value per share",
+   "content": [
+    "Sell (pre-spin) $35.00 present value",
+    "Spin-off Downside $23.96 / Base $28 / Upside $33",
+    "Hold Downside $22.25 / Base $25.77 / Upside $30",
+    "Sell A&I (post-spin) $35-37",
+    "EPS CAGR Downside 6.4% / Base 9.3% / Upside 11.3%",
+    "EPS CAGR required for sell value 14.4%-15.1%"
+   ]
+  },
+  "right": {
+   "id": "table",
+   "name": "table",
+   "data_type": "comparison",
+   "use_when": "Comparison tables, sources & uses, comps, precedent transactions, deal terms, requirements with detail",
+   "dont_use_when": "A trend or one number per item (use a chart)"
+  },
+  "also_right": [
+   "bk48",
+   "ig104"
+  ],
+  "picked": {
+   "id": "bk35",
+   "name": "Company comparison matrix",
+   "data_type": "matrix",
+   "use_when": "Comparing 3-5 entities or precedent deals on attributes",
+   "dont_use_when": "More than 5 entities; purely numeric comparison (use bk19)"
+  },
+  "alts": [
+   "table",
+   "football_field"
+  ],
+  "why": "3 alternatives (sell, hold, spin) compared on value cases and required growth; follows alternatives-comparison precedent",
+  "in_top3": true
+ },
+ {
+  "row": "rp_104_028_b2",
+  "section": "structure",
+  "message": "Lunar financing package provides $3,720mm funded debt and $4,570mm commitments at 4.79% base cost",
+  "block": {
+   "what": "Summary cost",
+   "data_type": "kpi_set",
+   "about": "blended financing metrics",
+   "content": [
+    "WAM 6.6 years",
+    "WACD base case 4.79%",
+    "Flex 6.61%",
+    "Structure flex 6.95%",
+    "Total financing fees $69.2mm"
+   ]
+  },
+  "right": {
+   "id": "bk47",
+   "name": "Financing term sheet",
+   "data_type": "list",
+   "use_when": "Debt package or financing structure",
+   "dont_use_when": "Single plain loan (one line of text)"
+  },
+  "also_right": [
+   "table"
+  ],
+  "picked": {
+   "id": "stat_strip",
+   "name": "stat strip",
+   "data_type": "kpi_set",
+   "use_when": "A row of 3-6 headline numbers under a chart or risk table",
+   "dont_use_when": "Numbers that need icons to be understood; more than 6 items"
+  },
+  "alts": [
+   "bk47",
+   "table"
+  ],
+  "why": "5 headline financing metrics (WAM, WACD, flex, fees) in a row under the term sheet",
+  "in_top3": true
+ },
+ {
+  "row": "rp_070_017_b1",
+  "section": "valuation",
+  "message": "Take-privates of US-listed Chinese companies saw median premiums of 23-44% across measures",
+  "block": {
+   "what": "Premium by precedent",
+   "data_type": "comparison",
+   "about": "premium vs one day, 30, 60 day VWAP",
+   "unit": "%",
+   "content": [
+    "FunTalk one day 23.0%",
+    "CRIC 19.0%",
+    "Gushan 28.2%",
+    "CFS 23.5%",
+    "Median one day 23.0%",
+    "Median 30 day VWAP 29.2%",
+    "Median 60 day VWAP 27.0%",
+    "Median 35.1% / 39.1% / 43.8% for other measures"
+   ]
+  },
+  "right": {
+   "id": "bk21",
+   "name": "Precedent table with inline bars",
+   "data_type": "matrix",
+   "use_when": "Precedents where the multiple is the point",
+   "dont_use_when": "Deals with no disclosed multiple"
+  },
+  "also_right": [
+   "bk23"
+  ],
+  "picked": {
+   "id": "bk25",
+   "name": "Premiums paid",
+   "data_type": "range",
+   "use_when": "Premium analysis",
+   "dont_use_when": "Private target (no share price)"
+  },
+  "alts": [
+   "table",
+   "bar"
+  ],
+  "why": "Premiums paid across precedents and VWAP measures with medians = premiums-paid exhibit",
+  "in_top3": false
+ },
+ {
+  "row": "rp_003_016_b2",
+  "section": "valuation",
+  "message": "Peers benchmarked on CY24E growth, margin and EBITDA multiples with medians",
+  "block": {
+   "what": "Operating metrics: revenue growth and EBITDA margin",
+   "data_type": "comparison",
+   "about": "CY24E growth and margin by peer",
+   "content": [
+    "CY24E Revenue Growth by peer (Adyen, Corpay, Paysafe and others)",
+    "CY24E EBITDA Margin 35% to 45% range",
+    "Business median shown"
+   ]
+  },
+  "right": {
+   "id": "bk32",
+   "name": "Benchmarking bar matrix",
+   "data_type": "matrix",
+   "use_when": "Comparing peers on 4-6 metrics at once",
+   "dont_use_when": "One metric (use bk22); more than 8 peers"
+  },
+  "also_right": [
+   "bk33"
+  ],
+  "picked": {
+   "id": "bk22",
+   "name": "Ranked columns with median line",
+   "data_type": "comparison",
+   "use_when": "Operational or valuation benchmarking on one metric",
+   "dont_use_when": "Many metrics at once (use bk32/bk33)"
+  },
+  "alts": [
+   "bk33",
+   "bar"
+  ],
+  "why": "Peers ranked on growth and margin each with a median; ranked columns with median line per metric",
+  "in_top3": true
+ },
+ {
+  "row": "rp_068_021_b2",
+  "section": "valuation",
+  "message": "Pro forma UGI share price and accretion vary with P/E multiple and equity financing share of the buy-in",
+  "block": {
+   "what": "Accretion / (dilution) to current price $54.02",
+   "data_type": "matrix",
+   "about": "accretion by multiple and financing",
+   "unit": "%",
+   "content": [
+    "2019E 65% equity: 3%, (1%), (7%)",
+    "75%: 9%, (2%), (7%)",
+    "85%: (2%), (8%)",
+    "2020E 65% equity: 7%, 3%, (5%), (11%)",
+    "75%: 6%, 3%, (6%), (12%)",
+    "85%: 6%, 2%, (6%), (12%)"
+   ]
+  },
+  "right": {
+   "id": "bk44",
+   "name": "Twin sensitivity tables",
+   "data_type": "matrix",
+   "use_when": "IRR or price sensitivity on two different pairs of drivers",
+   "dont_use_when": "Only one pair of drivers matters"
+  },
+  "also_right": [
+   "heatmap",
+   "table"
+  ],
+  "picked": {
+   "id": "bk45",
+   "name": "Accretion / dilution",
+   "data_type": "comparison",
+   "use_when": "Merger impact on EPS / DPU",
+   "dont_use_when": "All-cash deal by a private buyer"
+  },
+  "alts": [
+   "bk44",
+   "table"
+  ],
+  "why": "Accretion/(dilution) % by year, P/E and equity share = merger impact grid",
+  "in_top3": true
+ },
+ {
+  "row": "ig_t_seesaw_case",
+  "section": "valuation",
+  "message": "Upside outweighs downside at the current price",
+  "block": {
+   "what": "Bull vs bear case",
+   "data_type": "comparison",
+   "about": "two cases weighed against each other",
+   "content": [
+    "Bull: margin expansion, NRR above 110%, US$1.5bn exit",
+    "Bear: churn rises, price war, US$0.9bn exit"
+   ]
+  },
+  "right": {
+   "id": "ig132",
+   "name": "Balance (seesaw) of two panels",
+   "data_type": "comparison",
+   "use_when": "Weighing two sides (benefits vs costs, upside vs risks), 3-4 bullets each",
+   "dont_use_when": "More than 2 sides"
+  },
+  "also_right": [
+   "pros_cons",
+   "ig133",
+   "bk57"
+  ],
+  "picked": {
+   "id": "ig102",
+   "name": "Bull and bear two-way arrows",
+   "data_type": "comparison",
+   "use_when": "Upside vs downside case (bull vs bear), each with heading and ~25 words",
+   "dont_use_when": "More than 2 cases"
+  },
+  "alts": [
+   "pros_cons",
+   "ig132"
+  ],
+  "why": "Exactly 2 cases, bull vs bear, short text each = two-way arrows",
+  "in_top3": true
+ }
+]

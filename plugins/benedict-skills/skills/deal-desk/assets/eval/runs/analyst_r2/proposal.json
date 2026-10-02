@@ -1,0 +1,55 @@
+{
+  "patterns": [
+    "Vague one-line bk process layouts (bk49 'Sale process summary', bk50 'Process timetable with specific dates') picked for process-section content that lacks their defining feature (stage counts; a forward calendar) - 2 misses (rp_107_004_b1, rp_114_003_b1)",
+    "table under-picked for labelled number lists that need exact reading (KPIs with change vs prior, per-party prices) - lost to stat_icons / bk49 / bullets - 3 misses (rp_121_013_b1, rp_114_003_b1, rp_028_006_b2; the last looks like a label issue)",
+    "Terse bk use_when lines lose to more descriptive generic layouts: bk07 lost to bk08 ('Any A/E summary'), bk41 lost to stat_rings, bk44 lost to heatmap - 3 misses (rp_011_015_b1, rp_115_004_b2, rp_082_023_b2)",
+    "bk21 answer key inconsistent with its own round-1 rule: labelled wrong where a multiple is the point, labelled right where no multiple is shown - 2 misses (rp_039_052_b1, rp_066_015_b2) -> suspect labels, wording not changed",
+    "Single-row, not changed: management team list picked pill_rows over ig175 (ig_t_team); FFO/debt credit build picked bk46 over fin_table (suspect label)"
+  ],
+  "notes": {
+    "bk50": {
+      "use_when": "A forward deal timetable of 1-3 months on a calendar grid, key dates marked by week (launch, bids due, signing)",
+      "dont_use_when": "Timeline longer than 3 months (use bk51); a record or chronology of past events (use timeline)",
+      "why": "Pattern 1: dated past chronology picked bk50 instead of timeline / bullets"
+    },
+    "bk49": {
+      "use_when": "Sale process summary drawn as a funnel where the number of parties at each stage (contacted, NDA, bids, finalists) is the point",
+      "dont_use_when": "Process not yet launched; stages with no party counts, or per-bidder prices that must be read exactly (use table)",
+      "why": "Patterns 1 and 2: funnel stage labels with no counts plus price indications belong in a table"
+    },
+    "stat_icons": {
+      "dont_use_when": "More than 8 numbers (use a table); numbers each shown with a change vs prior period or other extra columns (use table); numbers that need a trend (use fin_chart)",
+      "why": "Pattern 2: KPI list with change vs prior period picked stat_icons although table's use_when names that case"
+    },
+    "bk08": {
+      "use_when": "One-company A/E financial summary or UFCF build: line items in rows, historical and projection columns split by a divider",
+      "dont_use_when": "No forecast columns; financials broken out by segment or business unit (use bk07); when a chart tells it faster",
+      "why": "Pattern 3: 'Any A/E financial summary' was too greedy and took segment financials from bk07"
+    },
+    "bk07": {
+      "use_when": "Revenue / EBITDA / cash flow by year for 2-4 segments or business units, one tabbed block per segment plus a commentary column on what drives its swings",
+      "dont_use_when": "Single-segment business; more than 4 segments",
+      "why": "Pattern 3: make the segment-split shape explicit so it beats bk08"
+    },
+    "bk41": {
+      "use_when": "Market page of 2-3 panels, one per market segment, each with its size, share and growth figures plus a line on what drives it; argues where the opportunity is",
+      "dont_use_when": "Company-specific argument; a single % split with no sizes or growth (use stat_rings)",
+      "why": "Pattern 3: segment market argument with $ size, share and CAGR went to stat_rings; bk41 not even in top 3"
+    },
+    "stat_rings": {
+      "dont_use_when": "Values that are not percentages; shares that must add to 100% across many parts (use stacked or pie); market segments that also carry $ size and growth (use bk41)",
+      "why": "Pattern 3: pointer back to bk41 so % rings stop taking full market-segment arguments"
+    },
+    "bk44": {
+      "use_when": "Two sensitivity grids side by side: two different pairs of drivers, or one pair showing two outputs (e.g. value and an implied cross-check rate)",
+      "dont_use_when": "One grid with one output (use heatmap)",
+      "why": "Pattern 3: value grid plus implied-growth cross-check read as a single heatmap"
+    }
+  },
+  "suspect_labels": [
+    {"row": "rp_039_052_b1", "why": "5 precedent deals with TEV/EBITDA per row and a multiple range as the message - exactly bk21's use_when; bk33 (peer benchmarking page) does not fit precedent deals"},
+    {"row": "rp_066_015_b2", "why": "Block content has EV and premium only, no multiple per row; bk21's round-1 dont_use_when explicitly sends this to table, so the picker followed the rule"},
+    {"row": "rp_082_058_b1", "why": "EBITDA, debt and FFO/debt ratio by year with a leverage message is a credit stats table; bk46 is at least as right as fin_table and should be in also_right"},
+    {"row": "rp_028_006_b2", "why": "Four explanatory sentences with no row/column structure; bullets (or takeaway) fits better than table"}
+  ]
+}

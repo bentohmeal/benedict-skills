@@ -1,0 +1,375 @@
+[
+ {
+  "row": "rp_082_058_b1",
+  "section": "financials",
+  "message": "FFO-to-debt stays near 10-12% through 2035E",
+  "block": {
+   "what": "FFO-to-debt build",
+   "data_type": "time_series",
+   "about": "S&P methodology 2024E-2035E",
+   "content": [
+    "EBITDA 2024E 2,367 2025E 2,717 2026E 2,987 2027E 3,272",
+    "EBITDA 2028E 3,534 2030E 4,093 2033E 4,879 2035E 5,268",
+    "Total debt 2024E 16,466 2025E 18,143 2027E 22,730 2035E 34,114",
+    "Adjusted debt 2024E 16,652 2035E 34,913",
+    "FFO/debt 2024E 12.3% 2028E 10.6% 2035E 12.3%"
+   ]
+  },
+  "right": {
+   "id": "fin_table",
+   "name": "fin table",
+   "data_type": "time_series",
+   "use_when": "Income statement / cash flow line items in bank format (A / E periods, % rows)",
+   "dont_use_when": "A one-metric trend (use fin_chart)"
+  },
+  "also_right": [
+   "bk08",
+   "bk38"
+  ],
+  "picked": {
+   "id": "bk46",
+   "name": "Credit stats with highlighted ratios",
+   "data_type": "time_series",
+   "use_when": "Financing impact on leverage / rating",
+   "dont_use_when": "No new debt"
+  },
+  "alts": [
+   "fin_table",
+   "bk08"
+  ],
+  "why": "EBITDA, debt and FFO/debt ratio by year 2024E-2035E; credit stats table with highlighted ratio fits the leverage story",
+  "in_top3": true
+ },
+ {
+  "row": "rp_028_006_b2",
+  "section": "valuation",
+  "message": "Selling now at $35-36 beats holding or spinning off unless revenue and EPS grow at high required rates",
+  "block": {
+   "what": "Growth required",
+   "data_type": "text",
+   "about": "what hold needs to match $35",
+   "content": [
+    "Revenue needs to grow at implied CAGR of 10.7% over next four years to reach present value of $35.00 per share",
+    "Growth required for $35 value: 7.3% revenue CAGR",
+    "Future value uses 19.6x P/E",
+    "Not the bank's view of future stock value"
+   ]
+  },
+  "right": {
+   "id": "table",
+   "name": "table",
+   "data_type": "comparison",
+   "use_when": "Labelled numbers that need exact reading: comps, precedents, sources & uses, deal terms, one-way sensitivities (down / base / up), KPI lists with change vs prior period, requirements with detail",
+   "dont_use_when": "A trend over time (use a chart); ranking many players on one metric (use bar); 3-6 headline numbers with no extra columns (use stat_strip)"
+  },
+  "also_right": [
+   "takeaway"
+  ],
+  "picked": {
+   "id": "bullets",
+   "name": "bullets",
+   "data_type": "text",
+   "use_when": "Numbered commentary beside an exhibit: bold lead-in + evidence + so what, 2-6 points",
+   "dont_use_when": "The main exhibit of a page (pick a chart, table or diagram); more than 2 bullet blocks on one slide"
+  },
+  "alts": [
+   "takeaway",
+   "hero_number"
+  ],
+  "why": "4 sentences explaining growth required to match $35; text commentary, numbers are not headline KPIs",
+  "in_top3": true
+ },
+ {
+  "row": "rp_115_004_b2",
+  "section": "market",
+  "message": "Unstructured data growing twice as fast as structured creates a large data management opportunity",
+  "block": {
+   "what": "Structured vs unstructured market",
+   "data_type": "comparison",
+   "about": "data management segments",
+   "content": [
+    "Structured: 15% of data, $18bn, CAGR 32.3% 2006-2010",
+    "Unstructured: 85% of data, $20bn, CAGR 63.7% 2006-2010",
+    "RDBMS addresses ~20% of market",
+    "Power: Manage and Search ~40%",
+    "Promote: Marketing ~20%",
+    "Protect: Legal and Compliance ~40%",
+    "Enterprise creates 20% of data but manages 85%"
+   ]
+  },
+  "right": {
+   "id": "bk41",
+   "name": "Market dynamics panels",
+   "data_type": "comparison",
+   "use_when": "Market argument with segments",
+   "dont_use_when": "Company-specific argument"
+  },
+  "also_right": [
+   "bk57"
+  ],
+  "picked": {
+   "id": "stat_rings",
+   "name": "stat rings",
+   "data_type": "composition",
+   "use_when": "Shares, margins, utilisation or a debt / equity split shown as % rings",
+   "dont_use_when": "Values that are not percentages; shares that must add to 100% across many parts (use stacked or pie)"
+  },
+  "alts": [
+   "bk40",
+   "table"
+  ],
+  "why": "structured 15% vs unstructured 85% shares plus sub-splits; % rings show shares of data, the table holds $ and CAGR detail",
+  "in_top3": false
+ },
+ {
+  "row": "rp_039_052_b1",
+  "section": "process",
+  "message": "PE buyers paid take-private multiples of about 11-18x TEV / EBITDA in chemicals",
+  "block": {
+   "what": "Chemicals P2P deals",
+   "data_type": "matrix",
+   "about": "target, buyer, date, price, multiple",
+   "content": [
+    "Ferro / Lydall / TPC Group / Innophos / AMLREAN deals",
+    "Buyers: First Reserve, SK Capital, Apollo, One Rock",
+    "Dates 11/8/2012, 6/1/2015, 10/21/2019, 5/11/2021, 6/21/2021",
+    "Price $1,019mm for one deal",
+    "TEV / FY1 EBITDA 11.6x, 11.1x, 17.9x"
+   ]
+  },
+  "right": {
+   "id": "bk33",
+   "name": "Peer small multiples",
+   "data_type": "comparison",
+   "use_when": "Full peer benchmarking page",
+   "dont_use_when": "One metric (use bk22)"
+  },
+  "also_right": [
+   "bk24"
+  ],
+  "picked": {
+   "id": "bk21",
+   "name": "Precedent table with inline bars",
+   "data_type": "matrix",
+   "use_when": "A table of deals or peers where one multiple, or its change over time (% or x turns), is the point: names in rows, the value drawn as an inline bar per row, median row at the bottom",
+   "dont_use_when": "Deals or peers with no multiple shown, e.g. EV and premium only (use table); more than 12 rows (use table)"
+  },
+  "alts": [
+   "table",
+   "page_deals"
+  ],
+  "why": "5 P2P deals where TEV/EBITDA multiple is the point; precedent table with inline multiple bars and median",
+  "in_top3": false
+ },
+ {
+  "row": "rp_011_015_b1",
+  "section": "financials",
+  "message": "Events segment revenue and EBITDA swing with the Olympic cycle, peaking in 2028E",
+  "block": {
+   "what": "Segment financials",
+   "data_type": "matrix",
+   "about": "revenue, adj. EBITDA and UFCF by year",
+   "content": [
+    "EE&R revenue 2023A $1,999, 2024E $3,038, 2025E $2,008, 2026E $2,455, 2027E $2,327, 2028E $4,128",
+    "Adj. EBITDA 2024E $325, 2025E $251, 2026E $334, 2027E $326, 2028E $631",
+    "Pre-tax UFCF 2024E $246, 2026E $452, 2027E $658, 2028E $314",
+    "Split IMG Media, On Location, Other"
+   ]
+  },
+  "right": {
+   "id": "bk07",
+   "name": "Segment table with side tabs + commentary column",
+   "data_type": "time_series",
+   "use_when": "Segment or business-unit financials with explanation per segment",
+   "dont_use_when": "Single-segment business; more than 4 segments"
+  },
+  "also_right": [
+   "bk06"
+  ],
+  "picked": {
+   "id": "bk08",
+   "name": "Historical | projection split table",
+   "data_type": "time_series",
+   "use_when": "Any A/E financial summary, UFCF build",
+   "dont_use_when": "No forecast columns; when a chart tells it faster"
+  },
+  "alts": [
+   "fin_table",
+   "bk38"
+  ],
+  "why": "revenue, EBITDA, UFCF across 2023A-2028E; historical | projection split table fits A/E financials",
+  "in_top3": false
+ },
+ {
+  "row": "rp_121_013_b1",
+  "section": "company",
+  "message": "Low leverage of 30.0% and 5.9x interest coverage show a conservative capital structure",
+  "block": {
+   "what": "Key capital management metrics",
+   "data_type": "kpi_set",
+   "about": "leverage, debt cost, tenors, ICR",
+   "content": [
+    "Aggregate Leverage 30.0% (-20 bps)",
+    "Average Cost of Debt 3.0% (-10 bps)",
+    "Weighted Average Debt Tenor 3.1 years",
+    "Weighted Average Hedge Tenor 3.3 years (+0.2 years)",
+    "Trailing 12-month ICR 5.9 times (+0.1 times)"
+   ]
+  },
+  "right": {
+   "id": "table",
+   "name": "table",
+   "data_type": "comparison",
+   "use_when": "Labelled numbers that need exact reading: comps, precedents, sources & uses, deal terms, one-way sensitivities (down / base / up), KPI lists with change vs prior period, requirements with detail",
+   "dont_use_when": "A trend over time (use a chart); ranking many players on one metric (use bar); 3-6 headline numbers with no extra columns (use stat_strip)"
+  },
+  "also_right": [
+   "bk46"
+  ],
+  "picked": {
+   "id": "stat_icons",
+   "name": "stat icons",
+   "data_type": "kpi_set",
+   "use_when": "Company at a glance or key numbers, each with a meaningful icon; return drivers in numbers on a thesis page",
+   "dont_use_when": "More than 8 numbers (use a table); numbers that need a trend (use fin_chart)"
+  },
+  "alts": [
+   "stat_strip",
+   "table"
+  ],
+  "why": "5 headline capital metrics (leverage, cost, tenors, ICR) with small changes; key numbers with icons",
+  "in_top3": true
+ },
+ {
+  "row": "rp_114_003_b1",
+  "section": "process",
+  "message": "Outreach to parties produced verbal price indications of $28 to $32 per share",
+  "block": {
+   "what": "Sale process funnel and price indications",
+   "data_type": "comparison",
+   "about": "parties contacted through indications",
+   "content": [
+    "Parties Contacted",
+    "NDA Signed / Initial Meeting",
+    "Submitted Preliminary Proposal (Verbal)",
+    "Post Due Diligence (Verbal)",
+    "Most Recent Price Indication $28",
+    "Most Recent Price Indication $32",
+    "Most Recent Price Indication $30"
+   ]
+  },
+  "right": {
+   "id": "table",
+   "name": "table",
+   "data_type": "comparison",
+   "use_when": "Labelled numbers that need exact reading: comps, precedents, sources & uses, deal terms, one-way sensitivities (down / base / up), KPI lists with change vs prior period, requirements with detail",
+   "dont_use_when": "A trend over time (use a chart); ranking many players on one metric (use bar); 3-6 headline numbers with no extra columns (use stat_strip)"
+  },
+  "also_right": [],
+  "picked": {
+   "id": "bk49",
+   "name": "Buyer funnel with stage counts",
+   "data_type": "process",
+   "use_when": "Sale process summary",
+   "dont_use_when": "Process not yet launched"
+  },
+  "alts": [
+   "ig107",
+   "table"
+  ],
+  "why": "funnel stages from contacts to $28-32 price indications; buyer funnel with stage counts and prices",
+  "in_top3": true
+ },
+ {
+  "row": "rp_066_015_b2",
+  "section": "valuation",
+  "message": "Precedent deals priced at a median 13.5x LTM EBITDA with 25-49% premiums",
+  "block": {
+   "what": "Deal details",
+   "data_type": "matrix",
+   "about": "acquirer, target, EV and premium",
+   "content": [
+    "Enterprise Value $180mm",
+    "$2,779mm",
+    "$1,731mm",
+    "$580mm",
+    "$560mm",
+    "$1,198mm",
+    "$1,621mm",
+    "$777mm",
+    "$6,725mm",
+    "$472mm",
+    "$5,498mm",
+    "$1,000mm",
+    "Premium 32%, 25%, 49%, 35%"
+   ]
+  },
+  "right": {
+   "id": "bk21",
+   "name": "Precedent table with inline bars",
+   "data_type": "matrix",
+   "use_when": "A table of deals or peers where one multiple, or its change over time (% or x turns), is the point: names in rows, the value drawn as an inline bar per row, median row at the bottom",
+   "dont_use_when": "Deals or peers with no multiple shown, e.g. EV and premium only (use table); more than 12 rows (use table)"
+  },
+  "also_right": [
+   "bk23",
+   "bar"
+  ],
+  "picked": {
+   "id": "table",
+   "name": "table",
+   "data_type": "comparison",
+   "use_when": "Labelled numbers that need exact reading: comps, precedents, sources & uses, deal terms, one-way sensitivities (down / base / up), KPI lists with change vs prior period, requirements with detail",
+   "dont_use_when": "A trend over time (use a chart); ranking many players on one metric (use bar); 3-6 headline numbers with no extra columns (use stat_strip)"
+  },
+  "alts": [
+   "page_deals",
+   "bk21"
+  ],
+  "why": "13 deals with EV and premium only, no multiple per row; table per bk21 don't-rule",
+  "in_top3": true
+ },
+ {
+  "row": "rp_082_023_b2",
+  "section": "valuation",
+  "message": "DCF implies enterprise value of roughly $19-23bn across terminal multiple and growth assumptions",
+  "block": {
+   "what": "Implied enterprise value sensitivity",
+   "data_type": "matrix",
+   "about": "EV by terminal EBITDA multiple and discount rate",
+   "unit": "$mm",
+   "content": [
+    "10.50x: 20,984 / 20,378 / 19,789 / 19,216",
+    "10.75x: 21,473 / 20,854 / 20,252 / 19,667",
+    "11.00x: 21,962 / 21,329 / 20,715 / 20,118",
+    "11.25x: 22,451 / 21,805 / 21,178 / 20,569",
+    "11.50x: 22,940 / 22,281 / 21,641 / 21,019",
+    "Discount rates 6.25% to 7.00%",
+    "Implied perpetuity growth 1.6% to 2.6%"
+   ]
+  },
+  "right": {
+   "id": "bk44",
+   "name": "Twin sensitivity tables",
+   "data_type": "matrix",
+   "use_when": "IRR or price sensitivity on two different pairs of drivers",
+   "dont_use_when": "Only one pair of drivers matters"
+  },
+  "also_right": [
+   "bk13"
+  ],
+  "picked": {
+   "id": "heatmap",
+   "name": "heatmap",
+   "data_type": "matrix",
+   "use_when": "IRR / MOIC or price sensitivity grid on two drivers (red-white-green)",
+   "dont_use_when": "One-way sensitivities (use a table or tornado)"
+  },
+  "alts": [
+   "bk44",
+   "table"
+  ],
+  "why": "EV grid on two drivers (terminal multiple x discount rate), 5x4 values; heatmap is the two-way grid, bk44 needs two pairs",
+  "in_top3": true
+ }
+]

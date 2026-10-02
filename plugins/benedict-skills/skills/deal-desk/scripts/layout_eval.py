@@ -7,14 +7,18 @@ r"""Layout-choice eval: golden dataset, review sheet, fixed 80/20 split, scoring
   python layout_eval.py review                          # pending rows -> golden_review.xlsx in the toolkit folder
   python layout_eval.py ingest                          # his top / alt / other / reject picks -> golden.jsonl
   python layout_eval.py examples [--all]                # train rows -> assets/eval/examples.md (few-shot for select)
-  python layout_eval.py matcher [--all]                 # score layout_match.py on the hold-out -> scores.md
-  python layout_eval.py blind [--all]                   # blind task for a subagent -> assets/eval/runs/<stamp>/task.md
-  python layout_eval.py score <answers.json> [--all]    # score the subagent's answers -> scores.md
+  python layout_eval.py matcher [--set final|dev|train] [--all]   # score layout_match.py -> scores.md
+  python layout_eval.py blind [--set final|dev|train-a|train-b] [--all]
+                                                        # blind task for a subagent -> assets/eval/runs/<stamp>_<set>/task.md
+  python layout_eval.py score <answers.json> [--all]    # score the subagent's answers -> scores.md (+ misses.json)
   python layout_eval.py stats
 
-Only rows with status "accepted" count; --all also counts "pending" ones (a provisional score, labelled as such).
-The split is a hash of the row id (1 in 5 -> hold-out), so it never moves when rows are added. Hold-out rows are
-never written into examples.md or a task's examples.
+Rows with status "accepted" (his review) or "silver" (3 judges agreed, layout_loop.py) count; --all also counts
+"pending" ones (a provisional score, labelled as such).
+Split (a hash of the row id, so it never moves when rows are added): 1 in 5 -> final (the hold-out, scored once per
+tuning run), 1 in 5 -> dev (decides whether a wording change is kept), the rest -> train (examples.md, and the misses
+the analyst learns from; train-a / train-b are its halves, each tested with the other half as examples).
+Final and dev rows are never written into examples.md or a task's examples.
 
 Row: {"id", "source", "ref", "thumb", "section", "message", "block": {what, data_type, about, content, unit?},
       "label", "acceptable": [ids that also count as right], "alternates"?: [2 runner-ups shown in review], "why", "status", "reviewer", "added", "flag"?}
@@ -62,8 +66,23 @@ def today():
     return datetime.date.today().isoformat()
 
 
+def _h(rid):
+    return int(hashlib.sha1(rid.encode()).hexdigest(), 16)
+
+
 def holdout(rid):
-    return int(hashlib.sha1(rid.encode()).hexdigest(), 16) % 5 == 0
+    return _h(rid) % 5 == 0
+
+
+def split(rid):
+    """final (hold-out) / dev (keeps or reverts a change) / train-a / train-b (examples + analyst's misses)."""
+    k = _h(rid) % 5
+    return "final" if k == 0 else "dev" if k == 1 else "train-a" if (_h(rid) // 5) % 2 == 0 else "train-b"
+
+
+def in_set(rid, name):
+    s = split(rid)
+    return s == name or (name == "train" and s.startswith("train"))
 
 
 def load_rows():
@@ -90,7 +109,7 @@ def add_rows(new):
 
 
 def usable(rows, include_pending):
-    ok = {"accepted", "pending"} if include_pending else {"accepted"}
+    ok = {"accepted", "silver", "pending"} if include_pending else {"accepted", "silver"}
     return [r for r in rows if r["status"] in ok]
 
 
@@ -233,10 +252,10 @@ def _log_swaps(swaps):
 # ---------- his review ----------
 
 GUIDE = [
-    ("What this sheet is for", "Each row is one block of content (a chart, table, list...) from a real bank page, one of "
-     "your decks, or a written infographic test. Claude has picked the layout it thinks fits best (Top pick) and two "
-     "runner-ups. Your answers become the answer key the deck builder is tested against, so the score is only as good "
-     "as these picks."),
+    ("What this sheet is for", "Each row is one block of content (a chart, table, list...) from a real bank page or a "
+     "written infographic test. Three Claude judges looked at the page and the layout pictures; the Top pick is their "
+     "answer (or most votes), the runner-ups are the next choices. Only rows where they split, plus a random spot "
+     "check, are here; the rest are settled. Your answers become the answer key the deck builder is tested against."),
     ("The one question", "For every row: which of the three pictures is the best way to show this block? Compare the "
      "page on the left with the three layout pictures. Click a layout name to open it full size."),
     ("top", "The Top pick is the best fit."),
@@ -248,8 +267,9 @@ GUIDE = [
      "'wrong layout', that is alt 1 / alt 2 / other, not reject."),
     ("Others also OK?", "yes (or blank) = the two pictures you did not choose would also be acceptable, so the deck "
      "builder is not marked wrong for picking them. no = only your choice counts as right."),
-    ("Check", "HOLD-OUT = one of the blind test rows the score is based on. Infographic test rows have no page, only the "
-     "written block."),
+    ("Check", "judges split = three Claude judges disagreed, so your call is the answer. spot check = the judges "
+     "agreed; these are a random sample to test whether the judges can be trusted (if you agree with ~90% of them, "
+     "their other answers stand). tester disagrees = the blind tester's pick looked better than the judges' answer; the tester's pick is shown as alt 1. Infographic test rows have no page, only the written block."),
     ("Blank", "Still to do. You can review over several sittings; refreshing the sheet keeps what you have entered."),
     ("When done", "Save and close the file, then tell Claude 'ingest the layout review'."),
 ]
@@ -330,7 +350,11 @@ def _prior_decisions():
 
 def _picks(r):
     alts = r.get("alternates") or r["acceptable"]
-    return [r["label"], *alts[:2]]
+    picks = [r["label"], *alts[:2]]
+    sp = (r.get("suspect") or {}).get("pick")
+    if sp and sp not in picks:  # show the tester's pick beside the judges' answer
+        picks = [r["label"], sp, *alts[:1]]
+    return picks
 
 
 def review():
@@ -343,7 +367,9 @@ def review():
     m = lm.Matcher()
     lib, root = m.lib, m.root
     prior = _prior_decisions()
-    rows = [r for r in load_rows() if r["status"] == "pending"]       # file order keeps a page's blocks together
+    # judges split (pending) + a random spot check of rows they agreed on (audit); file order keeps a page together
+    rows = [r for r in load_rows() if r["status"] == "pending" or r.get("suspect")
+            or (r["status"] == "silver" and r.get("audit"))]
     band = PatternFill("solid", fgColor="1F3864")
     link = Font(color="0563C1", underline="single", bold=True, size=9)
     PAGE_W, PAGE_H, LAY_W, LAY_H, ROW_PX = 260, 150, 175, 132, 168
@@ -381,7 +407,8 @@ def review():
         block = (f"{b.get('what', '')}\n[{r['section']} · {b.get('data_type', '')}]\n{content[:260]}\n"
                  f"Slide message: {r['message']}")
         page = r["ref"] if r.get("thumb") else "Written test block (no page)"
-        vals = [r["id"], "HOLD-OUT" if holdout(r["id"]) else "", page, block, "", "", "", *dec]
+        check = "tester disagrees" if r.get("suspect") else "spot check" if r["status"] == "silver" else "judges split" if r.get("judges") else ""
+        vals = [r["id"], check, page, block, "", "", "", *dec]
         for j, v in enumerate(vals, 1):
             c = ws.cell(i, j, v)
             c.alignment = Alignment(wrap_text=True, vertical="top")
@@ -400,7 +427,7 @@ def review():
                 _place(ws, _small(pic, LAY_W, LAY_H), i, j, LAY_W, LAY_H, top_px=18)
             else:
                 c.font = Font(size=9, bold=True)
-        if holdout(r["id"]):
+        if check in ("judges split", "tester disagrees"):
             ws.cell(i, 2).font = Font(bold=True, color="C00000")
         dv.add(ws.cell(i, COL["Decision"]))
         dv_to.add(ws.cell(i, COL["Other id"]))
@@ -464,7 +491,7 @@ def ingest():
         sys.exit("golden_review.xlsx is an older layout of the sheet: run review again first.")
     rows = load_rows()
     by_id = {r["id"]: r for r in rows}
-    n, swaps, bad = Counter(), [], []
+    n, swaps, bad, audit = Counter(), [], [], Counter()
     for i in range(5, ws.max_row + 1):
         rid = ws.cell(i, 1).value
         dec = str(ws.cell(i, COL["Decision"]).value or "").strip().lower()
@@ -488,6 +515,9 @@ def ingest():
                 chosen = other
             else:
                 chosen = picks[DECISIONS.index(dec)]
+            if r["status"] == "silver" and r.get("audit"):
+                r["audit_result"] = "agree" if chosen in {r["label"], *r["acceptable"]} else "disagree"
+                audit[r["audit_result"]] += 1
             if chosen != r["label"]:
                 swaps.append((r, r["label"]))
                 r["why"] = f"{r['why']} | {dec}: {r['label']} -> {chosen} in review"
@@ -504,6 +534,11 @@ def ingest():
     save_rows(rows)
     _log_swaps(swaps)
     print(dict(n), "| still pending:", sum(r["status"] == "pending" for r in rows))
+    done = [r for r in rows if r.get("audit_result")]
+    if done:
+        ok = sum(r["audit_result"] == "agree" for r in done)
+        print(f"judges vs you on spot checks: {ok}/{len(done)} = {ok / len(done):.0%} "
+              f"({'trust the judges' if ok / len(done) >= 0.9 else 'below 90%: fix the judge step before tuning'})")
     for b in bad:
         print("SKIPPED", b)
 
@@ -520,11 +555,11 @@ def _line(r):
 
 
 def examples(include_pending=False):
-    rows = [r for r in usable(load_rows(), include_pending) if not holdout(r["id"])]
+    rows = [r for r in usable(load_rows(), include_pending) if in_set(r["id"], "train")]
     lines = ["# Layout choice examples (train split)",
              f"Built {today()} by `layout_eval.py examples` from {len(rows)} reviewed rows"
              + (" (includes unreviewed rows: provisional)" if include_pending else "") +
-             ". Hold-out rows are never listed here. Read before the select step of deck-pipeline.md.", ""]
+             ". Dev and final (hold-out) rows are never listed here. Read before the select step of deck-pipeline.md.", ""]
     by_dt = defaultdict(list)
     for r in rows:
         by_dt[r["block"].get("data_type", "")].append(r)
@@ -537,11 +572,11 @@ def examples(include_pending=False):
     print(f"{len(rows)} examples -> {EXAMPLES}")
 
 
-def _test(include_pending):
+def _test(include_pending, name="final"):
     rows = usable(load_rows(), include_pending)
-    test = [r for r in rows if holdout(r["id"])]
+    test = [r for r in rows if in_set(r["id"], name)]
     if not test:
-        sys.exit("no hold-out rows yet: review some rows (or pass --all for a provisional score)")
+        sys.exit(f"no {name} rows yet: review some rows (or pass --all for a provisional score)")
     return test
 
 
@@ -556,7 +591,7 @@ def _rubric(r, ans, lib):
     return (cites + clean) / 2
 
 
-def _log(selector, rows, include_pending, top1, top3, rubric, note=""):
+def _log(selector, rows, include_pending, top1, top3, rubric, note="", name="final"):
     new = not os.path.exists(SCORES)
     accepted = sum(r["status"] == "accepted" for r in rows)
     with open(SCORES, "a", encoding="utf-8") as f:
@@ -566,7 +601,8 @@ def _log(selector, rows, include_pending, top1, top3, rubric, note=""):
                     "| Date | Selector | Set | n (accepted) | Top-1 | Top-3 | Reasoning | Note |\n"
                     "|---|---|---|---|---|---|---|---|\n")
         rub = f"{rubric:.0%}" if rubric is not None else "n/a"
-        f.write(f"| {today()} | {selector} | {'provisional (incl. pending)' if include_pending else 'accepted'} | "
+        kind = "provisional (incl. pending)" if include_pending else "accepted + silver"
+        f.write(f"| {today()} | {selector} | {kind if name == 'final' else kind + ' · ' + name} | "
                 f"{len(rows)} ({accepted}) | {top1:.0%} | {top3:.0%} | {rub} | {note} |\n")
 
 
@@ -575,9 +611,9 @@ def _hit(r, ids):
     return any(i in ok for i in ids)
 
 
-def matcher(include_pending=False, note=""):
+def matcher(include_pending=False, note="", name="final"):
     m = lm.Matcher()
-    test = _test(include_pending)
+    test = _test(include_pending, name)
     t1 = t3 = 0
     misses = []
     for r in test:
@@ -587,29 +623,32 @@ def matcher(include_pending=False, note=""):
         if not _hit(r, ids[:1]):
             misses.append(f"  {r['id']}: label {r['label']}, matcher {', '.join(ids)}")
     n = len(test)
-    print(f"matcher on {n} hold-out rows: top-1 {t1 / n:.0%}, top-3 {t3 / n:.0%}")
+    print(f"matcher on {n} {name} rows: top-1 {t1 / n:.0%}, top-3 {t3 / n:.0%}")
     print("\n".join(misses))
-    _log("layout_match.py", test, include_pending, t1 / n, t3 / n, None, note)
+    _log("layout_match.py", test, include_pending, t1 / n, t3 / n, None, note, name)
 
 
-def blind(include_pending=False):
-    """Task file for a blind selector (a subagent): pipeline select rules + catalogue + train examples + hold-out blocks."""
+def blind(include_pending=False, name="final"):
+    """Task file for a blind selector (a subagent): pipeline select rules + catalogue + train examples + test blocks.
+    final / dev: all train rows as examples. train-a / train-b: the other half only (a row never sees its own answer)."""
     lib = lm.Matcher().lib
     rows = usable(load_rows(), include_pending)
-    train = [r for r in rows if not holdout(r["id"])]
-    test = [r for r in rows if holdout(r["id"])]
-    stamp = datetime.datetime.now().strftime("%Y%m%d_%H%M")
-    out = os.path.join(RUNS, stamp)
+    test = [r for r in rows if in_set(r["id"], name)]
+    other = {"train-a": "train-b", "train-b": "train-a"}.get(name, "train")
+    train = [r for r in rows if in_set(r["id"], other)]
+    stamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    out = os.path.join(RUNS, f"{stamp}_{name}")
     os.makedirs(out, exist_ok=True)
     with open(PIPELINE, encoding="utf-8") as f:
         pipe = f.read()
     rules = pipe.split("## 4.")[0]
     cat = []
     for r in lib.values():
-        if r.get("kind") not in ("layout", "map", "icon_set"):
+        if r.get("kind") not in ("layout", "page", "map", "icon_set"):
             continue
         lo, hi = (r.get("items") or [1, 99])[:2]
-        cat.append(f"- `{r['id']}` ({r.get('data_type', '')}, {lo}-{hi} items{', numbers' if r.get('numbers') else ''})"
+        cat.append(f"- `{r['id']}` {r.get('name', '')} ({r.get('data_type', '')}, {lo}-{hi} items"
+                   f"{', numbers' if r.get('numbers') else ''})"
                    f": {r.get('use_when', '')} | Don't: {r.get('dont_use_when', '')}")
     qs = []
     for i, r in enumerate(test, 1):
@@ -628,7 +667,9 @@ def blind(include_pending=False):
                 + "\n\n## Questions\n```json\n" + json.dumps(qs, indent=1, ensure_ascii=False) + "\n```\n")
     with open(os.path.join(out, "key.json"), "w", encoding="utf-8") as f:
         json.dump({q["q"]: r["id"] for q, r in zip(qs, test)}, f, indent=1)
-    print(f"{len(test)} questions, {len(train)} examples -> {os.path.join(out, 'task.md')}")
+    with open(os.path.join(out, "set.txt"), "w") as f:
+        f.write(name)
+    print(f"{len(test)} questions ({name}), {len(train)} examples -> {os.path.join(out, 'task.md')}")
 
 
 def score(answers_path, include_pending=False, note=""):
@@ -637,7 +678,16 @@ def score(answers_path, include_pending=False, note=""):
     key = lm._load(os.path.join(os.path.dirname(answers_path), "key.json"))
     by_id = {r["id"]: r for r in load_rows()}
     test = [by_id[key[q]] for q in key]
+    run = os.path.dirname(answers_path)
+    sp = os.path.join(run, "set.txt")
+    name = open(sp).read().strip() if os.path.exists(sp) else "final"
     t1 = t3 = rub = 0
+    misses = []
+
+    def card(i):
+        x = lib.get(i, {})
+        return {"id": i, "name": x.get("name", ""), "data_type": x.get("data_type", ""),
+                "use_when": x.get("use_when", ""), "dont_use_when": x.get("dont_use_when", "")}
     for q, rid in key.items():
         r, a = by_id[rid], answers.get(q, {})
         ids = [a.get("pick", "")] + list(a.get("alts", []))[:2]
@@ -646,16 +696,25 @@ def score(answers_path, include_pending=False, note=""):
         rub += _rubric(r, a, lib)
         if not _hit(r, ids[:1]):
             print(f"  {q} {rid}: label {r['label']}, picked {', '.join(ids)} | {a.get('why', '')[:90]}")
+            misses.append({"row": rid, "section": r["section"], "message": r["message"], "block": r["block"],
+                           "right": card(r["label"]), "also_right": r["acceptable"], "picked": card(ids[0]),
+                           "alts": ids[1:], "why": a.get("why", ""), "in_top3": _hit(r, ids)})
     n = len(key)
-    print(f"blind selector on {n}: top-1 {t1 / n:.0%}, top-3 {t3 / n:.0%}, reasoning {rub / n:.0%}")
-    _log("blind subagent", test, include_pending, t1 / n, t3 / n, rub / n, note)
+    with open(os.path.join(run, "misses.json"), "w", encoding="utf-8") as f:
+        json.dump(misses, f, indent=1, ensure_ascii=False)
+    res = {"set": name, "n": n, "top1": t1 / n, "top3": t3 / n, "reasoning": rub / n}
+    with open(os.path.join(run, "score.json"), "w") as f:
+        json.dump(res, f)
+    print(f"blind selector on {n} {name}: top-1 {t1 / n:.0%}, top-3 {t3 / n:.0%}, reasoning {rub / n:.0%}")
+    _log("blind subagent", test, include_pending, t1 / n, t3 / n, rub / n, note, name)
+    return res
 
 
 def stats():
     rows = load_rows()
     print("status:", dict(Counter(r["status"] for r in rows)))
     print("source:", dict(Counter(r["source"].split(":")[0] for r in rows)))
-    print("hold-out:", sum(holdout(r["id"]) for r in rows), "of", len(rows))
+    print("split:", dict(Counter(split(r["id"]) for r in rows)))
     print("labels:", Counter(r["label"] for r in rows).most_common())
     print("flagged:", sum(bool(r.get("flag")) for r in rows))
 
@@ -666,6 +725,7 @@ if __name__ == "__main__":
     allp = "--all" in a
     note = a[a.index("--note") + 1] if "--note" in a else ""
     cmd = a[0] if a else ""
+    sname = a[a.index("--set") + 1] if "--set" in a else "final"
     if cmd == "seed-pages" and len(a) > 1:
         seed_pages(a[1], int(a[2]) if len(a) > 2 else 0)
     elif cmd == "add-chunks" and len(a) > 1:
@@ -679,9 +739,9 @@ if __name__ == "__main__":
     elif cmd == "examples":
         examples(allp)
     elif cmd == "matcher":
-        matcher(allp, note)
+        matcher(allp, note, sname)
     elif cmd == "blind":
-        blind(allp)
+        blind(allp, sname)
     elif cmd == "score" and len(a) > 1:
         score(a[1], allp, note)
     elif cmd == "stats":

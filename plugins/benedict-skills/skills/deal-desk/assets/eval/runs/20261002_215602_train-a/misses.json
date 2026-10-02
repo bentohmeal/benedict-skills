@@ -1,0 +1,87 @@
+[
+ {
+  "row": "rp_107_004_b1",
+  "section": "process",
+  "message": "Pacific ran a strategic alternatives process after suspending its drug program, but private bidders dropped out",
+  "block": {
+   "what": "Pacific process chronology",
+   "data_type": "process",
+   "about": "steps April-June 2023",
+   "content": [
+    "Apr 3, 2023: suspended pomotrelvir, cut headcount ~85%, explored alternatives",
+    "Apr 7, 2023: Foresite raised ownership to 27.2%",
+    "Apr 20, 2023: Foresite letter on potential acquisition",
+    "May 2, 2023: Special Committee formed; Leerink engaged",
+    "Considered 133 strategic candidates and five financial buyers",
+    "Nine private companies and three financial buyers included",
+    "8 submitted non-binding IOIs by May 23, 2023",
+    "Three held management presentations Jun 1-3",
+    "Two of three dropped out when asked to return $100M capital; last also dropped out"
+   ]
+  },
+  "right": {
+   "id": "bullets",
+   "name": "bullets",
+   "data_type": "text",
+   "use_when": "Numbered commentary beside an exhibit: bold lead-in + evidence + so what, 2-6 points",
+   "dont_use_when": "The main exhibit of a page (pick a chart, table or diagram); more than 2 bullet blocks on one slide"
+  },
+  "also_right": [
+   "timeline"
+  ],
+  "picked": {
+   "id": "bk50",
+   "name": "Calendar timeline",
+   "data_type": "process",
+   "use_when": "Process timetable with specific dates",
+   "dont_use_when": "Timeline longer than 3 months (use bk51)"
+  },
+  "alts": [
+   "table",
+   "timeline"
+  ],
+  "why": "9 dated chronology steps over Apr-Jun 2023; under 3 months and too many for a timeline",
+  "in_top3": true
+ },
+ {
+  "row": "ig_t_team",
+  "section": "company",
+  "message": "A proven team that stays post-deal",
+  "block": {
+   "what": "Management team",
+   "data_type": "list",
+   "about": "people with roles",
+   "content": [
+    "CEO, 20 yrs",
+    "CFO, ex-Big 4",
+    "COO, ex-Amazon",
+    "CTO, founder",
+    "CRO, ex-Salesforce"
+   ]
+  },
+  "right": {
+   "id": "ig175",
+   "name": "People portraits with captions",
+   "data_type": "list",
+   "use_when": "8 stakeholder or customer types, each with a caption above and below the silhouette (customer personas)",
+   "dont_use_when": "Fewer than 4 personas"
+  },
+  "also_right": [
+   "bk58",
+   "table"
+  ],
+  "picked": {
+   "id": "pill_rows",
+   "name": "pill rows",
+   "data_type": "list",
+   "use_when": "Business overview or summary: a short label pill beside 1-2 lines of text per row",
+   "dont_use_when": "Rows needing long argued paragraphs (use side_tabs)"
+  },
+  "alts": [
+   "table",
+   "ig175"
+  ],
+  "why": "5 people with role and one-line background; label pill plus line per row",
+  "in_top3": true
+ }
+]

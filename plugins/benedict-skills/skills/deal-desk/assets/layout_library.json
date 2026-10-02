@@ -1,6 +1,6 @@
 {
  "version": 1,
- "note": "Built by scripts/layout_tag.py build; edit layout_tags.json / COMPONENTS, not this file",
+ "note": "Built by scripts/layout_tag.py build; edit layout_tags.json / COMPONENTS / eval/layout_notes.json, not this file",
  "sections": [
   "cover",
   "exec_summary",
@@ -21026,8 +21026,8 @@
    "sections": [
     "any"
    ],
-   "use_when": "Comparison tables, sources & uses, comps, precedent transactions, deal terms, requirements with detail",
-   "dont_use_when": "A trend or one number per item (use a chart)",
+   "use_when": "Labelled numbers that need exact reading: comps, precedents, sources & uses, deal terms, one-way sensitivities (down / base / up), KPI lists with change vs prior period, requirements with detail",
+   "dont_use_when": "A trend over time (use a chart); ranking many players on one metric (use bar); 3-6 headline numbers with no extra columns (use stat_strip)",
    "items": [
     2,
     15
@@ -21148,7 +21148,7 @@
     "market"
    ],
    "use_when": "One metric's trend with CAGR, actual / estimate split and a % margin strip",
-   "dont_use_when": "Several unrelated metrics (use fin_table)",
+   "dont_use_when": "Several unrelated metrics (use fin_table); two forecast cases compared (use bk11); 2-4 metrics or segments each needing its own chart (use bk36)",
    "items": [
     4,
     12
@@ -21231,7 +21231,7 @@
     "valuation"
    ],
    "use_when": "Ranking players by one metric (target navy, the rest grey)",
-   "dont_use_when": "A time series (use column)",
+   "dont_use_when": "A time series (use column); 2-3 scenario values such as a one-way sensitivity down / base / up (use table)",
    "items": [
     3,
     15
@@ -22299,7 +22299,7 @@
    "sections": [
     "financials"
    ],
-   "use_when": "Comparing two forecast cases visually",
+   "use_when": "Two forecast cases (base vs alternative, plan vs street) compared visually: small charts per metric with both cases side by side, e.g. per-share earnings and book value under each case",
    "dont_use_when": "Only one forecast case",
    "look": "2x2 charts (revenue, EBITDA, growth, margin) each with two cases and callout boxes",
    "items": [
@@ -22778,8 +22778,8 @@
     "valuation",
     "appendix"
    ],
-   "use_when": "Precedents where the multiple is the point",
-   "dont_use_when": "Deals with no disclosed multiple",
+   "use_when": "A table of deals or peers where one multiple, or its change over time (% or x turns), is the point: names in rows, the value drawn as an inline bar per row, median row at the bottom",
+   "dont_use_when": "Deals or peers with no multiple shown, e.g. EV and premium only (use table); more than 12 rows (use table)",
    "look": "Deal table where one column is drawn as a small bar",
    "items": [
     4,
@@ -22827,8 +22827,8 @@
     "company",
     "market"
    ],
-   "use_when": "Operational or valuation benchmarking on one metric",
-   "dont_use_when": "Many metrics at once (use bk32/bk33)",
+   "use_when": "One current operating or valuation metric per peer (a single value each) shown as ranked columns with a median line",
+   "dont_use_when": "Change in a multiple across peers, in % or x turns (use bk21); the same multiple for 2+ years or bases side by side (use bk32); many metrics at once (use bk32/bk33)",
    "look": "One metric per peer as columns, sorted, target highlighted, median line and a callout",
    "items": [
     4,
@@ -23441,7 +23441,7 @@
     "market",
     "valuation"
    ],
-   "use_when": "Comparing peers on 4-6 metrics at once",
+   "use_when": "Comparing peers on 2-6 metrics at once, or on one multiple across several years / bases (e.g. two forecast years, NTM vs LTM), as a row of bar columns per metric",
    "dont_use_when": "One metric (use bk22); more than 8 peers",
    "look": "Metric columns, each a set of small horizontal bars, company logos as rows",
    "items": [
@@ -23621,7 +23621,7 @@
     "company",
     "market"
    ],
-   "use_when": "Historical / projected financial summary, market data",
+   "use_when": "Historical / projected summary as 2-4 small charts, one per metric or segment (e.g. revenue, EBITDA, segment EBITDA with CAGRs), or market data in 2-4 panels",
    "dont_use_when": "Only one chart worth showing",
    "look": "Four titled charts in a grid (columns, lines or bars)",
    "items": [

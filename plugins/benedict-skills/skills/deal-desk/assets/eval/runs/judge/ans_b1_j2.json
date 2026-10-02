@@ -1,0 +1,438 @@
+{
+ "sg_dc_s01_b1": {
+  "best": "stat_icons",
+  "ok": [
+   "stat_strip"
+  ],
+  "why": "5 icons over headline numbers in a row",
+  "doubt": false
+ },
+ "sg_dc_s02_b1": {
+  "best": "page_market",
+  "ok": [
+   "bullets",
+   "pros_cons"
+  ],
+  "why": "two framing text panels (demand vs supply) joined by an arrow",
+  "doubt": false
+ },
+ "sg_dc_s03_b1": {
+  "best": "timeline",
+  "ok": [],
+  "why": "horizontal dated milestones alternating above/below, latest in gold",
+  "doubt": false
+ },
+ "sg_dc_s04_b1": {
+  "best": "map_pins",
+  "ok": [
+   "page_geography",
+   "ig150"
+  ],
+  "why": "regional map with 3 pinned callout boxes",
+  "doubt": false
+ },
+ "sg_dc_s05_b2": {
+  "best": "logo_row",
+  "ok": [
+   "page_landscape"
+  ],
+  "why": "column of logos for one player group",
+  "doubt": false
+ },
+ "sg_dc_s06_b1": {
+  "best": "bk22",
+  "ok": [
+   "bar",
+   "column"
+  ],
+  "why": "4 ranked vertical columns, Singapore in gold",
+  "doubt": false
+ },
+ "sg_dc_s07_b1": {
+  "best": "table",
+  "ok": [
+   "page_deals",
+   "bk21"
+  ],
+  "why": "full-width precedent transactions table",
+  "doubt": false
+ },
+ "sg_dc_s08_b2": {
+  "best": "stat_strip",
+  "ok": [],
+  "why": "4 numbers in a row without icons",
+  "doubt": false
+ },
+ "sg_dc_s09_b2": {
+  "best": "takeaway",
+  "ok": [],
+  "why": "dashed-outline why-invest sentence",
+  "doubt": false
+ },
+ "rp_004_022_b1": {
+  "best": "bk40",
+  "ok": [],
+  "why": "before/after pie charts of industry mix",
+  "doubt": false
+ },
+ "rp_085_010_b1": {
+  "best": "numbered_steps",
+  "ok": [],
+  "why": "4 numbered boxed steps",
+  "doubt": false
+ },
+ "rp_013_025_b2": {
+  "best": "bk35",
+  "ok": [
+   "table",
+   "harvey"
+  ],
+  "why": "3 alternatives in columns, tick/cross rows",
+  "doubt": false
+ },
+ "rp_108_004_b2": {
+  "best": "side_tabs",
+  "ok": [
+   "bk47",
+   "pill_rows"
+  ],
+  "why": "left label tab with dense bullet text",
+  "doubt": false
+ },
+ "rp_091_006_b1": {
+  "best": "bk49",
+  "ok": [],
+  "why": "funnel with strategic/financial counts table",
+  "doubt": false
+ },
+ "rp_067_007_b3": {
+  "best": "bk21",
+  "ok": [
+   "bk19",
+   "table"
+  ],
+  "why": "comps table with inline bars and median bands",
+  "doubt": false
+ },
+ "rp_019_010_b1": {
+  "best": "bk15",
+  "ok": [
+   "football_field"
+  ],
+  "why": "horizontal football field with commentary column",
+  "doubt": false
+ },
+ "rp_032_007_b2": {
+  "best": "bk57",
+  "ok": [
+   "table",
+   "side_tabs"
+  ],
+  "why": "two case columns with row-label tabs",
+  "doubt": false
+ },
+ "rp_001_016_b2": {
+  "best": "fin_chart",
+  "ok": [
+   "column",
+   "bk36"
+  ],
+  "why": "5 flat columns with coverage strip; one panel of a 2x2",
+  "doubt": false
+ },
+ "rp_006_003_b2": {
+  "best": "table",
+  "ok": [
+   "bk29"
+  ],
+  "why": "daily price tracker table under line charts",
+  "doubt": false
+ },
+ "rp_039_049_b1": {
+  "best": "bk19",
+  "ok": [
+   "table"
+  ],
+  "why": "comps table grouped by universe with quartile/median rows",
+  "doubt": false
+ },
+ "rp_000_007_b2": {
+  "best": "bk06",
+  "ok": [
+   "bullets"
+  ],
+  "why": "lettered commentary keyed to a projections table",
+  "doubt": false
+ },
+ "rp_028_006_b2": {
+  "best": "table",
+  "ok": [],
+  "why": "small table of growth-required columns with a callout",
+  "doubt": false
+ },
+ "rp_115_008_b2": {
+  "best": "page_landscape",
+  "ok": [
+   "logo_row"
+  ],
+  "why": "logo wall grouped by vertical",
+  "doubt": false
+ },
+ "rp_113_013_b2": {
+  "best": "table",
+  "ok": [],
+  "why": "tick-mark process tracker table",
+  "doubt": false
+ },
+ "rp_104_028_b2": {
+  "best": "bk47",
+  "ok": [
+   "table"
+  ],
+  "why": "term sheet with side tabs and summary cost rows",
+  "doubt": false
+ },
+ "rp_092_009_b1": {
+  "best": "bk49",
+  "ok": [],
+  "why": "funnel with stage counts table",
+  "doubt": false
+ },
+ "rp_112_020_b1": {
+  "best": "table",
+  "ok": [
+   "heatmap"
+  ],
+  "why": "plain two-way sensitivity grid, highlighted row, no heat colours",
+  "doubt": false
+ },
+ "rp_102_008_b1": {
+  "best": "bk50",
+  "ok": [],
+  "why": "3 month calendars with coloured key dates",
+  "doubt": false
+ },
+ "rp_028_007_b2": {
+  "best": "table",
+  "ok": [
+   "bk20"
+  ],
+  "why": "implied multiples table under a vertical valuation range chart",
+  "doubt": false
+ },
+ "rp_039_052_b2": {
+  "best": "bullets",
+  "ok": [
+   "takeaway"
+  ],
+  "why": "footnote/source text only, not a real exhibit",
+  "doubt": true
+ },
+ "rp_082_053_b2": {
+  "best": "bk26",
+  "ok": [
+   "numbered_steps"
+  ],
+  "why": "numbered events keyed to markers on a price chart",
+  "doubt": false
+ },
+ "rp_117_014_b2": {
+  "best": "bullets",
+  "ok": [
+   "takeaway"
+  ],
+  "why": "two assumption bullets above sensitivity tables",
+  "doubt": false
+ },
+ "rp_082_043_b1": {
+  "best": "bk19",
+  "ok": [
+   "table"
+  ],
+  "why": "bond comps table with mean/median by group",
+  "doubt": false
+ },
+ "rp_121_013_b1": {
+  "best": "table",
+  "ok": [],
+  "why": "KPI table with change arrows and comments",
+  "doubt": false
+ },
+ "rp_039_030_b2": {
+  "best": "pill_rows",
+  "ok": [
+   "side_tabs"
+  ],
+  "why": "lettered label pills each with one bullet line",
+  "doubt": false
+ },
+ "rp_071_008_b2": {
+  "best": "bk52",
+  "ok": [
+   "chevrons"
+  ],
+  "why": "4 phase boxes with arrows, bullet columns below",
+  "doubt": false
+ },
+ "rp_114_004_b2": {
+  "best": "bullets",
+  "ok": [
+   "pros_cons"
+  ],
+  "why": "positive/negative bullet lists",
+  "doubt": false
+ },
+ "rp_085_023_b2": {
+  "best": "bullets",
+  "ok": [
+   "takeaway",
+   "numbered_steps"
+  ],
+  "why": "summary box with 3 numbered drivers",
+  "doubt": false
+ },
+ "rp_066_015_b2": {
+  "best": "bk23",
+  "ok": [
+   "bk21"
+  ],
+  "why": "horizontal EV/EBITDA bars with acquirer/target logos and EV/premium columns",
+  "doubt": false
+ },
+ "rp_083_029_b2": {
+  "best": "bk51",
+  "ok": [
+   "table"
+  ],
+  "why": "weekly Gantt grid with diamond key-date markers",
+  "doubt": false
+ },
+ "rp_000_014_b1": {
+  "best": "side_tabs",
+  "ok": [
+   "page_text",
+   "bullets"
+  ],
+  "why": "two navy left tabs each with a dense bullet block",
+  "doubt": false
+ },
+ "rp_115_010_b2": {
+  "best": "bk22",
+  "ok": [
+   "bk32",
+   "bar"
+  ],
+  "why": "stacked ranked column panels per metric with median callout boxes",
+  "doubt": false
+ },
+ "rp_019_015_b1": {
+  "best": "bk27",
+  "ok": [
+   "bk26"
+  ],
+  "why": "price chart with many results callout boxes linked to points",
+  "doubt": false
+ },
+ "rp_121_022_b2": {
+  "best": "table",
+  "ok": [
+   "bk35"
+  ],
+  "why": "description table with tick columns for owner responsibilities",
+  "doubt": false
+ },
+ "rp_010_018_b1": {
+  "best": "bk07",
+  "ok": [
+   "bk06",
+   "fin_table"
+  ],
+  "why": "segment table with side tabs, lettered markers and commentary column",
+  "doubt": false
+ },
+ "ig_t_funnel_sourcing": {
+  "best": "ig107",
+  "ok": [
+   "ig116",
+   "bk49"
+  ],
+  "why": "several input channels narrowing into one output",
+  "doubt": false
+ },
+ "ig_t_venn_synergy": {
+  "best": "ig009",
+  "ok": [
+   "ig193"
+  ],
+  "why": "overlapping circles showing combined synergy",
+  "doubt": false
+ },
+ "ig_t_rings_quality": {
+  "best": "stat_rings",
+  "ok": [
+   "ig064"
+  ],
+  "why": "three percentage rings with labels",
+  "doubt": false
+ },
+ "ig_t_map_apac": {
+  "best": "ig150",
+  "ok": [
+   "map_pins",
+   "page_geography"
+  ],
+  "why": "APAC map shaded by country",
+  "doubt": false
+ },
+ "ig_t_harvey_esg": {
+  "best": "harvey",
+  "ok": [
+   "ig171",
+   "bk35"
+  ],
+  "why": "Harvey ball rating per area",
+  "doubt": false
+ },
+ "ig_t_house_thesis": {
+  "best": "ig109",
+  "ok": [
+   "ig073"
+  ],
+  "why": "house with roof, pillars and foundations",
+  "doubt": false
+ },
+ "ig_t_converge_streams": {
+  "best": "ig101",
+  "ok": [
+   "ig107"
+  ],
+  "why": "three streams merging into one big arrow",
+  "doubt": false
+ },
+ "ig_t_honeycomb": {
+  "best": "ig076",
+  "ok": [
+   "ig075"
+  ],
+  "why": "honeycomb of six hexagons with section text",
+  "doubt": false
+ },
+ "ig_t_icon_rows": {
+  "best": "ig180",
+  "ok": [
+   "side_tabs",
+   "pill_rows"
+  ],
+  "why": "icon at left of each strength row",
+  "doubt": false
+ },
+ "ig_t_conc_rings": {
+  "best": "ig011",
+  "ok": [
+   "ig038",
+   "tam_sam_som"
+  ],
+  "why": "concentric rings for core/adjacent/new layers",
+  "doubt": false
+ }
+}

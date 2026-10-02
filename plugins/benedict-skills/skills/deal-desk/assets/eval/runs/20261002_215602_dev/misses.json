@@ -1,0 +1,166 @@
+[
+ {
+  "row": "rp_108_004_b3",
+  "section": "company",
+  "message": "Revised proposal offers $13.25 per share with committed financing",
+  "block": {
+   "what": "Diligence and timing",
+   "data_type": "text",
+   "about": "approval and signing timeline",
+   "content": [
+    "Approved by NMC investment committee",
+    "Prepared to sign by July 12, 2024",
+    "Discuss management rollover if approved by Special Committee"
+   ]
+  },
+  "right": {
+   "id": "side_tabs",
+   "name": "side tabs",
+   "data_type": "list",
+   "use_when": "Investment thesis pillars: bold claim + evidence -> so what -> implication (35+ words per pillar)",
+   "dont_use_when": "Short facts or one-liners (use pill_rows); a process (use chevrons)"
+  },
+  "also_right": [
+   "pill_rows"
+  ],
+  "picked": {
+   "id": "bullets",
+   "name": "bullets",
+   "data_type": "text",
+   "use_when": "Numbered commentary beside an exhibit: bold lead-in + evidence + so what, 2-6 points",
+   "dont_use_when": "The main exhibit of a page (pick a chart, table or diagram); more than 2 bullet blocks on one slide"
+  },
+  "alts": [
+   "pill_rows",
+   "takeaway"
+  ],
+  "why": "3 short text points on approval and timing are commentary beside the offer exhibit, not a visual on their own",
+  "in_top3": true
+ },
+ {
+  "row": "rp_115_004_b1",
+  "section": "market",
+  "message": "Unstructured data growing twice as fast as structured creates a large data management opportunity",
+  "block": {
+   "what": "Data growth",
+   "data_type": "time_series",
+   "about": "exabytes of data 2010-2020",
+   "unit": "EB",
+   "content": [
+    "2010 ~1,200",
+    "Axis to 2020 at 16,000+",
+    "Data needing protection vs actually protected",
+    "2020 need equals entire digital universe of 2018"
+   ]
+  },
+  "right": {
+   "id": "line",
+   "name": "line",
+   "data_type": "time_series",
+   "use_when": "Prices, rates or indices over many periods",
+   "dont_use_when": "Fewer than 6 points (use column)"
+  },
+  "also_right": [],
+  "picked": {
+   "id": "column",
+   "name": "column",
+   "data_type": "time_series",
+   "use_when": "Market size or volumes over time, or a few series side by side",
+   "dont_use_when": "Shares of a whole (use stacked / rings)"
+  },
+  "alts": [
+   "line",
+   "fin_chart"
+  ],
+  "why": "Market volume in EB over 2010-2020 with few labelled points is market size over time; fewer than 6 points rules out line",
+  "in_top3": true
+ },
+ {
+  "row": "rp_082_009_b3",
+  "section": "financials",
+  "message": "Management forecast shows capex shifting to Renewables with EBITDA and EPS growth to 2035",
+  "block": {
+   "what": "Adj. EPS",
+   "data_type": "time_series",
+   "about": "earnings per share 2024E-2035E",
+   "unit": "$ per share",
+   "content": [
+    "2024E $2.28",
+    "2025E $2.47",
+    "2026E $2.60",
+    "2027E $2.74",
+    "2028E $2.96",
+    "2029E $3.22",
+    "2030E $3.13",
+    "2031E $3.47",
+    "2032E $3.93",
+    "2033E $4.24",
+    "2034E $4.54",
+    "2035E $4.85"
+   ]
+  },
+  "right": {
+   "id": "fin_chart",
+   "name": "fin chart",
+   "data_type": "time_series",
+   "use_when": "One metric's trend with CAGR, actual / estimate split and a % margin strip",
+   "dont_use_when": "Several unrelated metrics (use fin_table); two forecast cases compared (use bk11); 2-4 metrics or segments each needing its own chart (use bk36)"
+  },
+  "also_right": [
+   "stacked",
+   "column"
+  ],
+  "picked": {
+   "id": "bk36",
+   "name": "2x2 chart dashboard",
+   "data_type": "time_series",
+   "use_when": "Historical / projected summary as 2-4 small charts, one per metric or segment (e.g. revenue, EBITDA, segment EBITDA with CAGRs), or market data in 2-4 panels",
+   "dont_use_when": "Only one chart worth showing"
+  },
+  "alts": [
+   "fin_chart",
+   "column"
+  ],
+  "why": "12-year EPS series is one of several metrics (capex, EBITDA, EPS) in the message, so a 2x2 chart dashboard panel; fin_chart if shown alone",
+  "in_top3": true
+ },
+ {
+  "row": "rp_000_012_b1",
+  "section": "valuation",
+  "message": "Minority squeeze-out deals were completed at meaningful premiums to undisturbed prices",
+  "block": {
+   "what": "Precedent minority squeeze-out premiums paid",
+   "data_type": "comparison",
+   "about": "premium by precedent deal",
+   "unit": "%",
+   "content": [
+    "Premiums sorted by size for precedent squeeze-out transactions",
+    "Premium to undisturbed price on day before announcement",
+    "Premium to 52-week high"
+   ]
+  },
+  "right": {
+   "id": "table",
+   "name": "table",
+   "data_type": "comparison",
+   "use_when": "Labelled numbers that need exact reading: comps, precedents, sources & uses, deal terms, one-way sensitivities (down / base / up), KPI lists with change vs prior period, requirements with detail",
+   "dont_use_when": "A trend over time (use a chart); ranking many players on one metric (use bar); 3-6 headline numbers with no extra columns (use stat_strip)"
+  },
+  "also_right": [
+   "bk21"
+  ],
+  "picked": {
+   "id": "bk25",
+   "name": "Premiums paid",
+   "data_type": "range",
+   "use_when": "Premium analysis",
+   "dont_use_when": "Private target (no share price)"
+  },
+  "alts": [
+   "bar",
+   "table"
+  ],
+  "why": "Premiums paid in precedent squeeze-outs vs undisturbed price and 52-week high is a premiums-paid page",
+  "in_top3": true
+ }
+]

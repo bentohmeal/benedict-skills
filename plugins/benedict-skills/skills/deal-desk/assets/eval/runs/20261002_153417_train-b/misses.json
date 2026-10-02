@@ -1,0 +1,495 @@
+[
+ {
+  "row": "sg_dc_s01_b3",
+  "section": "market",
+  "message": "Asia's premium data centre hub, running at over 95% occupancy",
+  "block": {
+   "what": "Singapore at a glance (with a photo)",
+   "data_type": "text",
+   "about": "anchor hub, near-full, premium pricing, controlled growth, power-intensive",
+   "content": [
+    "Anchor hub: 821MW live on a 744km2 island",
+    "Near-full: occupancy above 95%",
+    "Premium pricing: highest rents in APAC",
+    "Controlled growth: 247.5MW upcoming by tender",
+    "Power-intensive: ~7% of electricity, 50% green"
+   ]
+  },
+  "right": {
+   "id": "photo",
+   "name": "photo",
+   "data_type": "geography",
+   "use_when": "An asset, site or map photo beside facts (photo + fact strip + chart recipe)",
+   "dont_use_when": "Decoration with no information"
+  },
+  "also_right": [
+   "bullets",
+   "pill_rows"
+  ],
+  "picked": {
+   "id": "page_overview",
+   "name": "Overview page: photo, fact strip, chart and commentary",
+   "data_type": "kpi_set",
+   "use_when": "An asset or market overview: photo with bullets, 5 key numbers across the top, a ranked bar and commentary",
+   "dont_use_when": "No real photo of the asset (use page_market)"
+  },
+  "alts": [
+   "photo",
+   "pill_rows"
+  ],
+  "why": "5 labelled facts with numbers plus a photo: overview recipe carries photo, fact strip and commentary; plain pill_rows loses the photo",
+  "in_top3": true
+ },
+ {
+  "row": "rp_082_058_b1",
+  "section": "financials",
+  "message": "FFO-to-debt stays near 10-12% through 2035E",
+  "block": {
+   "what": "FFO-to-debt build",
+   "data_type": "time_series",
+   "about": "S&P methodology 2024E-2035E",
+   "content": [
+    "EBITDA 2024E 2,367 2025E 2,717 2026E 2,987 2027E 3,272",
+    "EBITDA 2028E 3,534 2030E 4,093 2033E 4,879 2035E 5,268",
+    "Total debt 2024E 16,466 2025E 18,143 2027E 22,730 2035E 34,114",
+    "Adjusted debt 2024E 16,652 2035E 34,913",
+    "FFO/debt 2024E 12.3% 2028E 10.6% 2035E 12.3%"
+   ]
+  },
+  "right": {
+   "id": "fin_table",
+   "name": "fin table",
+   "data_type": "time_series",
+   "use_when": "Income statement / cash flow line items in bank format (A / E periods, % rows)",
+   "dont_use_when": "A one-metric trend (use fin_chart)"
+  },
+  "also_right": [
+   "bk08",
+   "bk38"
+  ],
+  "picked": {
+   "id": "bk46",
+   "name": "Credit stats with highlighted ratios",
+   "data_type": "time_series",
+   "use_when": "Financing impact on leverage / rating",
+   "dont_use_when": "No new debt"
+  },
+  "alts": [
+   "fin_table",
+   "bk08"
+  ],
+  "why": "EBITDA, debt and FFO/debt 2024E-2035E: credit stats table with highlighted ratio; fin_table is generic",
+  "in_top3": true
+ },
+ {
+  "row": "rp_028_006_b2",
+  "section": "valuation",
+  "message": "Selling now at $35-36 beats holding or spinning off unless revenue and EPS grow at high required rates",
+  "block": {
+   "what": "Growth required",
+   "data_type": "text",
+   "about": "what hold needs to match $35",
+   "content": [
+    "Revenue needs to grow at implied CAGR of 10.7% over next four years to reach present value of $35.00 per share",
+    "Growth required for $35 value: 7.3% revenue CAGR",
+    "Future value uses 19.6x P/E",
+    "Not the bank's view of future stock value"
+   ]
+  },
+  "right": {
+   "id": "table",
+   "name": "table",
+   "data_type": "comparison",
+   "use_when": "Comparison tables, sources & uses, comps, precedent transactions, deal terms, requirements with detail",
+   "dont_use_when": "A trend or one number per item (use a chart)"
+  },
+  "also_right": [
+   "takeaway"
+  ],
+  "picked": {
+   "id": "bullets",
+   "name": "bullets",
+   "data_type": "text",
+   "use_when": "Numbered commentary beside an exhibit: bold lead-in + evidence + so what, 2-6 points",
+   "dont_use_when": "The main exhibit of a page (pick a chart, table or diagram); more than 2 bullet blocks on one slide"
+  },
+  "alts": [
+   "takeaway",
+   "side_tabs"
+  ],
+  "why": "4 growth-required points with CAGRs and caveats (42 words): commentary bullets; takeaway too short, side_tabs over-structured",
+  "in_top3": true
+ },
+ {
+  "row": "rp_115_004_b2",
+  "section": "market",
+  "message": "Unstructured data growing twice as fast as structured creates a large data management opportunity",
+  "block": {
+   "what": "Structured vs unstructured market",
+   "data_type": "comparison",
+   "about": "data management segments",
+   "content": [
+    "Structured: 15% of data, $18bn, CAGR 32.3% 2006-2010",
+    "Unstructured: 85% of data, $20bn, CAGR 63.7% 2006-2010",
+    "RDBMS addresses ~20% of market",
+    "Power: Manage and Search ~40%",
+    "Promote: Marketing ~20%",
+    "Protect: Legal and Compliance ~40%",
+    "Enterprise creates 20% of data but manages 85%"
+   ]
+  },
+  "right": {
+   "id": "bk41",
+   "name": "Market dynamics panels",
+   "data_type": "comparison",
+   "use_when": "Market argument with segments",
+   "dont_use_when": "Company-specific argument"
+  },
+  "also_right": [
+   "bk57"
+  ],
+  "picked": {
+   "id": "stacked",
+   "name": "stacked",
+   "data_type": "composition",
+   "use_when": "Mix over time (revenue by segment, capacity by operator)",
+   "dont_use_when": "A single-period split (use stat_rings)"
+  },
+  "alts": [
+   "stat_rings",
+   "table"
+  ],
+  "why": "structured vs unstructured shares, $ size and sub-segment % splits: stacked bars show composition; rings for single %, table for detail",
+  "in_top3": false
+ },
+ {
+  "row": "rp_039_052_b1",
+  "section": "process",
+  "message": "PE buyers paid take-private multiples of about 11-18x TEV / EBITDA in chemicals",
+  "block": {
+   "what": "Chemicals P2P deals",
+   "data_type": "matrix",
+   "about": "target, buyer, date, price, multiple",
+   "content": [
+    "Ferro / Lydall / TPC Group / Innophos / AMLREAN deals",
+    "Buyers: First Reserve, SK Capital, Apollo, One Rock",
+    "Dates 11/8/2012, 6/1/2015, 10/21/2019, 5/11/2021, 6/21/2021",
+    "Price $1,019mm for one deal",
+    "TEV / FY1 EBITDA 11.6x, 11.1x, 17.9x"
+   ]
+  },
+  "right": {
+   "id": "bk33",
+   "name": "Peer small multiples",
+   "data_type": "comparison",
+   "use_when": "Full peer benchmarking page",
+   "dont_use_when": "One metric (use bk22)"
+  },
+  "also_right": [
+   "bk24"
+  ],
+  "picked": {
+   "id": "bk21",
+   "name": "Precedent table with inline bars",
+   "data_type": "matrix",
+   "use_when": "Precedents where the multiple is the point",
+   "dont_use_when": "Deals with no disclosed multiple"
+  },
+  "alts": [
+   "table",
+   "bk19"
+  ],
+  "why": "5 P2P deals where TEV/EBITDA multiple is the point: precedent table with inline bars; bk19 adds mean/median band",
+  "in_top3": false
+ },
+ {
+  "row": "rp_121_013_b1",
+  "section": "company",
+  "message": "Low leverage of 30.0% and 5.9x interest coverage show a conservative capital structure",
+  "block": {
+   "what": "Key capital management metrics",
+   "data_type": "kpi_set",
+   "about": "leverage, debt cost, tenors, ICR",
+   "content": [
+    "Aggregate Leverage 30.0% (-20 bps)",
+    "Average Cost of Debt 3.0% (-10 bps)",
+    "Weighted Average Debt Tenor 3.1 years",
+    "Weighted Average Hedge Tenor 3.3 years (+0.2 years)",
+    "Trailing 12-month ICR 5.9 times (+0.1 times)"
+   ]
+  },
+  "right": {
+   "id": "table",
+   "name": "table",
+   "data_type": "comparison",
+   "use_when": "Comparison tables, sources & uses, comps, precedent transactions, deal terms, requirements with detail",
+   "dont_use_when": "A trend or one number per item (use a chart)"
+  },
+  "also_right": [
+   "bk46"
+  ],
+  "picked": {
+   "id": "stat_icons",
+   "name": "stat icons",
+   "data_type": "kpi_set",
+   "use_when": "Company at a glance or key numbers, each with a meaningful icon; return drivers in numbers on a thesis page",
+   "dont_use_when": "More than 8 numbers (use a table); numbers that need a trend (use fin_chart)"
+  },
+  "alts": [
+   "stat_strip",
+   "ig177"
+  ],
+  "why": "5 capital-management KPIs with changes: stat icons for at-a-glance numbers; strip if no icons",
+  "in_top3": false
+ },
+ {
+  "row": "rp_121_013_b2",
+  "section": "company",
+  "message": "Low leverage of 30.0% and 5.9x interest coverage show a conservative capital structure",
+  "block": {
+   "what": "Sensitivity on ICR: 10% change in EBITDA",
+   "data_type": "range",
+   "about": "ICR under EBITDA change",
+   "unit": "x",
+   "content": [
+    "Decrease 5.3",
+    "Base Case 5.9",
+    "Increase 6.4"
+   ]
+  },
+  "right": {
+   "id": "table",
+   "name": "table",
+   "data_type": "comparison",
+   "use_when": "Comparison tables, sources & uses, comps, precedent transactions, deal terms, requirements with detail",
+   "dont_use_when": "A trend or one number per item (use a chart)"
+  },
+  "also_right": [],
+  "picked": {
+   "id": "bar",
+   "name": "bar",
+   "data_type": "comparison",
+   "use_when": "Ranking players by one metric (target navy, the rest grey)",
+   "dont_use_when": "A time series (use column)"
+  },
+  "alts": [
+   "column",
+   "table"
+  ],
+  "why": "3 ICR values (decrease/base/increase) in x: short bars compare scenarios; column equally fine, table loses the visual",
+  "in_top3": true
+ },
+ {
+  "row": "rp_121_013_b3",
+  "section": "company",
+  "message": "Low leverage of 30.0% and 5.9x interest coverage show a conservative capital structure",
+  "block": {
+   "what": "Sensitivity on ICR: 100 bps change in interest rate",
+   "data_type": "range",
+   "about": "ICR under rate change",
+   "unit": "x",
+   "content": [
+    "Decrease 8.6",
+    "Base Case 5.9",
+    "Increase 4.4"
+   ]
+  },
+  "right": {
+   "id": "table",
+   "name": "table",
+   "data_type": "comparison",
+   "use_when": "Comparison tables, sources & uses, comps, precedent transactions, deal terms, requirements with detail",
+   "dont_use_when": "A trend or one number per item (use a chart)"
+  },
+  "also_right": [
+   "stat_strip"
+  ],
+  "picked": {
+   "id": "bar",
+   "name": "bar",
+   "data_type": "comparison",
+   "use_when": "Ranking players by one metric (target navy, the rest grey)",
+   "dont_use_when": "A time series (use column)"
+  },
+  "alts": [
+   "column",
+   "table"
+  ],
+  "why": "3 ICR values under rate change in x: bars mirror the EBITDA sensitivity; column/table alternatives",
+  "in_top3": true
+ },
+ {
+  "row": "rp_114_003_b1",
+  "section": "process",
+  "message": "Outreach to parties produced verbal price indications of $28 to $32 per share",
+  "block": {
+   "what": "Sale process funnel and price indications",
+   "data_type": "comparison",
+   "about": "parties contacted through indications",
+   "content": [
+    "Parties Contacted",
+    "NDA Signed / Initial Meeting",
+    "Submitted Preliminary Proposal (Verbal)",
+    "Post Due Diligence (Verbal)",
+    "Most Recent Price Indication $28",
+    "Most Recent Price Indication $32",
+    "Most Recent Price Indication $30"
+   ]
+  },
+  "right": {
+   "id": "table",
+   "name": "table",
+   "data_type": "comparison",
+   "use_when": "Comparison tables, sources & uses, comps, precedent transactions, deal terms, requirements with detail",
+   "dont_use_when": "A trend or one number per item (use a chart)"
+  },
+  "also_right": [],
+  "picked": {
+   "id": "bk49",
+   "name": "Buyer funnel with stage counts",
+   "data_type": "process",
+   "use_when": "Sale process summary",
+   "dont_use_when": "Process not yet launched"
+  },
+  "alts": [
+   "ig107",
+   "bar"
+  ],
+  "why": "funnel stages plus $28-32 price indications: buyer funnel with stage counts; ig107 no numbers, bar only for prices",
+  "in_top3": false
+ },
+ {
+  "row": "rp_003_016_b1",
+  "section": "valuation",
+  "message": "Peers benchmarked on CY24E growth, margin and EBITDA multiples with medians",
+  "block": {
+   "what": "Valuation multiples benchmarking",
+   "data_type": "comparison",
+   "about": "EV/EBITDA by peer",
+   "unit": "x",
+   "content": [
+    "EV / CY24E EBITDA 10.2x",
+    "EV / CY24E EBITDA 11.2x",
+    "EV / CY24E EBITDA 12.1x",
+    "EV / CY23E EBITDA 12.3x",
+    "EV / CY23E EBITDA 13.4x",
+    "EV / CY23E EBITDA 14.6x",
+    "Overall median shown",
+    "1-yr NTM average vs 1-yr LTM average"
+   ]
+  },
+  "right": {
+   "id": "bk32",
+   "name": "Benchmarking bar matrix",
+   "data_type": "matrix",
+   "use_when": "Comparing peers on 4-6 metrics at once",
+   "dont_use_when": "One metric (use bk22); more than 8 peers"
+  },
+  "also_right": [],
+  "picked": {
+   "id": "bk22",
+   "name": "Ranked columns with median line",
+   "data_type": "comparison",
+   "use_when": "Operational or valuation benchmarking on one metric",
+   "dont_use_when": "Many metrics at once (use bk32/bk33)"
+  },
+  "alts": [
+   "bar",
+   "bk19"
+  ],
+  "why": "8 EV/EBITDA multiples with overall median: ranked columns with median line; bar has no median, bk19 table",
+  "in_top3": false
+ },
+ {
+  "row": "rp_066_015_b2",
+  "section": "valuation",
+  "message": "Precedent deals priced at a median 13.5x LTM EBITDA with 25-49% premiums",
+  "block": {
+   "what": "Deal details",
+   "data_type": "matrix",
+   "about": "acquirer, target, EV and premium",
+   "content": [
+    "Enterprise Value $180mm",
+    "$2,779mm",
+    "$1,731mm",
+    "$580mm",
+    "$560mm",
+    "$1,198mm",
+    "$1,621mm",
+    "$777mm",
+    "$6,725mm",
+    "$472mm",
+    "$5,498mm",
+    "$1,000mm",
+    "Premium 32%, 25%, 49%, 35%"
+   ]
+  },
+  "right": {
+   "id": "bk21",
+   "name": "Precedent table with inline bars",
+   "data_type": "matrix",
+   "use_when": "Precedents where the multiple is the point",
+   "dont_use_when": "Deals with no disclosed multiple"
+  },
+  "also_right": [
+   "bk23",
+   "bar"
+  ],
+  "picked": {
+   "id": "table",
+   "name": "table",
+   "data_type": "comparison",
+   "use_when": "Comparison tables, sources & uses, comps, precedent transactions, deal terms, requirements with detail",
+   "dont_use_when": "A trend or one number per item (use a chart)"
+  },
+  "alts": [
+   "bk19",
+   "page_deals"
+  ],
+  "why": "13 deals with EV and premium: deal table (over bk21/bk24 12/10-item caps); bk19 with mean/median",
+  "in_top3": false
+ },
+ {
+  "row": "rp_082_023_b2",
+  "section": "valuation",
+  "message": "DCF implies enterprise value of roughly $19-23bn across terminal multiple and growth assumptions",
+  "block": {
+   "what": "Implied enterprise value sensitivity",
+   "data_type": "matrix",
+   "about": "EV by terminal EBITDA multiple and discount rate",
+   "unit": "$mm",
+   "content": [
+    "10.50x: 20,984 / 20,378 / 19,789 / 19,216",
+    "10.75x: 21,473 / 20,854 / 20,252 / 19,667",
+    "11.00x: 21,962 / 21,329 / 20,715 / 20,118",
+    "11.25x: 22,451 / 21,805 / 21,178 / 20,569",
+    "11.50x: 22,940 / 22,281 / 21,641 / 21,019",
+    "Discount rates 6.25% to 7.00%",
+    "Implied perpetuity growth 1.6% to 2.6%"
+   ]
+  },
+  "right": {
+   "id": "bk44",
+   "name": "Twin sensitivity tables",
+   "data_type": "matrix",
+   "use_when": "IRR or price sensitivity on two different pairs of drivers",
+   "dont_use_when": "Only one pair of drivers matters"
+  },
+  "also_right": [
+   "bk13"
+  ],
+  "picked": {
+   "id": "heatmap",
+   "name": "heatmap",
+   "data_type": "matrix",
+   "use_when": "IRR / MOIC or price sensitivity grid on two drivers (red-white-green)",
+   "dont_use_when": "One-way sensitivities (use a table or tornado)"
+  },
+  "alts": [
+   "bk44",
+   "table"
+  ],
+  "why": "EV grid by terminal multiple x discount rate (5x4): sensitivity heatmap; bk44 needs two grids",
+  "in_top3": true
+ }
+]

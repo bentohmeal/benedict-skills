@@ -1,0 +1,233 @@
+[
+ {
+  "row": "sg_dc_s02_b4",
+  "section": "market",
+  "message": "Cloud and AI demand far outruns what Singapore can add",
+  "block": {
+   "what": "Recent commitments to Singapore",
+   "data_type": "list",
+   "about": "who committed what capital and when: operators, tender awards",
+   "content": [
+    "AWS S$12bn to 2028",
+    "Digital Realty S$4.3bn Apr 2026",
+    "DC-CFA2 200MW Aug 2026",
+    "Equinix SG6 US$260m 20MW",
+    "Keppel 25MW floating DC 2028",
+    "DC-CFA1 80MW Jul 2023"
+   ]
+  },
+  "right": {
+   "id": "table",
+   "name": "table",
+   "data_type": "comparison",
+   "use_when": "Comparison tables, sources & uses, comps, precedent transactions, deal terms, requirements with detail",
+   "dont_use_when": "A trend or one number per item (use a chart)"
+  },
+  "also_right": [],
+  "picked": {
+   "id": "timeline",
+   "name": "timeline",
+   "data_type": "time_series",
+   "use_when": "History and milestones (company, policy or market events), or a deal timetable; highlight today",
+   "dont_use_when": "Fewer than 4 dates; numeric trends (use a chart)"
+  },
+  "alts": [
+   "table",
+   "pill_rows"
+  ],
+  "why": "6 dated capital commitments (who, how much, when) read best on a dated line; table loses the sequence, pill_rows loses the dates",
+  "in_top3": true
+ },
+ {
+  "row": "rp_108_004_b3",
+  "section": "company",
+  "message": "Revised proposal offers $13.25 per share with committed financing",
+  "block": {
+   "what": "Diligence and timing",
+   "data_type": "text",
+   "about": "approval and signing timeline",
+   "content": [
+    "Approved by NMC investment committee",
+    "Prepared to sign by July 12, 2024",
+    "Discuss management rollover if approved by Special Committee"
+   ]
+  },
+  "right": {
+   "id": "side_tabs",
+   "name": "side tabs",
+   "data_type": "list",
+   "use_when": "Investment thesis pillars: bold claim + evidence -> so what -> implication (35+ words per pillar)",
+   "dont_use_when": "Short facts or one-liners (use pill_rows); a process (use chevrons)"
+  },
+  "also_right": [
+   "pill_rows"
+  ],
+  "picked": {
+   "id": "bullets",
+   "name": "bullets",
+   "data_type": "text",
+   "use_when": "Numbered commentary beside an exhibit: bold lead-in + evidence + so what, 2-6 points",
+   "dont_use_when": "The main exhibit of a page (pick a chart, table or diagram); more than 2 bullet blocks on one slide"
+  },
+  "alts": [
+   "pill_rows",
+   "numbered_steps"
+  ],
+  "why": "3 short text lines on approvals and timing beside the proposal; bullets fit commentary, not a sequenced process",
+  "in_top3": true
+ },
+ {
+  "row": "rp_113_013_b2",
+  "section": "process",
+  "message": "13 parties contacted narrowed to few proposals with most recent price indications of $28-31",
+  "block": {
+   "what": "Most recent price indication",
+   "data_type": "comparison",
+   "about": "indicated price per share by party",
+   "unit": "$ per share",
+   "content": [
+    "Party A $28",
+    "Party B $31",
+    "Party C $30"
+   ]
+  },
+  "right": {
+   "id": "table",
+   "name": "table",
+   "data_type": "comparison",
+   "use_when": "Comparison tables, sources & uses, comps, precedent transactions, deal terms, requirements with detail",
+   "dont_use_when": "A trend or one number per item (use a chart)"
+  },
+  "also_right": [],
+  "picked": {
+   "id": "bar",
+   "name": "bar",
+   "data_type": "comparison",
+   "use_when": "Ranking players by one metric (target navy, the rest grey)",
+   "dont_use_when": "A time series (use column)"
+  },
+  "alts": [
+   "column",
+   "table"
+  ],
+  "why": "3 parties, one metric ($ per share), chartable unit; bar ranks the price indications, table loses the visual gap",
+  "in_top3": true
+ },
+ {
+  "row": "rp_115_004_b1",
+  "section": "market",
+  "message": "Unstructured data growing twice as fast as structured creates a large data management opportunity",
+  "block": {
+   "what": "Data growth",
+   "data_type": "time_series",
+   "about": "exabytes of data 2010-2020",
+   "unit": "EB",
+   "content": [
+    "2010 ~1,200",
+    "Axis to 2020 at 16,000+",
+    "Data needing protection vs actually protected",
+    "2020 need equals entire digital universe of 2018"
+   ]
+  },
+  "right": {
+   "id": "line",
+   "name": "line",
+   "data_type": "time_series",
+   "use_when": "Prices, rates or indices over many periods",
+   "dont_use_when": "Fewer than 6 points (use column)"
+  },
+  "also_right": [],
+  "picked": {
+   "id": "column",
+   "name": "column",
+   "data_type": "time_series",
+   "use_when": "Market size or volumes over time, or a few series side by side",
+   "dont_use_when": "Shares of a whole (use stacked / rings)"
+  },
+  "alts": [
+   "fin_chart",
+   "line"
+  ],
+  "why": "data volume in EB over 2010-2020, few points; column shows market size over time, line needs 6+ points",
+  "in_top3": true
+ },
+ {
+  "row": "rp_011_027_b2",
+  "section": "financials",
+  "message": "Total corporate spend declines from 4.3% to 3.2% of sales through 2028E",
+  "block": {
+   "what": "Commentary",
+   "data_type": "list",
+   "about": "cost components",
+   "content": [
+    "Communications includes PR and hospitality marketing, higher ahead of Olympics",
+    "Corp. Exec. covers CEO, Executive Chair, COO, CFO costs",
+    "HR includes personnel and infrastructure",
+    "Technology covers IT infrastructure and internal systems",
+    "Total corporate spend ranges ~3% to ~4.5% of revenue"
+   ]
+  },
+  "right": {
+   "id": "bk07",
+   "name": "Segment table with side tabs + commentary column",
+   "data_type": "time_series",
+   "use_when": "Segment or business-unit financials with explanation per segment",
+   "dont_use_when": "Single-segment business; more than 4 segments"
+  },
+  "also_right": [
+   "bullets"
+  ],
+  "picked": {
+   "id": "bk06",
+   "name": "Projections table + numbered commentary",
+   "data_type": "time_series",
+   "use_when": "Management case or business plan pages",
+   "dont_use_when": "Historicals only with no story to tell; more than 8 commentary points"
+  },
+  "alts": [
+   "bullets",
+   "pill_rows"
+  ],
+  "why": "5 commentary lines keyed to cost lines in a projection table; lettered commentary per precedent",
+  "in_top3": true
+ },
+ {
+  "row": "rp_000_012_b1",
+  "section": "valuation",
+  "message": "Minority squeeze-out deals were completed at meaningful premiums to undisturbed prices",
+  "block": {
+   "what": "Precedent minority squeeze-out premiums paid",
+   "data_type": "comparison",
+   "about": "premium by precedent deal",
+   "unit": "%",
+   "content": [
+    "Premiums sorted by size for precedent squeeze-out transactions",
+    "Premium to undisturbed price on day before announcement",
+    "Premium to 52-week high"
+   ]
+  },
+  "right": {
+   "id": "table",
+   "name": "table",
+   "data_type": "comparison",
+   "use_when": "Comparison tables, sources & uses, comps, precedent transactions, deal terms, requirements with detail",
+   "dont_use_when": "A trend or one number per item (use a chart)"
+  },
+  "also_right": [
+   "bk21"
+  ],
+  "picked": {
+   "id": "bk25",
+   "name": "Premiums paid",
+   "data_type": "range",
+   "use_when": "Premium analysis",
+   "dont_use_when": "Private target (no share price)"
+  },
+  "alts": [
+   "bar",
+   "table"
+  ],
+  "why": "squeeze-out premiums (%) by deal vs undisturbed and 52-week high; premiums-paid layout fits",
+  "in_top3": true
+ }
+]

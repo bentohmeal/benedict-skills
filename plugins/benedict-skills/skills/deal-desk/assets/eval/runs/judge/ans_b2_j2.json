@@ -1,0 +1,427 @@
+{
+ "sg_dc_s01_b2": {
+  "best": "bar",
+  "ok": [
+   "bk22"
+  ],
+  "why": "horizontal bars ranked, 8 markets, Singapore gold, values at bar end",
+  "doubt": false
+ },
+ "sg_dc_s02_b2": {
+  "best": "column",
+  "ok": [
+   "bar"
+  ],
+  "why": "3 vertical columns with values above",
+  "doubt": false
+ },
+ "sg_dc_s03_b2": {
+  "best": "table",
+  "ok": [
+   "pill_rows"
+  ],
+  "why": "two-column test/requirement table, 5 rows",
+  "doubt": false
+ },
+ "sg_dc_s04_b2": {
+  "best": "table",
+  "ok": [
+   "bk35"
+  ],
+  "why": "metric rows x 3 market columns text/number table",
+  "doubt": false
+ },
+ "sg_dc_s05_b3": {
+  "best": "logo_row",
+  "ok": [
+   "page_landscape"
+  ],
+  "why": "logo grid in grouped columns",
+  "doubt": false
+ },
+ "sg_dc_s06_b2": {
+  "best": "table",
+  "ok": [],
+  "why": "item/value/context 3-column table, 4 rows",
+  "doubt": false
+ },
+ "sg_dc_s07_b2": {
+  "best": "bar",
+  "ok": [
+   "bk22"
+  ],
+  "why": "horizontal ranked bars of price per MW, 5 deals",
+  "doubt": false
+ },
+ "sg_dc_s08_b3": {
+  "best": "bullets",
+  "ok": [
+   "pill_rows"
+  ],
+  "why": "4 bold lead-in bullets under a header",
+  "doubt": false
+ },
+ "sg_dc_s09_b3": {
+  "best": "stat_icons",
+  "ok": [
+   "ig177"
+  ],
+  "why": "6 icon + number + caption tiles in a 2x3 grid",
+  "doubt": false
+ },
+ "rp_004_022_b2": {
+  "best": "bk40",
+  "ok": [
+   "stat_rings"
+  ],
+  "why": "pie charts of mix, standalone vs combined, with borrower count box",
+  "doubt": false
+ },
+ "rp_001_021_b1": {
+  "best": "chevrons",
+  "ok": [
+   "bk52",
+   "side_tabs"
+  ],
+  "why": "3 vertical down-arrow phase tabs with bullets beside",
+  "doubt": false
+ },
+ "rp_083_008_b1": {
+  "best": "bk57",
+  "ok": [
+   "bk58"
+  ],
+  "why": "two numbered case columns with bullets plus a column chart each",
+  "doubt": false
+ },
+ "rp_108_004_b3": {
+  "best": "side_tabs",
+  "ok": [
+   "pill_rows",
+   "bullets"
+  ],
+  "why": "navy side tab label with bullet paragraphs",
+  "doubt": false
+ },
+ "rp_091_006_b2": {
+  "best": "bk49",
+  "ok": [
+   "ig107"
+  ],
+  "why": "5-stage funnel with strategic/financial count columns",
+  "doubt": false
+ },
+ "rp_080_023_b1": {
+  "best": "bk01",
+  "ok": [
+   "table"
+  ],
+  "why": "wide offer-value table across 11 price columns, current price boxed",
+  "doubt": false
+ },
+ "rp_072_012_b1": {
+  "best": "football_field",
+  "ok": [
+   "bk15"
+  ],
+  "why": "horizontal value ranges by method with current price dashed line",
+  "doubt": false
+ },
+ "rp_082_058_b1": {
+  "best": "fin_table",
+  "ok": [
+   "bk38",
+   "bk08"
+  ],
+  "why": "wide S&P FFO/debt build table 2024E-2035E under a column chart",
+  "doubt": false
+ },
+ "rp_108_005_b1": {
+  "best": "bk27",
+  "ok": [
+   "bk28"
+  ],
+  "why": "share price line with boxed event callouts beside a stats table",
+  "doubt": false
+ },
+ "rp_039_034_b1": {
+  "best": "bullets",
+  "ok": [
+   "page_text"
+  ],
+  "why": "sub-headed two-level bullet sections, text only",
+  "doubt": false
+ },
+ "rp_052_023_b1": {
+  "best": "bk35",
+  "ok": [
+   "bk48",
+   "table"
+  ],
+  "why": "3 option columns x attribute rows with ticks, recommended column highlighted",
+  "doubt": false
+ },
+ "rp_044_037_b1": {
+  "best": "bk44",
+  "ok": [
+   "heatmap",
+   "bk13"
+  ],
+  "why": "two side-by-side sensitivity grids (EBITDA multiple, PGR) vs WACC",
+  "doubt": false
+ },
+ "rp_012_007_b1": {
+  "best": "stacked",
+  "ok": [
+   "bk39",
+   "column"
+  ],
+  "why": "stacked cash + availability columns with % of revenue line",
+  "doubt": false
+ },
+ "rp_071_015_b1": {
+  "best": "bk05",
+  "ok": [],
+  "why": "issue boxes with arrows to potential-response boxes",
+  "doubt": false
+ },
+ "rp_028_003_b1": {
+  "best": "bk58",
+  "ok": [
+   "bullets"
+  ],
+  "why": "two headed boxed columns (Proposal, Assumptions) with bullets",
+  "doubt": false
+ },
+ "rp_115_004_b1": {
+  "best": "line",
+  "ok": [],
+  "why": "two-series exabyte line chart 2010-2020",
+  "doubt": false
+ },
+ "rp_092_009_b2": {
+  "best": "takeaway",
+  "ok": [],
+  "why": "single framed note box under the funnel",
+  "doubt": false
+ },
+ "rp_112_020_b2": {
+  "best": "bullets",
+  "ok": [
+   "takeaway"
+  ],
+  "why": "boxed summary with 3 dash bullets above a table",
+  "doubt": false
+ },
+ "rp_102_008_b2": {
+  "best": "table",
+  "ok": [],
+  "why": "row of 6 contact columns (name, title, contacts)",
+  "doubt": false
+ },
+ "rp_011_027_b1": {
+  "best": "bk07",
+  "ok": [
+   "fin_table"
+  ],
+  "why": "rounded side tabs per function, $ and % rows 2024E-28E, commentary column",
+  "doubt": false
+ },
+ "rp_032_008_b1": {
+  "best": "bk11",
+  "ok": [
+   "bk36"
+  ],
+  "why": "2x2 grid of two-case grouped column charts",
+  "doubt": false
+ },
+ "rp_003_008_b1": {
+  "best": "bk27",
+  "ok": [
+   "bk26",
+   "bk28"
+  ],
+  "why": "share price since IPO with many boxed event callouts plus a stats box",
+  "doubt": false
+ },
+ "rp_082_009_b1": {
+  "best": "stacked",
+  "ok": [
+   "bk36"
+  ],
+  "why": "stacked capex columns by segment with FFO/debt strip above",
+  "doubt": false
+ },
+ "rp_003_006_b1": {
+  "best": "bk01",
+  "ok": [
+   "table"
+  ],
+  "why": "metrics table across offer prices, offer columns highlighted",
+  "doubt": false
+ },
+ "rp_121_013_b2": {
+  "best": "table",
+  "ok": [],
+  "why": "small decrease/base/increase sensitivity table",
+  "doubt": false
+ },
+ "rp_085_007_b1": {
+  "best": "logo_row",
+  "ok": [
+   "page_landscape"
+  ],
+  "why": "tombstone logo tiles grouped into 4 sub-sector panels",
+  "doubt": false
+ },
+ "rp_114_003_b1": {
+  "best": "table",
+  "ok": [],
+  "why": "tick matrix of parties x process stages, grouped by strategic/sponsor tabs",
+  "doubt": false
+ },
+ "rp_032_011_b1": {
+  "best": "bk17",
+  "ok": [
+   "table"
+  ],
+  "why": "lettered methodology colour tabs with description bullets, grouped by side labels",
+  "doubt": false
+ },
+ "rp_003_016_b1": {
+  "best": "bk32",
+  "ok": [
+   "bk23"
+  ],
+  "why": "peer rows with logos, 4 metric bar columns, medians at bottom",
+  "doubt": false
+ },
+ "rp_068_021_b1": {
+  "best": "bk44",
+  "ok": [
+   "heatmap",
+   "table"
+  ],
+  "why": "twin grids (2019E/2020E) P/E vs % equity, highlighted cells",
+  "doubt": false
+ },
+ "rp_084_007_b1": {
+  "best": "bullets",
+  "ok": [
+   "timeline"
+  ],
+  "why": "dated bullet list of 7 key dates, text only",
+  "doubt": false
+ },
+ "rp_000_014_b2": {
+  "best": "side_tabs",
+  "ok": [
+   "bullets"
+  ],
+  "why": "two navy side tabs (historical, plan basis) each with bullet text",
+  "doubt": false
+ },
+ "rp_066_010_b1": {
+  "best": "stacked",
+  "ok": [
+   "fin_chart",
+   "bk36"
+  ],
+  "why": "base vs acquired stacked revenue columns 2023E-27E with CAGR arrows, in a 2x2 dashboard",
+  "doubt": false
+ },
+ "rp_107_004_b1": {
+  "best": "bullets",
+  "ok": [
+   "timeline"
+  ],
+  "why": "9 dated chronology bullets, text only",
+  "doubt": false
+ },
+ "rp_000_012_b1": {
+  "best": "table",
+  "ok": [
+   "bk21"
+  ],
+  "why": "long precedent premiums table with shaded quartile/median summary bands",
+  "doubt": false
+ },
+ "ig_t_cycle_pe": {
+  "best": "ig002",
+  "ok": [
+   "ig027",
+   "ig001"
+  ],
+  "why": "4-stage loop fits four-arrow operating cycle",
+  "doubt": false
+ },
+ "ig_t_pyramid_market": {
+  "best": "ig071",
+  "ok": [],
+  "why": "3 tiers fit a 3-4 level pyramid",
+  "doubt": false
+ },
+ "ig_t_hub_platform": {
+  "best": "hub_spoke",
+  "ok": [
+   "ig032"
+  ],
+  "why": "core platform with 4 bolt-ons around it",
+  "doubt": false
+ },
+ "ig_t_donuts_mix": {
+  "best": "ig063",
+  "ok": [
+   "stat_rings",
+   "bk40"
+  ],
+  "why": "3 splits as three donuts with % segments",
+  "doubt": false
+ },
+ "ig_t_map_uk": {
+  "best": "ig138",
+  "ok": [
+   "ig134",
+   "ig135"
+  ],
+  "why": "UK map shaded by region for depots",
+  "doubt": false
+ },
+ "ig_t_rating_dd": {
+  "best": "ig112",
+  "ok": [
+   "harvey"
+  ],
+  "why": "1-5 scores fit rating scale rows",
+  "doubt": false
+ },
+ "ig_t_pillars_plan": {
+  "best": "ig019",
+  "ok": [
+   "side_tabs"
+  ],
+  "why": "5 levers around a central goal",
+  "doubt": false
+ },
+ "ig_t_road_100day": {
+  "best": "timeline",
+  "ok": [
+   "ig121",
+   "ig111"
+  ],
+  "why": "6 dated milestones on a line",
+  "doubt": false
+ },
+ "ig_t_sunburst": {
+  "best": "ig048",
+  "ok": [],
+  "why": "3-level split fits three-level sunburst",
+  "doubt": false
+ },
+ "ig_t_branch_plan": {
+  "best": "ig113",
+  "ok": [],
+  "why": "protect vs grow branches fit branching process",
+  "doubt": false
+ }
+}

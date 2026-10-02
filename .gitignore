@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 desktop.ini
 .DS_Store
+plugins/benedict-skills/skills/deal-desk/assets/eval/runs/judge/sheets/
