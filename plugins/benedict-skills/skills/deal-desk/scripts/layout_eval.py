@@ -232,68 +232,180 @@ def _log_swaps(swaps):
 
 # ---------- his review ----------
 
+GUIDE = [
+    ("What this sheet is for", "Each row is one block of content (a chart, table, list...) taken from a real bank page or "
+     "one of your decks. 'Proposed layout' is how Claude thinks it should be drawn. Your answers become the answer key "
+     "the deck builder is tested against, so the score is only as good as these labels."),
+    ("The one question", "For every row: is 'Proposed layout' the right way to show this block? Click 'Page / slide' to "
+     "see the original page, and 'Proposed layout' to see what that layout looks like."),
+    ("accept", "Yes, that layout fits this content. The row joins the answer key as it is."),
+    ("swap", "The row is fine but a different layout fits better. Pick the right one in 'Swap to' (dropdown, or browse "
+     "the Layouts tab). The row stays in the answer key with your layout, and the swap is logged as a lesson."),
+    ("reject", "The row itself is broken, so it should not be tested at all: garbled text, the block does not match the "
+     "page, or it is not a real exhibit (cover, disclaimer, divider). Rejected rows are dropped."),
+    ("swap vs reject", "If your thought is 'wrong layout', that is a swap, not a reject. Rejecting a good row with a wrong "
+     "label throws away a test case; swapping keeps the case and fixes the answer."),
+    ("Also right", "Layouts that do the same job (e.g. bar and column). They already count as correct, so no need to "
+     "swap between them."),
+    ("Check", "HOLD-OUT = one of the blind test rows the score is based on, so do these first. Other notes are Claude's "
+     "doubts about the row (e.g. the block and the bank's layout may not match)."),
+    ("Blank", "Still to do. You can review over several sittings; refreshing the sheet keeps what you have entered."),
+    ("When done", "Save and close the file, then tell Claude 'ingest the layout review'."),
+]
+
+
+def _exemplar_thumb(rec, root):
+    ex = rec.get("exemplars") or []
+    if isinstance(ex, str):
+        import ast
+        try:
+            ex = ast.literal_eval(ex)
+        except (ValueError, SyntaxError):
+            ex = []
+    for e in ex:
+        if e.get("thumb") and root and os.path.exists(os.path.join(root, e["thumb"])):
+            return os.path.join(root, e["thumb"])
+    return ""
+
+
+def layout_link(rec, root):
+    """A picture of the layout: its own thumb, else the real bank page it was modelled on, else a slide of ours using it."""
+    if rec.get("thumb") and os.path.exists(os.path.join(ASSETS, rec["thumb"])):
+        return os.path.abspath(os.path.join(ASSETS, rec["thumb"]))
+    own = os.path.join(ASSETS, "layout_thumbs", f"code_{rec.get('id', '')}.png")   # bullets, takeaway, map_pins
+    return _exemplar_thumb(rec, root) or (os.path.abspath(own) if os.path.exists(own) else "")
+
+
+def _prior_decisions():
+    """Decisions already typed in the review sheet, so a refresh never wipes them."""
+    if not os.path.exists(REVIEW_XLSX):
+        return {}
+    from openpyxl import load_workbook
+    ws = load_workbook(REVIEW_XLSX).worksheets[0]
+    out = {}
+    for i in range(5, ws.max_row + 1):
+        rid, dec, to = ws.cell(i, 1).value, ws.cell(i, 13).value, ws.cell(i, 14).value
+        if rid and (dec or to):
+            out[rid] = (dec or "", to or "")
+    return out
+
+
 def review():
     from openpyxl import Workbook
     from openpyxl.styles import Alignment, Font, PatternFill
     from openpyxl.worksheet.datavalidation import DataValidation
-    lib = lm.Matcher().lib
+    if os.path.exists(os.path.join(TOOLKIT, "~$" + os.path.basename(REVIEW_XLSX))):
+        sys.exit("golden_review.xlsx is open in Excel. Save and close it first, then run review again "
+                 "(your decisions are kept).")
+    m = lm.Matcher()
+    lib, root = m.lib, m.root
+    prior = _prior_decisions()
     rows = [r for r in load_rows() if r["status"] == "pending"]
     rows.sort(key=lambda r: (not holdout(r["id"]), not r.get("flag"), r["id"]))   # what the score rests on first
+    band = PatternFill("solid", fgColor="1F3864")
+    link = Font(color="0563C1", underline="single")
     wb = Workbook()
+
     ws = wb.active
     ws.title = "Review"
     ws["A1"] = "Layout eval: review proposed labels"
     ws["A1"].font = Font(bold=True, size=14, color="FFFFFF")
-    ws["A2"] = ("Hold-out rows (they set the score) come first, then flagged ones. Decision: accept (the label is right), swap (put the right layout id in 'Swap to'), reject (bad row). "
-                "Blank = still pending. Then tell Claude 'ingest the layout review'.")
+    ws["A2"] = ("For each row: is 'Proposed layout' the right way to show this block?   accept = yes   ·   swap = no, "
+                "pick the right one in 'Swap to'   ·   reject = the row itself is broken (drop it).   Full guide: Guide tab.")
     ws["A2"].font = Font(italic=True, size=9, color="FFFFFF")
     for c in ("A1", "A2"):
         ws[c].alignment = Alignment(vertical="center")
-    band = PatternFill("solid", fgColor="1F3864")
     for row in (1, 2):
         for col in range(1, 15):
             ws.cell(row, col).fill = band
-    head = ["Row id", "Source", "Page / slide", "Section", "Slide message", "Block", "Type", "Items",
-            "Content (first lines)", "Proposed layout", "Also right", "Check", "Decision", "Swap to"]
+    head = ["Row id", "Source", "Page / slide (click to view)", "Section", "Slide message", "Block", "Type", "Items",
+            "Content (first lines)", "Proposed layout (click to view)", "Also right", "Check", "Decision", "Swap to"]
     for j, h in enumerate(head, 1):
         c = ws.cell(4, j, h)
         c.font = Font(bold=True)
         c.alignment = Alignment(wrap_text=True, vertical="bottom")
+    ids = sorted(lib, key=lambda k: (lib[k].get("kind") != "layout", k.startswith("ig"), k))
     dv = DataValidation(type="list", formula1='"accept,swap,reject"', allow_blank=True)
+    dv_to = DataValidation(type="list", formula1=f"=Layouts!$A$5:$A${len(ids) + 4}", allow_blank=True,
+                           showErrorMessage=True, error="Pick a layout id from the list (see the Layouts tab).")
     ws.add_data_validation(dv)
+    ws.add_data_validation(dv_to)
+    kept = 0
     for i, r in enumerate(rows, 5):
         b = r["block"]
         content = b.get("content", [])
+        dec, to = prior.get(r["id"], ("", ""))
+        kept += bool(dec or to)
         vals = [r["id"], r["source"], r["ref"], r["section"], r["message"], b.get("what", ""), b.get("data_type", ""),
                 len(content) if isinstance(content, list) else "", " · ".join(map(str, content[:4]))[:220]
                 if isinstance(content, list) else str(content)[:220], r["label"], ", ".join(r["acceptable"]),
-                ("HOLD-OUT. " if holdout(r["id"]) else "") + r.get("flag", ""), "", ""]
+                ("HOLD-OUT. " if holdout(r["id"]) else "") + r.get("flag", ""), dec, to]
         for j, v in enumerate(vals, 1):
             c = ws.cell(i, j, v)
             c.alignment = Alignment(wrap_text=True, vertical="top")
         if r.get("thumb") and os.path.exists(r["thumb"]):
             ws.cell(i, 3).hyperlink = r["thumb"]
-            ws.cell(i, 3).font = Font(color="0563C1", underline="single")
-        thumb = lib.get(r["label"], {}).get("thumb")
-        if thumb:
-            ws.cell(i, 10).hyperlink = os.path.abspath(os.path.join(ASSETS, thumb))
-            ws.cell(i, 10).font = Font(color="0563C1", underline="single")
+            ws.cell(i, 3).font = link
+        pic = layout_link(lib.get(r["label"], {}), root)
+        if pic:
+            ws.cell(i, 10).hyperlink = pic
+            ws.cell(i, 10).font = link
         if r.get("flag") or holdout(r["id"]):
             ws.cell(i, 12).font = Font(bold=True, color="C00000")
         dv.add(ws.cell(i, 13))
-    for col, w in zip("ABCDEFGHIJKLMN", (20, 12, 30, 11, 34, 26, 12, 6, 50, 15, 15, 24, 10, 12)):
+        dv_to.add(ws.cell(i, 14))
+    for col, w in zip("ABCDEFGHIJKLMN", (20, 12, 30, 11, 34, 26, 12, 6, 50, 17, 15, 24, 10, 14)):
         ws.column_dimensions[col].width = w
     ws.freeze_panes = "A5"
     ws.sheet_view.showGridLines = False
+
+    g = wb.create_sheet("Guide")
+    g["A1"] = "How to review"
+    g["A1"].font = Font(bold=True, size=14, color="FFFFFF")
+    for col in (1, 2):
+        g.cell(1, col).fill = band
+    for i, (k, v) in enumerate(GUIDE, 3):
+        g.cell(i, 1, k).font = Font(bold=True)
+        g.cell(i, 1).alignment = Alignment(vertical="top")
+        g.cell(i, 2, v).alignment = Alignment(wrap_text=True, vertical="top")
+    g.column_dimensions["A"].width = 18
+    g.column_dimensions["B"].width = 100
+    g.sheet_view.showGridLines = False
+
+    lt = wb.create_sheet("Layouts")
+    lt["A1"] = "Layout ids for 'Swap to'"
+    lt["A1"].font = Font(bold=True, size=14, color="FFFFFF")
+    lt["A2"] = "Click an id to see it. Coded layouts first, then bank-page layouts (ig...), then pages, maps and icon sets."
+    lt["A2"].font = Font(italic=True, size=9, color="FFFFFF")
+    for row in (1, 2):
+        for col in range(1, 5):
+            lt.cell(row, col).fill = band
+    for j, h in enumerate(["Id", "Kind", "Type of data", "Use when"], 1):
+        lt.cell(4, j, h).font = Font(bold=True)
+    for i, k in enumerate(ids, 5):
+        rec = lib[k]
+        for j, v in enumerate([k, rec.get("kind", ""), rec.get("data_type", ""), rec.get("use_when", "")], 1):
+            lt.cell(i, j, v).alignment = Alignment(wrap_text=True, vertical="top")
+        pic = layout_link(rec, root)
+        if pic:
+            lt.cell(i, 1).hyperlink = pic
+            lt.cell(i, 1).font = link
+    for col, w in zip("ABCD", (16, 10, 14, 90)):
+        lt.column_dimensions[col].width = w
+    lt.freeze_panes = "A5"
+    lt.sheet_view.showGridLines = False
+
     os.makedirs(TOOLKIT, exist_ok=True)
     wb.save(REVIEW_XLSX)
-    print(f"{len(rows)} pending rows -> {REVIEW_XLSX}")
+    print(f"{len(rows)} pending rows -> {REVIEW_XLSX} ({kept} earlier decisions kept)")
 
 
 def ingest():
     from openpyxl import load_workbook
+    if os.path.exists(os.path.join(TOOLKIT, "~$" + os.path.basename(REVIEW_XLSX))):
+        sys.exit("golden_review.xlsx is open in Excel. Save and close it first so no decisions are missed.")
     lib = lm.Matcher().lib
-    ws = load_workbook(REVIEW_XLSX).active
+    ws = load_workbook(REVIEW_XLSX).worksheets[0]
     rows = load_rows()
     by_id = {r["id"]: r for r in rows}
     n, swaps, bad = Counter(), [], []

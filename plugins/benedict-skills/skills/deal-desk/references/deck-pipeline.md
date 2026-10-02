@@ -62,7 +62,7 @@ python scripts/layout_match.py plan topics.json
 ## Eval: is the layout choice getting better?
 `scripts/layout_eval.py` keeps a golden set (`assets/eval/golden.jsonl`) of blocks with the right layout, and scores the matcher and a blind selector against it.
 - **Sources:** real bank pages (the bank's layout is the label; page text OCR'd and chunked blind), past worked cases (SG DC hand-built deck), and every approved plan (above).
-- **His review:** `layout_eval.py review` writes `output\_Deal Desk Toolkit\golden_review.xlsx`. He marks each row accept / swap (+ layout id) / reject; `layout_eval.py ingest` reads it back. Only accepted rows count; `--all` gives a provisional score that includes pending rows.
+- **His review:** `layout_eval.py review` writes `output\_Deal Desk Toolkit\golden_review.xlsx`. He marks each row accept (label right) / swap (row fine, pick the right layout id from the dropdown) / reject (row itself broken: garbled, mismatched, not an exhibit); a Guide tab explains this and a Layouts tab lists every id with a picture. Re-running review keeps his decisions and refuses while the file is open in Excel; `layout_eval.py ingest` reads it back. Only accepted rows count; `--all` gives a provisional score that includes pending rows.
 - **Split:** a hash of the row id puts 1 in 5 rows in a fixed hold-out. `layout_eval.py examples` writes the other 80% to `assets/eval/examples.md` (the few-shot list for step 3). Hold-out rows never appear in prompts.
 - **Score:**
   - `layout_eval.py matcher`: top-1 / top-3 of `layout_match.py` on the hold-out. Seconds, no tokens.
