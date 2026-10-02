@@ -513,6 +513,9 @@ def ingest():
                     bad.append(f"{rid}: other id {other!r} is not a layout id")
                     continue
                 chosen = other
+            elif DECISIONS.index(dec) >= len(picks):
+                bad.append(f"{rid}: {dec!r} points at an empty picture (only {len(picks)} shown)")
+                continue
             else:
                 chosen = picks[DECISIONS.index(dec)]
             if r["status"] == "silver" and r.get("audit"):
