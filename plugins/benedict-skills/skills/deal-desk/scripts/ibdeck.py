@@ -1189,6 +1189,16 @@ class Deck:
         ca.format.line.color.rgb = rgb(MIDGREY)
         ca.tick_labels.font.size = Pt(font)
         ca.has_major_gridlines = False
+        allv = [v for _, vals in series for v in vals if v is not None]
+        if allv and min(allv) < 0:
+            ca.tick_label_position = XL_TICK_LABEL_POSITION.LOW   # keep category names clear of negative bars
+            for ser in ch.series:
+                ser.invert_if_negative = False                    # PowerPoint draws negative bars hollow otherwise
+            if kind not in (XL_CHART_TYPE.COLUMN_STACKED, XL_CHART_TYPE.BAR_STACKED) and not is_line:
+                span = max(max(allv), 0) - min(allv)              # headroom so outside-end labels clear the axis text
+                va.minimum_scale = min(allv) - 0.25 * span
+                if max(allv) > 0:
+                    va.maximum_scale = max(allv) + 0.15 * span
         return ch
 
     def column(self, s, x, y, w, h, categories, series, **kw):

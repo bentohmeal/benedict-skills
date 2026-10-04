@@ -5,6 +5,8 @@ description: "Refresh Benedict's expense tracker by pulling DBS PayLah! and iBan
 
 # Expense Tracker — Refresh
 
+> **Conflict check (mandatory, every update):** before reading or writing any tracker file, run `sh workflows/check-conflicts.sh` (or the equivalent `find "$WT" -name "* ([0-9]*).*"`). Merge any Drive `(1)` duplicate into the real file first, tell Benedict which copy to delete, never delete it yourself. See CLAUDE.md -> "Tracker conflict check".
+
 **Triggers:** "refresh my expense tracker", "update my finances", or any equivalent
 
 **Local path (device-agnostic):** `$WT/Finances/expense-tracker.md`

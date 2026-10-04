@@ -15,3 +15,80 @@ Each line: the layout the matcher or Claude offered, what he chose instead, and 
 - 2026-10-02 · logo_row -> **page_landscape** · Big data and security software deals (list, 3 items) · Moelis · Moelis Presentation to Oracle (19-Apr-2016) p7
 - 2026-10-02 · table -> **page_deals** · Selected APAC data centre transactions 2024-26 (comparison, 0 items) · Singapore Data Centres sector overview (hand-built deck, sg_dc_slides.py) slide 7
 - 2026-10-02 · pill_rows -> **page_text** · Forecast assumptions (text, 6 items) · Evercore · Evercore Presentation to Diversey (01-Feb-2023) p34
+- 2026-10-03 · bk37 -> **stat_strip** · Project Summit at a glance (kpi_set, 6 items) · Project Summit CIM slide 1
+- 2026-10-03 · bk37 -> **stat_icons** · Highlights quantified (kpi_set, 6 items) · Project Summit CIM slide 3
+- 2026-10-03 · bk08 -> **bk06** · Summary projections ($m) (time_series, 6 items) · Project Summit CIM slide 4
+- 2026-10-03 · table -> **pill_rows** · Why now (list, 3 items) · Project Summit CIM slide 5
+- 2026-10-03 · bk51 -> **chevrons** · Indicative timeline (process, 5 items) · Project Summit CIM slide 6
+- 2026-10-03 · table -> **bar** · Category size and growth (comparison, 4 items) · Project Summit CIM slide 8
+- 2026-10-03 · ig181 -> **hero_number** · US outdoor participants, 2025 (kpi_set, 1 items) · Project Summit CIM slide 9
+- 2026-10-03 · table -> **pill_rows** · What it means for YETI (list, 3 items) · Project Summit CIM slide 9
+- 2026-10-03 · ig176 -> **pill_rows** · Growth drivers (list, 5 items) · Project Summit CIM slide 10
+- 2026-10-03 · table -> **page_landscape** · Competitor map (comparison, 7 items) · Project Summit CIM slide 11
+- 2026-10-03 · table -> **pill_rows** · How YETI competes (list, 4 items) · Project Summit CIM slide 11
+- 2026-10-03 · bar -> **bk22** · LTM revenue growth vs peers (%) (comparison, 8 items) · Project Summit CIM slide 12
+- 2026-10-03 · timeline -> **column** · Quarterly net sales ($m) (time_series, 6 items) · Project Summit CIM slide 14
+- 2026-10-03 · stat_rings -> **stacked** · Share of annual sales by quarter (composition, 2 items) · Project Summit CIM slide 14
+- 2026-10-03 · bk37 -> **stat_icons** · At a glance (kpi_set, 4 items) · Project Summit CIM slide 15
+- 2026-10-03 · table -> **bar** · Major shareholders (10 Mar 2026) (comparison, 6 items) · Project Summit CIM slide 17
+- 2026-10-03 · map_pins -> **page_geography** · Footprint (geography, 5 items) · Project Summit CIM slide 18
+- 2026-10-03 · ig038 -> **numbered_steps** · Entity structure (hierarchy, 5 items) · Project Summit CIM slide 19
+- 2026-10-03 · bk37 -> **stat_strip** · Corporate facts (kpi_set, 4 items) · Project Summit CIM slide 19
+- 2026-10-03 · column -> **fin_chart** · Drinkware net sales ($m) (time_series, 5 items) · Project Summit CIM slide 22
+- 2026-10-03 · timeline -> **chevrons** · 2025 launches by quarter (time_series, 4 items) · Project Summit CIM slide 23
+- 2026-10-03 · line -> **column** · Gross margin (%) (time_series, 6 items) · Project Summit CIM slide 24
+- 2026-10-03 · bk31 -> **stat_icons** · Concentration facts (kpi_set, 4 items) · Project Summit CIM slide 26
+- 2026-10-03 · bk27 -> **stacked** · Channel sales ($m) (time_series, 3 items) · Project Summit CIM slide 28
+- 2026-10-03 · bk37 -> **stat_strip** · Region facts (kpi_set, 4 items) · Project Summit CIM slide 29
+- 2026-10-03 · fin_table -> **stacked** · Net sales by region ($m) (time_series, 4 items) · Project Summit CIM slide 29
+- 2026-10-03 · ig157 -> **logo_row** · Sourcing countries (list, 7 items) · Project Summit CIM slide 30
+- 2026-10-03 · ig135 -> **map_pins** · Distribution network (geography, 6 items) · Project Summit CIM slide 31
+- 2026-10-03 · bk37 -> **stat_strip** · Distribution economics (kpi_set, 3 items) · Project Summit CIM slide 31
+- 2026-10-03 · line -> **fin_chart** · Inventory ($m) and days (time_series, 6 items) · Project Summit CIM slide 32
+- 2026-10-03 · bk26 -> **stacked** · Capex and intangibles ($m) (time_series, 5 items) · Project Summit CIM slide 33
+- 2026-10-03 · ig064 -> **stat_strip** · Brand protection facts (kpi_set, 3 items) · Project Summit CIM slide 34
+- 2026-10-03 · bk37 -> **stat_icons** · Board facts (kpi_set, 4 items) · Project Summit CIM slide 36
+- 2026-10-03 · harvey -> **table** · Board of directors (matrix, 8 items) · Project Summit CIM slide 36
+- 2026-10-03 · bk37 -> **stat_strip** · Pay outcomes (kpi_set, 4 items) · Project Summit CIM slide 37
+- 2026-10-03 · fin_table -> **column** · Headcount (time_series, 5 items) · Project Summit CIM slide 38
+- 2026-10-03 · bk37 -> **stat_icons** · Workforce facts (kpi_set, 4 items) · Project Summit CIM slide 38
+- 2026-10-03 · bk43 -> **stat_strip** · Four $1bn goals (kpi_set, 4 items) · Project Summit CIM slide 39
+- 2026-10-03 · ig064 -> **stat_strip** · Platform proof points (kpi_set, 3 items) · Project Summit CIM slide 40
+- 2026-10-03 · ig188 -> **side_tabs** · US actions (list, 4 items) · Project Summit CIM slide 42
+- 2026-10-03 · ig064 -> **stat_strip** · US sales trend (kpi_set, 3 items) · Project Summit CIM slide 42
+- 2026-10-03 · ig006 -> **pill_rows** · Bolt-on criteria (Investor Day) (list, 4 items) · Project Summit CIM slide 43
+- 2026-10-03 · bk05 -> **table** · Buyer synergies (illustrative) (comparison, 3 items) · Project Summit CIM slide 44
+- 2026-10-03 · column -> **fin_chart** · Net sales ($m) (time_series, 6 items) · Project Summit CIM slide 45
+- 2026-10-03 · bk36 -> **stacked** · SG&A by line ($m) (time_series, 3 items) · Project Summit CIM slide 47
+- 2026-10-03 · ig093 -> **bk18** · GAAP operating income to adjusted EBITDA ($m) (bridge, 6 items) · Project Summit CIM slide 48
+- 2026-10-03 · fin_table -> **fin_chart** · Quarterly sales and adjusted operating income ($m) (time_series, 6 items) · Project Summit CIM slide 50
+- 2026-10-03 · column -> **fin_chart** · Net working capital ($m) (time_series, 5 items) · Project Summit CIM slide 52
+- 2026-10-03 · stacked -> **bar** · Uses of cash FY2021-25 ($m) (composition, 5 items) · Project Summit CIM slide 54
+- 2026-10-03 · table -> **bk10** · FY2026 guidance (comparison, 6 items) · Project Summit CIM slide 56
+- 2026-10-03 · fin_table -> **bk08** · Projected P&L ($m) (time_series, 11 items) · Project Summit CIM slide 58
+- 2026-10-03 · table -> **pill_rows** · Margin assumptions (list, 4 items) · Project Summit CIM slide 58
+- 2026-10-03 · column -> **fin_chart** · EBITDA and margin ($m) (time_series, 6 items) · Project Summit CIM slide 59
+- 2026-10-03 · ig097 -> **fin_table** · Projected balance sheet ($m) (time_series, 10 items) · Project Summit CIM slide 60
+- 2026-10-03 · ig177 -> **stat_strip** · Working capital assumptions (kpi_set, 4 items) · Project Summit CIM slide 60
+- 2026-10-03 · fin_table -> **bk06** · Projected cash flow ($m) (time_series, 10 items) · Project Summit CIM slide 61
+- 2026-10-03 · fin_table -> **column** · FCF and buybacks ($m) (time_series, 5 items) · Project Summit CIM slide 61
+- 2026-10-03 · fin_table -> **fin_chart** · Diluted shares (m) and adjusted EPS ($) (time_series, 5 items) · Project Summit CIM slide 62
+- 2026-10-03 · table -> **bk09** · FY2026E vs company guidance (comparison, 5 items) · Project Summit CIM slide 63
+- 2026-10-03 · table -> **pill_rows** · How to read it (list, 3 items) · Project Summit CIM slide 64
+- 2026-10-03 · ig006 -> **pill_rows** · Diligence priorities (list, 4 items) · Project Summit CIM slide 66
+- 2026-10-03 · logo_row -> **fin_table** · Reconciliation detail ($m) (matrix, 9 items) · Project Summit CIM slide 67
+- 2026-10-03 · logo_row -> **table** · Quarterly detail ($m) (matrix, 8 items) · Project Summit CIM slide 68
+- 2026-10-03 · harvey -> **fin_table** · Assumptions table (matrix, 10 items) · Project Summit CIM slide 69
+- 2026-10-03 · bk58 -> **pill_rows** · Assumption sources (list, 4 items) · Project Summit CIM slide 69
+- 2026-10-03 · bk19 -> **table** · Glossary (matrix, 6 items) · Project Summit CIM slide 70
+- 2026-10-03 · bk58 -> **pill_rows** · Sources (list, 4 items) · Project Summit CIM slide 70
+- 2026-10-03 · table -> **bar** · TEV / LTM EBITDA (x) (comparison, 9 items) · Project Summit Valuation Book slide 2
+- 2026-10-03 · harvey -> **bk32** · Benchmarking by peer group (matrix, 3 items) · Project Summit Valuation Book slide 2
+- 2026-10-03 · table -> **bk19** · Trading comparables detail (matrix, 8 items) · Project Summit Valuation Book slide 3
+- 2026-10-03 · table -> **stat_strip** · Implied value from comps (kpi_set, 3 items) · Project Summit Valuation Book slide 3
+- 2026-10-03 · bk19 -> **bk21** · Selected precedent transactions (matrix, 11 items) · Project Summit Valuation Book slide 4
+- 2026-10-03 · table -> **stat_strip** · Implied value for YETI (kpi_set, 3 items) · Project Summit Valuation Book slide 4
+- 2026-10-03 · bk43 -> **bk13** · DCF summary ($m) (kpi_set, 4 items) · Project Summit Valuation Book slide 5
+- 2026-10-03 · bk19 -> **table** · WACC build (matrix, 8 items) · Project Summit Valuation Book slide 5
+- 2026-10-03 · table -> **bk44** · Sensitivity ($ per share) (matrix, 2 items) · Project Summit Valuation Book slide 6
+- 2026-10-03 · bullets -> **pill_rows** · Reading the tables (text, 3 items) · Project Summit Valuation Book slide 6

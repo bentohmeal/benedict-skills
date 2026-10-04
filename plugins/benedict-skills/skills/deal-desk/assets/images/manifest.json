@@ -150,5 +150,13 @@
   "page": "https://commons.wikimedia.org/wiki/File:Map_of_the_Singapore_Strait.png",
   "licence": "Public domain",
   "author": "Claudio Elias."
+ },
+ "map-world-blank": {
+  "path": "map-world-blank.png",
+  "title": "File:World map blank without borders.svg",
+  "site": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:World_map_blank_without_borders.svg",
+  "licence": "CC BY-SA 4.0",
+  "author": "Crates"
  }
 }

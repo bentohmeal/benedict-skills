@@ -673,8 +673,8 @@ def bk21(d, s, x, y, w, h, columns, rows, bar_col=None, fmt="{:.1f}x", mean=True
             lx = bx + bw * v / vmax
             d._line(s, lx, y + rh, lx, bottom, col, 1.25, dash=DASH)
         mv, md = statistics.mean(vals), statistics.median(vals)
-        _t(d, s, bx, bottom + 0.03, cw[bar_col], 0.22, f"Mean {fmt.format(mv)} (gold)  ·  Median {fmt.format(md)} (grey)",
-           bold=True, wrap=False)
+        _t(d, s, x, bottom + 0.03, w, 0.22, f"Mean {fmt.format(mv)} (gold)  ·  Median {fmt.format(md)} (grey)",
+           bold=True, align=RGT, wrap=False)   # right-aligned to the table edge so it never overflows
 
 
 def bk22(d, s, x, y, w, h, panels, target=None):
