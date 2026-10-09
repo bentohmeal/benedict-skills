@@ -29,9 +29,11 @@ If `$WT` is empty, the local folder isn't connected — use the Google Drive fal
 **Fallback — Google Drive:**
 If local read fails or returns FILE_NOT_FOUND, search Google Drive:
 ```
-mcp__Google_Drive__search_files: query = "name = 'expense-tracker.md' and trashed = false"
+mcp__claude_ai_Google_Drive__search_files: query = "name = 'expense-tracker.md' and trashed = false"
 ```
-Read it with `mcp__Google_Drive__read_file_content` if found.
+Read it with `mcp__claude_ai_Google_Drive__read_file_content` if found.
+
+**Second fallback — Nextcloud** (trial 2026-10-08 to 2026-10-15; rclone mirrors Drive to Nextcloud hourly): if Drive tools fail or aren't connected, find the Nextcloud tools with ToolSearch "nextcloud" and read `GDrive/Claude Things/Weekly Tracker/Finances/expense-tracker.md`. If both exist and differ, use Drive and note it in `Weekly Tracker/sync-mismatch-log.md`.
 
 Note the last transaction date in the file to know how far back to pull emails.
 
@@ -106,7 +108,8 @@ Append new transactions to the correct week. Do not overwrite existing entries.
   mkdir -p "$WT/Finances"
   # write updated file
   ```
-- **Fallback:** Use `mcp__Google_Drive__update_file` or `mcp__Google_Drive__create_file` in folder `12aFM2fFgGmYNO0JYFDwlCni2ws3mCkhb`
+- **Fallback:** Use `mcp__claude_ai_Google_Drive__update_file` (create_file only if the file truly doesn't exist) in folder `12aFM2fFgGmYNO0JYFDwlCni2ws3mCkhb`
+- **Second fallback (Nextcloud):** if Drive tools fail, update `GDrive/Claude Things/Weekly Tracker/Finances/expense-tracker.md` in place with the Nextcloud tools (find them with ToolSearch "nextcloud"; never delete then create). Tell Benedict "Saved to Nextcloud only, copy back to Drive by hand".
 
 ## Step 6 — Display summary
 

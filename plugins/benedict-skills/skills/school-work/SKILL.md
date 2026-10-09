@@ -50,7 +50,7 @@ Study guides: `Y5S1/<MOD>/<MOD> Study Guide — Y5S1.docx`
 3. Syllabus PDFs (above)
 4. Study guides: condensed lecture content by week
 5. Raw files in `Y5S1/<MOD>/Week N/`, `Project/`, `Job Profile Project/`, `Midterm/`, `Quiz 1/`
-6. Google Calendar (class times, events) and Google Drive `search_files` (anything not stored locally)
+6. Google Calendar (class times, events), Google Drive `search_files`, then Nextcloud (anything not stored locally; Drive wins on a mismatch)
 
 Rules: **always cite the source** (e.g. "MDA syllabus p.3", "TF Week 4 slides", "Tracker"). If sources conflict, show both and flag the conflict. If nothing is found, say so and **never guess** a date, weight or requirement.
 
@@ -101,6 +101,7 @@ If a newer brief or announcement states a different AI policy, follow the newer 
 Ask: **"Upload or paste files, point me to a folder, or should I search Google Drive?"**
 - Suggest the default `00. School\Y5S1\<MOD>\` and list the folders found there (Week N, Project, etc.).
 - Google Drive: `search_files`, then `read_file_content` / `download_file_content`.
+- Nextcloud (trial; mirror of Drive at `GDrive/00. School/Y5S1/<MOD>/`): if Drive tools fail, find the tools with ToolSearch "nextcloud". Read-only for course files.
 - Read **everything** provided. Then show a short inventory:
 
 | File | What it covers | How I'll use it |

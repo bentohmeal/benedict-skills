@@ -39,7 +39,7 @@ Tooling notes:
 - Python: PC `C:\Users\user\AppData\Local\Programs\Python\Python312\python.exe` · Mac `~/benedict-venv/bin/python` (python-docx, openpyxl, python-pptx, pymupdf; see `<Drive>/Claude Things/MAC-SETUP.md`).
 - Read .docx files with `scripts/docx_text.py` and PDFs with pymupdf (`python -c "import pymupdf,sys;print(''.join(p.get_text() for p in pymupdf.open(sys.argv[1])))" file.pdf`) or `pdftotext -layout` if installed.
 - Write .docx files with the **docx** skill.
-- For Google Docs, use the Google Drive connector if it's connected. If a local path fails, fall back to the Drive IDs in `Interview Prep/CLAUDE.md` without asking.
+- For Google Docs, use the Google Drive connector if it's connected. If a local path fails, fall back to the Drive IDs in `Interview Prep/CLAUDE.md` without asking. If Drive also fails, read the same path under `GDrive/` on Nextcloud (find the tools with ToolSearch "nextcloud").
 
 ## Step 0: Automatic checks (always, before the menu)
 
