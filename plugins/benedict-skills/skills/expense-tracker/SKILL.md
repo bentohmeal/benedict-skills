@@ -1,20 +1,21 @@
 ---
 name: expense-tracker
-description: "Refresh Benedict's expense tracker by pulling DBS PayLah! and iBanking alert emails from Gmail, extracting transactions, categorising them, and writing to expense-tracker.md locally or on Google Drive."
+description: "Refresh Benedict's expense tracker by pulling DBS PayLah! and iBanking alert emails from Gmail, extracting transactions, categorising them, and writing to expense-tracker.md locally or on Nextcloud."
 ---
 
 # Expense Tracker — Refresh
 
-> **Conflict check (mandatory, every update):** before reading or writing any tracker file, run `sh workflows/check-conflicts.sh` (or the equivalent `find "$WT" -name "* ([0-9]*).*"`). Merge any Drive `(1)` duplicate into the real file first, tell Benedict which copy to delete, never delete it yourself. See CLAUDE.md -> "Tracker conflict check".
+> **Conflict check (mandatory, every update):** before reading or writing any tracker file, run `sh workflows/check-conflicts.sh` (or the equivalent `find "$WT" \( -name "* ([0-9]*).*" -o -iname "*conflicted copy*" \)`). Merge any sync duplicate (`name (1).md` from the old Drive days, or Nextcloud's `name (conflicted copy <date>).md`) into the real file first, tell Benedict which copy to delete, never delete it yourself. See CLAUDE.md -> "Tracker conflict check".
 
 **Triggers:** "refresh my expense tracker", "update my finances", or any equivalent
 
 **Local path (device-agnostic):** `$WT/Finances/expense-tracker.md`
-**Google Drive Folder ID:** `12aFM2fFgGmYNO0JYFDwlCni2ws3mCkhb`
+**Nextcloud path (when the desktop folder isn't connected):** `GDrive/Claude Things/Weekly Tracker/Finances/expense-tracker.md` (connector "NextCloud"; find its tools with ToolSearch "nextcloud")
 
 `$WT` is the Weekly Tracker folder. Resolve it at the start of every local command (shell state does not persist); works whether `Claude Things` or `Weekly Tracker` itself is connected in the Claude desktop app:
 ```bash
-WT=""; for d in "$HOME/mnt/Claude Things/Weekly Tracker" "$HOME/mnt/Weekly Tracker" "/c/Users/user/Documents/Google Drive/Claude Things/Weekly Tracker" "$HOME"/Library/CloudStorage/GoogleDrive-*/"My Drive/Claude Things/Weekly Tracker" "$HOME/Google Drive/Claude Things/Weekly Tracker"; do [ -d "$d" ] && WT="$d" && break; done
+WT=""; for d in "$HOME/mnt/Claude Things/Weekly Tracker" "$HOME/mnt/Weekly Tracker" "/c/Users/user/Nextcloud/GDrive/Claude Things/Weekly Tracker" "$HOME/Nextcloud/GDrive/Claude Things/Weekly Tracker"; do [ -d "$d" ] && WT="$d" && break; done
+[ -n "$WT" ] && [ ! -f "$WT/NEXTCLOUD.md" ] && echo "STALE_DRIVE_FOLDER: $WT (old Google Drive copy, do not use)" && WT=""
 ```
 
 ## Step 1 — Read the existing tracker
@@ -24,16 +25,10 @@ Use `device_bash` to read the existing file:
 ```bash
 cat "$WT/Finances/expense-tracker.md" 2>/dev/null || echo "FILE_NOT_FOUND"
 ```
-If `$WT` is empty, the local folder isn't connected — use the Google Drive fallback.
+If `$WT` is empty, the local folder isn't connected (or `STALE_DRIVE_FOLDER` printed: the old Google Drive copy is connected; tell Benedict to reconnect `C:\Users\user\Nextcloud\GDrive\Claude Things`) — use the Nextcloud fallback.
 
-**Fallback — Google Drive:**
-If local read fails or returns FILE_NOT_FOUND, search Google Drive:
-```
-mcp__claude_ai_Google_Drive__search_files: query = "name = 'expense-tracker.md' and trashed = false"
-```
-Read it with `mcp__claude_ai_Google_Drive__read_file_content` if found.
-
-**Second fallback — Nextcloud** (trial 2026-10-08 to 2026-10-15; rclone mirrors Drive to Nextcloud hourly): if Drive tools fail or aren't connected, find the Nextcloud tools with ToolSearch "nextcloud" and read `GDrive/Claude Things/Weekly Tracker/Finances/expense-tracker.md`. If both exist and differ, use Drive and note it in `Weekly Tracker/sync-mismatch-log.md`.
+**Fallback — Nextcloud:**
+If local read fails or returns FILE_NOT_FOUND, find the Nextcloud tools with ToolSearch "nextcloud" and read `GDrive/Claude Things/Weekly Tracker/Finances/expense-tracker.md` with `parse_document: "raw"`; keep the `etag` it returns for the write-back. Never use the Google Drive connector: Drive is retired and its copy is stale.
 
 Note the last transaction date in the file to know how far back to pull emails.
 
@@ -108,8 +103,7 @@ Append new transactions to the correct week. Do not overwrite existing entries.
   mkdir -p "$WT/Finances"
   # write updated file
   ```
-- **Fallback:** Use `mcp__claude_ai_Google_Drive__update_file` (create_file only if the file truly doesn't exist) in folder `12aFM2fFgGmYNO0JYFDwlCni2ws3mCkhb`
-- **Second fallback (Nextcloud):** if Drive tools fail, update `GDrive/Claude Things/Weekly Tracker/Finances/expense-tracker.md` in place with the Nextcloud tools (find them with ToolSearch "nextcloud"; never delete then create). Tell Benedict "Saved to Nextcloud only, copy back to Drive by hand".
+- **Fallback (Nextcloud):** update `GDrive/Claude Things/Weekly Tracker/Finances/expense-tracker.md` in place: read with `parse_document: "raw"` (it returns an `etag`), then write by updating the same path in place with that etag as `if_match`. Create (no `if_match`) only a genuinely new file, such as a new day's log; never delete then create, and never force-overwrite with `"*"`. Tell Benedict "Saved to Nextcloud — desktop not connected".
 
 ## Step 6 — Display summary
 

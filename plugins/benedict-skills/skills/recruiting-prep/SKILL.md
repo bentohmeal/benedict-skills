@@ -5,9 +5,9 @@ description: "Benedict's interview & application prep engine (IB / PE / private 
 
 # Recruiting Prep: Master Bank + Firm Delta
 
-> **Conflict check (mandatory, every update):** before reading or writing any tracker file, run `sh workflows/check-conflicts.sh` (or the equivalent `find "$WT" -name "* ([0-9]*).*"`). Merge any Drive `(1)` duplicate into the real file first, tell Benedict which copy to delete, never delete it yourself. See CLAUDE.md -> "Tracker conflict check".
+> **Conflict check (mandatory, every update):** before reading or writing any tracker file, run `sh workflows/check-conflicts.sh` (or the equivalent `find "$WT" \( -name "* ([0-9]*).*" -o -iname "*conflicted copy*" \)`). Merge any sync duplicate (`name (1).md` from the old Drive days, or Nextcloud's `name (conflicted copy <date>).md`) into the real file first, tell Benedict which copy to delete, never delete it yourself. See CLAUDE.md -> "Tracker conflict check".
 
-> **Drive root `<Drive>`:** PC `C:\Users\user\Documents\Google Drive` · Mac `~/Library/CloudStorage/GoogleDrive-benedict2588@gmail.com/My Drive` (run `ls ~/Library/CloudStorage` to confirm the folder name). Paths below are relative to `<Drive>`; use `/` on the Mac. This skill lives in `<Drive>/Claude Things/.claude/skills/` (shared by PC and Mac through Drive), so edit it there.
+> **Files root `<Root>`:** Benedict's files live on his self-hosted **Nextcloud** (Google Drive was retired on 2 Nov 2026). PC `C:\Users\user\Nextcloud\GDrive` · Mac/Linux `~/Nextcloud/GDrive` (the Nextcloud desktop client's sync folder) · on the server (connector "NextCloud", tools via ToolSearch "nextcloud") the same tree sits under `GDrive/`. Paths below are relative to `<Root>`; use `/` on Mac/Linux. A ":" in a folder name shows as the full-width "：" on Nextcloud (e.g. `01. IB：PE`). This skill lives in `<Root>/Claude Things/.claude/skills/` (shared across machines by Nextcloud), so edit it there. Never use the old `Documents\Google Drive` folder or the Google Drive connector: both are stale. If the connected "Claude Things" folder has no `NEXTCLOUD.md` at its root, it is the old Drive copy: tell Benedict to reconnect `C:\Users\user\Nextcloud\GDrive\Claude Things` in the Claude desktop app, and use the Nextcloud connector meanwhile.
 
 ## Role
 
@@ -24,8 +24,8 @@ Style for anything shown in chat: clear, jargon-free, bullets over paragraphs. I
 
 | What | Path |
 |---|---|
-| Master Bank | `<Drive>\Claude Things\Interview Prep\Master Bank\` (read `README.md` for the format) |
-| Firm folders | `<Drive>\Claude Things\Interview Prep\Firms\<Firm>\` (`dossier.md`, `<Firm> Prep.docx`, `cv-notes.md`, tailored CV) |
+| Master Bank | `<Root>\Claude Things\Interview Prep\Master Bank\` (read `README.md` for the format) |
+| Firm folders | `<Root>\Claude Things\Interview Prep\Firms\<Firm>\` (`dossier.md`, `<Firm> Prep.docx`, `cv-notes.md`, tailored CV) |
 | Firm index | `Interview Prep\Firms\prep-index.md` (the Ops Dashboard reads this; keep the table columns exactly) |
 | Recruiting tracker | `Claude Things\Weekly Tracker\Recruiting\recruiting-tracker.md` (read only here; the pipeline is managed elsewhere) |
 | CV (rule) | Newest `Benedict_Toh Resume*` by date modified in `01. IB PE\Application Stuff (28 Aug 2026)\2026 Summer Applications\Resume\` |
@@ -36,10 +36,10 @@ Style for anything shown in chat: clear, jargon-free, bullets over paragraphs. I
 | Past firm preps (reference only) | `Interview Prep\Buy-Side Interviews\`, `Interview Prep\Sell-Side Interviews\`, `01. IB PE\Investment Banking Library\Interview Prep\` |
 
 Tooling notes:
-- Python: PC `C:\Users\user\AppData\Local\Programs\Python\Python312\python.exe` · Mac `~/benedict-venv/bin/python` (python-docx, openpyxl, python-pptx, pymupdf; see `<Drive>/Claude Things/MAC-SETUP.md`).
+- Python: PC `C:\Users\user\AppData\Local\Programs\Python\Python312\python.exe` · Mac `~/benedict-venv/bin/python` (python-docx, openpyxl, python-pptx, pymupdf; see `<Root>/Claude Things/MAC-SETUP.md`).
 - Read .docx files with `scripts/docx_text.py` and PDFs with pymupdf (`python -c "import pymupdf,sys;print(''.join(p.get_text() for p in pymupdf.open(sys.argv[1])))" file.pdf`) or `pdftotext -layout` if installed.
 - Write .docx files with the **docx** skill.
-- For Google Docs, use the Google Drive connector if it's connected. If a local path fails, fall back to the Drive IDs in `Interview Prep/CLAUDE.md` without asking. If Drive also fails, read the same path under `GDrive/` on Nextcloud (find the tools with ToolSearch "nextcloud").
+- If a local path fails (desktop not connected), read and write the same path under `GDrive/` on Nextcloud without asking (find the tools with ToolSearch "nextcloud"; read with `parse_document: "raw"` (it returns an `etag`), then write by updating the same path in place with that etag as `if_match`. Create (no `if_match`) only a genuinely new file, such as a new day's log; never delete then create, and never force-overwrite with `"*"`.) Never use the Google Drive connector or the old Drive IDs: Drive is retired and stale.
 
 ## Step 0: Automatic checks (always, before the menu)
 

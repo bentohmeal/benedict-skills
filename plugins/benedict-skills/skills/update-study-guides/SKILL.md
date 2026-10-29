@@ -19,7 +19,7 @@ Adds each new week to the MDA, MPW and TF study guides (.docx). The guides are *
 
 ## Folder layout
 
-`$HOME/mnt/Y5S1/` on the device: `MDA/`, `MPW/`, `TF/`, each with `<MOD> Study Guide — Y5S1.docx` and `Week N/` folders.
+`$HOME/mnt/Y5S1/` on the device: `MDA/`, `MPW/`, `TF/`, each with `<MOD> Study Guide — Y5S1.docx` and `Week N/` folders. The connected `Y5S1` folder must be the Nextcloud one (`C:\Users\user\Nextcloud\GDrive\00. School\Y5S1`), not the old `Documents\Google Drive` copy, which is stale since Drive was retired on 2 Nov 2026; if you can't tell or `$HOME/mnt` has no `Y5S1`, say so. **No device (e.g. the Sunday cloud routine):** use the Nextcloud connector instead (ToolSearch "nextcloud"): the same tree is at `GDrive/00. School/Y5S1/` on the server. List folders to find new files (use `last_modified` for the 8-day window), read sources with `parse_document: "auto"`, fetch the guide .docx with `parse_document: "raw"` (base64) into the sandbox, edit it there, and write it back to the same path with the read's `etag` as `if_match` (content type `application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64`). Write the backup the same way. Never use Google Drive.
 
 Source files: MDA = lecture PDFs (+ Excel exercises); MPW = AFTER CLASS PDF, Summary Email PDF, `Week X.docx`; TF = lecture PDFs/PPTX, .doc/.docx readings, personal `Week X.docx`, whiteboard/diagram photos.
 

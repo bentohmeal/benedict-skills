@@ -5,9 +5,9 @@ description: "Benedict's elite academic partner and school command centre for SM
 
 # School Work — Academic Partner & Command Centre
 
-> **Conflict check (mandatory, every update):** before reading or writing any tracker file, run `sh workflows/check-conflicts.sh` (or the equivalent `find "$WT" -name "* ([0-9]*).*"`). Merge any Drive `(1)` duplicate into the real file first, tell Benedict which copy to delete, never delete it yourself. See CLAUDE.md -> "Tracker conflict check".
+> **Conflict check (mandatory, every update):** before reading or writing any tracker file, run `sh workflows/check-conflicts.sh` (or the equivalent `find "$WT" \( -name "* ([0-9]*).*" -o -iname "*conflicted copy*" \)`). Merge any sync duplicate (`name (1).md` from the old Drive days, or Nextcloud's `name (conflicted copy <date>).md`) into the real file first, tell Benedict which copy to delete, never delete it yourself. See CLAUDE.md -> "Tracker conflict check".
 
-> **Drive root `<Drive>`:** PC `C:\Users\user\Documents\Google Drive` · Mac `~/Library/CloudStorage/GoogleDrive-benedict2588@gmail.com/My Drive` (run `ls ~/Library/CloudStorage` to confirm the folder name). Paths below are relative to `<Drive>`; use `/` on the Mac. This skill lives in `<Drive>/Claude Things/.claude/skills/` (shared by PC and Mac through Drive), so edit it there.
+> **Files root `<Root>`:** Benedict's files live on his self-hosted **Nextcloud** (Google Drive was retired on 2 Nov 2026). PC `C:\Users\user\Nextcloud\GDrive` · Mac/Linux `~/Nextcloud/GDrive` (the Nextcloud desktop client's sync folder) · on the server (connector "NextCloud", tools via ToolSearch "nextcloud") the same tree sits under `GDrive/`. Paths below are relative to `<Root>`; use `/` on Mac/Linux. A ":" in a folder name shows as the full-width "：" on Nextcloud (e.g. `01. IB：PE`). This skill lives in `<Root>/Claude Things/.claude/skills/` (shared across machines by Nextcloud), so edit it there. Never use the old `Documents\Google Drive` folder or the Google Drive connector: both are stale. If the connected "Claude Things" folder has no `NEXTCLOUD.md` at its root, it is the old Drive copy: tell Benedict to reconnect `C:\Users\user\Nextcloud\GDrive\Claude Things` in the Claude desktop app, and use the Nextcloud connector meanwhile.
 
 ## Role and mission
 
@@ -26,15 +26,15 @@ Style: clear and jargon-free; bullets over paragraphs (except in the deliverable
 
 | What | Path |
 |---|---|
-| Workspace | `<Drive>\Claude Things\` |
+| Workspace | `<Root>\Claude Things\` |
 | School context | `School/CLAUDE.md`, `School/MEMORY.md`, `CAPABILITIES.md` (workspace root) |
 | Module context | `School/<MOD>/CLAUDE.md`, `School/<MOD>/MEMORY.md` |
 | Tracker | `School/SCHOOL-TRACKER.md` |
 | Outputs | `School/<MOD>/Outputs/` |
 | Style templates | `School/Claude outputs/Style 1 — Claude Orange.docx`, `Style 2 — Navy & Gold.docx`, `Style 3 — Minimal Teal.docx` |
-| Course files (Y5S1) | `<Drive>\00. School\Y5S1\<MOD>\` (Week N/, Project/, syllabus, study guide) |
+| Course files (Y5S1) | `<Root>\00. School\Y5S1\<MOD>\` (Week N/, Project/, syllabus, study guide) |
 | Weekly task list | `Weekly Tracker/tasks.json` (used by /task-manager) |
-| Dashboard | **School** tab of the Benedict Ops Dashboard: https://claude.ai/artifact/PNhvX5QwPfpsDnF78yxSAm#school. Read-only; it reads `SCHOOL-TRACKER.md` live from Drive. The **tracker file is the master record** |
+| Dashboard | **School** tab of the Benedict Ops Dashboard: https://claude.ai/artifact/PNhvX5QwPfpsDnF78yxSAm#school. Read-only; it reads `SCHOOL-TRACKER.md` live from Nextcloud. The **tracker file is the master record** |
 
 Syllabi:
 - MDA: `Y5S1/MDA/COR1305 Course Syllabus 2026.pdf`
@@ -50,7 +50,7 @@ Study guides: `Y5S1/<MOD>/<MOD> Study Guide — Y5S1.docx`
 3. Syllabus PDFs (above)
 4. Study guides: condensed lecture content by week
 5. Raw files in `Y5S1/<MOD>/Week N/`, `Project/`, `Job Profile Project/`, `Midterm/`, `Quiz 1/`
-6. Google Calendar (class times, events), Google Drive `search_files`, then Nextcloud (anything not stored locally; Drive wins on a mismatch)
+6. Google Calendar (class times, events), then Nextcloud (`GDrive/…`, connector "NextCloud") for anything not reachable locally
 
 Rules: **always cite the source** (e.g. "MDA syllabus p.3", "TF Week 4 slides", "Tracker"). If sources conflict, show both and flag the conflict. If nothing is found, say so and **never guess** a date, weight or requirement.
 
@@ -98,10 +98,10 @@ Before drafting anything that will be **submitted for a grade**, check that modu
 If a newer brief or announcement states a different AI policy, follow the newer one and tell Benedict. When unsure, draft the question to email the instructor rather than guessing.
 
 ### Step 2 — Reference materials (always ask; skip for Study and Manage)
-Ask: **"Upload or paste files, point me to a folder, or should I search Google Drive?"**
+Ask: **"Upload or paste files, point me to a folder, or should I search Nextcloud?"**
 - Suggest the default `00. School\Y5S1\<MOD>\` and list the folders found there (Week N, Project, etc.).
-- Google Drive: `search_files`, then `read_file_content` / `download_file_content`.
-- Nextcloud (trial; mirror of Drive at `GDrive/00. School/Y5S1/<MOD>/`): if Drive tools fail, find the tools with ToolSearch "nextcloud". Read-only for course files.
+- Nextcloud (`GDrive/00. School/Y5S1/<MOD>/` on the server; find the tools with ToolSearch "nextcloud"): list the folder, then read files (`parse_document: "auto"` for PDFs/DOCX, `"raw"` for text). Read-only for course files.
+
 - Read **everything** provided. Then show a short inventory:
 
 | File | What it covers | How I'll use it |
@@ -143,7 +143,7 @@ Show:
 
 **Study / Exam Preparation**
 - Skip Steps 2–4. Ask only which **module(s)** and **week(s)**, then **invoke `/update-study-guides`** (Skill tool: `anthropic-skills:update-study-guides`).
-- Tell it the path: files live in `<Drive>\00. School\Y5S1` (that skill's docs call this `$HOME/mnt/Y5S1`).
+- Tell it the path: files live in `<Root>\00. School\Y5S1` on Nextcloud (that skill's docs call this `$HOME/mnt/Y5S1`).
 - That skill does its own backup, detection, build and report. Don't copy its steps here.
 
 **Manage School / Schedule**. Ask which of the following (more than one is fine). Keep chat short and point to the dashboard's School tab (Step 7) rather than pasting long tables:
@@ -181,7 +181,7 @@ Benedict finds long text replies hard to read. The **School tab** of the Ops Das
 
 **When:** at the end of every run that changed a status, date, weight or item. Skip it for a quick direct question (Step 0b) that changed nothing.
 
-**How:** edit `School/SCHOOL-TRACKER.md` (it syncs to Drive, and the tab reads it live, so **never republish the dashboard page for school changes**). Keep the tab's parsing intact:
+**How:** edit `School/SCHOOL-TRACKER.md` (it syncs to Nextcloud, and the tab reads it live, so **never republish the dashboard page for school changes**). Keep the tab's parsing intact:
 - one `## <MOD> — <course code> (…)` section per module, each with the columns `Item | Type | Weight % | Due | Status | Requirements | Files`
 - Due must start with a date like `Mon 12 Oct` (optionally `, 3:30pm`). Put `(?)` after an unconfirmed date. Words like `Unannounced` or `Ongoing` are fine when there is no date.
 - Status uses the tracker values; `Submitted` or `Graded` counts as done. Weight is a plain number (e.g. `7.5`)
