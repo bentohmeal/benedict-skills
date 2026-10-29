@@ -14,8 +14,8 @@ description: "Refresh Benedict's expense tracker by pulling DBS PayLah! and iBan
 
 `$WT` is the Weekly Tracker folder. Resolve it at the start of every local command (shell state does not persist); works whether `Claude Things` or `Weekly Tracker` itself is connected in the Claude desktop app:
 ```bash
-WT=""; for d in "$HOME/mnt/Claude Things/Weekly Tracker" "$HOME/mnt/Weekly Tracker" "/c/Users/user/Nextcloud/GDrive/Claude Things/Weekly Tracker" "$HOME/Nextcloud/GDrive/Claude Things/Weekly Tracker"; do [ -d "$d" ] && WT="$d" && break; done
-[ -n "$WT" ] && [ ! -f "$WT/NEXTCLOUD.md" ] && echo "STALE_DRIVE_FOLDER: $WT (old Google Drive copy, do not use)" && WT=""
+WT=""; STALE=""; for d in "$HOME/mnt/Claude Things/Weekly Tracker" "$HOME"/mnt/*"Claude Things/Weekly Tracker" "$HOME/mnt/Weekly Tracker" "$HOME"/mnt/*"Weekly Tracker" "/c/Users/user/Nextcloud/GDrive/Claude Things/Weekly Tracker" "$HOME/Nextcloud/GDrive/Claude Things/Weekly Tracker"; do [ -d "$d" ] || continue; if [ -f "$d/NEXTCLOUD.md" ]; then WT="$d"; break; else STALE="$d"; fi; done
+[ -z "$WT" ] && [ -n "$STALE" ] && echo "STALE_DRIVE_FOLDER: $STALE (old Google Drive copy, do not use)"
 ```
 
 ## Step 1 — Read the existing tracker

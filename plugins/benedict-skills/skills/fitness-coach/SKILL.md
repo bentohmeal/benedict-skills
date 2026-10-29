@@ -32,8 +32,8 @@ Pick the flow from the message. Only show the menu when it is genuinely unclear.
 
 `$WT` = Weekly Tracker folder. Resolve it at the start of **every** local command (shell state does not persist):
 ```bash
-WT=""; for d in "$HOME/mnt/Claude Things/Weekly Tracker" "$HOME/mnt/Weekly Tracker" "/c/Users/user/Nextcloud/GDrive/Claude Things/Weekly Tracker" "$HOME/Nextcloud/GDrive/Claude Things/Weekly Tracker"; do [ -d "$d" ] && WT="$d" && break; done
-[ -n "$WT" ] && [ ! -f "$WT/NEXTCLOUD.md" ] && echo "STALE_DRIVE_FOLDER: $WT (old Google Drive copy, do not use)" && WT=""
+WT=""; STALE=""; for d in "$HOME/mnt/Claude Things/Weekly Tracker" "$HOME"/mnt/*"Claude Things/Weekly Tracker" "$HOME/mnt/Weekly Tracker" "$HOME"/mnt/*"Weekly Tracker" "/c/Users/user/Nextcloud/GDrive/Claude Things/Weekly Tracker" "$HOME/Nextcloud/GDrive/Claude Things/Weekly Tracker"; do [ -d "$d" ] || continue; if [ -f "$d/NEXTCLOUD.md" ]; then WT="$d"; break; else STALE="$d"; fi; done
+[ -z "$WT" ] && [ -n "$STALE" ] && echo "STALE_DRIVE_FOLDER: $STALE (old Google Drive copy, do not use)"
 [ -n "$WT" ] && echo "DEVICE_OK: $WT" || echo "DEVICE_UNAVAILABLE"
 # duplicate check — sync leaves conflict copies like "food-library (1).md" or "food-library (conflicted copy 2026-11-03 101500).md"
 [ -n "$WT" ] && find "$WT/Fitness" "$WT/Nutrition" "$WT/Workouts" \( -name "* ([0-9]*).md" -o -iname "*conflicted copy*" \) 2>/dev/null
